@@ -1,0 +1,33 @@
+🦁 Sport 2026 em dados: 19 jogos, 3 fases. O saldo de xG conta o que o placar às vezes esconde.
+
+🧵 1/3
+
+[card 01 — 01_evolucao_saldo.png]
+
+---
+
+Fase 1 (Sub20): saldo médio +1,67 → dominância clara
+Fase 2 (Pré-Série B): saldo médio +0,20 → quase equilibrado
+Fase 3 (Márcio Goiano): saldo médio −0,34 → ainda negativo
+
+A queda é visível. Mas foi só o nível dos adversários?
+
+🧵 2/3
+
+[card 02 — 02_saldo_xg_forca.png]
+
+---
+
+Saldo de xG vs força do adversário — cada ponto é um jogo.
+
+r = −0,68 → rival mais forte, saldo menor.
+
+Fase 3 em detalhe:
+→ Vila Nova (força 0,79): −0,96
+→ Londrina (força 0,74): +1,38 ✓
+
+A tendência dentro da fase importa. 👀
+
+Dados: SofaScore · @SportRecifeLab
+
+🧵 3/3

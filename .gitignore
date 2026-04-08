@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+.venv/
+env/
+
+# Dados brutos e processados (grandes e transitórios)
+data/raw/
+data/processed/
+data/cache/
+
+# Banco de dados
+accounts.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Imagens geradas (card_*, chart_*, debug_*)
+card_*.png
+card_*.jpg
+chart_*.png
+debug_*.png
+
+# Imagens geradas dos cards xPts e scatter
+*_xpts_*.png
+*_scatter_*.png
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

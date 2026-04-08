@@ -1,0 +1,12 @@
+{
+  "post_date": "2026-04-08",
+  "slug": "xpts-serie-b",
+  "topic": "expected_points_table",
+  "season": 2026,
+  "rounds_covered": [1, 2],
+  "cards": {
+    "01_xpts_table.png": "pronto",
+    "02_xpts_scatter.png": "pronto"
+  },
+  "status": "pronto para publicar"
+}

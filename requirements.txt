@@ -1,0 +1,10 @@
+pandas
+requests
+selenium
+webdriver-manager
+python-dotenv
+tenacity
+pyarrow
+pydantic
+pytest
+

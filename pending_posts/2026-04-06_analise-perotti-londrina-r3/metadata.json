@@ -1,0 +1,50 @@
+{
+  "slug": "analise-perotti-londrina-r3",
+  "date": "2026-04-06",
+  "format": "thread",
+  "tweets": 3,
+  "match_context": {
+    "competition": "Brasileirao Serie B",
+    "round": 3,
+    "match": "Londrina 1 x 2 Sport Recife",
+    "match_date": "2026-04-04",
+    "sport_role": "visitante",
+    "result": "vitoria"
+  },
+  "subject": {
+    "player": "Perotti",
+    "player_id": 840076,
+    "position": "F",
+    "jersey_number": 9,
+    "minutes_played": 90
+  },
+  "cards": [
+    { "file": "01_stats.png",   "tweet": 1, "type": "player_stats", "description": "Estatisticas com escala de cor vs. atacantes da partida (n=4, >=45min)" },
+    { "file": "02_shotmap.png", "tweet": 2, "type": "shot_map",     "description": "Mapa de finalizacoes com circulo proporcional ao xG" },
+    { "file": "03_xg.png",      "tweet": 3, "type": "xg_timeline",  "description": "xG acumulado por finalizacao ao longo dos 90 minutos" }
+  ],
+  "key_stats": {
+    "minutes_played": 90,
+    "rating": 6.7,
+    "shots": 4,
+    "goals": 1,
+    "xg_total": 0.856,
+    "touches": 26,
+    "passes_accurate": "9/12",
+    "pass_accuracy_pct": 75.0,
+    "ball_recovery": 4,
+    "possession_lost": 8,
+    "shots_detail": [
+      { "min": 43, "outcome": "save",  "xg": 0.173 },
+      { "min": 65, "outcome": "block", "xg": 0.488 },
+      { "min": 70, "outcome": "miss",  "xg": 0.024 },
+      { "min": 87, "outcome": "goal",  "xg": 0.171 }
+    ]
+  },
+  "data_sources": [
+    "data/processed/2026/players/sport_2026_player_match_stats.csv",
+    "data/raw/sofascore/perotti_londrina_shotmap.json",
+    "data/raw/sofascore/perotti_londrina_heatmap.json"
+  ],
+  "status": "pending"
+}

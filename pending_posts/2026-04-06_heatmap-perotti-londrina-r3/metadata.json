@@ -1,0 +1,28 @@
+{
+  "slug": "heatmap-perotti-londrina-r3",
+  "date": "2026-04-06",
+  "format": "single",
+  "tweets": 1,
+  "match_context": {
+    "competition": "Brasileirao Serie B",
+    "round": 3,
+    "match": "Londrina 1 x 2 Sport Recife",
+    "match_date": "2026-04-04",
+    "sport_role": "visitante",
+    "result": "vitoria"
+  },
+  "subject": {
+    "player": "Perotti",
+    "player_id": 840076,
+    "position": "F",
+    "jersey_number": 9,
+    "minutes_played": 90
+  },
+  "cards": [
+    { "file": "01_heatmap.png", "tweet": 1, "type": "heatmap", "description": "Mapa de calor de posicionamento na partida" }
+  ],
+  "data_sources": [
+    "data/raw/sofascore/perotti_londrina_heatmap.json"
+  ],
+  "status": "pending"
+}

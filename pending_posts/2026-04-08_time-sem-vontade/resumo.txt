@@ -1,0 +1,41 @@
+============================================================
+RELATÓRIO DE ANÁLISE DE NARRATIVA
+Tema: "time sem vontade"
+Gerado em: 2026-04-08 16:41 UTC
+============================================================
+
+-- CLASSIFICAÇÃO ------------------------------------------
+  Classificação : Orgânico
+  Score         : 25/100 (0=orgânico, 100=impulsionado)
+  Confiança     : Média
+
+  Narrativa de origem ORGÂNICA (score de impulsionamento: 25/100). Os primeiros 20 tweets vieram de 20 usuários distintos, com concentração de apenas 15% nos top-3 perfis e engajamento médio baixo de 77 interações. O padrão sugere que a ideia emergiu espontaneamente da base da torcida.
+
+-- ORIGEM (primeiros tweets) -------------------------------
+  Tweets analisados : 20
+  Usuários únicos   : 20
+  Concentração top3 : 15.0%
+  Engajamento médio : 77.1 (likes + RTs)
+  Janela temporal   : 4.1h
+
+-- DIFUSÃO (dataset completo) ------------------------------
+  Total usuários    : 61
+  Gini tweets       : 0.204 (0=igualitário, 1=concentrado)
+  Gini engajamento  : 0.847
+  Mediana eng/tweet : 38
+  P90 eng/tweet     : 946
+
+-- VELOCIDADE ----------------------------------------------
+  10 tweets           : 1.4h
+  50 tweets           : 32.0h
+  100 tweets          : (não atingido)
+
+-- PICOS DE ATIVIDADE --------------------------------------
+  Picos detectados  : 3
+
+-- FATORES DE CLASSIFICAÇÃO --------------------------------
+  [↓ ORGÂNICO] Top-3 usuários: 15% dos primeiros 20 tweets | 20 usuários únicos
+  [↓ ORGÂNICO] Ratio engajamento inicial/mediana global: 2.0x (77 vs 38)
+  [↑ IMPULSIONADO] Gini do engajamento: 0.847 (0=igualitário, 1=concentrado)
+
+============================================================

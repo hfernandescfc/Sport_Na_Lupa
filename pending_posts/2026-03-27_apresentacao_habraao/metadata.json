@@ -1,0 +1,21 @@
+{
+  "type": "apresentacao_jogador",
+  "assunto": "Habraao",
+  "status": "pending",
+  "gerado_em": "2026-03-27",
+  "fonte": "SofaScore + Transfermarkt",
+  "metricas_usadas": {
+    "rating_medio_serie_b": 7.02,
+    "duelos_aereos_pct": 70.0,
+    "precisao_passe_pct": 81.7,
+    "cortes_serie_b": 280,
+    "team_of_the_week": 3,
+    "jogos_serie_b": 47,
+    "minutos_serie_b": 4745
+  },
+  "clubes_serie_b": ["ABC FC", "Chapecoense", "Athletico-PR"],
+  "temporadas": ["2023", "2024", "2025"],
+  "card": "card.png",
+  "tweet": "tweet.txt",
+  "chars": 264
+}

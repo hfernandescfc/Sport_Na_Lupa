@@ -1,0 +1,38 @@
+============================================================
+RELATÓRIO DE ANÁLISE DE NARRATIVA
+Tema: "rejeicao dal pozzo"
+Gerado em: 2026-04-08 16:50 UTC
+============================================================
+
+-- CLASSIFICAÇÃO ------------------------------------------
+  Classificação : Misto
+  Score         : 40/100 (0=orgânico, 100=impulsionado)
+  Confiança     : Média
+
+  Narrativa de origem MISTA (score: 40/100). Iniciou com 0 usuários e concentração de 0%, mas os sinais de engajamento são contraditórios. Pode ter emergido organicamente e sido amplificada depois, ou ter sido iniciada por influenciadores com pouca tração inicial.
+
+-- ORIGEM (primeiros tweets) -------------------------------
+  Tweets analisados : 0
+  Usuários únicos   : 0
+  Concentração top3 : 0.0%
+  Engajamento médio : 0.0 (likes + RTs)
+  Janela temporal   : 0.0h
+
+-- DIFUSÃO (dataset completo) ------------------------------
+  Total usuários    : 0
+  Gini tweets       : 0.000 (0=igualitário, 1=concentrado)
+  Gini engajamento  : 0.000
+  Mediana eng/tweet : 0
+  P90 eng/tweet     : 0
+
+-- VELOCIDADE ----------------------------------------------
+
+-- PICOS DE ATIVIDADE --------------------------------------
+  Picos detectados  : 0
+
+-- FATORES DE CLASSIFICAÇÃO --------------------------------
+  [↑ IMPULSIONADO] Top-3 usuários: 0% dos primeiros 20 tweets | 0 usuários únicos
+  [↓ ORGÂNICO] Ratio engajamento inicial/mediana global: 0.0x (0 vs 0)
+  [↓ ORGÂNICO] Gini do engajamento: 0.000 (0=igualitário, 1=concentrado)
+
+============================================================

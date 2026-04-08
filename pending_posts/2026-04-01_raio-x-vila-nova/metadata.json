@@ -1,0 +1,38 @@
+{
+  "slug": "raio-x-vila-nova",
+  "date": "2026-04-01",
+  "format": "thread",
+  "tweets": 8,
+  "match_context": {
+    "competition": "Brasileirao Serie B",
+    "round": 2,
+    "sport_role": "visitante",
+    "opponent": "Vila Nova FC",
+    "opponent_team_key": "vila-nova",
+    "opponent_team_id": 2021
+  },
+  "data_sources": [
+    "data/curated/opponents_2026/vila-nova/matches.csv",
+    "data/curated/opponents_2026/vila-nova/team_match_stats.csv",
+    "data/curated/opponents_2026/vila-nova/player_match_stats.csv"
+  ],
+  "key_stats": {
+    "jogos_disputados": 18,
+    "vitorias": 10,
+    "empates": 3,
+    "derrotas": 5,
+    "gols_marcados": 42,
+    "gols_sofridos": 27,
+    "saldo_gols": 15,
+    "mandante_record": "5V 3E 2D",
+    "visitante_record": "5V 0E 3D",
+    "xg_medio_jogo": 0.99,
+    "xg_sofrido_jogo": 1.26,
+    "posse_media": 53.4,
+    "precisao_chutes": 54.1,
+    "melhor_rating": "Joao Vieira (7.80)",
+    "artilheiro_chutes": "Dellatorre (21 chutes / 14 jogos)",
+    "lider_assistencias": "Joao Vieira (6)"
+  },
+  "status": "pending"
+}
