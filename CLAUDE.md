@@ -66,12 +66,14 @@ src/
     sofascore_team.py           — metadados de clubes
     sofascore_player_stats.py   — scouts individuais via /event/{id}/lineups ✅
     sofascore_heatmap.py        — heatmap de posicionamento via /player/{id}/.../heatmap ✅
+    sofascore_attack_map.py     — stats estendidas + shotmap por partida do adversário ✅
     sofascore_opponent.py       — extração completa de adversário: partidas + team stats + player stats ✅
     sofascore_serie_b_strength.py — valor de mercado + proxy de desempenho dos 20 clubes Série B ✅
     sofascore_logos.py          — download de escudos via Selenium XHR binary (base64) para data/cache/logos/ ✅
   transform/
     matches.py                  — unifica + normaliza partidas e stats de time ✅
     players.py                  — normaliza scouts individuais ✅
+    attack_map.py               — agrega extended_stats + shotmap → attack_profile.json + padrões ✅
     opponents.py                — normaliza dados do adversário: is_home_team + team_outcome ✅
     standings.py                — xPts (Poisson) + SOS + expected_points_table.csv ✅
     clubs.py / events.py / lineups.py / shots.py — stubs
@@ -92,6 +94,7 @@ generate_habraao_card.py        — card de apresentação de jogador com foto +
 generate_<adversário>_cards.py  — raio-x do adversário: 6 cards (cover, campanha, mandante, últimos5, xG, jogadores)
 generate_xpts_table_card.py     — tabela xPts dos 20 clubes Série B com escudos, barras, dots SOS ✅
 generate_xpts_scatter_card.py   — scatter xPts vs SOS com 4 quadrantes coloridos ✅
+generate_como_joga_card.py      — card "Como Joga" do adversário: shotmap + zonas + padrões ✅
 
 # Curadoria de conteúdo
 pending_posts/                  — posts aguardando revisão (→ posted/ ou rejected/)
@@ -336,6 +339,31 @@ data/curated/opponents_2026/vila-nova/
 | Time | team_key | team_id | Rodada | Status |
 |---|---|---|---|---|
 | Vila Nova | `vila-nova` | `2021` | R2 | ✅ cards + thread gerados |
+| Avaí | `avai` | `7315` | R4 | 🔜 próximo (11/04/2026) |
+
+### Fluxo raio-x completo (com card "Como Joga")
+
+```bash
+# 1. Extrair partidas + stats de time + player stats
+python -m src.main sync-opponent --team-key avai --team-id 7315 --season 2026
+
+# 2. Normalizar partidas
+python -m src.main transform-opponent --team-key avai --season 2026
+
+# 3. Extrair estatísticas estendidas + shotmap (NOVO)
+python -m src.main sync-attack-map --team-key avai --season 2026
+
+# 4. Agregar + detectar padrões (NOVO)
+python -m src.main transform-attack-map --team-key avai --season 2026
+
+# 5. Gerar os 6 cards principais (baseado em generate_vila_nova_cards.py)
+python generate_avai_cards.py
+
+# 6. Gerar card "Como Joga" (NOVO — card 07)
+python generate_como_joga_card.py \
+  --team-key avai --team-name "AVAÍ FC" \
+  --team-id 7315 --round 4 --date 2026-04-11 --season 2026
+```
 
 ---
 

@@ -1,61 +1,61 @@
 season,competition,round,match_code,team_name,team_key,is_home,possession,expected_goals,shots_total,shots_on_target,shots_on_target_pct,corners,fouls,passes_total,passes_accurate,passes_accuracy_pct,tackles_total,yellow_cards,red_cards,data_status,last_updated_at,transformed_at
-2026,serie_b,1,wPsHPi,Vila Nova FC,vila-nova-fc,True,35,0.47,8,4,50.0,3,22,240,173,72.1,15,4,1,advanced_stats_confirmed,2026-04-08T13:42:30.412483Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,wPsHPi,CRB,crb,False,65,1.13,12,9,75.0,5,16,433,361,83.4,11,4,1,advanced_stats_confirmed,2026-04-08T13:42:30.412483Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,bPseau,Ceará,ceara,True,52,1.77,21,6,28.6,7,8,407,341,83.8,14,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.412525Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,bPseau,São Bernardo,sao-bernardo,False,48,0.24,4,3,75.0,3,18,382,314,82.2,14,0,0,advanced_stats_confirmed,2026-04-08T13:42:30.412525Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,oWcsJRp,Operário-PR,operario-pr,True,43,2.73,17,10,58.8,7,14,332,262,78.9,16,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.412549Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,oWcsJRp,Atlético Goianiense,atletico-go,False,57,0.59,9,0,0.0,7,12,433,365,84.3,9,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.412549Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,EOsvP,Botafogo-SP,botafogo-sp,True,47,2.6,15,6,40.0,7,13,339,281,82.9,17,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.412565Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,EOsvP,Fortaleza,fortaleza,False,53,0.34,7,0,0.0,5,20,389,336,86.4,12,5,1,advanced_stats_confirmed,2026-04-08T13:42:30.412565Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,jOscJu,Cuiabá,cuiaba,True,42,1.32,13,4,30.8,0,20,356,290,81.5,12,1,0,advanced_stats_confirmed,2026-04-08T13:42:30.412581Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,jOscJu,Sport Recife,sport,False,58,0.92,10,1,10.0,1,21,500,428,85.6,8,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.412581Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,FOspWc,Avaí,avai,True,41,0.96,16,5,31.2,3,15,321,244,76.0,20,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.412595Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,FOspWc,Juventude,juventude,False,59,0.74,8,1,12.5,3,14,449,381,84.9,14,0,0,advanced_stats_confirmed,2026-04-08T13:42:30.412595Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,JOslP,Náutico,nautico,True,60,0.77,10,1,10.0,12,17,395,312,79.0,10,3,1,advanced_stats_confirmed,2026-04-08T13:42:30.412608Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,JOslP,Criciúma,criciuma,False,40,1.11,9,2,22.2,8,19,262,181,69.1,17,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.412608Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,uOsAfMc,Athletic Club,athletic-club,True,43,1.01,17,8,47.1,3,21,335,274,81.8,11,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.412621Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,uOsAfMc,Ponte Preta,ponte-preta,False,57,0.79,10,3,30.0,3,15,449,375,83.5,15,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.412621Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,kOsyO,Goiás,goias,True,33,1.96,9,3,33.3,3,10,258,194,75.2,14,1,1,advanced_stats_confirmed,2026-04-08T13:42:30.412635Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,kOsyO,América Mineiro,america-mineiro,False,67,1.77,24,9,37.5,8,6,505,445,88.1,14,1,0,advanced_stats_confirmed,2026-04-08T13:42:30.412635Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,xPsokeb,Grêmio Novorizontino,novorizontino,True,56,2.25,24,9,37.5,9,9,414,339,81.9,20,0,0,advanced_stats_confirmed,2026-04-08T13:42:30.412651Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,1,xPsokeb,Londrina,londrina,False,44,1.06,11,3,27.3,7,9,347,270,77.8,20,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.412651Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,FOsokeb,Juventude,juventude,True,60,0.68,13,4,30.8,4,13,476,412,86.6,10,4,0,advanced_stats_confirmed,2026-04-08T13:42:30.694944Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,FOsokeb,Grêmio Novorizontino,novorizontino,False,40,0.26,9,0,0.0,8,15,308,249,80.8,11,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.694944Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,vPscJu,Fortaleza,fortaleza,True,59,0.54,15,2,13.3,4,20,511,435,85.1,13,1,0,advanced_stats_confirmed,2026-04-08T13:42:30.694962Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,vPscJu,Cuiabá,cuiaba,False,41,0.06,4,0,0.0,0,18,372,290,78.0,12,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.694962Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,yOsEO,América Mineiro,america-mineiro,True,68,1.19,14,1,7.1,11,15,485,435,89.7,10,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.694972Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,yOsEO,Botafogo-SP,botafogo-sp,False,32,1.12,13,5,38.5,7,17,226,176,77.9,16,4,0,advanced_stats_confirmed,2026-04-08T13:42:30.694972Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,lPsoWc,Atlético Goianiense,atletico-go,True,49,1.47,11,2,18.2,7,21,310,248,80.0,16,1,0,advanced_stats_confirmed,2026-04-08T13:42:30.694983Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,lPsoWc,Náutico,nautico,False,51,0.82,9,4,44.4,1,18,331,267,80.7,20,4,1,advanced_stats_confirmed,2026-04-08T13:42:30.694983Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,kOsxP,Londrina,londrina,True,41,1.61,8,5,62.5,6,16,294,225,76.5,20,4,0,advanced_stats_confirmed,2026-04-08T13:42:30.694992Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,kOsxP,Goiás,goias,False,59,1.88,14,3,21.4,6,17,430,361,84.0,3,5,0,advanced_stats_confirmed,2026-04-08T13:42:30.694992Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,jOswP,Sport Recife,sport,True,39,0.68,10,7,70.0,6,11,320,250,78.1,16,2,1,advanced_stats_confirmed,2026-04-08T13:42:30.695002Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,jOswP,Vila Nova FC,vila-nova-fc,False,61,1.64,16,2,12.5,3,12,505,446,88.3,17,4,1,advanced_stats_confirmed,2026-04-08T13:42:30.695002Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,uOsbP,Ponte Preta,ponte-preta,True,59,1.5,9,5,55.6,4,20,441,381,86.4,11,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.695010Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,uOsbP,Ceará,ceara,False,41,2.24,14,4,28.6,6,13,302,230,76.2,16,3,1,advanced_stats_confirmed,2026-04-08T13:42:30.695010Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,pWcsHPi,CRB,crb,True,57,1.56,27,6,22.2,5,10,544,476,87.5,11,1,0,advanced_stats_confirmed,2026-04-08T13:42:30.695019Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,pWcsHPi,Avaí,avai,False,43,0.54,15,3,20.0,5,14,410,347,84.6,17,6,1,advanced_stats_confirmed,2026-04-08T13:42:30.695019Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,JOsAfMc,Criciúma,criciuma,True,71,2.8,32,7,21.9,9,10,499,452,90.6,17,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.695028Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,JOsAfMc,Athletic Club,athletic-club,False,29,0.57,7,2,28.6,2,21,208,131,63.0,22,5,1,advanced_stats_confirmed,2026-04-08T13:42:30.695028Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,JRpseau,São Bernardo,sao-bernardo,True,48,0.93,16,5,31.2,6,7,478,421,88.1,9,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.695037Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,2,JRpseau,Operário-PR,operario-pr,False,52,0.95,15,7,46.7,8,8,521,465,89.3,13,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.695037Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,FOsvP,Fortaleza,fortaleza,True,37,1.73,11,4,36.4,5,23,280,220,78.6,10,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.931129Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,FOsvP,Juventude,juventude,False,63,1.05,18,6,33.3,2,11,476,408,85.7,18,0,0,advanced_stats_confirmed,2026-04-08T13:42:30.931129Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,bPscJu,Cuiabá,cuiaba,True,65,2.23,16,6,37.5,1,14,500,445,89.0,10,0,0,advanced_stats_confirmed,2026-04-08T13:42:30.931146Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,bPscJu,Ceará,ceara,False,35,1.48,7,2,28.6,2,20,277,221,79.8,11,4,0,advanced_stats_confirmed,2026-04-08T13:42:30.931146Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,uOslP,Náutico,nautico,True,69,2.4,23,6,26.1,17,14,448,387,86.4,11,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.931155Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,uOslP,Ponte Preta,ponte-preta,False,31,0.6,4,4,100.0,3,21,206,142,68.9,12,1,2,advanced_stats_confirmed,2026-04-08T13:42:30.931155Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,wPsoWc,Vila Nova FC,vila-nova-fc,True,58,2.2,17,5,29.4,8,16,357,265,74.2,16,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.931167Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,wPsoWc,Atlético Goianiense,atletico-go,False,42,1.41,10,4,40.0,3,24,267,181,67.8,18,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.931167Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,jOsxP,Londrina,londrina,True,38,0.85,13,3,23.1,5,13,281,223,79.4,18,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.931179Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,jOsxP,Sport Recife,sport,False,62,2.23,16,4,25.0,7,13,481,418,86.9,16,0,0,advanced_stats_confirmed,2026-04-08T13:42:30.931179Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,pWcsJRp,Avaí,avai,True,49,1.15,13,4,30.8,9,19,330,266,80.6,22,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.931187Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,pWcsJRp,Operário-PR,operario-pr,False,51,0.16,6,3,50.0,4,19,366,295,80.6,13,6,0,advanced_stats_confirmed,2026-04-08T13:42:30.931187Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,HPisokeb,Grêmio Novorizontino,novorizontino,True,43,1.12,19,3,15.8,5,19,356,301,84.6,17,4,0,advanced_stats_confirmed,2026-04-08T13:42:30.931197Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,HPisokeb,CRB,crb,False,57,1.61,11,4,36.4,1,12,514,450,87.5,9,5,0,advanced_stats_confirmed,2026-04-08T13:42:30.931197Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,yOsAfMc,Athletic Club,athletic-club,True,35,1.43,10,4,40.0,4,18,279,217,77.8,15,3,1,advanced_stats_confirmed,2026-04-08T13:42:30.931205Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,yOsAfMc,América Mineiro,america-mineiro,False,65,1.95,20,7,35.0,7,12,508,437,86.0,12,1,0,advanced_stats_confirmed,2026-04-08T13:42:30.931205Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,EOseau,Botafogo-SP,botafogo-sp,True,48,1.22,16,4,25.0,9,12,396,323,81.6,14,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.931213Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,EOseau,São Bernardo,sao-bernardo,False,52,1.62,13,6,46.2,8,11,423,352,83.2,8,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.931213Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,kOsJO,Goiás,goias,True,54,1.32,13,3,23.1,6,9,460,377,82.0,16,1,0,advanced_stats_confirmed,2026-04-08T13:42:30.931222Z,2026-04-08T13:47:07.918335Z
-2026,serie_b,3,kOsJO,Criciúma,criciuma,False,46,0.74,9,1,11.1,7,11,393,323,82.2,16,0,0,advanced_stats_confirmed,2026-04-08T13:42:30.931222Z,2026-04-08T13:47:07.918335Z
+2026,serie_b,1,wPsHPi,Vila Nova FC,vila-nova-fc,True,35,0.47,8,4,50.0,3,22,240,173,72.1,15,4,1,advanced_stats_confirmed,2026-04-08T13:42:30.412483Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,wPsHPi,CRB,crb,False,65,1.13,12,9,75.0,5,16,433,361,83.4,11,4,1,advanced_stats_confirmed,2026-04-08T13:42:30.412483Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,bPseau,Ceará,ceara,True,52,1.77,21,6,28.6,7,8,407,341,83.8,14,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.412525Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,bPseau,São Bernardo,sao-bernardo,False,48,0.24,4,3,75.0,3,18,382,314,82.2,14,0,0,advanced_stats_confirmed,2026-04-08T13:42:30.412525Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,oWcsJRp,Operário-PR,operario-pr,True,43,2.73,17,10,58.8,7,14,332,262,78.9,16,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.412549Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,oWcsJRp,Atlético Goianiense,atletico-go,False,57,0.59,9,0,0.0,7,12,433,365,84.3,9,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.412549Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,EOsvP,Botafogo-SP,botafogo-sp,True,47,2.6,15,6,40.0,7,13,339,281,82.9,17,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.412565Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,EOsvP,Fortaleza,fortaleza,False,53,0.34,7,0,0.0,5,20,389,336,86.4,12,5,1,advanced_stats_confirmed,2026-04-08T13:42:30.412565Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,jOscJu,Cuiabá,cuiaba,True,42,1.32,13,4,30.8,0,20,356,290,81.5,12,1,0,advanced_stats_confirmed,2026-04-08T13:42:30.412581Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,jOscJu,Sport Recife,sport,False,58,0.92,10,1,10.0,1,21,500,428,85.6,8,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.412581Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,FOspWc,Avaí,avai,True,41,0.96,16,5,31.2,3,15,321,244,76.0,20,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.412595Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,FOspWc,Juventude,juventude,False,59,0.74,8,1,12.5,3,14,449,381,84.9,14,0,0,advanced_stats_confirmed,2026-04-08T13:42:30.412595Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,JOslP,Náutico,nautico,True,60,0.77,10,1,10.0,12,17,395,312,79.0,10,3,1,advanced_stats_confirmed,2026-04-08T13:42:30.412608Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,JOslP,Criciúma,criciuma,False,40,1.11,9,2,22.2,8,19,262,181,69.1,17,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.412608Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,uOsAfMc,Athletic Club,athletic-club,True,43,1.01,17,8,47.1,3,21,335,274,81.8,11,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.412621Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,uOsAfMc,Ponte Preta,ponte-preta,False,57,0.79,10,3,30.0,3,15,449,375,83.5,15,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.412621Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,kOsyO,Goiás,goias,True,33,1.96,9,3,33.3,3,10,258,194,75.2,14,1,1,advanced_stats_confirmed,2026-04-08T13:42:30.412635Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,kOsyO,América Mineiro,america-mineiro,False,67,1.77,24,9,37.5,8,6,505,445,88.1,14,1,0,advanced_stats_confirmed,2026-04-08T13:42:30.412635Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,xPsokeb,Grêmio Novorizontino,novorizontino,True,56,2.25,24,9,37.5,9,9,414,339,81.9,20,0,0,advanced_stats_confirmed,2026-04-08T13:42:30.412651Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,1,xPsokeb,Londrina,londrina,False,44,1.06,11,3,27.3,7,9,347,270,77.8,20,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.412651Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,FOsokeb,Juventude,juventude,True,60,0.68,13,4,30.8,4,13,476,412,86.6,10,4,0,advanced_stats_confirmed,2026-04-08T13:42:30.694944Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,FOsokeb,Grêmio Novorizontino,novorizontino,False,40,0.26,9,0,0.0,8,15,308,249,80.8,11,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.694944Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,vPscJu,Fortaleza,fortaleza,True,59,0.54,15,2,13.3,4,20,511,435,85.1,13,1,0,advanced_stats_confirmed,2026-04-08T13:42:30.694962Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,vPscJu,Cuiabá,cuiaba,False,41,0.06,4,0,0.0,0,18,372,290,78.0,12,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.694962Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,yOsEO,América Mineiro,america-mineiro,True,68,1.19,14,1,7.1,11,15,485,435,89.7,10,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.694972Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,yOsEO,Botafogo-SP,botafogo-sp,False,32,1.12,13,5,38.5,7,17,226,176,77.9,16,4,0,advanced_stats_confirmed,2026-04-08T13:42:30.694972Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,lPsoWc,Atlético Goianiense,atletico-go,True,49,1.47,11,2,18.2,7,21,310,248,80.0,16,1,0,advanced_stats_confirmed,2026-04-08T13:42:30.694983Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,lPsoWc,Náutico,nautico,False,51,0.82,9,4,44.4,1,18,331,267,80.7,20,4,1,advanced_stats_confirmed,2026-04-08T13:42:30.694983Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,kOsxP,Londrina,londrina,True,41,1.61,8,5,62.5,6,16,294,225,76.5,20,4,0,advanced_stats_confirmed,2026-04-08T13:42:30.694992Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,kOsxP,Goiás,goias,False,59,1.88,14,3,21.4,6,17,430,361,84.0,3,5,0,advanced_stats_confirmed,2026-04-08T13:42:30.694992Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,jOswP,Sport Recife,sport,True,39,0.68,10,7,70.0,6,11,320,250,78.1,16,2,1,advanced_stats_confirmed,2026-04-08T13:42:30.695002Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,jOswP,Vila Nova FC,vila-nova-fc,False,61,1.64,16,2,12.5,3,12,505,446,88.3,17,4,1,advanced_stats_confirmed,2026-04-08T13:42:30.695002Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,uOsbP,Ponte Preta,ponte-preta,True,59,1.5,9,5,55.6,4,20,441,381,86.4,11,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.695010Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,uOsbP,Ceará,ceara,False,41,2.24,14,4,28.6,6,13,302,230,76.2,16,3,1,advanced_stats_confirmed,2026-04-08T13:42:30.695010Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,pWcsHPi,CRB,crb,True,57,1.56,27,6,22.2,5,10,544,476,87.5,11,1,0,advanced_stats_confirmed,2026-04-08T13:42:30.695019Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,pWcsHPi,Avaí,avai,False,43,0.54,15,3,20.0,5,14,410,347,84.6,17,6,1,advanced_stats_confirmed,2026-04-08T13:42:30.695019Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,JOsAfMc,Criciúma,criciuma,True,71,2.8,32,7,21.9,9,10,499,452,90.6,17,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.695028Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,JOsAfMc,Athletic Club,athletic-club,False,29,0.57,7,2,28.6,2,21,208,131,63.0,22,5,1,advanced_stats_confirmed,2026-04-08T13:42:30.695028Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,JRpseau,São Bernardo,sao-bernardo,True,48,0.93,16,5,31.2,6,7,478,421,88.1,9,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.695037Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,2,JRpseau,Operário-PR,operario-pr,False,52,0.95,15,7,46.7,8,8,521,465,89.3,13,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.695037Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,FOsvP,Fortaleza,fortaleza,True,37,1.73,11,4,36.4,5,23,280,220,78.6,10,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.931129Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,FOsvP,Juventude,juventude,False,63,1.05,18,6,33.3,2,11,476,408,85.7,18,0,0,advanced_stats_confirmed,2026-04-08T13:42:30.931129Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,bPscJu,Cuiabá,cuiaba,True,65,2.23,16,6,37.5,1,14,500,445,89.0,10,0,0,advanced_stats_confirmed,2026-04-08T13:42:30.931146Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,bPscJu,Ceará,ceara,False,35,1.48,7,2,28.6,2,20,277,221,79.8,11,4,0,advanced_stats_confirmed,2026-04-08T13:42:30.931146Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,uOslP,Náutico,nautico,True,69,2.4,23,6,26.1,17,14,448,387,86.4,11,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.931155Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,uOslP,Ponte Preta,ponte-preta,False,31,0.6,4,4,100.0,3,21,206,142,68.9,12,1,2,advanced_stats_confirmed,2026-04-08T13:42:30.931155Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,wPsoWc,Vila Nova FC,vila-nova-fc,True,58,2.2,17,5,29.4,8,16,357,265,74.2,16,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.931167Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,wPsoWc,Atlético Goianiense,atletico-go,False,42,1.41,10,4,40.0,3,24,267,181,67.8,18,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.931167Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,jOsxP,Londrina,londrina,True,38,0.85,13,3,23.1,5,13,281,223,79.4,18,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.931179Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,jOsxP,Sport Recife,sport,False,62,2.23,16,4,25.0,7,13,481,418,86.9,16,0,0,advanced_stats_confirmed,2026-04-08T13:42:30.931179Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,pWcsJRp,Avaí,avai,True,49,1.15,13,4,30.8,9,19,330,266,80.6,22,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.931187Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,pWcsJRp,Operário-PR,operario-pr,False,51,0.16,6,3,50.0,4,19,366,295,80.6,13,6,0,advanced_stats_confirmed,2026-04-08T13:42:30.931187Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,HPisokeb,Grêmio Novorizontino,novorizontino,True,43,1.12,19,3,15.8,5,19,356,301,84.6,17,4,0,advanced_stats_confirmed,2026-04-08T13:42:30.931197Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,HPisokeb,CRB,crb,False,57,1.61,11,4,36.4,1,12,514,450,87.5,9,5,0,advanced_stats_confirmed,2026-04-08T13:42:30.931197Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,yOsAfMc,Athletic Club,athletic-club,True,35,1.43,10,4,40.0,4,18,279,217,77.8,15,3,1,advanced_stats_confirmed,2026-04-08T13:42:30.931205Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,yOsAfMc,América Mineiro,america-mineiro,False,65,1.95,20,7,35.0,7,12,508,437,86.0,12,1,0,advanced_stats_confirmed,2026-04-08T13:42:30.931205Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,EOseau,Botafogo-SP,botafogo-sp,True,48,1.22,16,4,25.0,9,12,396,323,81.6,14,3,0,advanced_stats_confirmed,2026-04-08T13:42:30.931213Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,EOseau,São Bernardo,sao-bernardo,False,52,1.62,13,6,46.2,8,11,423,352,83.2,8,2,0,advanced_stats_confirmed,2026-04-08T13:42:30.931213Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,kOsJO,Goiás,goias,True,54,1.32,13,3,23.1,6,9,460,377,82.0,16,1,0,advanced_stats_confirmed,2026-04-08T13:42:30.931222Z,2026-04-09T13:03:40.106581Z
+2026,serie_b,3,kOsJO,Criciúma,criciuma,False,46,0.74,9,1,11.1,7,11,393,323,82.2,16,0,0,advanced_stats_confirmed,2026-04-08T13:42:30.931222Z,2026-04-09T13:03:40.106581Z

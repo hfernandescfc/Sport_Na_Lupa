@@ -10,9 +10,12 @@ from src.extract.sofascore_competition import sync_competition_stub
 from src.extract.sofascore_match import sync_matches_stub
 from src.extract.sofascore_all_teams import sync_all_teams_stub
 from src.extract.sofascore_player_stats import sync_player_stats
+from src.extract.sofascore_attack_map import sync_attack_map
+from src.extract.sofascore_team_heatmap import sync_team_heatmap
 from src.extract.sofascore_opponent import sync_opponent
 from src.extract.sofascore_opponent_strength import sync_opponent_strength
 from src.extract.sofascore_sport import sync_sport_stub
+from src.transform.attack_map import transform_attack_map
 from src.transform.opponents import transform_opponent
 from src.transform.matches import transform_matches
 from src.transform.players import transform_players
@@ -86,6 +89,31 @@ def build_parser() -> argparse.ArgumentParser:
     )
     transform_opponent_cmd.add_argument("--team-key", dest="team_key", required=True)
     transform_opponent_cmd.add_argument("--season", type=int, required=True)
+
+    sync_attack_map_cmd = subparsers.add_parser(
+        "sync-attack-map",
+        help="Fetch extended stats + shotmap for all completed opponent matches",
+    )
+    sync_attack_map_cmd.add_argument("--team-key", dest="team_key", required=True,
+                                     help="Canonical team key, e.g. avai")
+    sync_attack_map_cmd.add_argument("--season", type=int, required=True)
+
+    transform_attack_map_cmd = subparsers.add_parser(
+        "transform-attack-map",
+        help="Aggregate extended stats + shotmap into attack_profile.json with pattern detection",
+    )
+    transform_attack_map_cmd.add_argument("--team-key", dest="team_key", required=True)
+    transform_attack_map_cmd.add_argument("--season", type=int, required=True)
+
+    sync_team_heatmap_cmd = subparsers.add_parser(
+        "sync-team-heatmap",
+        help="Fetch per-player heatmaps and aggregate into a team-level heatmap",
+    )
+    sync_team_heatmap_cmd.add_argument("--team-key", dest="team_key", required=True,
+                                       help="Canonical team key, e.g. avai")
+    sync_team_heatmap_cmd.add_argument("--competition", required=True,
+                                       help="Competition name filter, e.g. 'Brasileirao Serie B'")
+    sync_team_heatmap_cmd.add_argument("--season", type=int, required=True)
 
     sync_logos_cmd = subparsers.add_parser(
         "sync-logos",
@@ -203,6 +231,29 @@ def main() -> None:
         ensure_project_structure(settings)
         transform_opponent(settings, team_key=args.team_key, season=args.season)
         logger.info("Opponent transform completed for %s season %s", args.team_key, args.season)
+        return
+
+    if args.command == "sync-attack-map":
+        ensure_project_structure(settings)
+        sync_attack_map(settings, team_key=args.team_key, season=args.season)
+        logger.info("Attack map sync completed for %s season %s", args.team_key, args.season)
+        return
+
+    if args.command == "transform-attack-map":
+        ensure_project_structure(settings)
+        transform_attack_map(settings, team_key=args.team_key, season=args.season)
+        logger.info("Attack map transform completed for %s season %s", args.team_key, args.season)
+        return
+
+    if args.command == "sync-team-heatmap":
+        ensure_project_structure(settings)
+        sync_team_heatmap(
+            settings,
+            team_key=args.team_key,
+            competition_filter=args.competition,
+            season=args.season,
+        )
+        logger.info("Team heatmap sync completed for %s season %s", args.team_key, args.season)
         return
 
     if args.command == "sync-logos":
