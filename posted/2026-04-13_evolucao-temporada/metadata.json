@@ -1,0 +1,44 @@
+{
+  "slug": "2026-04-13_evolucao-temporada",
+  "created_at": "2026-04-13",
+  "status": "pending",
+  "type": "thread",
+  "topic": "evolucao_temporada",
+  "cards": [
+    {
+      "file": "01_evolucao_saldo.png",
+      "description": "Linha temporal do saldo de xG por jogo (xG pró − xG contra), com bandas de fase, área sombreada e média tracejada por fase. 21 jogos incluídos (R4 Série B — Sport 2x2 Avaí)."
+    },
+    {
+      "file": "02_saldo_xg_forca.png",
+      "description": "Scatter: saldo de xG vs força do adversário. Apenas 9/21 jogos com dados de força (adversários da Série B). r = +0.15 — correlação fraca, interpretar com cautela."
+    }
+  ],
+  "data_sources": {
+    "matches": "data/processed/2026/sport/sport_2026_results.csv",
+    "team_stats": "data/processed/2026/sport/sport_2026_team_match_stats.csv",
+    "opponent_strength": "data/processed/2026/sport/sport_2026_opponent_strength.csv"
+  },
+  "key_stats": {
+    "jogos_total": 21,
+    "jogos_com_xg": 21,
+    "jogos_com_forca": 21,
+    "fase_1": {"jogos": 3, "xg_diff_medio": 1.72},
+    "fase_2": {"jogos": 13, "xg_diff_medio": 0.47},
+    "fase_3": {"jogos": 5, "xg_diff_medio": 0.32},
+    "destaque_r4": {
+      "jogo": "Sport Recife x Avai",
+      "resultado": "2-2",
+      "xg_sport": 3.24,
+      "xg_avai": 1.79,
+      "xg_diff": 1.45
+    },
+    "r_xgdiff_forca": -0.33,
+    "aviso": "AD Jaguar sem dados de MV (Transfermarkt) — único adversário sem strength_score"
+  },
+  "discarded_cards": [
+    "01_evolucao_xg.png"
+  ],
+  "supersedes": "2026-04-07_evolucao-temporada",
+  "generator": "generate_temporada_cards.py"
+}

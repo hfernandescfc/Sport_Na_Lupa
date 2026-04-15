@@ -10,12 +10,16 @@ from src.extract.sofascore_competition import sync_competition_stub
 from src.extract.sofascore_match import sync_matches_stub
 from src.extract.sofascore_all_teams import sync_all_teams_stub
 from src.extract.sofascore_player_stats import sync_player_stats
+from src.extract.sofascore_incidents import sync_incidents
+from src.extract.sofascore_player_heatmap_match import sync_player_positions
 from src.extract.sofascore_attack_map import sync_attack_map
 from src.extract.sofascore_team_heatmap import sync_team_heatmap
 from src.extract.sofascore_opponent import sync_opponent
 from src.extract.sofascore_opponent_strength import sync_opponent_strength
 from src.extract.sofascore_sport import sync_sport_stub
 from src.transform.attack_map import transform_attack_map
+from src.transform.incidents import transform_incidents
+from src.transform.player_positions import transform_player_positions
 from src.transform.opponents import transform_opponent
 from src.transform.matches import transform_matches
 from src.transform.players import transform_players
@@ -66,6 +70,30 @@ def build_parser() -> argparse.ArgumentParser:
         "sync-player-stats", help="Sync individual player stats (Sport all comps + Série B all clubs)"
     )
     sync_player_stats_cmd.add_argument("--season", type=int, required=True)
+
+    sync_player_positions_cmd = subparsers.add_parser(
+        "sync-player-positions",
+        help="Fetch per-match heatmaps for Sport players in Série B and compute avg position",
+    )
+    sync_player_positions_cmd.add_argument("--season", type=int, required=True)
+
+    transform_player_positions_cmd = subparsers.add_parser(
+        "transform-player-positions",
+        help="Normalize heatmap centroids into player_positions_serie_b.csv",
+    )
+    transform_player_positions_cmd.add_argument("--season", type=int, required=True)
+
+    sync_incidents_cmd = subparsers.add_parser(
+        "sync-incidents",
+        help="Fetch match incidents (goals, cards, subs) + goal passing sequences with coordinates",
+    )
+    sync_incidents_cmd.add_argument("--season", type=int, required=True)
+
+    transform_incidents_cmd = subparsers.add_parser(
+        "transform-incidents",
+        help="Normalize incidents JSON into match_incidents.csv + goal_sequences.csv",
+    )
+    transform_incidents_cmd.add_argument("--season", type=int, required=True)
 
     sync_opp_strength_cmd = subparsers.add_parser(
         "sync-opponent-strength",
@@ -208,6 +236,30 @@ def main() -> None:
         ensure_project_structure(settings)
         sync_player_stats(settings, season=args.season)
         logger.info("Player stats sync completed for season %s", args.season)
+        return
+
+    if args.command == "sync-player-positions":
+        ensure_project_structure(settings)
+        sync_player_positions(settings, season=args.season)
+        logger.info("Player positions sync completed for season %s", args.season)
+        return
+
+    if args.command == "transform-player-positions":
+        ensure_project_structure(settings)
+        transform_player_positions(settings, season=args.season)
+        logger.info("Player positions transform completed for season %s", args.season)
+        return
+
+    if args.command == "sync-incidents":
+        ensure_project_structure(settings)
+        sync_incidents(settings, season=args.season)
+        logger.info("Incidents sync completed for season %s", args.season)
+        return
+
+    if args.command == "transform-incidents":
+        ensure_project_structure(settings)
+        transform_incidents(settings, season=args.season)
+        logger.info("Incidents transform completed for season %s", args.season)
         return
 
     if args.command == "sync-opponent-strength":

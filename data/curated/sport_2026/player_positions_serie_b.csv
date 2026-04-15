@@ -1,0 +1,63 @@
+season,competition,round,event_id,match_code,match_label,home_team,away_team,is_home,player_id,player_name,player_slug,position,jersey_number,is_substitute,minutes_played,n_points,avg_x,avg_y,transformed_at
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,871291,Thiago Couto,thiago-couto,G,26,False,90.0,55,10.75,48.49,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,839516,Ramon Menezes,ramon,D,40,False,90.0,82,36.28,37.7,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,988852,Zé Gabriel,ze-gabriel,D,23,False,90.0,86,41.28,44.17,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,901700,Zé Marcos,ze-marcos,D,4,False,90.0,117,36.09,72.13,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,2027140,Augusto Pucci,augusto-pucci-de-freitas,M,68,False,90.0,53,43.26,18.36,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,2040561,Zé Lucas,ze-lucas,M,58,False,72.0,52,47.02,35.85,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,552164,Yago Felipe,yago-felipe,M,7,False,87.0,57,52.63,70.02,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,1048276,Felipinho,felipinho,M,60,False,90.0,113,48.91,88.01,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,795020,Iury Castilho,iury-castilho,F,95,False,81.0,30,53.77,39.03,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,842076,Zé Roberto,ze-roberto,F,99,False,72.0,35,59.91,47.74,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,1023049,Gustavo Maia,gustavo-maia,F,11,False,81.0,38,69.47,76.79,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,1873287,Dedé,dedezinho,F,65,True,18.0,19,61.53,43.63,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,1919858,Micael de Barros Viturino,micael,F,77,True,18.0,6,71.33,23.83,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,811308,Clayson,clayson,M,25,True,9.0,9,71.89,71.89,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,2440220,Lipão,lipao,F,71,True,9.0,11,73.45,56.36,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,1,15525993,jOscJu,Cuiabá x Sport Recife,Cuiabá,Sport Recife,False,311394,Carlos De Pena,carlos-de-pena,M,10,True,12.0,10,49.5,67.9,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,871291,Thiago Couto,thiago-couto,G,26,False,90.0,43,8.28,47.63,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,1634992,Marcelo Ajul,marcelo-ajul,D,3,False,90.0,73,34.51,31.52,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,988852,Zé Gabriel,ze-gabriel,D,23,False,67.0,42,37.83,51.14,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,901700,Zé Marcos,ze-marcos,D,4,False,90.0,60,30.8,67.1,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,2027140,Augusto Pucci,augusto-pucci-de-freitas,M,68,False,77.0,58,38.83,19.28,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,552164,Yago Felipe,yago-felipe,M,7,False,77.0,56,49.98,34.79,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,1383112,Biel Fonseca,biel,M,6,False,90.0,38,51.76,65.11,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,1048276,Felipinho,felipinho,M,60,False,90.0,60,44.23,84.62,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,1035765,Chrystian Barletta,chrystian-barletta,F,30,False,77.0,48,59.96,32.58,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,842076,Zé Roberto,ze-roberto,F,99,False,35.0,6,61.33,56.67,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,795020,Iury Castilho,iury-castilho,F,95,False,50.0,14,51.64,74.64,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,840076,Perotti,perotti,F,9,True,55.0,21,51.52,45.52,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,311394,Carlos De Pena,carlos-de-pena,M,10,True,23.0,17,63.0,41.59,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,1106488,Pedro Victor Martins,pedro-victor-martins,M,48,True,13.0,9,51.0,15.44,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,811308,Clayson,clayson,M,25,True,13.0,8,54.62,67.5,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,2,15526002,jOswP,Sport Recife x Vila Nova FC,Sport Recife,Vila Nova FC,True,965796,Marlon,marlon,F,31,True,13.0,3,32.33,26.0,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,3,15526008,jOsxP,Londrina x Sport Recife,Londrina,Sport Recife,False,871291,Thiago Couto,thiago-couto,G,26,False,90.0,42,7.43,48.71,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,3,15526008,jOsxP,Londrina x Sport Recife,Londrina,Sport Recife,False,2027140,Augusto Pucci,augusto-pucci-de-freitas,D,68,False,89.0,71,48.86,12.59,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,3,15526008,jOsxP,Londrina x Sport Recife,Londrina,Sport Recife,False,1634992,Marcelo Ajul,marcelo-ajul,D,3,False,90.0,89,30.37,25.66,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,3,15526008,jOsxP,Londrina x Sport Recife,Londrina,Sport Recife,False,901700,Zé Marcos,ze-marcos,D,4,False,90.0,76,32.93,66.16,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,3,15526008,jOsxP,Londrina x Sport Recife,Londrina,Sport Recife,False,1048276,Felipinho,felipinho,D,60,False,90.0,103,47.85,83.28,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,3,15526008,jOsxP,Londrina x Sport Recife,Londrina,Sport Recife,False,2040561,Zé Lucas,ze-lucas,M,58,False,45.0,36,49.69,25.25,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,3,15526008,jOsxP,Londrina x Sport Recife,Londrina,Sport Recife,False,988852,Zé Gabriel,ze-gabriel,M,23,False,90.0,76,45.66,54.55,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,3,15526008,jOsxP,Londrina x Sport Recife,Londrina,Sport Recife,False,552164,Yago Felipe,yago-felipe,M,7,False,62.0,48,50.88,55.75,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,3,15526008,jOsxP,Londrina x Sport Recife,Londrina,Sport Recife,False,1035765,Chrystian Barletta,chrystian-barletta,F,30,False,88.0,64,72.89,50.78,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,3,15526008,jOsxP,Londrina x Sport Recife,Londrina,Sport Recife,False,840076,Perotti,perotti,F,9,False,90.0,44,64.98,54.77,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,3,15526008,jOsxP,Londrina x Sport Recife,Londrina,Sport Recife,False,1383112,Biel Fonseca,biel,F,6,False,90.0,84,55.21,76.94,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,3,15526008,jOsxP,Londrina x Sport Recife,Londrina,Sport Recife,False,811308,Clayson,clayson,M,25,True,45.0,36,59.75,76.61,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,3,15526008,jOsxP,Londrina x Sport Recife,Londrina,Sport Recife,False,965796,Marlon,marlon,F,31,True,28.0,23,53.74,26.74,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,3,15526008,jOsxP,Londrina x Sport Recife,Londrina,Sport Recife,False,311394,Carlos De Pena,carlos-de-pena,M,10,True,8.0,5,60.0,56.8,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,871291,Thiago Couto,thiago-couto,G,26,False,90.0,44,8.36,48.93,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,552164,Yago Felipe,yago-felipe,D,7,False,90.0,80,40.94,17.1,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,1634992,Marcelo Ajul,marcelo-ajul,D,3,False,90.0,81,29.01,56.31,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,901700,Zé Marcos,ze-marcos,D,4,False,34.0,45,35.11,64.96,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,1048276,Felipinho,felipinho,D,60,False,90.0,63,41.76,84.67,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,2040561,Zé Lucas,ze-lucas,M,58,False,90.0,57,48.56,33.6,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,988852,Zé Gabriel,ze-gabriel,M,23,False,86.0,70,40.39,54.26,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,1383112,Biel Fonseca,biel,M,6,False,45.0,35,50.8,64.86,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,1035765,Chrystian Barletta,chrystian-barletta,F,30,False,90.0,70,62.7,27.14,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,840076,Perotti,perotti,F,9,False,72.0,26,59.88,50.88,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,811308,Clayson,clayson,F,25,False,45.0,25,62.96,60.52,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,1167540,Habraão,habraao,D,28,True,56.0,60,32.88,36.63,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,311394,Carlos De Pena,carlos-de-pena,M,10,True,45.0,47,49.7,60.0,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,795020,Iury Castilho,iury-castilho,F,95,True,45.0,10,72.1,67.9,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,1023049,Gustavo Maia,gustavo-maia,F,11,True,18.0,4,50.0,67.5,2026-04-14T18:05:33.997818Z
+2026,Brasileirão Série B,4,15526022,jOspWc,Sport Recife x Avaí,Sport Recife,Avaí,True,965796,Marlon,marlon,F,31,True,11.0,5,81.4,16.6,2026-04-14T18:05:33.997818Z

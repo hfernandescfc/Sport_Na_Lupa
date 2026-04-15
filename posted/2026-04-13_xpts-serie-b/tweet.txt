@@ -1,0 +1,52 @@
+— THREAD —
+
+[1/4 — sem imagem — ~190 chars]
+
+O CRB criou chances para quase 7 pontos em 4 rodadas.
+
+Tem 2.
+
+A tabela real ainda não conta essa história.
+
+Qual time você acha que mais sofreu com o azar até agora? 👇
+
+🧵
+
+---
+
+[2/4 — card: 01_xpts_table.png — ~280 chars]
+
+xPts: pontos que cada time MERECIA ter, após 4 rodadas.
+
+Mais azarados:
+❌ CRB: 2 pts reais | 6.68 xPts (−4.68)
+❌ América-MG: 1 pt | 4.71 (−3.71)
+❌ Ponte Preta: 1 pt | 4.57 (−3.57)
+
+Mais sortudos:
+✅ Athletic Club: 8 pts | 4.67 (+3.33)
+✅ Avaí: 8 pts | 5.06 (+2.94)
+✅ Vila Nova: 8 pts | 5.41 (+2.59)
+
+Qual te surpreendeu? 👇
+
+---
+
+[3/4 — card: 02_xpts_scatter.png — ~240 chars]
+
+O scatter cruza xPts com a força dos adversários. Cada quadrante conta uma história.
+
+O Sport tem o calendário mais fácil da Série B até agora — e está em 6º em xPts, quase empatado com seus pontos reais (−0.14).
+
+Performance real ou calendário puxando? 👀
+
+---
+
+[4/4 — reply ao tweet 3 — ~230 chars]
+
+Com 34 rodadas pela frente, a tabela tende a convergir.
+
+Metodologia: xG via SofaScore → Poisson → xPts. Força dos adversários: 60% valor de mercado + 40% pontos/jogo em 2026.
+
+📊 @SportRecifeLab
+#SerieB #SerieB2026 #SportRecife

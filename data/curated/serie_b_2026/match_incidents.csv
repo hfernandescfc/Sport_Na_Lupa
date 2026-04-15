@@ -1,0 +1,784 @@
+season,competition,round,event_id,match_code,match_label,home_team,away_team,incident_id,incident_type,incident_class,time,added_time,is_home,home_score,away_score,scorer_name,scorer_id,assist_name,assist_id,carded_player_name,carded_player_id,card_reason,player_in_name,player_in_id,player_out_name,player_out_id,transformed_at
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,124942711.0,card,yellow,85,,True,,,,,,,Lucas Lima,1048254.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,125890910.0,substitution,regular,82,,False,,,,,,,,,,Pedro Vitor,976852.0,Pablo Dyego,550248.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,125890866.0,substitution,regular,74,,True,,,,,,,,,,Júlio César,1185832.0,Rafael Ramos,788195.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,125890747.0,substitution,regular,64,,False,,,,,,,,,,Foguinho,888385.0,Dudu Miraíma,1017251.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,125890757.0,substitution,regular,64,,False,,,,,,,,,,Pedrinho,896248.0,Lucas Rian,1893682.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,125890746.0,substitution,regular,64,,False,,,,,,,,,,Echaporã,981418.0,Fabrício Daniel,1128767.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,125890742.0,substitution,regular,63,,True,,,,,,,,,,Melk,2440251.0,Matheusinho,822523.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,125890741.0,substitution,regular,63,,True,,,,,,,,,,Juan Alano,875906.0,Matheus Araújo,1002617.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,125890743.0,substitution,regular,63,,True,,,,,,,,,,Lucca,1199435.0,Wendel Silva,937265.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,341743687.0,goal,regular,55,,False,1.0,1.0,Pará,552188.0,Lucas Rian,1893682.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,124942626.0,card,yellow,52,,True,,,,,,,Éder,842072.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,125890475.0,substitution,regular,46,,True,,,,,,,,,,Fernandinho,871219.0,Vina,1101714.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,125890115.0,substitution,injury,42,,False,,,,,,,,,,Marcão Silva,866754.0,Rodrigo Andrade,874398.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525988,bPseau,Ceará x São Bernardo,Ceará,São Bernardo,341739628.0,goal,penalty,7,,True,1.0,0.0,Vinicius Zanocelo,973841.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,341977030.0,goal,regular,90,9.0,False,2.0,2.0,João Neto,1110033.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,124960011.0,card,yellow,90,6.0,False,,,,,,,Vinicius Barata,871205.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,125910871.0,substitution,regular,86,,True,,,,,,,,,,Caio Marcelo,953718.0,Dellatorre,166503.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,125910877.0,substitution,regular,81,,False,,,,,,,,,,João Neto,1110033.0,Crystopher,869676.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,124960006.0,card,yellow,74,,True,,,,,,,Dudu,2510831.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,124960010.0,card,yellow,71,,False,,,,,,,Guilherme Pato,1018095.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,125910870.0,substitution,regular,70,,True,,,,,,,,,,Willian Maranhão,868120.0,Marquinhos Gabriel,90812.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,125910869.0,substitution,regular,69,,True,,,,,,,,,,Tiago Pagnussat,1650429.0,Janderson,870898.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,125910876.0,substitution,regular,69,,False,,,,,,,,,,Guilherme Pato,1018095.0,Dadá Belmonte,926786.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,125910875.0,substitution,regular,69,,False,,,,,,,,,,Geovane,1177383.0,Pedro Castro,243185.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,124960005.0,card,red,64,,True,,,,,,,Pedro Romano,1417920.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,341977028.0,goal,regular,61,,True,2.0,1.0,Dudu,2510831.0,João Vieira,1046490.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,125910874.0,substitution,regular,58,,False,,,,,,,,,,Luiz Phellype,291707.0,Douglas Baggio,795035.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,125910873.0,substitution,regular,58,,False,,,,,,,,,,Vinicius Barata,871205.0,Mikael,994017.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,125910872.0,substitution,regular,58,,False,,,,,,,,,,Guilherme Estrella,1634144.0,Danielzinho,840218.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,341977027.0,goal,regular,48,,True,1.0,1.0,Dellatorre,166503.0,Ryan Lima,1634692.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,125910868.0,substitution,regular,46,,True,,,,,,,,,,Dudu,2510831.0,Hayner,807767.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,125910867.0,substitution,regular,46,,True,,,,,,,,,,Ryan Lima,1634692.0,André Luís,876286.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,125910866.0,substitution,regular,46,,True,,,,,,,,,,Higor,1991456.0,Anderson,922629.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,124960008.0,card,yellow,39,,False,,,,,,,Bressan,312114.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,124960003.0,card,yellow,26,,True,,,,,,,João Vieira,1046490.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,124960007.0,card,yellow,23,,False,,,,,,,Danielzinho,840218.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,124960002.0,card,yellow,22,,True,,,,,,,Anderson,922629.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,97238.0,varDecision,goalNotAwarded,20,,False,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,341977029.0,goal,regular,19,,False,0.0,1.0,Mikael,994017.0,Lucas Lovat,810689.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,124960009.0,card,red,-5,,False,,,,,,,Leo Campos,125034.0,Violent conduct,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525994,wPsHPi,Vila Nova FC x CRB,Vila Nova FC,CRB,124960004.0,card,yellow,-5,,True,,,,,,,Dalberson,870638.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,125890973.0,substitution,regular,82,,True,,,,,,,,,,Léo Gaúcho,1069410.0,Pablo,374486.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,125890982.0,substitution,regular,82,,True,,,,,,,,,,Gabriel Feliciano,1463925.0,Moraes Júnior,877139.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,125890981.0,substitution,regular,82,,True,,,,,,,,,,Neto Paraíba,1148584.0,Vinícius Diniz,1148464.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,125890983.0,substitution,regular,82,,False,,,,,,,,,,Ariel Gomes,1184843.0,Cristiano,1021866.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,125890912.0,substitution,regular,72,,True,,,,,,,,,,Felipe Augusto,847089.0,Edwin Torres,855966.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,125890913.0,substitution,regular,72,,False,,,,,,,,,,Guilherme Henrique,1589309.0,Guilherme Marques,109610.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,124942704.0,card,yellow,69,,False,,,,,,,Adriano Martins,1008459.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,125890857.0,substitution,regular,60,,False,,,,,,,,,,Leo Jacó,1462709.0,Kevin Ramírez,789931.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,125890831.0,substitution,regular,58,,True,,,,,,,,,,Matheus Trindade,852556.0,Índio,981621.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,124942661.0,card,yellow,56,,True,,,,,,,Índio,981621.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,125890669.0,substitution,regular,46,,False,,,,,,,,,,Bruno José,974329.0,Jean Dias,1047201.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,125890657.0,substitution,regular,46,,False,,,,,,,,,,Igor Henrique,865400.0,Indio,979864.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,124942545.0,card,yellow,44,,True,,,,,,,Gabriel Boschilia,358540.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,124942542.0,card,yellow,42,,False,,,,,,,Marrony,926871.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525987,oWcsJRp,Operário-PR x Atlético Goianiense,Operário-PR,Atlético Goianiense,341741660.0,goal,regular,23,,True,1.0,0.0,Pablo,374486.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,124958762.0,card,yellow,90,7.0,True,,,,,,,Felipe Vieira,892875.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,125909367.0,substitution,regular,90,2.0,True,,,,,,,,,,Marquinho,1147010.0,Leandro Maciel,840847.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,125909366.0,substitution,regular,90,2.0,True,,,,,,,,,,Jefferson Nem,835259.0,Kelvin,869675.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,124958767.0,card,red,90,,False,,,,,,,Maílton,973857.0,Violent conduct,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,124958768.0,card,yellow,88,,False,,,,,,,Maílton,973857.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,125909372.0,substitution,regular,82,,False,,,,,,,,,,Ryan Gustavo,1170779.0,Lucas Sasha,123225.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,124958766.0,card,yellow,81,,False,,,,,,,Lucas Sasha,123225.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,124958765.0,card,yellow,75,,False,,,,,,,Lucas Crispim,795178.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,125909365.0,substitution,injury,73,,True,,,,,,,,,,Thiago Moraes,1131921.0,Rafael Gava,870920.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,125909364.0,substitution,regular,73,,True,,,,,,,,,,Felipe Vieira,892875.0,Patrick Brey,871192.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,125909371.0,substitution,regular,66,,False,,,,,,,,,,Paulo Baya,1174206.0,Juan Miritello,1003721.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,125909363.0,substitution,regular,63,,True,,,,,,,,,,Matheus Sales,822935.0,Everton Morelli,928137.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,124958764.0,card,yellow,63,,False,,,,,,,Lucas Gazal,1103705.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,341949671.0,goal,regular,52,,True,4.0,0.0,Everton Morelli,928137.0,Rafael Gava,870920.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,125909370.0,substitution,regular,46,,False,,,,,,,,,,Welliton,989892.0,Vitinho,1066721.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,125909369.0,substitution,regular,46,,False,,,,,,,,,,Lucas Crispim,795178.0,Rodrigo Santos,1173040.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,125909368.0,substitution,regular,46,,False,,,,,,,,,,Lucca Prior,1631235.0,Tomás Pochettino,824626.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,341949670.0,goal,regular,45,4.0,True,3.0,0.0,Vilar,1177012.0,Patrick Brey,871192.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,124958763.0,card,yellow,43,,False,,,,,,,Luiz Fernando,874143.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,124958761.0,card,yellow,39,,True,,,,,,,Everton Morelli,928137.0,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,341949669.0,goal,regular,38,,True,2.0,0.0,Everton Morelli,928137.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525984,EOsvP,Botafogo-SP x Fortaleza,Botafogo-SP,Fortaleza,341949668.0,goal,regular,34,,True,1.0,0.0,Hygor,832472.0,Everton Morelli,928137.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,125900594.0,substitution,regular,87,,True,,,,,,,,,,Wesley Gasolina,994479.0,Luiz Henrique,1015283.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,125900593.0,substitution,regular,87,,True,,,,,,,,,,Wenderson,1019166.0,Daniel Penha,862256.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,124951714.0,card,yellow,76,,True,,,,,,,Walace dos Santos França,2436887.0,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,341853928.0,goal,regular,75,,True,2.0,0.0,Walace dos Santos França,2436887.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,125900438.0,substitution,regular,74,,False,,,,,,,,,,Alan Kardec,39656.0,Luan Martins Gonçalves,2120751.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,125900428.0,substitution,regular,74,,True,,,,,,,,,,Walace dos Santos França,2436887.0,Jean Lucas,902684.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,125900394.0,substitution,injury,68,,False,,,,,,,,,,Raí,1175321.0,Pablo,931595.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,125900349.0,substitution,injury,66,,True,,,,,,,,,,Sorriso,1897879.0,Thayllon Roberth,1633708.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,125900335.0,substitution,regular,65,,True,,,,,,,,,,Paulo Vitor,1488136.0,Felipe Avenatti,308058.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,125900313.0,substitution,regular,61,,False,,,,,,,,,,Fábio Lima,1200923.0,Manuel Castro,340143.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,125900182.0,substitution,regular,46,,False,,,,,,,,,,Nathan,1016912.0,Raí Ramos,879591.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,125900181.0,substitution,regular,46,,False,,,,,,,,,,Allanzinho,988782.0,Wadson,1192068.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,124951404.0,card,yellow,45,2.0,True,,,,,,,Douglas Teixeira,1609565.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,124951353.0,card,yellow,42,,True,,,,,,,Zé Ricardo,840132.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,341849167.0,goal,regular,37,,True,1.0,0.0,Felipe Avenatti,308058.0,Thayllon Roberth,1633708.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525991,FOspWc,Avaí x Juventude,Avaí,Juventude,124951604.0,card,yellow,-5,,False,,,,,,,Mauricio Barbieri,,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,124965209.0,card,yellow,83,,False,,,,,,,Thiaguinho,2207925.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,125921785.0,substitution,regular,79,,True,,,,,,,,,,Rosa,2463039.0,Dodô,1018871.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,125921790.0,substitution,regular,73,,False,,,,,,,,,,João Carlos,1462654.0,Jhonata Robert,998494.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,125921784.0,substitution,regular,71,,True,,,,,,,,,,Ramon,958169.0,Vitinho,1836052.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,125921789.0,substitution,regular,69,,False,,,,,,,,,,Fellipe Mateus,865321.0,Jean Irmer,848630.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,125921783.0,substitution,regular,63,,True,,,,,,,,,,Felipe Cardoso,1652635.0,Juninho,576004.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,124965208.0,card,yellow,61,,False,,,,,,,Bruno Alves,551810.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,125921788.0,substitution,injury,57,,False,,,,,,,,,,Willean Lepo,868076.0,Marcinho,840148.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,124965206.0,card,red,51,,True,,,,,,,Samuel,1857028.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,97255.0,varDecision,cardUpgrade,49,,True,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,125921782.0,substitution,regular,46,,True,,,,,,,,,,Betão,1634673.0,Igor Fernandes,329057.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,125921787.0,substitution,regular,46,,False,,,,,,,,,,Diego Gonçalves,344077.0,Rómulo Otero,845323.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,125921786.0,substitution,regular,46,,False,,,,,,,,,,Thiaguinho,2207925.0,Eduardo Biasi,870800.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,125921781.0,substitution,regular,46,,True,,,,,,,,,,Léo Jance,1631686.0,Yuri,857733.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,124965204.0,card,yellow,38,,True,,,,,,,Vinícius,124807.0,Simulation,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,124965203.0,card,yellow,35,,True,,,,,,,Arnaldo,801074.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,124965207.0,card,yellow,35,,False,,,,,,,Eduardo Biasi,870800.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,124965202.0,card,yellow,19,,True,,,,,,,Igor Fernandes,329057.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,342051780.0,goal,regular,6,,False,0.0,1.0,Waguininho,924251.0,Marcelo Hermes,783490.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525992,JOslP,Náutico x Criciúma,Náutico,Criciúma,124965205.0,card,yellow,-5,,True,,,,,,,Helio Dos Anjos,,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,124952956.0,card,yellow,90,9.0,True,,,,,,,Ronaldo Tavares,828707.0,Time wasting,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,124952914.0,card,yellow,90,2.0,False,,,,,,,Luis Phelipe,974310.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,124952908.0,card,yellow,89,,True,,,,,,,Kauan Rodrigues,1516708.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,125901904.0,substitution,regular,84,,False,,,,,,,,,,David da Hora,1104714.0,Murilo,2035942.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,125901903.0,substitution,regular,84,,False,,,,,,,,,,Daniel Baianinho,1109043.0,William Pottker,243501.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,125901897.0,substitution,regular,84,,True,,,,,,,,,,Gabriel Indio,2282980.0,Jota,1200993.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,125901902.0,substitution,regular,84,,True,,,,,,,,,,Pedro Oliveira,1175752.0,Ruan Lucas de Assis,1495892.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,125901856.0,substitution,regular,78,,True,,,,,,,,,,Joao Miguel,2032278.0,Gian Cabezas,1099301.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,125901782.0,substitution,regular,71,,False,,,,,,,,,,Luis Phelipe,974310.0,Tarik Boschetti,946791.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,125901684.0,substitution,regular,63,,True,,,,,,,,,,Kauan Rodrigues,1516708.0,Ian Luccas,1046496.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,125901662.0,substitution,regular,62,,True,,,,,,,,,,Léo Chú,1009933.0,Bruninho,2032258.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,125901640.0,substitution,regular,59,,False,,,,,,,,,,Diego Porfirio,1123398.0,Kevyson,1389980.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,125901637.0,substitution,regular,58,,False,,,,,,,,,,Elvis,156028.0,Jonathan Cafú,790103.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,124952640.0,card,yellow,57,,True,,,,,,,Jhonathan,1467761.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,124959457.0,card,yellow,52,,False,,,,,,,Kevyson,1389980.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,341858055.0,goal,regular,45,1.0,True,2.0,1.0,Jota,1200993.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,341858015.0,goal,regular,45,,False,1.0,1.0,Bryan Borges,882748.0,Brandão,1464655.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,124952323.0,card,yellow,30,,False,,,,,,,Lucas Cunha,794139.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525986,uOsAfMc,Athletic Club x Ponte Preta,Athletic Club,Ponte Preta,341857180.0,goal,regular,27,,True,1.0,0.0,Ian Luccas,1046496.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,124952959.0,card,yellow,90,5.0,False,,,,,,,Thauan Willians,1589390.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,97219.0,varDecision,goalNotAwarded,90,2.0,False,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,341862081.0,goal,regular,90,1.0,False,3.0,1.0,Gonzalo Mastriani,345847.0,Willian Bigode,146308.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,341861749.0,goal,regular,86,,True,3.0,0.0,Gegê,335807.0,Juninho,330691.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,125901899.0,substitution,regular,81,,True,,,,,,,,,,Djalma,973933.0,Nicolas,841336.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,125901817.0,substitution,regular,71,,False,,,,,,,,,,Alê,869564.0,Felipe Amaral,1201949.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,125901747.0,substitution,regular,65,,True,,,,,,,,,,Cadu,1199473.0,Anselmo Ramon,125032.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,125901675.0,substitution,regular,60,,False,,,,,,,,,,Fernando Elizari,249911.0,Eduardo Person,938482.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,125901674.0,substitution,regular,60,,False,,,,,,,,,,Matías Segovia,988622.0,Gabriel Barros,1020259.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,125901629.0,substitution,injury,53,,True,,,,,,,,,,Juninho,330691.0,Lourenço,879871.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,125901605.0,substitution,regular,46,,False,,,,,,,,,,Willian Bigode,146308.0,Yago Souza,1485488.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,125901585.0,substitution,regular,46,,False,,,,,,,,,,Paulinho,1485496.0,Artur,360160.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,125901584.0,substitution,regular,46,,True,,,,,,,,,,Murilo Camara,2055851.0,Lucas Lima,244589.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,125901579.0,substitution,regular,46,,True,,,,,,,,,,Guilherme Baldória,1587920.0,Jean Carlos,1588737.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,124952462.0,card,yellow,45,2.0,True,,,,,,,Nicolas,841336.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,124952449.0,card,red,43,,True,,,,,,,Filipe Machado,844601.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,341857358.0,goal,penalty,31,,True,2.0,0.0,Tadeu,552172.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,341856046.0,goal,penalty,9,,True,1.0,0.0,Anselmo Ramon,125032.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,97208.0,varDecision,penaltyNotAwarded,5,,False,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525989,kOsyO,Goiás x América Mineiro,Goiás,América Mineiro,124959475.0,card,yellow,-5,,True,,,,,,,Daniel Paulista,,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,341868041.0,goal,regular,90,6.0,True,1.0,3.0,Carlão,922564.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,341867820.0,goal,regular,89,,False,0.0,3.0,André Luiz,1016673.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,124953207.0,card,yellow,85,,False,,,,,,,Kozlinski,879859.0,Time wasting,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,125902395.0,substitution,regular,83,,False,,,,,,,,,,João Tavares,1400331.0,Thalis Cantanhede,856357.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,125902387.0,substitution,regular,83,,True,,,,,,,,,,Jardiel,1631875.0,Diego Galo,1651675.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,125902311.0,substitution,regular,73,,False,,,,,,,,,,Paulinho Moccelin,341145.0,Vitinho,2125637.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,125902312.0,substitution,regular,73,,False,,,,,,,,,,Heron,992611.0,André Dhominique,1177384.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,125902306.0,substitution,injury,72,,False,,,,,,,,,,Fabiano,1819690.0,Lucas Marques,796100.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,125902278.0,substitution,regular,66,,True,,,,,,,,,,Carlão,922564.0,Robson,850987.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,125902270.0,substitution,regular,66,,True,,,,,,,,,,Diego Mathias,1047223.0,Tavinho,1836636.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,125902241.0,substitution,regular,59,,True,,,,,,,,,,Juninho,1016874.0,Luís Oyama,922570.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,125902240.0,substitution,regular,59,,True,,,,,,,,,,Christian Ortíz,293235.0,Rômulo,1105078.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,341866293.0,goal,regular,57,,False,0.0,2.0,Lucas Marques,796100.0,Iago Teles,1125099.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,341865822.0,goal,regular,48,,False,0.0,1.0,Bruno Santos,1105781.0,Vitinho,2125637.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,125902225.0,substitution,regular,46,,False,,,,,,,,,,Bruno Santos,1105781.0,Gilberto,158561.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,124953056.0,card,yellow,36,,False,,,,,,,Iago Teles,1125099.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,124953039.0,card,yellow,28,,False,,,,,,,Kevyn,931758.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,1,15525985,xPsokeb,Grêmio Novorizontino x Londrina,Grêmio Novorizontino,Londrina,124953151.0,card,yellow,-5,,False,,,,,,,Allan Rodrigo Aal,,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,124996047.0,card,yellow,90,3.0,True,,,,,,,Luis Mandaca,1116677.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,124996048.0,card,yellow,90,2.0,False,,,,,,,Nicolas Careca,606612.0,Time wasting,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,124996045.0,card,yellow,87,,True,,,,,,,Allanzinho,988782.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,125961426.0,substitution,injury,85,,False,,,,,,,,,,Carlinhos,1467119.0,Eduardo Brock,866775.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,125961423.0,substitution,regular,82,,False,,,,,,,,,,Nicolas Careca,606612.0,Robson,850987.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,125961408.0,substitution,regular,71,,False,,,,,,,,,,Tavinho,1836636.0,Vinicius Paiva,990160.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,125961407.0,substitution,regular,71,,False,,,,,,,,,,Christian Ortiz,293235.0,Rômulo,1105078.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,125961406.0,substitution,regular,68,,True,,,,,,,,,,Allanzinho,988782.0,Marcos Paulo,962027.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,125961405.0,substitution,regular,68,,True,,,,,,,,,,Alan Kardec,39656.0,Raí,1175321.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,124996040.0,card,yellow,66,,True,,,,,,,Marcos Paulo,1170913.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,124996034.0,card,yellow,59,,False,,,,,,,Nilson Castrillón,833742.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,125961377.0,substitution,regular,58,,True,,,,,,,,,,Alisson Safira,870927.0,Manuel Castro,340143.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,125961376.0,substitution,regular,57,,True,,,,,,,,,,Nathan,1016912.0,Raí Ramos,879591.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,125961337.0,substitution,regular,46,,False,,,,,,,,,,Juninho,1016874.0,Diego Mathias,1047223.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,124996003.0,card,yellow,24,,False,,,,,,,Luís Oyama,922570.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526004,FOsokeb,Juventude x Grêmio Novorizontino,Juventude,Grêmio Novorizontino,124995989.0,card,yellow,13,,True,,,,,,,Luan Martins Gonçalves,2120751.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,125961519.0,substitution,regular,86,,False,,,,,,,,,,Eric,1640518.0,Lorenzo,2114147.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,124996075.0,card,yellow,86,,False,,,,,,,Hernandes,976884.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,124996071.0,card,yellow,81,,False,,,,,,,David,1633878.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,125961516.0,substitution,regular,79,,False,,,,,,,,,,Hernandes,976884.0,Rodrigo,954327.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,125961515.0,substitution,regular,78,,True,,,,,,,,,,Rodrigo Santos,1173040.0,Maurício Júnior,1118234.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,124996067.0,card,yellow,76,,True,,,,,,,Lucas Emanoel,2104437.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,125961468.0,substitution,regular,73,,True,,,,,,,,,,Juan Miritello,1003721.0,Tomás Pochettino,824626.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,125961460.0,substitution,injury,67,,False,,,,,,,,,,Weverson,1106499.0,Luiz Otavio,870111.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,125961455.0,substitution,regular,61,,True,,,,,,,,,,Lucas Emanoel,2104437.0,Lucca Prior,1631235.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,125961454.0,substitution,regular,59,,True,,,,,,,,,,Lucas Crispim,795178.0,Gabriel Fuentes,927551.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,125961439.0,substitution,regular,58,,True,,,,,,,,,,Rodriguinho,1174770.0,Ryan Gustavo,1170779.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,125961425.0,substitution,regular,46,,False,,,,,,,,,,João Basso,850955.0,Luisão,1632328.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,125961424.0,substitution,regular,46,,False,,,,,,,,,,Kauan Cristtyan,1631777.0,Vinicius Peixoto,1875994.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,124996057.0,card,red,-5,,True,,,,,,,Thiago Carpini,,Violent conduct,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525999,vPscJu,Fortaleza x Cuiabá,Fortaleza,Cuiabá,124996058.0,card,red,-5,,False,,,,,,,Eduardo Barros,,Violent conduct,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,124999124.0,card,yellow,90,2.0,True,,,,,,,Gustavo,124766.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,124999123.0,card,yellow,90,1.0,True,,,,,,,Gonzalo Mastriani,345847.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,125967075.0,substitution,regular,90,,False,,,,,,,,,,Thiago Moraes,1131921.0,Zé Hugo,1166468.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,124999119.0,card,yellow,89,,False,,,,,,,Matheus Sales,822935.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,125967051.0,substitution,regular,83,,False,,,,,,,,,,Jonathan,882351.0,Gabriel Inocêncio,1047680.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,125967050.0,substitution,regular,83,,False,,,,,,,,,,Jefferson Nem,835259.0,Kelvin,869675.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,125967040.0,substitution,regular,78,,True,,,,,,,,,,Paulo Victor,1107995.0,Eduardo Person,938482.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,124999068.0,card,yellow,76,,False,,,,,,,Luizão,1126962.0,Time wasting,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,125967025.0,substitution,regular,75,,False,,,,,,,,,,Matheus Sales,822935.0,Rafael Gava,870920.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,125967024.0,substitution,regular,75,,False,,,,,,,,,,Luizão,1126962.0,Hygor,832472.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,125967016.0,substitution,regular,72,,True,,,,,,,,,,Matías Segovia,988622.0,Willian Bigode,146308.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,125967015.0,substitution,regular,72,,True,,,,,,,,,,Jhonny,1185449.0,Léo Alaba,1105945.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,125966993.0,substitution,regular,61,,True,,,,,,,,,,Yago Souza,1485488.0,Felipe Amaral,1201949.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,343211912.0,goal,regular,59,,False,1.0,2.0,Zé Hugo,1166468.0,Patrick Brey,871192.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,124998981.0,card,yellow,54,,False,,,,,,,Zé Hugo,1166468.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,125966980.0,substitution,regular,46,,True,,,,,,,,,,Thauan Willians,1589390.0,Gabriel Barros,1020259.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,124998875.0,card,yellow,45,4.0,False,,,,,,,Kelvin,869675.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,343209490.0,goal,regular,32,,False,1.0,1.0,Everton Morelli,928137.0,Rafael Gava,870920.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,343208080.0,goal,regular,8,,True,1.0,0.0,Gonzalo Mastriani,345847.0,Willian Bigode,146308.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525997,yOsEO,América Mineiro x Botafogo-SP,América Mineiro,Botafogo-SP,124998849.0,card,yellow,-5,,False,,,,,,,Cláudio Tencati,,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,343217117.0,goal,regular,90,6.0,False,2.0,2.0,Esli García,1019977.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,124999272.0,card,yellow,88,,False,,,,,,,Luis Fellipe,1467379.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,125967245.0,substitution,regular,87,,True,,,,,,,,,,Juninho,2030576.0,Iago Teles,1125099.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,125967220.0,substitution,injury,81,,True,,,,,,,,,,Fabiano,1819690.0,Lucas Marques,796100.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,125967216.0,substitution,regular,81,,True,,,,,,,,,,Gabriel Lacerda,1047847.0,Thalis Cantanhede,856357.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,125967210.0,substitution,regular,76,,False,,,,,,,,,,Cadu,1199473.0,Gegê,335807.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,125967199.0,substitution,regular,75,,True,,,,,,,,,,Paulinho Moccelin,341145.0,Vitinho,2125637.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,125967194.0,substitution,regular,69,,False,,,,,,,,,,Diego Caito,1468270.0,Rodrigo Soares,804765.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,124999206.0,card,yellow,65,,True,,,,,,,Lucas Marques,796100.0,Time wasting,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,125967174.0,substitution,regular,62,,False,,,,,,,,,,Esli García,1019977.0,Lucas Lima,244589.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,125967173.0,substitution,regular,62,,False,,,,,,,,,,Bruno Sávio,840066.0,Jean Carlos,1588737.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,124999190.0,card,yellow,60,,True,,,,,,,Iago Teles,1125099.0,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,343214940.0,goal,regular,59,,True,2.0,1.0,Iago Teles,1125099.0,Bruno Santos,1105781.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,124999178.0,card,yellow,54,,False,,,,,,,Lucas Lima,244589.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,125967120.0,substitution,regular,46,,False,,,,,,,,,,Juninho,330691.0,Guilherme Baldória,1587920.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,125967119.0,substitution,regular,46,,True,,,,,,,,,,Weverton,985888.0,André Dhominique,1177384.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,124999111.0,card,yellow,45,,True,,,,,,,Kevyn,931758.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,124999105.0,card,yellow,42,,False,,,,,,,Luiz Felipe,831993.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,124999080.0,card,yellow,39,,False,,,,,,,Lourenço,879871.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,343212857.0,goal,regular,38,,False,1.0,1.0,Anselmo Ramon,125032.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,343212555.0,goal,regular,33,,True,1.0,0.0,Bruno Santos,1105781.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,124999041.0,card,yellow,32,,True,,,,,,,Vitinho,2125637.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525998,kOsxP,Londrina x Goiás,Londrina,Goiás,124999010.0,card,yellow,23,,False,,,,,,,Guilherme Baldória,1587920.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,343223077.0,goal,regular,81,,False,1.0,1.0,Sánchez,870753.0,Giulio,1631766.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,125967577.0,substitution,regular,75,,False,,,,,,,,,,Alex Silva,335187.0,Fernando,1017746.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,125967576.0,substitution,regular,74,,True,,,,,,,,,,Danilo Barcelos,551576.0,Diego Porfirio,1123398.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,125967575.0,substitution,regular,74,,True,,,,,,,,,,Bruno Lopes,342145.0,Elvis,156028.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,124999572.0,card,yellow,71,,True,,,,,,,Bryan Borges,882748.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,125967514.0,substitution,regular,69,,True,,,,,,,,,,Lucas Justen,1521960.0,Thalys,995699.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,125967511.0,substitution,regular,66,,False,,,,,,,,,,Sánchez,870753.0,Wendel Silva,937265.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,125967510.0,substitution,regular,66,,False,,,,,,,,,,Giulio,1631766.0,Matheus Araújo,1002617.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,124999559.0,card,yellow,65,,True,,,,,,,David Braz,46942.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,124999555.0,card,yellow,64,,False,,,,,,,Matheus Araújo,1002617.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,125967498.0,substitution,injury,59,,True,,,,,,,,,,Léo Gomes,931751.0,Murilo,2035942.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,125967497.0,substitution,injury,59,,True,,,,,,,,,,Daniel Baianinho,1109043.0,Luis Phelipe,974310.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,125967494.0,substitution,regular,54,,False,,,,,,,,,,Matheusinho,822523.0,Fernandinho,871219.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,125967489.0,substitution,regular,54,,False,,,,,,,,,,Juan Alano,875906.0,Richardson,870758.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,343221775.0,goal,regular,53,,True,1.0,0.0,Luis Phelipe,974310.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,124999505.0,card,yellowRed,45,,False,,,,,,,Lucas Lima,1048254.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525995,uOsbP,Ponte Preta x Ceará,Ponte Preta,Ceará,124999441.0,card,yellow,23,,False,,,,,,,Lucas Lima,1048254.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,124999651.0,card,red,90,3.0,False,,,,,,,Allyson,809194.0,Professional foul last man,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,97349.0,varDecision,mistakenIdentity,90,3.0,False,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,97368.0,varDecision,cardUpgrade,90,2.0,False,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,124999635.0,card,yellow,88,,False,,,,,,,Paulo Vitor,1488136.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,124999634.0,card,yellow,86,,False,,,,,,,Bruno Baldini,2055361.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,124999632.0,card,yellow,86,,False,,,,,,,Walace dos Santos França,2436887.0,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,343224644.0,goal,regular,85,,False,0.0,1.0,Walace dos Santos França,2436887.0,Allyson,809194.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,125967683.0,substitution,regular,81,,False,,,,,,,,,,Walace dos Santos França,2436887.0,Felipe Avenatti,308058.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,125967670.0,substitution,regular,73,,True,,,,,,,,,,Vinicius Barata,871205.0,Douglas Baggio,795035.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,124999617.0,card,yellow,72,,False,,,,,,,Wallison,988671.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,125967647.0,substitution,regular,68,,False,,,,,,,,,,Wenderson,1019166.0,Luiz Henrique,1015283.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,125967646.0,substitution,regular,68,,False,,,,,,,,,,Sorriso,1897879.0,Thayllon Roberth,1633708.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,125967634.0,substitution,regular,60,,True,,,,,,,,,,David Braw,1189439.0,Dadá Belmonte,926786.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,125967633.0,substitution,regular,59,,True,,,,,,,,,,Guilherme Pato,1018095.0,Danielzinho,840218.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,124999546.0,card,yellow,45,1.0,False,,,,,,,Zé Ricardo,840132.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,125967486.0,substitution,injury,43,,True,,,,,,,,,,Guilherme Estrella,1634144.0,Pedro Castro,243185.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,124999537.0,card,yellow,35,,False,,,,,,,Douglas Teixeira,1609565.0,Time wasting,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,124999525.0,card,yellow,26,,True,,,,,,,Fábio Alemão,911436.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526003,pWcsHPi,CRB x Avaí,CRB,Avaí,125967425.0,substitution,injury,15,,False,,,,,,,,,,Paulo Vitor,1488136.0,Daniel Penha,862256.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,125967693.0,substitution,regular,90,5.0,False,,,,,,,,,,Gabriel Moyses,1468837.0,Ronaldo Tavares,828707.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,125967690.0,substitution,regular,88,,False,,,,,,,,,,Pedro Oliveira,1175752.0,Ian Luccas,1046496.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,125967681.0,substitution,regular,79,,True,,,,,,,,,,Thiaguinho,2207925.0,Fellipe Mateus,865321.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,125967680.0,substitution,injury,79,,True,,,,,,,,,,João Carlos,1462654.0,Jhonata Robert,998494.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,124999612.0,card,yellow,68,,True,,,,,,,Hiago Alves,1914330.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,125967642.0,substitution,regular,68,,True,,,,,,,,,,Romarinho,870578.0,Rómulo Otero,845323.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,343223577.0,goal,penalty,61,,True,1.0,1.0,Jhonata Robert,998494.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,125967632.0,substitution,regular,58,,False,,,,,,,,,,Kauan Rodrigues,1516708.0,Gian Cabezas,1099301.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,125967598.0,substitution,regular,46,,False,,,,,,,,,,Gabriel Indio,2282980.0,Ruan Lucas de Assis,1495892.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,125967597.0,substitution,regular,46,,False,,,,,,,,,,Joao Miguel,2032278.0,Jota,1200993.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,125967596.0,substitution,regular,46,,True,,,,,,,,,,Marcinho,840148.0,Eduardo Biasi,870800.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,124999544.0,card,red,43,,False,,,,,,,Dixon Vera,1197424.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,124999543.0,card,yellow,40,,True,,,,,,,Nicolas,866564.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,124999541.0,card,yellow,36,,False,,,,,,,Dixon Vera,1197424.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,125967464.0,substitution,regular,32,,True,,,,,,,,,,Hiago Alves,1914330.0,Bruno Alves,551810.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,124999534.0,card,yellow,30,,True,,,,,,,Fellipe Mateus,865321.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,124999508.0,card,yellow,17,,False,,,,,,,Ruan Lucas de Assis,1495892.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,124999506.0,card,yellow,14,,False,,,,,,,Jota,1200993.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,124999503.0,card,yellow,11,,False,,,,,,,Jhonathan,1467761.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,343219516.0,goal,regular,2,,False,0.0,1.0,Ronaldo Tavares,828707.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15526001,JOsAfMc,Criciúma x Athletic Club,Criciúma,Athletic Club,124999519.0,card,yellow,-5,,False,,,,,,,Glauco Tadeu,839760.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,125002847.0,card,yellow,90,2.0,False,,,,,,,Neto Paraíba,1148584.0,Time wasting,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,125970206.0,substitution,regular,90,,False,,,,,,,,,,Jhan Pool Torres,1899903.0,Pablo,374486.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,125970205.0,substitution,regular,90,,False,,,,,,,,,,Caio Dantas,869574.0,Aylon,364528.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,343412443.0,goal,regular,84,,False,1.0,2.0,Gabriel Boschilia,358540.0,Aylon,364528.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,125970182.0,substitution,regular,79,,True,,,,,,,,,,Marcão Silva,866754.0,Foguinho,888385.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,125970174.0,substitution,regular,78,,False,,,,,,,,,,Neto Paraíba,1148584.0,Vinícius Diniz,1148464.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,125970156.0,substitution,regular,68,,True,,,,,,,,,,Junior Urso,243251.0,Dudu Miraíma,1017251.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,125970155.0,substitution,regular,68,,True,,,,,,,,,,Pedro Vitor,976852.0,Pedrinho,896248.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,125970149.0,substitution,regular,65,,False,,,,,,,,,,Hildeberto Pereira,352880.0,Edwin Torres,855966.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,125970105.0,substitution,regular,57,,True,,,,,,,,,,Lucas Rian,1893682.0,Daniel Amorim,869443.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,125970106.0,substitution,regular,57,,True,,,,,,,,,,Pablo Dyego,550248.0,Fabrício Daniel,1128767.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,125970054.0,substitution,regular,46,,False,,,,,,,,,,Matheus Trindade,852556.0,Índio,981621.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,125002719.0,card,yellow,45,5.0,True,,,,,,,Helder Maciel,980777.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,343408802.0,goal,regular,41,,False,1.0,1.0,Pablo,374486.0,Mikael Doka,1067652.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,125002634.0,card,yellow,32,,True,,,,,,,Fabrício Daniel,1128767.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,125002635.0,card,yellow,30,,False,,,,,,,Índio,981621.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,125002626.0,card,yellow,20,,False,,,,,,,Miranda,926868.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,2,15525996,JRpseau,São Bernardo x Operário-PR,São Bernardo,Operário-PR,343406256.0,goal,regular,2,,True,1.0,0.0,Romisson,911123.0,Fabrício Daniel,1128767.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125014604.0,card,yellow,89,,True,,,,,,,Rodrigo Santos,1173040.0,Time wasting,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125985848.0,substitution,regular,89,,True,,,,,,,,,,Rodrigo Santos,1173040.0,Tomás Pochettino,824626.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125985838.0,substitution,injury,86,,False,,,,,,,,,,Nathan,1016912.0,Marcos Paulo,1170913.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125985815.0,substitution,regular,83,,False,,,,,,,,,,Marcos Paulo,962027.0,Wadson,1192068.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125985755.0,substitution,regular,78,,False,,,,,,,,,,Carlinhos,2543317.0,Luan Martins Gonçalves,2120751.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125985754.0,substitution,regular,78,,False,,,,,,,,,,Índio,868859.0,Messias,839765.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125985753.0,substitution,regular,78,,True,,,,,,,,,,Vitinho,1066721.0,Luiz Fernando,874143.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125985597.0,substitution,regular,64,,True,,,,,,,,,,Luan Freitas,986064.0,Lucas Sasha,123225.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125985596.0,substitution,injury,64,,True,,,,,,,,,,Lucas Crispim,795178.0,Maurício Júnior,1118234.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125014417.0,card,yellow,60,,True,,,,,,,Luiz Fernando,874143.0,Time wasting,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125985532.0,substitution,regular,59,,True,,,,,,,,,,Rodriguinho,1174770.0,Ryan Gustavo,1170779.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125985533.0,substitution,regular,59,,True,,,,,,,,,,Juan Miritello,1003721.0,Lucas Emanoel,2104437.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,343647915.0,goal,regular,50,,False,2.0,1.0,Alan Kardec,39656.0,Manuel Castro,340143.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125985398.0,substitution,regular,46,,False,,,,,,,,,,Fábio Lima,1200923.0,Raí Ramos,879591.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125985397.0,substitution,regular,46,,False,,,,,,,,,,Alan Kardec,39656.0,Alisson Safira,870927.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,343644895.0,goal,ownGoal,45,1.0,True,2.0,0.0,Luan Martins Gonçalves,2120751.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,343640864.0,goal,penalty,18,,True,1.0,0.0,Maílton,973857.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,97528.0,varDecision,penaltyNotAwarded,15,,True,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125013930.0,card,yellow,11,,True,,,,,,,Maílton,973857.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,97526.0,varDecision,goalAwarded,4,,True,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526009,FOsvP,Fortaleza x Juventude,Fortaleza,Juventude,125019973.0,card,red,-5,,False,,,,,,,Mauricio Barbieri,,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,125015217.0,card,yellow,90,7.0,False,,,,,,,João Gabriel,2118168.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,118621361.0,inGamePenalty,missed,90,,True,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,125015158.0,card,yellow,86,,False,,,,,,,Matheus Araújo,1002617.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,125986486.0,substitution,regular,84,,False,,,,,,,,,,Matheus Araújo,1002617.0,Juan Alano,875906.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,125986476.0,substitution,regular,80,,True,,,,,,,,,,Nino Paraíba,77375.0,Railan,1047213.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,125986473.0,substitution,regular,80,,True,,,,,,,,,,Weverson,1106499.0,João Basso,850955.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,343658051.0,goal,regular,79,,False,0.0,2.0,Juan Alano,875906.0,João Gabriel,2118168.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,125986446.0,substitution,regular,77,,False,,,,,,,,,,Luiz Otávio,871204.0,Richardson,870758.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,343657490.0,goal,regular,71,,False,0.0,1.0,Juan Alano,875906.0,Wendel Silva,937265.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,125986417.0,substitution,regular,70,,True,,,,,,,,,,Gabriel Mineiro,1936059.0,Kauan Cristtyan,1631777.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,125986416.0,substitution,regular,70,,True,,,,,,,,,,Vinicius Peixoto,1875994.0,Rodrigo,954327.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,125015080.0,card,yellow,68,,False,,,,,,,Richardson,870758.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,118621358.0,inGamePenalty,missed,61,,True,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,125986361.0,substitution,regular,58,,True,,,,,,,,,,Mateus Santos,904837.0,Pepê,946945.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,125986363.0,substitution,regular,58,,False,,,,,,,,,,Fernandinho,871219.0,Giulio,1631766.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,125986362.0,substitution,regular,57,,False,,,,,,,,,,Wendel Silva,937265.0,Matheusinho,822523.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,125986317.0,substitution,regular,46,,False,,,,,,,,,,João Gabriel,2118168.0,Melk,2440251.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526013,bPscJu,Cuiabá x Ceará,Cuiabá,Ceará,125014931.0,card,yellow,30,,False,,,,,,,Richard,883906.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125015211.0,card,red,90,2.0,False,,,,,,,Jonathan Cafú,790103.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125015172.0,card,yellow,84,,True,,,,,,,Dodô,1018871.0,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125986498.0,substitution,regular,81,,False,,,,,,,,,,Jonathan Cafú,790103.0,Bryan Borges,882748.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125986497.0,substitution,regular,81,,False,,,,,,,,,,Danilo Barcelos,551576.0,Diego Porfirio,1123398.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,343658244.0,goal,penalty,78,,True,1.0,0.0,Vinícius,124807.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125986447.0,substitution,regular,74,,False,,,,,,,,,,Rodriguinho,1147005.0,William Pottker,243501.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125986448.0,substitution,regular,74,,False,,,,,,,,,,André Lima,1116646.0,Elvis,156028.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125986445.0,substitution,regular,73,,True,,,,,,,,,,Derek Freitas,924423.0,Paulo Sérgio,34168.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125986444.0,substitution,regular,73,,True,,,,,,,,,,Arnaldo,801074.0,Matheus Ribeiro,794878.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,97542.0,varDecision,penaltyAwarded,70,,True,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125015086.0,card,red,67,,False,,,,,,,Rodrigo Saravia,1112862.0,Professional foul last man,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125986415.0,substitution,regular,65,,False,,,,,,,,,,Bruno Lopes,342145.0,Luis Phelipe,974310.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125986373.0,substitution,regular,58,,True,,,,,,,,,,Victor Andrade,243189.0,Juninho,576004.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125015034.0,card,yellow,52,,True,,,,,,,Wenderson,958676.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125986319.0,substitution,regular,46,,True,,,,,,,,,,Ramon,958169.0,Leonai Souza de Almeida,1021850.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125014947.0,card,yellow,45,3.0,False,,,,,,,Luis Phelipe,974310.0,Time wasting,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125014870.0,card,yellow,31,,True,,,,,,,Leonai Souza de Almeida,1021850.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526012,uOslP,Náutico x Ponte Preta,Náutico,Ponte Preta,125015041.0,card,yellow,-5,,True,,,,,,,Helio Dos Anjos,,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,125987151.0,substitution,regular,90,,False,,,,,,,,,,Ariel Gomes,1184843.0,Cristiano,1021866.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,125015598.0,card,yellow,89,,True,,,,,,,Gustavo Puskas,2034257.0,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,343665871.0,goal,regular,88,,True,2.0,1.0,Gustavo Puskas,2034257.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,125987088.0,substitution,injury,85,,True,,,,,,,,,,Gustavo Puskas,2034257.0,Rafael Silva,243963.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,125987057.0,substitution,regular,78,,True,,,,,,,,,,Nathan Camargo,1199453.0,Willian Maranhão,868120.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,125015534.0,card,yellow,74,,True,,,,,,,Dudu,2510831.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,125986996.0,substitution,regular,73,,False,,,,,,,,,,Léo Tocantins,965313.0,Leo Jacó,1462709.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,125986997.0,substitution,regular,72,,False,,,,,,,,,,Gustavo Coutinho,981595.0,Marrony,926871.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,125015525.0,card,yellow,67,,False,,,,,,,Cristiano,1021866.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,125986977.0,substitution,regular,66,,True,,,,,,,,,,Hayner,807767.0,Elias,876202.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,125986964.0,substitution,regular,66,,True,,,,,,,,,,Emerson Urso,1105974.0,Janderson,870898.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,343664405.0,goal,penalty,65,,True,1.0,1.0,Marquinhos Gabriel,90812.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,97551.0,varDecision,penaltyNotAwarded,61,,True,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,125986913.0,substitution,regular,59,,False,,,,,,,,,,Guilherme Marques,109610.0,Assis,2034254.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,125986912.0,substitution,regular,58,,False,,,,,,,,,,Bruno José,974329.0,Geovany Soares,1640631.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,125015455.0,card,yellow,56,,False,,,,,,,Leo Jacó,1462709.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,125986830.0,substitution,regular,46,,True,,,,,,,,,,Ryan Lima,1634692.0,João Vieira,1046490.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,343661364.0,goal,regular,33,,False,0.0,1.0,Marrony,926871.0,Geovany Soares,1640631.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526014,wPsoWc,Vila Nova FC x Atlético Goianiense,Vila Nova FC,Atlético Goianiense,125015329.0,card,yellow,28,,True,,,,,,,Higor,1991456.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125994789.0,substitution,regular,85,,True,,,,,,,,,,Wesley Gasolina,994479.0,Wallison,988671.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125994788.0,substitution,regular,85,,True,,,,,,,,,,Sorriso,1897879.0,Jean Lucas,902684.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125994787.0,substitution,regular,85,,True,,,,,,,,,,Paulo Vitor,1488136.0,Zé Ricardo,840132.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125021061.0,card,yellow,84,,False,,,,,,,Miranda,926868.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125021049.0,card,yellow,81,,False,,,,,,,Mikael Doka,1067652.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125021046.0,card,yellow,80,,False,,,,,,,José Cuenú,1098309.0,Time wasting,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125994769.0,substitution,regular,77,,False,,,,,,,,,,Caio Dantas,869574.0,Pablo,374486.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125994768.0,substitution,regular,76,,False,,,,,,,,,,Índio,981621.0,Matheus Trindade,852556.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125994729.0,substitution,regular,72,,True,,,,,,,,,,Walace dos Santos França,2436887.0,Felipe Avenatti,308058.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125020991.0,card,yellow,64,,False,,,,,,,Matheus Trindade,852556.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125994688.0,substitution,regular,63,,False,,,,,,,,,,Neto Paraíba,1148584.0,Aylon,364528.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125994664.0,substitution,regular,58,,False,,,,,,,,,,Edwin Torres,855966.0,Hildeberto Pereira,352880.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125994663.0,substitution,regular,58,,False,,,,,,,,,,Gabriel Feliciano,1463925.0,Moraes Júnior,877139.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125994634.0,substitution,injury,55,,True,,,,,,,,,,Cristiano,215954.0,Wenderson,1019166.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125020862.0,card,yellow,45,6.0,False,,,,,,,Hildeberto Pereira,352880.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,97624.0,varDecision,goalAwarded,42,,True,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125020770.0,card,yellow,30,,True,,,,,,,Jean Lucas,902684.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125020760.0,card,yellow,28,,False,,,,,,,Aylon,364528.0,Persistent fouling,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526011,pWcsJRp,Avaí x Operário-PR,Avaí,Operário-PR,125020736.0,card,yellow,24,,True,,,,,,,Bruno Baldini,2055361.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,343774949.0,goal,regular,90,4.0,False,1.0,1.0,Dadá Belmonte,926786.0,Diogo Hereda,981295.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125021472.0,card,yellow,87,,False,,,,,,,Dadá Belmonte,926786.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125021471.0,card,yellow,87,,True,,,,,,,Jhilmar Lora,1005176.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125021463.0,card,yellow,86,,True,,,,,,,Nilson Castrillón,833742.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125021464.0,card,yellow,86,,False,,,,,,,Danielzinho,840218.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125995395.0,substitution,injury,80,,True,,,,,,,,,,Matheus Bianqui,981746.0,Nicolas Careca,606612.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125995381.0,substitution,regular,77,,False,,,,,,,,,,Guilherme Estrella,1634144.0,Luizão,885854.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125995380.0,substitution,regular,77,,False,,,,,,,,,,Leo Campos,125034.0,Lucas Lovat,810689.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,343773771.0,goal,regular,74,,True,1.0,0.0,Carlão,922564.0,Rômulo,1105078.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125021420.0,card,yellow,72,,False,,,,,,,Fábio Alemão,911436.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125995337.0,substitution,regular,71,,True,,,,,,,,,,Nicolas Careca,606612.0,Vinicius Paiva,990160.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125995382.0,substitution,injury,71,,False,,,,,,,,,,Patrick De Lucca,979868.0,Crystopher,869676.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125995338.0,substitution,regular,71,,False,,,,,,,,,,Guilherme Pato,1018095.0,Douglas Baggio,795035.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125995317.0,substitution,regular,68,,False,,,,,,,,,,João Neto,1110033.0,Mikael,994017.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125995297.0,substitution,regular,65,,True,,,,,,,,,,Carlão,922564.0,Robson,850987.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125021370.0,card,yellow,63,,True,,,,,,,Patrick,1148340.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125021345.0,card,yellow,54,,True,,,,,,,Luís Oyama,922570.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125021333.0,card,yellow,48,,False,,,,,,,Lucas Lovat,810689.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125995218.0,substitution,regular,46,,True,,,,,,,,,,Jhilmar Lora,1005176.0,Leo Naldi,1101061.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125995214.0,substitution,regular,46,,True,,,,,,,,,,Luís Oyama,922570.0,Christian Ortiz,293235.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125021156.0,card,yellow,20,,False,,,,,,,Crystopher,869676.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526006,HPisokeb,Grêmio Novorizontino x CRB,Grêmio Novorizontino,CRB,125021507.0,card,yellow,-5,,True,,,,,,,Enderson Moreira,,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,125021935.0,card,yellow,90,4.0,False,,,,,,,Rafael Barcelos,1485499.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,125995927.0,substitution,regular,90,4.0,True,,,,,,,,,,Oluwasegun Samuel Otusanya,1486805.0,Ronaldo Tavares,828707.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,125021934.0,card,yellow,90,3.0,True,,,,,,,Diogo Batista de Souza,1588320.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,125995918.0,substitution,regular,89,,True,,,,,,,,,,Alexandre Pena,1808042.0,Kauan Rodrigues,1516708.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,343781213.0,goal,regular,82,,False,1.0,1.0,Gonzalo Mastriani,345847.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,125995841.0,substitution,regular,73,,False,,,,,,,,,,Val Soares,871681.0,Felipe Amaral,1201949.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,125995808.0,substitution,regular,67,,False,,,,,,,,,,Matías Segovia,988622.0,Jhonny,1185449.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,125995803.0,substitution,regular,63,,True,,,,,,,,,,Pedro Oliveira,1175752.0,Jota,1200993.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,125022868.0,card,yellow,62,,True,,,,,,,Jota,1200993.0,Time wasting,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,125995786.0,substitution,regular,57,,False,,,,,,,,,,Fernando Elizari,249911.0,Gabriel Barros,1020259.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,125995785.0,substitution,regular,57,,False,,,,,,,,,,Everton,1093892.0,Alê,869564.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,125995728.0,substitution,regular,46,,False,,,,,,,,,,Eduardo Person,938482.0,Nathan Cardoso,1126701.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,125995727.0,substitution,regular,46,,True,,,,,,,,,,Gian Cabezas,1099301.0,Ruan Lucas de Assis,1495892.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,125995726.0,substitution,regular,46,,True,,,,,,,,,,Joao Miguel,2032278.0,Bruninho,2032258.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,125021637.0,card,red,42,,True,,,,,,,Ian Luccas,1046496.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,125021634.0,card,yellow,39,,True,,,,,,,Bruninho,2032258.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526007,yOsAfMc,Athletic Club x América Mineiro,Athletic Club,América Mineiro,343777228.0,goal,regular,37,,True,1.0,0.0,Ronaldo Tavares,828707.0,Ruan Lucas de Assis,1495892.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,125022163.0,card,yellow,90,7.0,True,,,,,,,Pedrinho,2364097.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,343783561.0,goal,regular,90,3.0,False,1.0,2.0,Daniel Amorim,869443.0,Echaporã,981418.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,125022081.0,card,yellow,81,,False,,,,,,,Pedro Vitor,976852.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,125996003.0,substitution,regular,80,,True,,,,,,,,,,Matheus Sales,822935.0,Leandro Maciel,840847.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,125996002.0,substitution,regular,80,,True,,,,,,,,,,Luizão,1126962.0,Zé Hugo,1166468.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,125996000.0,substitution,injury,77,,False,,,,,,,,,,Lucas Fernandes,837871.0,Foguinho,888385.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,125995975.0,substitution,regular,72,,True,,,,,,,,,,Thiago Moraes,1131921.0,Rafael Gava,870920.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,125995974.0,substitution,regular,72,,True,,,,,,,,,,Wesley Pinheiro,1067632.0,Kelvin,869675.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,125995941.0,substitution,regular,65,,False,,,,,,,,,,Júnior Urso,243251.0,Dudu Miraíma,1017251.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,125021922.0,card,yellow,55,,True,,,,,,,Kelvin,869675.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,343781212.0,goal,regular,49,,False,1.0,1.0,Rodrigo Ferreira,1048150.0,Pedro Vitor,976852.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,125995887.0,substitution,regular,46,,False,,,,,,,,,,Echaporã,981418.0,Pedrinho,896248.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,125995886.0,substitution,regular,46,,False,,,,,,,,,,Daniel Amorim,869443.0,Fabrício Daniel,1128767.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,125995885.0,substitution,regular,46,,False,,,,,,,,,,Pedro Vitor,976852.0,Pablo Dyego,550248.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,97657.0,varDecision,goalAwarded,45,5.0,False,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,125021703.0,card,yellow,41,,False,,,,,,,Pará,552188.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,125021688.0,card,yellow,33,,True,,,,,,,Leandro Maciel,840847.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,125995661.0,substitution,regular,18,,True,,,,,,,,,,Pedrinho,2364097.0,Jonathan,882351.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526005,EOseau,Botafogo-SP x São Bernardo,Botafogo-SP,São Bernardo,343777082.0,goal,regular,4,,True,1.0,0.0,Hygor,832472.0,Jonathan,882351.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,126001954.0,substitution,injury,88,,True,,,,,,,,,,Juninho,330691.0,Lourenço,879871.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,126001932.0,substitution,regular,82,,True,,,,,,,,,,Guilherme Baldória,1587920.0,Filipe Machado,844601.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,126001909.0,substitution,injury,82,,True,,,,,,,,,,Lucas Ribeiro,945578.0,Gegê,335807.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,126001931.0,substitution,regular,82,,True,,,,,,,,,,Bruno Sávio,840066.0,Anselmo Ramon,125032.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,126001889.0,substitution,regular,71,,False,,,,,,,,,,Romarinho,870578.0,Diego Gonçalves,344077.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,126001870.0,substitution,regular,66,,False,,,,,,,,,,Léo Mana,1170769.0,Jean Irmer,848630.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,126001867.0,substitution,regular,65,,False,,,,,,,,,,Thiaguinho,2207925.0,Fellipe Mateus,865321.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,343880011.0,goal,regular,58,,True,1.0,0.0,Cadu,1199473.0,Anselmo Ramon,125032.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,126001815.0,substitution,regular,46,,True,,,,,,,,,,Cadu,1199473.0,Jean Carlos,1588737.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,126001814.0,substitution,regular,46,,False,,,,,,,,,,Hiago Alves,1914330.0,Marcinho,840148.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,126001812.0,substitution,regular,46,,False,,,,,,,,,,Guilherme Lobo,1148301.0,Bruno Alves,551810.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,3,15526010,kOsJO,Goiás x Criciúma,Goiás,Criciúma,125025918.0,card,yellow,37,,True,,,,,,,Lucas Lima,244589.0,Simulation,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,125040205.0,card,yellow,90,8.0,True,,,,,,,Rómulo Otero,845323.0,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,344308323.0,goal,regular,90,7.0,True,1.0,0.0,Rómulo Otero,845323.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,125040185.0,card,yellow,90,1.0,True,,,,,,,Luciano Castan,845110.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,125040175.0,card,yellow,89,,True,,,,,,,Marcelo Hermes,783490.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,126020849.0,substitution,regular,85,,False,,,,,,,,,,Marco Antonio Batistussi,1185811.0,Pedrinho,2364097.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,126020809.0,substitution,regular,76,,True,,,,,,,,,,Diego Gonçalves,344077.0,Guilherme Lobo,1148301.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,126020792.0,substitution,regular,70,,False,,,,,,,,,,Jefferson Nem,835259.0,Thiago Moraes,1131921.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,126020794.0,substitution,injury,69,,False,,,,,,,,,,Wallace,800407.0,Carlão,1022676.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,125040135.0,card,yellow,66,,True,,,,,,,Jean Irmer,848630.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,126020777.0,substitution,regular,64,,True,,,,,,,,,,Jean Irmer,848630.0,Thiaguinho,2207925.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,125040129.0,card,red,60,,True,,,,,,,Willean Lepo,868076.0,Violent conduct,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,97783.0,varDecision,cardUpgrade,58,,True,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,126020758.0,substitution,regular,57,,True,,,,,,,,,,Hiago Alves,1914330.0,Fellipe Mateus,865321.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,126020757.0,substitution,regular,57,,True,,,,,,,,,,Rómulo Otero,845323.0,Waguininho,924251.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,126020706.0,substitution,injury,49,,False,,,,,,,,,,Zé Hugo,1166468.0,Hygor,832472.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,126020675.0,substitution,regular,46,,False,,,,,,,,,,Leandro Maciel,840847.0,Rafael Gava,870920.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,126020674.0,substitution,regular,46,,True,,,,,,,,,,Nicolas,866564.0,Romarinho,870578.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,125040067.0,card,yellow,45,1.0,False,,,,,,,Carlão,1022676.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526021,EOsJO,Criciúma x Botafogo-SP,Criciúma,Botafogo-SP,125040057.0,card,yellow,43,,False,,,,,,,Patrick Brey,871192.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,126029367.0,substitution,regular,83,,True,,,,,,,,,,Carlinhos,2543317.0,Allanzinho,988782.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,126029366.0,substitution,regular,82,,True,,,,,,,,,,Ray,1464967.0,Alan Kardec,39656.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,126029341.0,substitution,regular,80,,False,,,,,,,,,,Djalma,973933.0,Nicolas,841336.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,126029278.0,substitution,injury,75,,True,,,,,,,,,,Índio,868859.0,Luan Martins Gonçalves,2120751.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,126029197.0,substitution,regular,67,,False,,,,,,,,,,Bruno Sávio,840066.0,Cadu,1199473.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,126029196.0,substitution,regular,67,,False,,,,,,,,,,Lucas Ribeiro,945578.0,Gegê,335807.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,126029195.0,substitution,regular,66,,True,,,,,,,,,,Alisson Safira,870927.0,Rodrigo Sam,794640.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,126029159.0,substitution,regular,66,,True,,,,,,,,,,Lucas Mineiro,840077.0,Raí Ramos,879591.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,125050556.0,card,yellow,61,,False,,,,,,,Lourenço,879871.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,344378464.0,goal,regular,60,,True,2.0,0.0,Alan Kardec,39656.0,Wadson,1192068.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,125045849.0,card,red,55,,False,,,,,,,Esli García,1019977.0,Violent conduct,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,97864.0,varDecision,cardUpgrade,54,,False,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,126029006.0,substitution,regular,46,,False,,,,,,,,,,Esli García,1019977.0,Anselmo Ramon,125032.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,126028987.0,substitution,regular,46,,False,,,,,,,,,,Pedrinho,1217904.0,Lucas Lima,244589.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,125045675.0,card,red,43,,False,,,,,,,Rodrigo Soares,804765.0,Professional foul last man,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,97860.0,varDecision,cardUpgrade,43,,False,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526024,kOsFO,Juventude x Goiás,Juventude,Goiás,344376622.0,goal,ownGoal,39,,True,1.0,0.0,Luiz Felipe,831993.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,125046658.0,card,yellow,90,11.0,False,,,,,,,Higor,1991456.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,97876.0,varDecision,goalAwarded,90,5.0,True,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,126030196.0,substitution,injury,84,,False,,,,,,,,,,Nathan Camargo,1199453.0,Dudu,2510831.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,126030135.0,substitution,regular,78,,False,,,,,,,,,,Gustavo Puskas,2034257.0,Rafael Silva,243963.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,126030134.0,substitution,injury,78,,False,,,,,,,,,,Willian Formiga,929687.0,Elias,876202.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,126030118.0,substitution,regular,74,,True,,,,,,,,,,Miguel,2168369.0,Murilo,2035942.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,126030117.0,substitution,regular,74,,True,,,,,,,,,,Brandão,1464655.0,William Pottker,243501.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,125046547.0,card,yellow,72,,True,,,,,,,Murilo,2035942.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,126030082.0,substitution,regular,70,,False,,,,,,,,,,Hayner,807767.0,Janderson,870898.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,126030081.0,substitution,regular,70,,False,,,,,,,,,,Bruno Xavier,901455.0,Ryan Lima,1634692.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,125046523.0,card,yellow,64,,False,,,,,,,Ryan Lima,1634692.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,126030047.0,substitution,regular,63,,True,,,,,,,,,,Diego Tavares,871003.0,Rodriguinho,1147005.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,125046467.0,card,yellow,54,,False,,,,,,,Rafael Silva,243963.0,Time wasting,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,126029936.0,substitution,regular,46,,True,,,,,,,,,,Luis Phelipe,974310.0,Elvis,156028.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,344380297.0,goal,regular,38,,False,0.0,1.0,Ryan Lima,1634692.0,Janderson,870898.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,125046268.0,card,yellow,30,,False,,,,,,,Pedro Romano,1417920.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,126029639.0,substitution,injury,6,,True,,,,,,,,,,Lucas Cunha,794139.0,David Braz,46942.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526015,uOswP,Ponte Preta x Vila Nova FC,Ponte Preta,Vila Nova FC,125046643.0,card,yellow,-5,,False,,,,,,,Guto Ferreira,,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,125047004.0,card,yellow,77,,True,,,,,,,Alex Silva,335187.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,125047001.0,card,yellow,76,,True,,,,,,,Sánchez,870753.0,Persistent fouling,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,126031002.0,substitution,regular,73,,True,,,,,,,,,,Melk,2440251.0,Matheusinho,822523.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,126030992.0,substitution,regular,72,,False,,,,,,,,,,Felipe Saraiva,882076.0,Dodô,1018871.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,126030973.0,substitution,regular,67,,True,,,,,,,,,,Juan Alano,875906.0,Vina,1101714.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,126030972.0,substitution,regular,67,,True,,,,,,,,,,Wendel Silva,937265.0,Matheus Araújo,1002617.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,126030969.0,substitution,regular,65,,False,,,,,,,,,,Paulo Sérgio,34168.0,Derek Freitas,924423.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,125046951.0,card,yellow,62,,False,,,,,,,Mateus Silva,870300.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,125046948.0,card,yellow,62,,True,,,,,,,Matheus Araújo,1002617.0,Time wasting,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,126030941.0,substitution,regular,60,,False,,,,,,,,,,Victor Andrade,243189.0,Juninho,576004.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,126030933.0,substitution,regular,58,,True,,,,,,,,,,Giulio,1631766.0,Fernandinho,871219.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,126030932.0,substitution,regular,58,,True,,,,,,,,,,Júlio César,1185832.0,Dieguinho,1016930.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,344384498.0,goal,regular,47,,True,1.0,0.0,Fernandinho,871219.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,126030799.0,substitution,regular,46,,False,,,,,,,,,,Ramon,958169.0,Leonai Souza de Almeida,1021850.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,126030790.0,substitution,regular,46,,False,,,,,,,,,,Arnaldo,801074.0,Matheus Ribeiro,794878.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,125046814.0,card,yellow,33,,False,,,,,,,Leonai Souza de Almeida,1021850.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,125046786.0,card,yellow,24,,True,,,,,,,Fernandinho,871219.0,Simulation,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,125046763.0,card,yellow,12,,False,,,,,,,Matheus Ribeiro,794878.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526019,bPslP,Ceará x Náutico,Ceará,Náutico,125046742.0,card,yellow,6,,False,,,,,,,Derek Freitas,924423.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,344440248.0,goal,regular,90,2.0,False,0.0,3.0,Tavinho,1836636.0,Juninho,1016874.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,126040119.0,substitution,regular,87,,False,,,,,,,,,,Carlão,922564.0,Robson,850987.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,126040110.0,substitution,regular,87,,False,,,,,,,,,,Leo Naldi,1101061.0,Diego Galo,1651675.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,126040062.0,substitution,regular,77,,True,,,,,,,,,,Eduardo Person,938482.0,Alê,869564.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,126040061.0,substitution,regular,77,,True,,,,,,,,,,Thauan Willians,1589390.0,Everton,1093892.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,125053492.0,card,yellow,76,,False,,,,,,,Diego Galo,1651675.0,Time wasting,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,344439737.0,goal,regular,74,,False,0.0,2.0,Sander,795014.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,344439674.0,goal,regular,71,,False,0.0,1.0,Diego Galo,1651675.0,Juninho,1016874.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,125053476.0,card,yellow,70,,False,,,,,,,Matheus Bianqui,981746.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,126040025.0,substitution,regular,69,,True,,,,,,,,,,Matías Segovia,988622.0,Val Soares,871681.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,126040024.0,substitution,regular,69,,True,,,,,,,,,,Yago Souza,1485488.0,Willian Bigode,146308.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,126040007.0,substitution,regular,65,,False,,,,,,,,,,Juninho,1016874.0,Rômulo,1105078.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,126039989.0,substitution,regular,62,,False,,,,,,,,,,Tavinho,1836636.0,Vinicius Paiva,990160.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,126039988.0,substitution,injury,62,,False,,,,,,,,,,Patrick,1148340.0,Dantas,1476558.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,125053420.0,card,yellow,53,,False,,,,,,,Dantas,1476558.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,125053417.0,card,yellow,52,,True,,,,,,,Dalbert,385386.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526017,yOsokeb,América Mineiro x Grêmio Novorizontino,América Mineiro,Grêmio Novorizontino,126039623.0,substitution,injury,27,,True,,,,,,,,,,Nathan Cardoso,1126701.0,Emerson Santos,844015.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,125053580.0,card,yellow,90,4.0,False,,,,,,,Weverson,1106499.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,126040124.0,substitution,regular,85,,True,,,,,,,,,,Felipe Augusto,847089.0,Vinícius Diniz,1148464.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,125053547.0,card,yellow,85,,True,,,,,,,Vinícius Diniz,1148464.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,126040125.0,substitution,regular,85,,False,,,,,,,,,,Luisão,1632328.0,Mateus Santos,904837.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,125053544.0,card,yellow,85,,False,,,,,,,Mateus Santos,904837.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,126040113.0,substitution,injury,84,,False,,,,,,,,,,Vinicius Peixoto,1875994.0,Calebe Costa,1645786.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,126040100.0,substitution,regular,83,,False,,,,,,,,,,Weverson,1106499.0,Hernandes,976884.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,126040082.0,substitution,regular,79,,True,,,,,,,,,,Pedro Vilhena,1009937.0,Aylon,364528.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,126040058.0,substitution,regular,75,,False,,,,,,,,,,Eric,1640518.0,Rodrigo,954327.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,125053494.0,card,red,73,,False,,,,,,,Marlon Lopes,870933.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,97970.0,varDecision,cardUpgrade,72,,False,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,126040030.0,substitution,regular,68,,False,,,,,,,,,,Mateus Santos,904837.0,Pepê,946945.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,126040029.0,substitution,regular,68,,True,,,,,,,,,,Neto Paraíba,1148584.0,Índio,981621.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,126040028.0,substitution,regular,68,,True,,,,,,,,,,Edwin Torres,855966.0,Hildeberto Pereira,352880.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,125053453.0,card,yellow,63,,False,,,,,,,David,1633878.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,125053452.0,card,yellow,61,,False,,,,,,,Vitor Mendes,988873.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,126039906.0,substitution,regular,46,,True,,,,,,,,,,Caio Dantas,869574.0,Pablo,374486.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,97963.0,varDecision,penaltyAwarded,39,,False,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,125053207.0,card,yellow,22,,False,,,,,,,Pepê,946945.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526018,JRpscJu,Operário-PR x Cuiabá,Operário-PR,Cuiabá,125053192.0,card,yellow,19,,True,,,,,,,Índio,981621.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,126040149.0,substitution,regular,89,,True,,,,,,,,,,Fabrício Daniel,1128767.0,Daniel Amorim,869443.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,344440240.0,goal,regular,87,,False,0.0,1.0,Juan Miritello,1003721.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,125053561.0,card,yellow,84,,False,,,,,,,Emanuel Brítez,789395.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,126040134.0,substitution,regular,83,,False,,,,,,,,,,Paulo Baya,1174206.0,Luiz Fernando,874143.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,126040133.0,substitution,regular,83,,False,,,,,,,,,,Lucca Prior,1631235.0,Tomás Pochettino,824626.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,126040122.0,substitution,regular,83,,False,,,,,,,,,,Ronald,1587711.0,Ryan Gustavo,1170779.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,126040088.0,substitution,regular,76,,True,,,,,,,,,,Echaporã,981418.0,Pedrinho,896248.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,126040080.0,substitution,regular,76,,True,,,,,,,,,,Hyoran,551348.0,Dudu Miraíma,1017251.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,126040089.0,substitution,regular,76,,True,,,,,,,,,,Marcão Silva,866754.0,Foguinho,888385.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,125053503.0,card,yellow,73,,False,,,,,,,Pierre,1017710.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,126040039.0,substitution,injury,68,,False,,,,,,,,,,Maurício Júnior,1118234.0,Gabriel Fuentes,927551.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,126040004.0,substitution,regular,59,,False,,,,,,,,,,Juan Miritello,1003721.0,Lucas Emanoel,2104437.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,125053432.0,card,yellow,52,,False,,,,,,,Gabriel Fuentes,927551.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,126039921.0,substitution,injury,46,,True,,,,,,,,,,Helder Maciel,980777.0,Matheus Salustiano,345789.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526016,vPseau,São Bernardo x Fortaleza,São Bernardo,Fortaleza,125053194.0,card,yellow,19,,True,,,,,,,Pará,552188.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,344444555.0,goal,penalty,90,11.0,False,2.0,3.0,Ronaldo Tavares,828707.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,125053933.0,card,yellow,90,6.0,False,,,,,,,Kauan Rodrigues,1516708.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,125053931.0,card,yellow,90,4.0,True,,,,,,,Guilherme Estrella,1634144.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,126040684.0,substitution,regular,88,,False,,,,,,,,,,Pedro Oliveira,1175752.0,Jota,1200993.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,126040669.0,substitution,regular,83,,True,,,,,,,,,,Guilherme Estrella,1634144.0,Bressan,312114.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,344443815.0,goal,regular,79,,False,2.0,2.0,Ronaldo Tavares,828707.0,Zeca,555454.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,126040651.0,substitution,regular,77,,True,,,,,,,,,,Wallace,1843731.0,Pedro Castro,243185.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,126040592.0,substitution,regular,70,,False,,,,,,,,,,Marcelo Henrique,1836632.0,Diogo Batista de Souza,1588320.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,126040591.0,substitution,regular,70,,False,,,,,,,,,,Joao Miguel,2032278.0,Gian Cabezas,1099301.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,126040590.0,substitution,regular,70,,False,,,,,,,,,,Dixon Vera,1197424.0,Ruan Lucas de Assis,1495892.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,126040553.0,substitution,regular,64,,True,,,,,,,,,,Patrick De Lucca,979868.0,Luizão,885854.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,126040554.0,substitution,injury,64,,True,,,,,,,,,,Guilherme Pato,1018095.0,Luiz Phellype,291707.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,126040545.0,substitution,regular,61,,False,,,,,,,,,,Léo Chú,1009933.0,Bruninho,2032258.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,125053797.0,card,yellow,50,,False,,,,,,,Diogo Batista de Souza,1588320.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,125053796.0,card,yellow,50,,True,,,,,,,Dadá Belmonte,926786.0,Argument,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,344442995.0,goal,regular,49,,False,2.0,1.0,Ronaldo Tavares,828707.0,Jota,1200993.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,126040438.0,substitution,injury,46,,True,,,,,,,,,,Kevin,810691.0,Diogo Hereda,981295.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,344442102.0,goal,penalty,45,5.0,True,2.0,0.0,Douglas Baggio,795035.0,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526023,HPisAfMc,CRB x Athletic Club,CRB,Athletic Club,344441290.0,goal,regular,21,,True,1.0,0.0,Pedro Castro,243185.0,Diogo Hereda,981295.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,,period,,90,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,344444996.0,goal,regular,90,,False,2.0,1.0,Emiliano Rodriguez,1177548.0,Weverton,985888.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,,injuryTime,,90,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,126040755.0,substitution,regular,89,,True,,,,,,,,,,Natã,1175603.0,Ewerthon,992512.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,126040754.0,substitution,regular,89,,True,,,,,,,,,,Ariel Gomes,1184843.0,Geovany Soares,1640631.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,344444831.0,goal,regular,86,,True,2.0,0.0,Leo Jacó,1462709.0,Guilherme Marques,109610.0,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,125053946.0,card,yellow,84,,True,,,,,,,Guilherme Marques,109610.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,126040738.0,substitution,regular,83,,True,,,,,,,,,,Leo Jacó,1462709.0,Gustavo Coutinho,981595.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,126040711.0,substitution,regular,73,,False,,,,,,,,,,André Cardoso,1470521.0,André Luiz,1016673.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,126040697.0,substitution,regular,67,,True,,,,,,,,,,Guilherme Marques,109610.0,Assis,2034254.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,126040696.0,substitution,regular,67,,True,,,,,,,,,,Léo Tocantins,965313.0,Marrony,926871.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,125053906.0,card,yellow,61,,False,,,,,,,Heron,992611.0,Foul,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,126040647.0,substitution,regular,56,,False,,,,,,,,,,Rafael Monteiro,1485293.0,Kevyn,931758.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,126040646.0,substitution,regular,56,,False,,,,,,,,,,Caio Rafael,1199393.0,João Tavares,1400331.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,126040650.0,substitution,regular,56,,False,,,,,,,,,,Emiliano Rodriguez,1177548.0,Paulinho Moccelin,341145.0,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,,period,,45,999.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,,injuryTime,,45,0.0,,,,,,,,,,,,,,,2026-04-14T17:35:38.530748Z
+2026,serie_b,4,15526020,xPsoWc,Atlético Goianiense x Londrina,Atlético Goianiense,Londrina,344442088.0,goal,regular,21,,True,1.0,0.0,Guilherme Lopes,1097858.0,Ewerthon,992512.0,,,,,,,,2026-04-14T17:35:38.530748Z

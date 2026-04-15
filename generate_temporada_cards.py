@@ -32,7 +32,7 @@ RESULTS_PATH = BASE_DIR / "data/processed/2026/sport/sport_2026_results.csv"
 STATS_PATH   = BASE_DIR / "data/processed/2026/sport/sport_2026_team_match_stats.csv"
 OPP_STR_PATH = BASE_DIR / "data/processed/2026/sport/sport_2026_opponent_strength.csv"
 LOGO_PATH    = BASE_DIR / "sportrecifelab_avatar.png"
-OUT_DIR      = BASE_DIR / "pending_posts/2026-04-07_evolucao-temporada"
+OUT_DIR      = BASE_DIR / "pending_posts/2026-04-13_evolucao-temporada"
 
 TEAM_NAME        = "Sport Recife"
 FASE1_N_JOGOS    = 3
@@ -65,7 +65,7 @@ DPI        = 150
 # ── Carrega e monta o DataFrame de análise ────────────────────────────────────
 
 def _load_df() -> pd.DataFrame:
-    results = pd.read_csv(RESULTS_PATH)
+    results = pd.read_csv(RESULTS_PATH, encoding="utf-8")
     results["match_date_utc"] = pd.to_datetime(results["match_date_utc"], utc=True)
     results = results.sort_values("match_date_utc").reset_index(drop=True)
     results["jogo_num"] = range(1, len(results) + 1)
@@ -84,7 +84,7 @@ def _load_df() -> pd.DataFrame:
     results["opp_short"] = results["opponent"].str.split().str[0]
     results["label"] = results["jogo_num"].astype(str) + ". " + results["opp_short"]
 
-    team_stats = pd.read_csv(STATS_PATH)
+    team_stats = pd.read_csv(STATS_PATH, encoding="utf-8")
     sport_xg = (
         team_stats.loc[team_stats["team_name"].eq(TEAM_NAME)]
         .drop_duplicates("source_url")[["source_url", "expected_goals"]]
@@ -99,7 +99,7 @@ def _load_df() -> pd.DataFrame:
     results = results.merge(opp_xg,   on="source_url", how="left")
     results["xg_diff"] = results["xg_for"] - results["xg_against"]
 
-    opp_str = pd.read_csv(OPP_STR_PATH)
+    opp_str = pd.read_csv(OPP_STR_PATH, encoding="utf-8")
     mv = opp_str["squad_market_value_eur"]
     opp_str["mv_score"]   = (mv - mv.min()) / (mv.max() - mv.min())
     ppg = opp_str["perf_points_per_game"].fillna(0)
@@ -201,27 +201,26 @@ def card_evolucao_saldo(df: pd.DataFrame):
 
     span_limits = [x_min] + boundaries + [x_max]
 
-    # ── Bandas de fase ────────────────────────────────────────────────────────
-    # Paleta de fundo escura (cada fase tem um tom sutil)
-    FASE_BG_DARK = {1: "#1A1200", 2: "#001428", 3: "#001A10"}
+    # ── Bandas de fase — tons visíveis mas discretos ──────────────────────────
+    FASE_BG_DARK = {1: "#201800", 2: "#001830", 3: "#001E12"}
     for i, fid in enumerate(all_phases):
         ax.axvspan(span_limits[i], span_limits[i + 1],
                    color=FASE_BG_DARK[fid], alpha=1.0, zorder=0)
 
     # ── Linhas de fronteira de fase ───────────────────────────────────────────
     for b in boundaries:
-        ax.axvline(b, color=GRAY, linewidth=1.0, linestyle="--", alpha=0.4, zorder=1)
+        ax.axvline(b, color=GRAY, linewidth=1.0, linestyle="--", alpha=0.5, zorder=1)
 
-    # ── Linha zero ────────────────────────────────────────────────────────────
-    ax.axhline(0, color=RED, linewidth=1.2, linestyle=(0, (5, 4)), alpha=0.55, zorder=2)
+    # ── Linha zero — cinza neutro, sem competir com pontos de derrota ─────────
+    ax.axhline(0, color=GRAY, linewidth=1.0, linestyle=(0, (5, 4)), alpha=0.6, zorder=2)
 
-    # ── Área sombreada acima/abaixo do zero ───────────────────────────────────
+    # ── Área sombreada acima/abaixo do zero — alpha aumentado ─────────────────
     ax.fill_between(dates, saldos, 0,
                     where=(saldos >= 0), interpolate=True,
-                    color=GREEN, alpha=0.12, zorder=1)
+                    color=GREEN, alpha=0.22, zorder=1)
     ax.fill_between(dates, saldos, 0,
                     where=(saldos < 0), interpolate=True,
-                    color=RED, alpha=0.12, zorder=1)
+                    color=RED, alpha=0.22, zorder=1)
 
     # ── Linha principal do saldo ──────────────────────────────────────────────
     ax.plot(dates, saldos,
@@ -233,78 +232,80 @@ def card_evolucao_saldo(df: pd.DataFrame):
     for _, row in plot.iterrows():
         ec = _result_color(row.get("sport_outcome", ""))
         ax.scatter(row["match_date_utc"], row["xg_diff"],
-                   s=55, color=ec, zorder=5, linewidths=0)
+                   s=60, color=ec, zorder=5, linewidths=0)
 
-    # ── Rótulos dos adversários ───────────────────────────────────────────────
-    # Ajustes manuais de offset para evitar sobreposição nos clusters
-    OFFSET_OVERRIDES = {
-        "Náutico": (0, -14),   # dois jogos juntos, empurrar para baixo
-        "Retrô":   (0, 8),
-    }
+    # ── Rótulos seletivos — apenas jogos notáveis (|xg_diff| > threshold)
+    # + primeiro e último de cada fase, para garantir ancoragem visual
+    abs_vals  = plot["xg_diff"].abs()
+    threshold = max(1.0, abs_vals.quantile(0.60))   # rotula ~40% superiores
+    first_last_idx = set()
+    for fid in plot["fase"].unique():
+        idx = plot.loc[plot["fase"] == fid].index
+        if len(idx):
+            first_last_idx.add(idx[0])
+            first_last_idx.add(idx[-1])
+
+    to_label = plot.loc[(abs_vals >= threshold) | plot.index.isin(first_last_idx)]
+
     labeled: dict = {}
-    for _, row in plot.iterrows():
+    for _, row in to_label.iterrows():
         opp   = str(row["opponent"]).split()[0]
         y_val = row["xg_diff"]
-        default_offset = (0, 8) if y_val >= 0 else (0, -12)
-        xoff, yoff = OFFSET_OVERRIDES.get(opp, default_offset)
-        va = "bottom" if yoff >= 0 else "top"
-
-        # Se o mesmo adversário aparece várias vezes, alterna offset
+        yoff  = 10 if y_val >= 0 else -13
+        va    = "bottom" if y_val >= 0 else "top"
         if opp in labeled:
             yoff = -yoff
             va   = "top" if yoff < 0 else "bottom"
         labeled[opp] = labeled.get(opp, 0) + 1
-
         ax.annotate(
             opp,
             xy=(row["match_date_utc"], y_val),
-            xytext=(xoff, yoff), textcoords="offset points",
-            fontsize=7.2, color=LGRAY, fontfamily=FONT_BODY,
+            xytext=(0, yoff), textcoords="offset points",
+            fontsize=8.5, color=LGRAY, fontfamily=FONT_BODY,
             ha="center", va=va, zorder=6,
         )
 
-    # ── Médias por fase (linha tracejada) ─────────────────────────────────────
+    # ── Médias por fase (linha tracejada + badge) ─────────────────────────────
     for i, fid in enumerate(all_phases):
         sub = plot.loc[plot["fase"] == fid, "xg_diff"].dropna()
         if sub.empty:
             continue
         m = sub.mean()
         ax.hlines(m, span_limits[i], span_limits[i + 1],
-                  color=FASE_C[fid], linewidth=1.6, linestyle="--",
-                  alpha=0.75, zorder=4)
-        # Badge com a média
+                  color=FASE_C[fid], linewidth=1.8, linestyle="--",
+                  alpha=0.85, zorder=4)
         mid_x = span_limits[i] + (span_limits[i + 1] - span_limits[i]) * 0.82
-        ax.text(mid_x, m + (0.12 if m >= 0 else -0.18),
-                f"x̄ {m:+.2f}",
+        ax.text(mid_x, m + (0.14 if m >= 0 else -0.20),
+                f"x\u0305 {m:+.2f}",
                 ha="center", va="bottom" if m >= 0 else "top",
-                fontsize=7.5, color=FASE_C[fid],
+                fontsize=8.5, color=FASE_C[fid],
                 fontfamily=FONT_BODY, fontweight="bold", zorder=7,
-                bbox=dict(boxstyle="round,pad=0.25", facecolor=CARD,
-                          edgecolor=FASE_C[fid], alpha=0.85, linewidth=0.8))
+                bbox=dict(boxstyle="round,pad=0.30", facecolor=CARD,
+                          edgecolor=FASE_C[fid], alpha=0.90, linewidth=1.0))
 
-    # ── Rótulos de fase no topo ───────────────────────────────────────────────
-    y_top = plot["xg_diff"].max()
+    # ── Rótulos de fase — dentro do ylim, na faixa superior de cada banda ─────
+    max_abs = plot["xg_diff"].abs().max()
+    y_label_pos = max_abs + 0.35   # dentro do ylim que será definido abaixo
     for i, fid in enumerate(all_phases):
         mid_x = span_limits[i] + (span_limits[i + 1] - span_limits[i]) / 2
         lbl   = FASE_LABELS_LONG[fid].replace(" — ", "\n")
-        ax.text(mid_x, y_top * 1.10, lbl,
-                ha="center", va="top", fontsize=8.5,
+        ax.text(mid_x, y_label_pos, lbl,
+                ha="center", va="top", fontsize=9,
                 color=FASE_C[fid], fontfamily=FONT_BODY,
                 fontweight="bold", linespacing=1.3, zorder=7)
 
     # ── Axes ──────────────────────────────────────────────────────────────────
-    max_abs = plot["xg_diff"].abs().max()
     ax.set_ylim(-(max_abs + 0.6), max_abs + 0.9)
     ax.set_xlim(x_min, x_max)
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%d/%m"))
     ax.xaxis.set_major_locator(mdates.WeekdayLocator(interval=1))
     plt.setp(ax.get_xticklabels(), rotation=40, ha="right",
-             fontsize=7.5, color=LGRAY, fontfamily=FONT_BODY)
+             fontsize=8, color=LGRAY, fontfamily=FONT_BODY)
     ax.set_ylabel("Saldo de xG  (a favor − contra)",
-                  color=LGRAY, fontsize=9, fontfamily=FONT_BODY, labelpad=8)
-    ax.set_xlabel("Data do jogo", color=GRAY, fontsize=8.5,
+                  color=LGRAY, fontsize=9.5, fontfamily=FONT_BODY, labelpad=8)
+    ax.set_xlabel("Data do jogo", color=GRAY, fontsize=9,
                   fontfamily=FONT_BODY, labelpad=6)
-    ax.tick_params(axis="y", colors=LGRAY, labelsize=7.5)
+    ax.tick_params(axis="y", colors=LGRAY, labelsize=8)
     ax.spines[["top", "right"]].set_visible(False)
     ax.spines[["left", "bottom"]].set_color(DGRAY)
     ax.yaxis.set_major_formatter(mticker.FormatStrFormatter("%+.1f"))
@@ -313,13 +314,13 @@ def card_evolucao_saldo(df: pd.DataFrame):
     from matplotlib.lines import Line2D
     legend_elems = [
         Line2D([0], [0], marker="o", color="none", markerfacecolor=GREEN,
-               markersize=7, label="Vitória"),
+               markersize=8, label="Vitória"),
         Line2D([0], [0], marker="o", color="none", markerfacecolor=YELLOW,
-               markersize=7, label="Empate"),
+               markersize=8, label="Empate"),
         Line2D([0], [0], marker="o", color="none", markerfacecolor=RED,
-               markersize=7, label="Derrota"),
+               markersize=8, label="Derrota"),
     ]
-    ax.legend(handles=legend_elems, fontsize=7.5, loc="lower right",
+    ax.legend(handles=legend_elems, fontsize=8, loc="lower right",
               frameon=True, facecolor="#1a1a1a", edgecolor="#333333",
               labelcolor=LGRAY)
 
@@ -328,8 +329,8 @@ def card_evolucao_saldo(df: pd.DataFrame):
              ha="center", va="top", color=YELLOW,
              fontsize=14, fontfamily=FONT_TITLE, fontweight="bold")
     fig.text(0.50, 0.925,
-             "Ponto colorido = resultado  ·  Tracejado = média da fase  ·  3 jogos do Retrô sem dados de xG omitidos",
-             ha="center", va="top", color=GRAY, fontsize=8, fontfamily=FONT_BODY)
+             "Ponto colorido = resultado  ·  Tracejado = m\u00e9dia da fase",
+             ha="center", va="top", color=GRAY, fontsize=8.5, fontfamily=FONT_BODY)
 
     _add_logo(fig)
     _footer(fig)
@@ -345,89 +346,92 @@ def card_saldo_xg_forca(df: pd.DataFrame):
     ax  = fig.add_axes([0.10, 0.13, 0.82, 0.72])
     ax.set_facecolor(CARD)
 
-    # ── Quadrantes de fundo ───────────────────────────────────────────────────
+    # ── Quadrantes de fundo — alpha aumentado para ser legível ───────────────
     xmax = plot_df["strength_score"].max() + 0.08
-    ax.fill_betweenx([0, plot_df["xg_diff"].max() + 0.5],
-                     0, xmax, color=GREEN, alpha=0.04, zorder=0)
-    ax.fill_betweenx([plot_df["xg_diff"].min() - 0.5, 0],
-                     0, xmax, color=RED, alpha=0.04, zorder=0)
+    ymax = plot_df["xg_diff"].max() + 0.5
+    ymin = plot_df["xg_diff"].min() - 0.5
+    ax.fill_betweenx([0, ymax], 0, xmax, color=GREEN, alpha=0.10, zorder=0)
+    ax.fill_betweenx([ymin, 0], 0, xmax, color=RED,   alpha=0.10, zorder=0)
 
-    # ── Linha zero ────────────────────────────────────────────────────────────
-    ax.axhline(0, color=RED, linewidth=0.9, linestyle="--", alpha=0.5, zorder=2)
+    # ── Linha zero — cinza neutro ─────────────────────────────────────────────
+    ax.axhline(0, color=GRAY, linewidth=1.0, linestyle="--", alpha=0.55, zorder=2)
 
-    # ── Linha de regressão ────────────────────────────────────────────────────
+    # ── Linha de regressão — mais visível ────────────────────────────────────
     x_reg = plot_df["strength_score"].values
     y_reg = plot_df["xg_diff"].values
     coef  = np.polyfit(x_reg, y_reg, 1)
     x_line = np.linspace(x_reg.min() - 0.03, x_reg.max() + 0.03, 100)
     ax.plot(x_line, np.polyval(coef, x_line),
-            color=GRAY, linewidth=1.4, linestyle="--", alpha=0.6, zorder=3)
+            color=LGRAY, linewidth=1.8, linestyle="--", alpha=0.55, zorder=3)
     r = np.corrcoef(x_reg, y_reg)[0, 1]
 
     # ── Scatter por fase ──────────────────────────────────────────────────────
     for fid in sorted(plot_df["fase"].unique()):
         fsub = plot_df.loc[plot_df["fase"] == fid]
         ax.scatter(fsub["strength_score"], fsub["xg_diff"],
-                   color=FASE_C[fid], s=110, zorder=5,
+                   color=FASE_C[fid], s=120, zorder=5,
                    edgecolors="#0d0d0d", linewidths=0.8,
                    label=FASE_LABELS_LONG[fid])
 
-    # ── Rótulos dos pontos ────────────────────────────────────────────────────
-    for _, row in plot_df.iterrows():
+    # ── Rótulos seletivos — apenas os ~6 mais extremos (|xg_diff| ou força) ──
+    abs_diff = plot_df["xg_diff"].abs()
+    top_n    = min(6, len(plot_df))
+    top_idx  = abs_diff.nlargest(top_n).index
+    # Garante que Vila Nova e Londrina (citados no tweet) sejam incluídos se presentes
+    for opp_key in ("Vila Nova", "Londrina"):
+        matches = plot_df.loc[plot_df["opponent"].str.contains(opp_key, na=False)].index
+        top_idx = top_idx.union(matches)
+
+    for _, row in plot_df.loc[top_idx].iterrows():
         label = row["opp_short"]
-        xoff, yoff = 5, 4
-
-        # Ajuste manual para evitar sobreposição em clusters
-        if row["opponent"] in ("Náutico", "Náutico ") or "Náutico" in row["opponent"]:
-            yoff = -12
-        if "Acadêmica" in row["opponent"]:
-            xoff = -52
-        if "Decisão" in row["opponent"]:
-            xoff = 5; yoff = 6
-
+        xoff, yoff = 6, 6
+        if row["xg_diff"] < 0:
+            yoff = -13
         ax.annotate(
             label,
             xy=(row["strength_score"], row["xg_diff"]),
             xytext=(xoff, yoff), textcoords="offset points",
-            fontsize=6.8, color=LGRAY, fontfamily=FONT_BODY,
+            fontsize=8.5, color=LGRAY, fontfamily=FONT_BODY,
             zorder=6,
         )
 
-    # ── Centroides por fase (marcador maior) ──────────────────────────────────
+    # ── Centroides por fase — maiores e com label legível ────────────────────
     for fid in sorted(plot_df["fase"].unique()):
         fsub = plot_df.loc[plot_df["fase"] == fid]
         cx   = fsub["strength_score"].mean()
         cy   = fsub["xg_diff"].mean()
-        ax.scatter(cx, cy, color=FASE_C[fid], s=260, zorder=7,
-                   edgecolors=WHITE, linewidths=1.8,
-                   marker="D", alpha=0.85)
-        ax.text(cx, cy + 0.17, f"x̄ F{fid}\n({cy:+.2f})",
-                ha="center", va="bottom", fontsize=7,
+        ax.scatter(cx, cy, color=FASE_C[fid], s=320, zorder=7,
+                   edgecolors=WHITE, linewidths=2.0,
+                   marker="D", alpha=0.90)
+        ax.text(cx, cy + 0.20, f"x\u0305 F{fid}  {cy:+.2f}",
+                ha="center", va="bottom", fontsize=9,
                 color=FASE_C[fid], fontfamily=FONT_BODY, fontweight="bold",
-                linespacing=1.2, zorder=8)
+                zorder=8,
+                bbox=dict(boxstyle="round,pad=0.25", facecolor=BG,
+                          edgecolor=FASE_C[fid], alpha=0.80, linewidth=0.8))
 
     # ── Badge r ───────────────────────────────────────────────────────────────
     ax.text(0.97, 0.97, f"r = {r:.2f}",
             transform=ax.transAxes, ha="right", va="top",
-            fontsize=9.5, color=WHITE, fontfamily=FONT_BODY,
+            fontsize=11, color=WHITE, fontfamily=FONT_BODY,
             fontweight="bold",
             bbox=dict(boxstyle="round,pad=0.4", facecolor="#2a2a2a",
-                      edgecolor=GRAY, alpha=0.9))
+                      edgecolor=YELLOW, alpha=0.9, linewidth=1.0))
 
-    # ── Rótulos de quadrante ──────────────────────────────────────────────────
-    ax.text(0.02, 0.98, "saldo positivo", transform=ax.transAxes,
-            ha="left", va="top", fontsize=7, color=GREEN, alpha=0.55,
+    # ── Rótulos de quadrante — mais visíveis ─────────────────────────────────
+    ax.text(0.02, 0.97, "saldo positivo", transform=ax.transAxes,
+            ha="left", va="top", fontsize=8, color=GREEN, alpha=0.75,
             fontfamily=FONT_BODY, style="italic")
-    ax.text(0.02, 0.02, "saldo negativo", transform=ax.transAxes,
-            ha="left", va="bottom", fontsize=7, color=RED, alpha=0.55,
+    ax.text(0.02, 0.03, "saldo negativo", transform=ax.transAxes,
+            ha="left", va="bottom", fontsize=8, color=RED, alpha=0.75,
             fontfamily=FONT_BODY, style="italic")
 
     # ── Axes ──────────────────────────────────────────────────────────────────
     ax.set_xlabel("Força do adversário  (0 = mais fraco  ·  1 = mais forte)",
-                  color=LGRAY, fontsize=9, fontfamily=FONT_BODY, labelpad=8)
-    ax.set_ylabel("Saldo de xG  (xG a favor − xG contra)",
-                  color=LGRAY, fontsize=9, fontfamily=FONT_BODY, labelpad=8)
-    ax.tick_params(colors=LGRAY, labelsize=7.5)
+                  color=LGRAY, fontsize=9.5, fontfamily=FONT_BODY, labelpad=8)
+    ax.set_ylabel("Saldo de xG  (xG a favor \u2212 xG contra)",
+                  color=LGRAY, fontsize=9.5, fontfamily=FONT_BODY, labelpad=8)
+    ax.tick_params(colors=LGRAY, labelsize=8)
     ax.spines[["top", "right"]].set_visible(False)
     ax.spines[["left", "bottom"]].set_color(DGRAY)
 
@@ -438,21 +442,21 @@ def card_saldo_xg_forca(df: pd.DataFrame):
         Patch(facecolor=FASE_C[fid], label=FASE_LABELS_LONG[fid])
         for fid in sorted(FASE_LABELS_LONG)
     ] + [
-        Line2D([0], [0], color=GRAY, linewidth=1.4, linestyle="--", label="Tendência geral"),
+        Line2D([0], [0], color=LGRAY, linewidth=1.8, linestyle="--", label="Tend\u00eancia geral"),
     ]
     ax.legend(
-        handles=legend_elems, fontsize=7.5, loc="lower left",
+        handles=legend_elems, fontsize=8, loc="lower left",
         frameon=True, facecolor="#1a1a1a", edgecolor="#333333",
         labelcolor=LGRAY,
     )
 
     # ── Título ────────────────────────────────────────────────────────────────
-    fig.text(0.50, 0.97, "SPORT 2026 — SALDO DE xG vs FORÇA DO ADVERSÁRIO",
+    fig.text(0.50, 0.97, "SPORT 2026 \u2014 SALDO DE xG vs FOR\u00c7A DO ADVERS\u00c1RIO",
              ha="center", va="top", color=YELLOW,
              fontsize=13, fontfamily=FONT_TITLE, fontweight="bold")
     fig.text(0.50, 0.925,
-             "Losango = média da fase  ·  Quanto mais forte o adversário, menor o saldo",
-             ha="center", va="top", color=GRAY, fontsize=8, fontfamily=FONT_BODY)
+             "Losango = m\u00e9dia da fase  \u00b7  Quanto mais forte o advers\u00e1rio, menor o saldo",
+             ha="center", va="top", color=GRAY, fontsize=8.5, fontfamily=FONT_BODY)
 
     _add_logo(fig)
     _footer(fig)

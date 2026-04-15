@@ -21,6 +21,15 @@ MATCH_URL_TEMPLATE = (
 
 # Todos os padrões candidatos a conter passes com coordenadas
 CANDIDATE_PATTERNS = [
+    # Por evento (sem jogador)
+    "/api/v1/event/{event}/incidents",      # eventos de partida — principal candidato (passes, gols, cartões…)
+    "/api/v1/event/{event}/pass-map",
+    "/api/v1/event/{event}/passmap",
+    "/api/v1/event/{event}/passes",
+    "/api/v1/event/{event}/shotmap",        # referência já conhecida
+    "/api/v1/event/{event}/lineups",        # referência já conhecida
+    "/api/v1/event/{event}/statistics",     # referência já conhecida
+    # Por jogador
     "/api/v1/event/{event}/player/{player}/heatmap",
     "/api/v1/event/{event}/player/{player}/passes",
     "/api/v1/event/{event}/player/{player}/pass-map",
@@ -29,12 +38,6 @@ CANDIDATE_PATTERNS = [
     "/api/v1/event/{event}/player/{player}/highlights",
     "/api/v1/event/{event}/player/{player}/timeline",
     "/api/v1/event/{event}/player/{player}/actions",
-    "/api/v1/event/{event}/pass-map",
-    "/api/v1/event/{event}/passmap",
-    "/api/v1/event/{event}/passes",
-    "/api/v1/event/{event}/shotmap",        # referência já conhecida
-    "/api/v1/event/{event}/lineups",        # referência já conhecida
-    "/api/v1/event/{event}/statistics",    # referência já conhecida
 ]
 
 

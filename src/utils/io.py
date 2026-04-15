@@ -46,4 +46,4 @@ def write_json(path: Path, payload: Any) -> None:
 def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     df = pd.DataFrame(rows)
-    df.to_csv(path, index=False)
+    df.to_csv(path, index=False, encoding="utf-8")

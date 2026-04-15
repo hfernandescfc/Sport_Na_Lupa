@@ -27,13 +27,30 @@ CURATED_COLS = [
     "team_name", "team_key", "is_home",
     "player_id", "player_name", "player_slug", "position", "jersey_number", "is_substitute",
     "minutes_played", "rating",
+    # Passes aggregate
     "total_pass", "accurate_pass", "pass_accuracy_pct",
     "total_long_balls", "accurate_long_balls", "long_ball_accuracy_pct",
-    "total_shots", "goal_assist", "saves",
-    "touches", "possession_lost_ctrl", "ball_recovery",
+    "goal_assist",
+    # Pass zones
+    "total_own_half_passes", "accurate_own_half_passes", "own_half_pass_acc_pct",
+    "total_opposition_half_passes", "accurate_opposition_half_passes", "opp_half_pass_acc_pct",
+    # Progression / ball carries
+    "total_progression",
+    "total_ball_carries_distance", "ball_carries_count",
+    "total_progressive_ball_carries_distance", "progressive_ball_carries_count",
+    "best_ball_carry_progression",
+    # Shots
+    "total_shots",
+    # Defensive / duels
+    "total_clearance", "duel_won", "was_fouled",
+    # General
+    "saves", "touches", "possession_lost_ctrl", "ball_recovery",
     "expected_assists",
+    # Normalized value scores
     "pass_value_normalized", "dribble_value_normalized",
     "defensive_value_normalized", "goalkeeper_value_normalized",
+    # GK-specific
+    "keeper_save_value", "goals_prevented",
     "last_updated_at", "transformed_at",
 ]
 
@@ -70,13 +87,27 @@ def _enrich(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     df["team_key"] = df["team_name"].fillna("").apply(normalize_team_name)
 
-    for col in ["total_pass", "accurate_pass", "total_long_balls", "accurate_long_balls",
-                "total_shots", "minutes_played", "rating", "touches",
-                "possession_lost_ctrl", "ball_recovery", "expected_assists",
-                "goal_assist", "saves",
-                "pass_value_normalized", "dribble_value_normalized",
-                "defensive_value_normalized", "goalkeeper_value_normalized"]:
-        df[col] = pd.to_numeric(df[col], errors="coerce")
+    numeric_cols = [
+        "total_pass", "accurate_pass",
+        "total_long_balls", "accurate_long_balls",
+        "goal_assist",
+        "total_own_half_passes", "accurate_own_half_passes",
+        "total_opposition_half_passes", "accurate_opposition_half_passes",
+        "total_progression",
+        "total_ball_carries_distance", "ball_carries_count",
+        "total_progressive_ball_carries_distance", "progressive_ball_carries_count",
+        "best_ball_carry_progression",
+        "total_shots",
+        "total_clearance", "duel_won", "was_fouled",
+        "saves", "touches", "minutes_played", "rating",
+        "possession_lost_ctrl", "ball_recovery", "expected_assists",
+        "pass_value_normalized", "dribble_value_normalized",
+        "defensive_value_normalized", "goalkeeper_value_normalized",
+        "keeper_save_value", "goals_prevented",
+    ]
+    for col in numeric_cols:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
 
     df["pass_accuracy_pct"] = (
         (df["accurate_pass"] / df["total_pass"] * 100)
@@ -88,6 +119,18 @@ def _enrich(df: pd.DataFrame) -> pd.DataFrame:
         .where(df["total_long_balls"] > 0)
         .round(1)
     )
+    if "accurate_own_half_passes" in df.columns and "total_own_half_passes" in df.columns:
+        df["own_half_pass_acc_pct"] = (
+            (df["accurate_own_half_passes"] / df["total_own_half_passes"] * 100)
+            .where(df["total_own_half_passes"] > 0)
+            .round(1)
+        )
+    if "accurate_opposition_half_passes" in df.columns and "total_opposition_half_passes" in df.columns:
+        df["opp_half_pass_acc_pct"] = (
+            (df["accurate_opposition_half_passes"] / df["total_opposition_half_passes"] * 100)
+            .where(df["total_opposition_half_passes"] > 0)
+            .round(1)
+        )
 
     # match_label for readability
     df["match_label"] = df["home_team"] + " x " + df["away_team"]

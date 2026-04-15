@@ -490,6 +490,12 @@ Página de análise de dados do Sport Recife criada em paralelo ao pipeline.
 - **Fonte:** Franklin Gothic Heavy (títulos) + Arial (subtítulos)
 - **Logo:** `sportrecifelab_avatar.png` (400×400) — sempre no footer, posição `(0.09, 0.028)` figura
 
+### Criação de cards visuais
+
+**Sempre usar a skill `canvas-design`** ao criar ou modificar qualquer card visual — seja um novo `generate_*.py`, seja ajuste de layout, paleta, tipografia ou composição de elementos existentes.
+
+A skill deve ser invocada antes de escrever código de card, para alinhar as decisões de design com os padrões visuais do @SportRecifeLab.
+
 ### Tipos de card produzidos
 
 | Tipo | Template | Gatilho |
@@ -562,6 +568,16 @@ Referência de implementação: `generate_vila_nova_cards.py` e `generate_xpts_t
 
 Posts gerados ficam em `pending_posts/<YYYY-MM-DD_slug>/` com `card.png`, `tweet.txt` e `metadata.json`.
 Após revisão: mover para `posted/` (com data de publicação em metadata) ou `rejected/`.
+
+### Geração de tweets
+
+**Sempre usar a skill `twitter-algorithm-optimizer`** ao redigir ou revisar o `tweet.txt` de qualquer post.
+
+Restrições obrigatórias:
+- **Limite de 280 caracteres por tweet** (conta free do X — não há acesso a Twitter Blue / X Premium)
+- Cada tweet da thread deve ser contado individualmente — imagens e links encurtados consomem ~23 caracteres
+- Incluir contagem de caracteres real em cada tweet do arquivo `tweet.txt` (ex: `[1/4 — card: 01.png — 247 chars]`)
+- Não ultrapassar 280 chars em nenhum tweet, incluindo hashtags e menções do rodapé
 
 ### IDs SofaScore relevantes
 

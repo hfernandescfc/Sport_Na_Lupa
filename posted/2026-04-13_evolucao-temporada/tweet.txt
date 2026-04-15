@@ -1,0 +1,46 @@
+— THREAD —
+
+[1/4 — sem imagem — 139 chars]
+
+O Sport dominou o Avaí em xG — e saiu só com o empate.
+
+21 jogos, 3 fases. O saldo de xG conta o que o placar às vezes esconde. 🧵
+
+---
+
+[2/4 — card: 01_evolucao_saldo.png — 244 chars]
+
+Evolução do saldo de xG por fase: [23]
+
+Fase 1 (Sub20): x̄ +1.72 → domínio claro
+Fase 2 (Pré-Série B): x̄ +0.47 → controlado
+Fase 3 (Márcio Goiano): x̄ +0.32 → positivo, mas ingrato
+
+Destaque: Avaí (R4) — Sport criou 3.24 xG contra 1.79. Placar: 2-2.
+
+Qual jogo te surpreendeu mais? 👇
+
+---
+
+[3/4 — card: 02_saldo_xg_forca.png — 243 chars]
+
+Saldo de xG vs força dos adversários: [23]
+
+r = −0.33 → adversário mais forte, menor saldo.
+
+Fase 3 tem os rivais mais difíceis — e ainda mantém saldo positivo.
+
+Centroides mostram a queda de F1 → F2 → F3, mesmo com o Avaí puxando pra cima.
+
+Dados: SofaScore · @SportRecifeLab
+
+---
+
+[4/4 — reply ao tweet 3 — 234 chars]
+
+Com 34 rodadas pela frente, o saldo tende a se normalizar.
+
+Metodologia: xG via SofaScore. Força: 60% valor de mercado + 40% pts/jogo (apenas clubes com dados da Série B).
+
+📊 @SportRecifeLab
+#SerieB #SerieB2026 #SportRecife

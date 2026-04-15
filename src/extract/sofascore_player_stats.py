@@ -27,42 +27,88 @@ logger = get_logger(__name__)
 PLAYER_STAT_FIELDS = [
     "minutes_played",
     "rating",
+    # Passes aggregate
     "total_pass",
     "accurate_pass",
     "total_long_balls",
     "accurate_long_balls",
-    "total_shots",
     "goal_assist",
+    # Pass zones (own half vs opponent half)
+    "accurate_own_half_passes",
+    "total_own_half_passes",
+    "accurate_opposition_half_passes",
+    "total_opposition_half_passes",
+    # Progression / ball carries
+    "total_progression",
+    "total_ball_carries_distance",
+    "total_progressive_ball_carries_distance",
+    "progressive_ball_carries_count",
+    "best_ball_carry_progression",
+    "ball_carries_count",
+    # Shots
+    "total_shots",
+    # Defensive / duels
+    "total_clearance",
+    "duel_won",
+    "was_fouled",
+    # General
     "saves",
     "touches",
     "possession_lost_ctrl",
     "ball_recovery",
     "expected_assists",
+    # Normalized value scores
     "pass_value_normalized",
     "dribble_value_normalized",
     "defensive_value_normalized",
     "goalkeeper_value_normalized",
+    # GK-specific
+    "keeper_save_value",
+    "goals_prevented",
 ]
 
 # Mapping from SofaScore camelCase keys to our snake_case field names
 _STAT_KEY_MAP = {
     "minutesPlayed": "minutes_played",
     "rating": "rating",
+    # Passes aggregate
     "totalPass": "total_pass",
     "accuratePass": "accurate_pass",
     "totalLongBalls": "total_long_balls",
     "accurateLongBalls": "accurate_long_balls",
-    "totalShots": "total_shots",
     "goalAssist": "goal_assist",
+    # Pass zones
+    "accurateOwnHalfPasses": "accurate_own_half_passes",
+    "totalOwnHalfPasses": "total_own_half_passes",
+    "accurateOppositionHalfPasses": "accurate_opposition_half_passes",
+    "totalOppositionHalfPasses": "total_opposition_half_passes",
+    # Progression / ball carries
+    "totalProgression": "total_progression",
+    "totalBallCarriesDistance": "total_ball_carries_distance",
+    "totalProgressiveBallCarriesDistance": "total_progressive_ball_carries_distance",
+    "progressiveBallCarriesCount": "progressive_ball_carries_count",
+    "bestBallCarryProgression": "best_ball_carry_progression",
+    "ballCarriesCount": "ball_carries_count",
+    # Shots
+    "totalShots": "total_shots",
+    # Defensive / duels
+    "totalClearance": "total_clearance",
+    "duelWon": "duel_won",
+    "wasFouled": "was_fouled",
+    # General
     "saves": "saves",
     "touches": "touches",
     "possessionLostCtrl": "possession_lost_ctrl",
     "ballRecovery": "ball_recovery",
     "expectedAssists": "expected_assists",
+    # Normalized value scores
     "passValueNormalized": "pass_value_normalized",
     "dribbleValueNormalized": "dribble_value_normalized",
     "defensiveValueNormalized": "defensive_value_normalized",
     "goalkeeperValueNormalized": "goalkeeper_value_normalized",
+    # GK-specific
+    "keeperSaveValue": "keeper_save_value",
+    "goalsPrevented": "goals_prevented",
 }
 
 
