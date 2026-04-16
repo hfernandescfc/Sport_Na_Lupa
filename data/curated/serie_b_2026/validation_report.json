@@ -30,49 +30,49 @@
       "name": "sport_confirmed_match_seed_count",
       "status": "pass",
       "expected_min": 1,
-      "actual": 17,
+      "actual": 22,
       "notes": "Counts matches with status=completed from the live API."
     },
     {
       "name": "sport_incremental_open_match_rows",
       "status": "pass",
       "expected_min": 1,
-      "actual": 40,
+      "actual": 35,
       "notes": "Open rows are expected while the season is in progress."
     },
     {
       "name": "sport_team_advanced_stats_rows",
       "status": "pass",
       "expected_min": 2,
-      "actual": 34,
+      "actual": 44,
       "notes": "Sport team stats should grow incrementally as completed matches expose statistics on SofaScore."
     },
     {
       "name": "serie_b_incremental_round_seed_count",
       "status": "pass",
       "expected_min": 1,
-      "actual": 1,
+      "actual": 5,
       "notes": "A live season should not require all 38 rounds upfront."
     },
     {
       "name": "serie_b_full_season_coverage",
       "status": "info",
       "expected_final": 38,
-      "actual_now": 1,
+      "actual_now": 5,
       "notes": "This is informational during the live season and becomes mandatory only after season completion."
     },
     {
       "name": "serie_b_round_1_completed_results",
       "status": "pass",
       "expected_round_1": 10,
-      "actual": 19,
+      "actual": 40,
       "notes": "This measures whether round 1 already has enough final scores for basic analysis."
     },
     {
       "name": "serie_b_team_advanced_stats_rows",
       "status": "pass",
       "expected_round_1_min": 20,
-      "actual": 38,
+      "actual": 80,
       "notes": "Two rows per match are expected for full round-level team analysis."
     },
     {

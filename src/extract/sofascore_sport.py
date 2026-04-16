@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 import datetime
 import json
 from typing import Any
@@ -831,14 +832,32 @@ def sync_sport_stub(settings: Settings, season: int) -> None:
     write_csv(processed_dir / "sport_2026_competitions.csv", SPORT_2026_COMPETITION_SEED)
     write_csv(processed_dir / "sport_2026_matches.csv", match_rows)
     write_csv(processed_dir / "sport_2026_results.csv", _build_sport_results_rows(match_rows, season))
-    team_stats_rows = _extract_sport_team_stats(match_rows, season)
-    write_csv(
-        processed_dir / "sport_2026_team_match_stats.csv",
-        team_stats_rows,
-    )
+    # Load already-persisted team stats to skip matches already processed
+    existing_stats_csv = processed_dir / "sport_2026_team_match_stats.csv"
+    existing_stats_rows: list[dict] = []
+    already_processed: set[str] = set()
+    if existing_stats_csv.exists():
+        with open(existing_stats_csv, encoding="utf-8") as f:
+            existing_stats_rows = list(csv.DictReader(f))
+            already_processed = {r["match_id"] for r in existing_stats_rows if r.get("match_id")}
+
+    new_match_rows = [m for m in match_rows if m.get("match_code") not in already_processed]
+
+    if new_match_rows:
+        logger.info(
+            "Extracting team stats for %s new matches (skipping %s already persisted)",
+            len(new_match_rows), len(already_processed),
+        )
+        new_stats_rows = _extract_sport_team_stats(new_match_rows, season)
+        all_stats_rows = existing_stats_rows + new_stats_rows
+    else:
+        logger.info("Team stats up to date — no new matches to process")
+        all_stats_rows = existing_stats_rows
+
+    write_csv(processed_dir / "sport_2026_team_match_stats.csv", all_stats_rows)
     write_csv(
         processed_dir / "sport_2026_team_stats_coverage.csv",
-        _build_sport_team_stats_coverage(team_stats_rows),
+        _build_sport_team_stats_coverage(all_stats_rows),
     )
 
 

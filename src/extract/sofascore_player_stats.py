@@ -222,8 +222,22 @@ def _collect_match_rows(settings: Settings, season: int) -> list[dict[str, Any]]
     else:
         logger.warning("Série B match_ids file not found: %s", serie_b_path)
 
-    logger.info("Collected %s unique matches to process (%s already covered by Sport)", len(rows), len(seen_event_ids) - len(rows))
-    return rows
+    # Skip event_ids already persisted from a previous run
+    existing_csv = settings.processed_dir / str(season) / "players" / f"player_match_stats_{season}.csv"
+    already_done: set[str] = set()
+    if existing_csv.exists():
+        with open(existing_csv, encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                eid = r.get("event_id", "")
+                if eid:
+                    already_done.add(eid)
+
+    new_rows = [r for r in rows if r["event_id"] not in already_done]
+    logger.info(
+        "Collected %s matches total; %s already persisted → %s to fetch",
+        len(rows), len(already_done & {r["event_id"] for r in rows}), len(new_rows),
+    )
+    return new_rows
 
 
 def _fetch_lineups_json(driver: Any, event_id: str) -> dict[str, Any] | None:
@@ -300,24 +314,33 @@ def _build_match_url(match_code: str, home_team: str, away_team: str) -> str:
 
 def _persist_player_stats(settings: Settings, season: int, rows: list[dict[str, Any]]) -> None:
     if not rows:
-        logger.warning("No player stat rows to persist")
+        logger.info("No new player stat rows to persist — already up to date")
         return
 
     out_dir = settings.processed_dir / str(season) / "players"
 
+    # Merge with existing rows so the file always contains the full history
+    existing_csv = out_dir / f"player_match_stats_{season}.csv"
+    existing_rows: list[dict[str, Any]] = []
+    if existing_csv.exists():
+        with open(existing_csv, encoding="utf-8") as f:
+            existing_rows = list(csv.DictReader(f))
+
+    all_rows = existing_rows + rows
+
     # Full raw JSON
     write_json(
         out_dir / f"player_match_stats_{season}.json",
-        {"season": season, "row_count": len(rows), "rows": rows},
+        {"season": season, "row_count": len(all_rows), "rows": all_rows},
     )
 
-    write_csv(out_dir / f"player_match_stats_{season}.csv", rows)
+    write_csv(out_dir / f"player_match_stats_{season}.csv", all_rows)
 
     # Sport-only subset
-    sport_rows = [r for r in rows if "Sport" in str(r.get("team_name", ""))]
+    sport_rows = [r for r in all_rows if "Sport" in str(r.get("team_name", ""))]
     write_csv(out_dir / f"sport_{season}_player_match_stats.csv", sport_rows)
 
     logger.info(
-        "Persisted %s player-match rows (%s Sport rows) to %s",
-        len(rows), len(sport_rows), out_dir,
+        "Persisted %s new rows → %s total (%s Sport) in %s",
+        len(rows), len(all_rows), len(sport_rows), out_dir,
     )

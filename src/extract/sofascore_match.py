@@ -143,12 +143,59 @@ def sync_matches_stub(settings: Settings, season: int, from_round: int, to_round
     )
 
     base = settings.processed_dir / str(season) / "matches"
-    write_csv(base / "matches.csv", [_build_match_row(m) for m in all_matches])
-    write_csv(base / "team_match_stats.csv", _extract_round_team_stats(completed))
+
+    # matches.csv: upsert by match_id so previous rounds are preserved
+    _upsert_matches_csv(base / "matches.csv", [_build_match_row(m) for m in all_matches])
+
+    # team_match_stats.csv: skip matches already processed in prior runs
+    existing_stats_csv = base / "team_match_stats.csv"
+    existing_stats_rows: list[dict] = []
+    already_processed: set[str] = set()
+    if existing_stats_csv.exists():
+        with open(existing_stats_csv, encoding="utf-8") as f:
+            existing_stats_rows = list(csv.DictReader(f))
+            already_processed = {r["match_id"] for r in existing_stats_rows if r.get("match_id")}
+
+    new_completed = [m for m in completed if m.get("match_code") not in already_processed]
+    if new_completed:
+        logger.info(
+            "Extracting team stats for %s new completed matches (skipping %s already persisted)",
+            len(new_completed), len(already_processed),
+        )
+        new_stats_rows = _extract_round_team_stats(new_completed)
+        all_stats_rows = existing_stats_rows + new_stats_rows
+    else:
+        logger.info("Team stats up to date — no new completed matches to process")
+        all_stats_rows = existing_stats_rows
+
+    write_csv(base / "team_match_stats.csv", all_stats_rows)
     write_csv(base / "lineups.csv", [])
     write_csv(settings.processed_dir / str(season) / "events" / "events.csv", [])
     write_csv(settings.processed_dir / str(season) / "events" / "shots.csv", [])
     _upsert_match_ids(base / "match_ids.csv", all_matches)
+
+
+def _upsert_matches_csv(path: "Path", new_rows: list[dict[str, Any]]) -> None:
+    """Merge new match rows into matches.csv, keyed on match_id. Preserves existing rows."""
+    from pathlib import Path as _Path
+
+    existing: dict[str, dict] = {}
+    if path.exists():
+        with open(path, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                key = row.get("match_id", "")
+                if key:
+                    existing[key] = row
+
+    for row in new_rows:
+        key = str(row.get("match_id", "") or "")
+        if key:
+            existing[key] = row
+
+    rows = list(existing.values())
+    if rows:
+        write_csv(path, rows)
+        logger.info("matches.csv upserted: %s total rows", len(rows))
 
 
 _MATCH_IDS_COLS = [
