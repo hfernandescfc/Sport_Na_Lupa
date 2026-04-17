@@ -12,5 +12,6 @@
   "cards": {
     "card.png": "pronto"
   },
+  "hook": "estreia_titular_debate",
   "status": "pronto para publicar"
 }
