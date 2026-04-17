@@ -52,15 +52,15 @@ EDSON = {
 
 # Outros laterais esquerdos nas rodadas 1-3
 OTHERS = [
-    {"name": "Marcelo Ajul",  "round": "R1",
-     "rating": 7.3, "passes": 46, "pass_acc": 84.8, "opp_half": 17, "opp_half_pct": 85.0,
-     "long_balls": 4, "lb_acc": 100.0, "shots": 0, "duels_won": 6, "touches": 61, "recoveries": 12},
-    {"name": "Rafinha",       "round": "R2",
+    {"name": "Felipinho",  "round": "R1",
+     "rating": 6.6, "passes": 54, "pass_acc": 79.6, "opp_half": 20, "opp_half_pct": 69.0,
+     "long_balls": 4, "lb_acc": 50.0, "shots": 0, "duels_won": 1, "touches": 63, "recoveries": 3},
+    {"name": "Rafinha",    "round": "R2",
      "rating": 7.6, "passes": 32, "pass_acc": 78.1, "opp_half": 15, "opp_half_pct": 78.9,
      "long_balls": 4, "lb_acc": 50.0, "shots": 0, "duels_won": 9, "touches": 46, "recoveries": 14},
-    {"name": "Yago Felipe",   "round": "R3",
-     "rating": 6.7, "passes": 78, "pass_acc": 91.0, "opp_half": 19, "opp_half_pct": 79.2,
-     "long_balls": 5, "lb_acc": 60.0, "shots": 1, "duels_won": 5, "touches": 89, "recoveries": 11},
+    {"name": "Felipinho",  "round": "R3",
+     "rating": 7.8, "passes": 58, "pass_acc": 82.8, "opp_half": 24, "opp_half_pct": 80.0,
+     "long_balls": 4, "lb_acc": 75.0, "shots": 2, "duels_won": 4, "touches": 69, "recoveries": 10},
 ]
 
 def _mean(key):
@@ -243,7 +243,7 @@ def generate():
             ha="center", va="center", transform=ax.transAxes, zorder=10)
 
     player_labels = [o["name"].split()[0] + f" ({o['round']})" for o in OTHERS]
-    player_colors = ["#3A7BD5", "#9B59B6", "#E67E22"]
+    player_colors = ["#3A7BD5", "#E67E22", "#3A7BD5"]
 
     for i, (label, key, edson_val, _) in enumerate(metrics):
         y = start_y - (i + 1) * row_h
@@ -298,7 +298,7 @@ def generate():
     # Nota explicativa
     y_note = start_y - (len(metrics) + 1) * row_h - 0.005
     ax.text(0.5, y_note,
-            "Média dos outros laterais: Marcelo Ajul (R1) · Rafinha (R2) · Yago Felipe (R3)",
+            "Média dos outros laterais: Felipinho (R1) · Rafinha (R2) · Felipinho (R3)",
             color=GRAY, fontsize=6.2, ha="center", va="center",
             transform=ax.transAxes, zorder=10)
 
