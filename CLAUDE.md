@@ -70,12 +70,16 @@ src/
     sofascore_opponent.py       — extração completa de adversário: partidas + team stats + player stats ✅
     sofascore_serie_b_strength.py — valor de mercado + proxy de desempenho dos 20 clubes Série B ✅
     sofascore_logos.py          — download de escudos via Selenium XHR binary (base64) para data/cache/logos/ ✅
+    sofascore_incidents.py      — extração de incidentes/gols por partida via /event/{id}/incidents ✅
+    sofascore_player_heatmap_match.py — heatmap de jogador por partida específica ✅
   transform/
     matches.py                  — unifica + normaliza partidas e stats de time ✅
     players.py                  — normaliza scouts individuais ✅
     attack_map.py               — agrega extended_stats + shotmap → attack_profile.json + padrões ✅
     opponents.py                — normaliza dados do adversário: is_home_team + team_outcome ✅
     standings.py                — xPts (Poisson) + SOS + expected_points_table.csv ✅
+    incidents.py                — normaliza incidentes de partida → goal_sequences.csv + match_incidents.csv ✅
+    player_positions.py         — posições de jogadores na Série B → player_positions_serie_b.csv ✅
     clubs.py / events.py / lineups.py / shots.py — stubs
   validate/
     quality_checks.py           — 12 checks, gera validation_report.json
@@ -95,6 +99,8 @@ generate_<adversário>_cards.py  — raio-x do adversário: 6 cards (cover, camp
 generate_xpts_table_card.py     — tabela xPts dos 20 clubes Série B com escudos, barras, dots SOS ✅
 generate_xpts_scatter_card.py   — scatter xPts vs SOS com 4 quadrantes coloridos ✅
 generate_como_joga_card.py      — card "Como Joga" do adversário: shotmap + zonas + padrões ✅
+nivel_de_ataque.py              — quadro semanal "Nível de Ataque": dumbbell xG produzido vs contexto defensivo ✅
+analise_ofensiva_serie_b.py     — script de análise exploratória (terminal): ranking completo + detalhe por rodada
 
 # Curadoria de conteúdo
 pending_posts/                  — posts aguardando revisão (→ posted/ ou rejected/)
@@ -137,6 +143,9 @@ pending_posts/                  — posts aguardando revisão (→ posted/ ou re
 | **Transform standings (xPts + SOS)** | ✅ `standings.py` — Poisson, SOS, KEY_ALIASES, `expected_points_table.csv` |
 | **Cards xPts (tabela + scatter)** | ✅ `generate_xpts_table_card.py` + `generate_xpts_scatter_card.py` |
 | **Post xPts R1-R3 Série B 2026** | ✅ `pending_posts/2026-04-08_xpts-serie-b/` — pronto para publicar |
+| **Extração de incidentes por partida** | ✅ `sofascore_incidents.py` — goal_sequences + match_incidents |
+| **Transform de incidentes e posições** | ✅ `incidents.py` + `player_positions.py` |
+| **Quadro "Nível de Ataque"** | ✅ `nivel_de_ataque.py` — dumbbell xG produzido vs contexto defensivo, auto-rodada, tweet gerado |
 
 ### Parcial / dependente de execução
 
@@ -149,8 +158,7 @@ pending_posts/                  — posts aguardando revisão (→ posted/ ou re
 
 | Módulo | Status |
 |---|---|
-| Eventos detalhados por partida (`/incidents`) | ❌ |
-| Shotmap | ❌ |
+| Shotmap por partida (Série B completa) | ❌ |
 | Snapshot de classificação (`/standings/total`) | ❌ |
 | `transform/` restante (clubs, events, lineups, shots) | ❌ stubs |
 | `validate/reconciliation.py` | ❌ stub |
@@ -161,13 +169,18 @@ pending_posts/                  — posts aguardando revisão (→ posted/ ou re
 
 | Arquivo | Linhas | Conteúdo |
 |---|---|---|
-| `serie_b_2026/matches.csv` | 30 | Partidas Série B R1-R3 com `match_label`, `team_key` normalizado |
-| `serie_b_2026/team_match_stats.csv` | 60 | Stats de time + `passes_accuracy_pct`, `shots_on_target_pct` |
-| `serie_b_2026/player_match_stats.csv` | ~1200 | Scouts individuais Série B R1-R3 |
-| `serie_b_2026/expected_points_table.csv` | 20 | xPts, xW/D/L, pts_diff, SOS, sos_rank — R1-R3 (MP=3) |
-| `sport_2026/matches.csv` | 57 | Todas partidas do Sport 2026 |
-| `sport_2026/team_match_stats.csv` | 32 | Stats de time do Sport (partidas concluídas) |
-| `sport_2026/player_match_stats.csv` | 365 | Scouts individuais do Sport (todas as competições) |
+| `serie_b_2026/matches.csv` | 40 | Partidas Série B R1-R4 com `match_label`, `team_key` normalizado |
+| `serie_b_2026/team_match_stats.csv` | 80 | Stats de time + `passes_accuracy_pct`, `shots_on_target_pct` |
+| `serie_b_2026/player_match_stats.csv` | ~1600 | Scouts individuais Série B R1-R4 |
+| `serie_b_2026/expected_points_table.csv` | 20 | xPts, xW/D/L, pts_diff, SOS, sos_rank — R1-R4 (MP=4) |
+| `serie_b_2026/goal_sequences.csv` | — | Sequências de gol com minuto, tipo, time — R1-R4 |
+| `serie_b_2026/match_incidents.csv` | — | Incidentes por partida (gols, cartões, substituições) — R1-R4 |
+| `sport_2026/matches.csv` | — | Todas partidas do Sport 2026 |
+| `sport_2026/team_match_stats.csv` | — | Stats de time do Sport (partidas concluídas) |
+| `sport_2026/player_match_stats.csv` | — | Scouts individuais do Sport (todas as competições) |
+| `sport_2026/goal_sequences.csv` | — | Sequências de gol do Sport 2026 |
+| `sport_2026/match_incidents.csv` | — | Incidentes das partidas do Sport 2026 |
+| `sport_2026/player_positions_serie_b.csv` | — | Posições dos jogadores do Sport na Série B |
 | `opponents_2026/vila-nova/matches.csv` | — | Partidas do Vila Nova 2026 com `is_home_team` + `team_outcome` |
 | `opponents_2026/vila-nova/team_match_stats.csv` | — | Stats de time do Vila Nova por partida |
 | `opponents_2026/vila-nova/player_match_stats.csv` | — | Scouts individuais do Vila Nova |
@@ -217,6 +230,26 @@ python -m src.main sync-player-stats --season 2026
 python -m src.main transform --season 2026
 python -m src.main validate --season 2026
 ```
+
+### Fluxo Nível de Ataque (quadro semanal — a cada rodada)
+
+```bash
+# 1. Sincronizar nova rodada
+python -m src.main sync-matches --season 2026 --from-round N --to-round N
+python -m src.main transform --season 2026
+
+# 2. Gerar card + tweet + metadata automaticamente
+python -X utf8 nivel_de_ataque.py
+# → pending_posts/{hoje}_nivel-de-ataque-r{N}/card.png + tweet.txt + metadata.json
+
+# Forçar rodada específica (reprocessar):
+python -X utf8 nivel_de_ataque.py --round N
+```
+
+**O script auto-detecta** a última rodada completa nos dados, gera o dumbbell chart com escudos,
+e preenche o tweet com top-3/bottom-3 e posição do Sport calculados em tempo real.
+
+---
 
 ### Fluxo xPts semanal (a cada bloco de rodadas)
 
@@ -444,12 +477,11 @@ pip install ntscraper               # coleta real sem API paga (alternativa ao s
 
 ## Próximas prioridades
 
-1. Publicar thread xPts R1-R3 (`pending_posts/2026-04-08_xpts-serie-b/`)
-2. Publicar thread R2 — Vila Nova (`pending_posts/2026-04-01_raio-x-vila-nova/`)
-3. Executar pipeline raio-x para o próximo adversário do Sport
-4. Implementar extração de eventos (`/api/v1/event/{id}/incidents`)
-5. Implementar snapshot de classificação (`/api/v1/unique-tournament/390/season/89840/standings/total`)
-6. Integrar X API via MCP para postagem direta a partir da pasta `pending_posts/`
+1. Publicar "Nível de Ataque R1-R4" (`pending_posts/2026-04-16_nivel-de-ataque-r4/`)
+2. Executar pipeline raio-x para o próximo adversário do Sport (R5+)
+3. Atualizar xPts para R1-R4 e publicar (`generate_xpts_table_card.py` + `generate_xpts_scatter_card.py`)
+4. Implementar snapshot de classificação (`/api/v1/unique-tournament/390/season/89840/standings/total`)
+5. Integrar X API via MCP para postagem direta a partir da pasta `pending_posts/`
 
 ---
 
@@ -473,6 +505,8 @@ pip install ntscraper               # coleta real sem API paga (alternativa ao s
 | `generate_vila_nova_cards.py` | Raio-X R2 — template de referência para próximos adversários |
 | `generate_xpts_table_card.py` | Card 01 xPts — tabela 20 times com escudos, barras, dots SOS |
 | `generate_xpts_scatter_card.py` | Card 02 xPts — scatter xPts vs SOS, 4 quadrantes |
+| `nivel_de_ataque.py` | Quadro recorrente — dumbbell xG produzido vs contexto defensivo; auto-detecta rodada; gera card + tweet + metadata |
+| `analise_ofensiva_serie_b.py` | Análise exploratória em terminal — ranking completo + detalhe por partida por rodada |
 | `data/cache/logos/` | Escudos dos 20 clubes Série B (PNG, fundo removido via BFS) |
 | `data/processed/2026/matches/serie_b_2026_team_strength.csv` | MV + proxy de desempenho dos 20 clubes |
 | `pending_posts/2026-04-01_raio-x-vila-nova/` | Thread R2 (Vila Nova): 6 cards + tweet.txt + metadata.json |
@@ -507,6 +541,7 @@ A skill deve ser invocada antes de escrever código de card, para alinhar as dec
 | Raio-X do adversário | `generate_<adversário>_cards.py` | Antes de cada rodada da Série B |
 | xPts semanal (tabela) | `generate_xpts_table_card.py` | A cada bloco de rodadas da Série B |
 | xPts semanal (scatter) | `generate_xpts_scatter_card.py` | A cada bloco de rodadas da Série B |
+| **Nível de Ataque** (quadro recorrente) | `nivel_de_ataque.py` | Após cada rodada — dumbbell xG produzido vs contexto defensivo dos 20 clubes |
 
 ### Cards do raio-x (6 cards por adversário)
 
