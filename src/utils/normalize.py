@@ -7,6 +7,7 @@ import unicodedata
 ALIASES = {
     "america": "america-mg",
     "america mg": "america-mg",
+    "america mineiro": "america-mg",
     "athletic club": "athletic-club",
     "atletico goianiense": "atletico-go",
     "atletico goianiense saf": "atletico-go",
@@ -33,6 +34,7 @@ ALIASES = {
     "sport": "sport",
     "sport recife": "sport",
     "vila nova": "vila-nova",
+    "vila nova fc": "vila-nova",
 }
 
 

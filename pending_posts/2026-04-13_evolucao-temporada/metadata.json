@@ -1,0 +1,49 @@
+{
+  "title": "Evolução do Sport na temporada 2026 — saldo de xG em 3 fases",
+  "slug": "evolucao-temporada",
+  "date_created": "2026-04-24",
+  "date_target": "2026-04-24",
+  "status": "pending",
+  "post_type": "thread",
+  "tweet_count": 4,
+  "cards": [
+    {
+      "file": "01_evolucao_saldo.png",
+      "title": "Sport evolui, mas ainda oscila mais do que deveria",
+      "subtitle": "Saldo de xG por jogo ao longo da temporada",
+      "tweet_index": 1
+    },
+    {
+      "file": "02_saldo_xg_forca.png",
+      "title": "Contra adversários mais fortes, o Sport cai de rendimento",
+      "subtitle": "Saldo de xG vs força do adversário",
+      "tweet_index": 3
+    }
+  ],
+  "topics": [
+    "sport-recife",
+    "serie-b-2026",
+    "analise-de-dados",
+    "expected-goals",
+    "evolucao-temporada",
+    "marcio-goiano",
+    "roger-machado"
+  ],
+  "key_metrics": {
+    "total_matches": 18,
+    "fase_1_xg_balance_avg": 1.72,
+    "fase_2_xg_balance_avg": 0.47,
+    "fase_3_xg_balance_avg": 0.49,
+    "correlation_strength_vs_performance": -0.45,
+    "best_match": {"opponent": "Maranhão", "xg_balance": 2.93},
+    "worst_match": {"opponent": "Náutico", "xg_balance": -2.39},
+    "worst_vs_strong": {"opponent": "Vila Nova", "xg_balance": -0.96},
+    "last_match": {"opponent": "América-MG", "xg_balance": -0.91}
+  },
+  "narrative_angle": "Evolução real com oscilação residual. Sport melhorou o saldo de xG mesmo com salto de dificuldade dos adversários entre as três fases técnicas da temporada, mas ainda sofre contra times fortes (correlação negativa r=-0.45 entre força do adversário e saldo de xG).",
+  "generated_by": "generate_temporada_cards.py",
+  "data_sources": [
+    "data/curated/sport_2026/team_match_stats.csv",
+    "data/processed/2026/matches/serie_b_2026_team_strength.csv"
+  ]
+}

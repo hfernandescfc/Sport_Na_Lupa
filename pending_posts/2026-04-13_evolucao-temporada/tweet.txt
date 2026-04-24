@@ -1,0 +1,38 @@
+[1/4 — card: 01_evolucao_saldo.png — 236 chars]
+Sport tem 18 jogos na temporada 2026.
+Dá pra medir evolução com saldo de xG jogo a jogo?
+
+A resposta divide o ano em 3 fases — com 3 técnicos diferentes.
+
+A tendência é de melhora. Mas a oscilação continua grande demais pra Série B.
+
+---
+
+[2/4 — sem imagem — 210 chars]
+Fase 1 (Base fraca, Sub20): +1,72 xG por jogo
+Fase 2 (Pré-Série B, Roger): +0,47
+Fase 3 (Competição real, Márcio): +0,49
+
+Mesmo com adversário mais forte na Fase 3, o saldo se manteve. Sinal de evolução real.
+
+---
+
+[3/4 — card: 02_saldo_xg_forca.png — 239 chars]
+Mas tem um padrão que o Sport precisa quebrar.
+
+Quanto mais forte o adversário, pior o saldo de xG (r = -0,45).
+
+Melhor jogo vs fraco: Maranhão (+2,93)
+Pior vs forte: Vila Nova (-0,96)
+
+Domina quem pode — sofre contra quem disputa Série B.
+
+---
+
+[4/4 — sem imagem — 217 chars]
+Leitura final:
+- Evolução: saldo médio cai, mas adversário sobe muito
+- Pico na Fase 3: 2,93 xG de saldo
+- Alerta: ainda oscila demais e trava contra fortes
+
+Se Márcio corrigir a oscilação, o Sport briga por acesso.
