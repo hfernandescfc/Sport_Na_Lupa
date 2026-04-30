@@ -11,16 +11,21 @@ For each completed match that has xG for both teams:
 
 Aggregate per team and compare against actual points.
 
-Opponent strength (optional)
-----------------------------
-If  data/processed/{season}/matches/serie_b_{season}_team_strength.csv  exists,
-the table is enriched with:
-  - sos        : average strength_score of opponents faced  (0-1 scale)
-  - sos_xpts   : xPts weighted by opponents' strength (higher = harder schedule)
+Opponent strength
+-----------------
+The table is always enriched with a SOS column derived from each team's live
+Série B PPG (Pts / MP from this very table), optionally combined with squad
+market value from data/processed/{season}/matches/serie_b_{season}_team_strength.csv.
 
-Strength score mirrors generate_temporada_cards.py:
-    strength_score = 0.60 × mv_score + 0.40 × perf_score   (when MV available)
-    strength_score = perf_score                              (fallback)
+  strength_score = 0.60 × mv_score + 0.40 × perf_score   (when MV available)
+  strength_score = perf_score                              (fallback)
+
+  mv_score   = (mv - min) / (max - min)             [frozen until sync-serie-b-strength re-runs]
+  perf_score = (Pts/MP) / max(Pts/MP)               [live — recomputed every transform-standings]
+
+This keeps the time-sensitive part of SOS in sync with the current round even
+if MV has not been refreshed, while preserving market value as a stable
+top-of-table signal between transfer windows.
 
 Output
 ------
@@ -90,48 +95,77 @@ def _match_probabilities(xg_home: float, xg_away: float) -> tuple[float, float, 
 # Opponent strength
 # ---------------------------------------------------------------------------
 
-def _load_strength_scores(settings: Settings, season: int) -> dict[str, float] | None:
-    """Return {team_key: strength_score} or None if the strength file is absent."""
-    path = settings.processed_dir / str(season) / "matches" / f"serie_b_{season}_team_strength.csv"
+_STRENGTH_KEY_ALIASES = {
+    "america-mg":  "america-mineiro",
+    "vila-nova":   "vila-nova-fc",
+}
+
+
+def _load_market_values(settings: Settings, season: int) -> dict[str, float]:
+    """Return {team_key: mv_score in [0,1]}. Empty dict if file missing/incomplete.
+
+    MV evolves slowly (transfer windows) and is sourced from
+    sync-serie-b-strength. The performance component is computed live in
+    `_compute_strength_scores` from the curated standings table — so a stale
+    MV CSV degrades to a frozen 60% weight, but the live 40% always reflects
+    the latest round.
+    """
+    path = (
+        settings.processed_dir / str(season) / "matches"
+        / f"serie_b_{season}_team_strength.csv"
+    )
     if not path.exists():
-        logger.info("Team strength file not found (%s) — SOS columns will be omitted", path)
-        return None
+        logger.info("Team strength file not found (%s) — MV component disabled", path)
+        return {}
 
     df = pd.read_csv(path)
+    df["team_key"] = df["team_key"].replace(_STRENGTH_KEY_ALIASES)
+    df["squad_market_value_eur"] = pd.to_numeric(
+        df["squad_market_value_eur"], errors="coerce"
+    )
+    df = df.dropna(subset=["squad_market_value_eur"])
 
-    # Corrige divergências entre chaves do MANUAL_TEAM_MAPPINGS e o
-    # resultado de normalize_team_name nos dados curados
-    KEY_ALIASES = {
-        "america-mg":  "america-mineiro",
-        "vila-nova":   "vila-nova-fc",
-    }
-    df["team_key"] = df["team_key"].replace(KEY_ALIASES)
+    if len(df) < 20:
+        logger.warning(
+            "Strength CSV covers %d/20 Série B teams — MV missing for the rest. "
+            "Run `sync-serie-b-strength` (or `update-round --refresh-strength`) to refresh.",
+            len(df),
+        )
 
-    df["squad_market_value_eur"] = pd.to_numeric(df["squad_market_value_eur"], errors="coerce")
-    df["perf_points_per_game"] = pd.to_numeric(df["perf_points_per_game"], errors="coerce")
-
-    # Normalise market value to [0, 1]
     mv = df["squad_market_value_eur"]
     mv_min, mv_max = mv.min(), mv.max()
-    if mv_max > mv_min:
-        df["mv_score"] = (mv - mv_min) / (mv_max - mv_min)
-    else:
-        df["mv_score"] = None
+    if mv_max <= mv_min:
+        return {}
+    df["mv_score"] = (mv - mv_min) / (mv_max - mv_min)
+    return dict(zip(df["team_key"], df["mv_score"]))
 
-    # Normalise PPG to [0, 1]
-    ppg = df["perf_points_per_game"].fillna(0.0)
+
+def _compute_strength_scores(
+    table: pd.DataFrame, mv_scores: dict[str, float]
+) -> dict[str, float]:
+    """Combine frozen MV (60%) with live PPG from the curated Série B table (40%).
+
+    Live PPG ensures SOS reflects each opponent's latest form even if
+    sync-serie-b-strength has not been re-run. Falls back to PPG-only when
+    MV is unavailable for a team (graceful degradation; matches the previous
+    behaviour for partial coverage)."""
+    if table.empty or "Pts" not in table.columns or "MP" not in table.columns:
+        return {}
+
+    ppg = (table["Pts"] / table["MP"]).where(table["MP"] > 0, 0.0)
     ppg_max = ppg.max()
-    df["perf_score"] = ppg / ppg_max if ppg_max > 0 else 0.0
+    if ppg_max <= 0:
+        return {}
+    perf_scores = dict(zip(table["team_key"], ppg / ppg_max))
 
-    # Combined strength score — same formula as generate_temporada_cards.py
-    def _strength(row: pd.Series) -> float:
-        if pd.notna(row["mv_score"]):
-            return 0.60 * row["mv_score"] + 0.40 * row["perf_score"]
-        return float(row["perf_score"])
-
-    df["strength_score"] = df.apply(_strength, axis=1)
-
-    return dict(zip(df["team_key"], df["strength_score"]))
+    strength: dict[str, float] = {}
+    for team_key, perf in perf_scores.items():
+        mv = mv_scores.get(team_key)
+        if mv is not None:
+            strength[team_key] = 0.60 * mv + 0.40 * float(perf)
+        else:
+            strength[team_key] = float(perf)
+    return strength
 
 
 # ---------------------------------------------------------------------------
@@ -267,8 +301,10 @@ def transform_standings(settings: Settings, season: int) -> None:
     table["xL"] = table["xL"].round(2)
     table["pts_diff"] = (table["Pts"] - table["xPts"]).round(2)
 
-    # ── Opponent strength (optional) ──────────────────────────────────────────
-    strength_scores = _load_strength_scores(settings, season)
+    # ── Opponent strength ─────────────────────────────────────────────────────
+    # MV from CSV (frozen, slow-changing); PPG from this very table (live).
+    mv_scores = _load_market_values(settings, season)
+    strength_scores = _compute_strength_scores(table, mv_scores)
     if strength_scores:
         table = _enrich_with_sos(table, all_rows, strength_scores)
 

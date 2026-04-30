@@ -1,0 +1,51 @@
+season,competition,round,match_id,team_name,is_home,possession,expected_goals,shots_total,shots_on_target,corners,fouls,passes_total,passes_accurate,tackles_total,yellow_cards,red_cards,source_url,data_status,last_updated_at
+2026,"Cearense, Serie A, Group A",2,vPsxdn,Ferroviário,True,54.0,1.27,13.0,5.0,5.0,15.0,399.0,337.0,5.0,1.0,0.0,https://www.sofascore.com/football/match/ferroviario-fortaleza/vPsxdn,advanced_stats_confirmed,2026-04-28T19:32:21.743390Z
+2026,"Cearense, Serie A, Group A",2,vPsxdn,Fortaleza,False,46.0,1.86,12.0,5.0,4.0,21.0,340.0,279.0,6.0,4.0,0.0,https://www.sofascore.com/football/match/ferroviario-fortaleza/vPsxdn,advanced_stats_confirmed,2026-04-28T19:32:21.743390Z
+2026,"Cearense, Serie A, Group A",3,vPsvdn,Fortaleza,True,63.0,2.97,20.0,8.0,8.0,18.0,562.0,512.0,13.0,2.0,0.0,https://www.sofascore.com/football/match/quixada-fortaleza/vPsvdn,advanced_stats_confirmed,2026-04-28T19:32:21.743415Z
+2026,"Cearense, Serie A, Group A",3,vPsvdn,Quixadá,False,37.0,0.5,9.0,0.0,1.0,11.0,338.0,274.0,18.0,3.0,0.0,https://www.sofascore.com/football/match/quixada-fortaleza/vPsvdn,advanced_stats_confirmed,2026-04-28T19:32:21.743415Z
+2026,"Cearense, Serie A, Group A",4,vPsgTJ,Fortaleza,True,,,,,,,,,,,,https://www.sofascore.com/football/match/maracana-fortaleza/vPsgTJ,advanced_stats_missing,2026-04-28T19:32:21.743429Z
+2026,"Cearense, Serie A, Group A",4,vPsgTJ,Maracanã,False,,,,,,,,,,,,https://www.sofascore.com/football/match/maracana-fortaleza/vPsgTJ,advanced_stats_missing,2026-04-28T19:32:21.743429Z
+2026,"Cearense, Serie A, Group A",5,vPstOi,Horizonte FC,True,38.0,0.06,3.0,1.0,1.0,12.0,270.0,199.0,15.0,3.0,0.0,https://www.sofascore.com/football/match/horizonte-fc-fortaleza/vPstOi,advanced_stats_confirmed,2026-04-28T19:32:21.743440Z
+2026,"Cearense, Serie A, Group A",5,vPstOi,Fortaleza,False,62.0,0.68,16.0,3.0,6.0,18.0,443.0,375.0,13.0,4.0,0.0,https://www.sofascore.com/football/match/horizonte-fc-fortaleza/vPstOi,advanced_stats_confirmed,2026-04-28T19:32:21.743440Z
+2026,"Cearense, Serie A, Championship Round",1,vPsLKjc,Fortaleza,True,58.0,1.15,11.0,1.0,3.0,23.0,409.0,327.0,13.0,2.0,0.0,https://www.sofascore.com/football/match/floresta-fortaleza/vPsLKjc,advanced_stats_confirmed,2026-04-28T19:32:21.743452Z
+2026,"Cearense, Serie A, Championship Round",1,vPsLKjc,Floresta,False,42.0,0.15,3.0,1.0,3.0,12.0,298.0,217.0,13.0,1.0,0.0,https://www.sofascore.com/football/match/floresta-fortaleza/vPsLKjc,advanced_stats_confirmed,2026-04-28T19:32:21.743452Z
+2026,"Cearense, Serie A, Championship Round",2,vPsMKjc,Fortaleza,True,67.0,2.38,31.0,11.0,13.0,19.0,393.0,346.0,10.0,5.0,0.0,https://www.sofascore.com/football/match/ad-iguatu-fortaleza/vPsMKjc,advanced_stats_confirmed,2026-04-28T19:32:21.743469Z
+2026,"Cearense, Serie A, Championship Round",2,vPsMKjc,AD Iguatu,False,33.0,0.33,4.0,2.0,3.0,9.0,211.0,151.0,16.0,6.0,0.0,https://www.sofascore.com/football/match/ad-iguatu-fortaleza/vPsMKjc,advanced_stats_confirmed,2026-04-28T19:32:21.743469Z
+2026,"Cearense, Serie A, Championship Round",3,bPsvP,Ceará,True,,,,,,,,,,,,https://www.sofascore.com/football/match/fortaleza-ceara/bPsvP,advanced_stats_missing,2026-04-28T19:32:21.743480Z
+2026,"Cearense, Serie A, Championship Round",3,bPsvP,Fortaleza,False,,,,,,,,,,,,https://www.sofascore.com/football/match/fortaleza-ceara/bPsvP,advanced_stats_missing,2026-04-28T19:32:21.743480Z
+2026,"Cearense, Serie A, Playoffs",28,vPsxdn,Ferroviário,True,54.0,1.27,13.0,5.0,5.0,15.0,399.0,337.0,5.0,1.0,0.0,https://www.sofascore.com/football/match/ferroviario-fortaleza/vPsxdn,advanced_stats_confirmed,2026-04-28T19:32:21.743491Z
+2026,"Cearense, Serie A, Playoffs",28,vPsxdn,Fortaleza,False,46.0,1.86,12.0,5.0,4.0,21.0,340.0,279.0,6.0,4.0,0.0,https://www.sofascore.com/football/match/ferroviario-fortaleza/vPsxdn,advanced_stats_confirmed,2026-04-28T19:32:21.743491Z
+2026,"Cearense, Serie A, Playoffs",28,vPsxdn,Fortaleza,True,54.0,1.27,13.0,5.0,5.0,15.0,399.0,337.0,5.0,1.0,0.0,https://www.sofascore.com/football/match/ferroviario-fortaleza/vPsxdn,advanced_stats_confirmed,2026-04-28T19:32:21.743502Z
+2026,"Cearense, Serie A, Playoffs",28,vPsxdn,Ferroviário,False,46.0,1.86,12.0,5.0,4.0,21.0,340.0,279.0,6.0,4.0,0.0,https://www.sofascore.com/football/match/ferroviario-fortaleza/vPsxdn,advanced_stats_confirmed,2026-04-28T19:32:21.743502Z
+2026,Copa Betano do Brasil,2,vPsXMHd,Fortaleza,True,,1.5,,,,,,,,3.0,0.0,https://www.sofascore.com/football/match/maguary-fortaleza/vPsXMHd,advanced_stats_partial,2026-04-28T19:32:21.743515Z
+2026,Copa Betano do Brasil,2,vPsXMHd,Maguary,False,,1.51,,,,,,,,4.0,0.0,https://www.sofascore.com/football/match/maguary-fortaleza/vPsXMHd,advanced_stats_partial,2026-04-28T19:32:21.743515Z
+2026,"Cearense, Serie A, Playoffs",29,bPsvP,Fortaleza,True,,,,,,,,,,,,https://www.sofascore.com/football/match/fortaleza-ceara/bPsvP,advanced_stats_missing,2026-04-28T19:32:21.743526Z
+2026,"Cearense, Serie A, Playoffs",29,bPsvP,Ceará,False,,,,,,,,,,,,https://www.sofascore.com/football/match/fortaleza-ceara/bPsvP,advanced_stats_missing,2026-04-28T19:32:21.743526Z
+2026,"Cearense, Serie A, Playoffs",29,bPsvP,Ceará,True,,,,,,,,,,,,https://www.sofascore.com/football/match/fortaleza-ceara/bPsvP,advanced_stats_missing,2026-04-28T19:32:21.743536Z
+2026,"Cearense, Serie A, Playoffs",29,bPsvP,Fortaleza,False,,,,,,,,,,,,https://www.sofascore.com/football/match/fortaleza-ceara/bPsvP,advanced_stats_missing,2026-04-28T19:32:21.743536Z
+2026,Copa Betano do Brasil,3,vPsemhd,Manauara EC,True,42.0,0.59,,4.0,1.0,20.0,0.0,,,2.0,0.0,https://www.sofascore.com/football/match/manauara-ec-fortaleza/vPsemhd,advanced_stats_partial,2026-04-28T19:32:21.743546Z
+2026,Copa Betano do Brasil,3,vPsemhd,Fortaleza,False,58.0,1.52,,4.0,7.0,24.0,16.0,,,4.0,0.0,https://www.sofascore.com/football/match/manauara-ec-fortaleza/vPsemhd,advanced_stats_partial,2026-04-28T19:32:21.743546Z
+2026,Copa Betano do Brasil,4,vPsGOc,Nova Iguaçu,True,63.0,0.31,6.0,1.0,1.0,17.0,579.0,519.0,10.0,2.0,0.0,https://www.sofascore.com/football/match/nova-iguacu-fortaleza/vPsGOc,advanced_stats_confirmed,2026-04-28T19:32:21.743555Z
+2026,Copa Betano do Brasil,4,vPsGOc,Fortaleza,False,37.0,0.79,9.0,3.0,2.0,15.0,347.0,277.0,21.0,3.0,0.0,https://www.sofascore.com/football/match/nova-iguacu-fortaleza/vPsGOc,advanced_stats_confirmed,2026-04-28T19:32:21.743555Z
+2026,Brasileirão Série B,1,EOsvP,Botafogo-SP,True,,,,,,,,,,,,https://www.sofascore.com/football/match/fortaleza-botafogo-sp/EOsvP,advanced_stats_missing,2026-04-28T19:32:21.743567Z
+2026,Brasileirão Série B,1,EOsvP,Fortaleza,False,,,,,,,,,,,,https://www.sofascore.com/football/match/fortaleza-botafogo-sp/EOsvP,advanced_stats_missing,2026-04-28T19:32:21.743567Z
+2026,Copa do Nordeste,1,vPsxdn,Ferroviário,True,,,,,,,,,,,,https://www.sofascore.com/football/match/ferroviario-fortaleza/vPsxdn,advanced_stats_missing,2026-04-28T19:32:21.743578Z
+2026,Copa do Nordeste,1,vPsxdn,Fortaleza,False,,,,,,,,,,,,https://www.sofascore.com/football/match/ferroviario-fortaleza/vPsxdn,advanced_stats_missing,2026-04-28T19:32:21.743578Z
+2026,Copa do Nordeste,2,vPsGFKb,Fortaleza,True,,,,,,,,,,,,https://www.sofascore.com/football/match/imperatriz-fortaleza/vPsGFKb,advanced_stats_missing,2026-04-28T19:32:21.743588Z
+2026,Copa do Nordeste,2,vPsGFKb,Imperatriz,False,,,,,,,,,,,,https://www.sofascore.com/football/match/imperatriz-fortaleza/vPsGFKb,advanced_stats_missing,2026-04-28T19:32:21.743588Z
+2026,Brasileirão Série B,2,vPscJu,Fortaleza,True,,,,,,,,,,,,https://www.sofascore.com/football/match/cuiaba-fortaleza/vPscJu,advanced_stats_missing,2026-04-28T19:32:21.743599Z
+2026,Brasileirão Série B,2,vPscJu,Cuiabá,False,,,,,,,,,,,,https://www.sofascore.com/football/match/cuiaba-fortaleza/vPscJu,advanced_stats_missing,2026-04-28T19:32:21.743599Z
+2026,Brasileirão Série B,3,FOsvP,Fortaleza,True,,,,,,,,,,,,https://www.sofascore.com/football/match/fortaleza-juventude/FOsvP,advanced_stats_missing,2026-04-28T19:32:21.743610Z
+2026,Brasileirão Série B,3,FOsvP,Juventude,False,,,,,,,,,,,,https://www.sofascore.com/football/match/fortaleza-juventude/FOsvP,advanced_stats_missing,2026-04-28T19:32:21.743610Z
+2026,Copa do Nordeste,3,bPsvP,Ceará,True,,,,,,,,,,,,https://www.sofascore.com/football/match/fortaleza-ceara/bPsvP,advanced_stats_missing,2026-04-28T19:32:21.743620Z
+2026,Copa do Nordeste,3,bPsvP,Fortaleza,False,,,,,,,,,,,,https://www.sofascore.com/football/match/fortaleza-ceara/bPsvP,advanced_stats_missing,2026-04-28T19:32:21.743620Z
+2026,Brasileirão Série B,4,vPseau,São Bernardo,True,,,,,,,,,,,,https://www.sofascore.com/football/match/sao-bernardo-fortaleza/vPseau,advanced_stats_missing,2026-04-28T19:32:21.743630Z
+2026,Brasileirão Série B,4,vPseau,Fortaleza,False,,,,,,,,,,,,https://www.sofascore.com/football/match/sao-bernardo-fortaleza/vPseau,advanced_stats_missing,2026-04-28T19:32:21.743630Z
+2026,Copa do Nordeste,4,vPsyP,América-RN,True,,,,,,,,,,,,https://www.sofascore.com/football/match/america-rn-fortaleza/vPsyP,advanced_stats_missing,2026-04-28T19:32:21.743640Z
+2026,Copa do Nordeste,4,vPsyP,Fortaleza,False,,,,,,,,,,,,https://www.sofascore.com/football/match/america-rn-fortaleza/vPsyP,advanced_stats_missing,2026-04-28T19:32:21.743640Z
+2026,Brasileirão Série B,5,JOsvP,Fortaleza,True,,,,,,,,,,,,https://www.sofascore.com/football/match/fortaleza-criciuma/JOsvP,advanced_stats_missing,2026-04-28T19:32:21.743650Z
+2026,Brasileirão Série B,5,JOsvP,Criciúma,False,,,,,,,,,,,,https://www.sofascore.com/football/match/fortaleza-criciuma/JOsvP,advanced_stats_missing,2026-04-28T19:32:21.743650Z
+2026,Copa Betano do Brasil,5,vPsHPi,Fortaleza,True,,,,,,,,,,,,https://www.sofascore.com/football/match/crb-fortaleza/vPsHPi,advanced_stats_missing,2026-04-28T19:32:21.743666Z
+2026,Copa Betano do Brasil,5,vPsHPi,CRB,False,,,,,,,,,,,,https://www.sofascore.com/football/match/crb-fortaleza/vPsHPi,advanced_stats_missing,2026-04-28T19:32:21.743666Z
+2026,Brasileirão Série B,6,vPsJRp,Operário-PR,True,,,,,,,,,,,,https://www.sofascore.com/football/match/operario-pr-fortaleza/vPsJRp,advanced_stats_missing,2026-04-28T19:32:21.743676Z
+2026,Brasileirão Série B,6,vPsJRp,Fortaleza,False,,,,,,,,,,,,https://www.sofascore.com/football/match/operario-pr-fortaleza/vPsJRp,advanced_stats_missing,2026-04-28T19:32:21.743676Z

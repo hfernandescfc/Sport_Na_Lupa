@@ -54,16 +54,33 @@ def _load_serie_b_matches(processed: Path) -> pd.DataFrame:
     matches_path = processed / "matches" / "matches.csv"
     ids_path = processed / "matches" / "match_ids.csv"
 
-    if not matches_path.exists():
-        logger.warning("matches.csv not found: %s", matches_path)
-        return pd.DataFrame()
-
-    df = pd.read_csv(matches_path, dtype=str)
-
-    # Enrich with event_id from match_ids.csv
+    # Primary source: match_ids.csv. It is cumulative across rounds and is
+    # filled in by the event-detail fetcher with status + scores + event_id.
+    # matches.csv only contains the round-list output, which over time prunes
+    # already-completed rounds and never carries final scores.
     if ids_path.exists():
-        ids_df = pd.read_csv(ids_path, dtype=str)[["match_code", "event_id"]]
-        df = df.merge(ids_df, left_on="match_id", right_on="match_code", how="left").drop(columns=["match_code"], errors="ignore")
+        df = pd.read_csv(ids_path, dtype=str)
+        # Keep only Série B fixtures (defensive — match_ids.csv is single-comp).
+        if "competition" in df.columns:
+            df = df[df["competition"] == "serie_b"].copy()
+        # Align match_id naming with downstream rename below.
+        if "match_code" in df.columns and "match_id" not in df.columns:
+            df = df.rename(columns={"match_code": "match_id"})
+        # Optional enrichment from matches.csv (venue, source).
+        if matches_path.exists():
+            extra_cols = [
+                c for c in ("round", "match_id", "venue_name", "source",
+                            "source_detail", "source_url", "last_updated_at")
+                if c in pd.read_csv(matches_path, dtype=str, nrows=0).columns
+            ]
+            if {"round", "match_id"}.issubset(extra_cols):
+                mdf = pd.read_csv(matches_path, dtype=str)[extra_cols]
+                df = df.merge(mdf, on=["round", "match_id"], how="left")
+    elif matches_path.exists():
+        df = pd.read_csv(matches_path, dtype=str)
+    else:
+        logger.warning("no Série B match sources found in %s", processed / "matches")
+        return pd.DataFrame()
 
     df = df.rename(columns={
         "match_id": "match_code",

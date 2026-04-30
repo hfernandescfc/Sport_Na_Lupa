@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import argparse
+import subprocess
+import sys
+from pathlib import Path
 
 from src.config import get_settings
 from src.discover.endpoint_registry import discover_endpoints
@@ -11,6 +14,7 @@ from src.extract.sofascore_match import sync_matches_stub
 from src.extract.sofascore_all_teams import sync_all_teams_stub
 from src.extract.sofascore_player_stats import sync_player_stats
 from src.extract.sofascore_incidents import sync_incidents
+from src.extract.sofascore_shotmap_serie_b import sync_shotmap_serie_b
 from src.extract.sofascore_player_heatmap_match import sync_player_positions
 from src.extract.sofascore_attack_map import sync_attack_map
 from src.extract.sofascore_team_heatmap import sync_team_heatmap
@@ -24,6 +28,7 @@ from src.transform.opponents import transform_opponent
 from src.transform.matches import transform_matches
 from src.transform.players import transform_players
 from src.transform.standings import transform_standings
+from src.transform.power_ranking import transform_power_ranking
 from src.extract.sofascore_serie_b_strength import sync_serie_b_strength
 from src.extract.sofascore_logos import sync_logos
 from src.extract.sofascore_team import sync_teams_stub
@@ -118,6 +123,19 @@ def build_parser() -> argparse.ArgumentParser:
     transform_opponent_cmd.add_argument("--team-key", dest="team_key", required=True)
     transform_opponent_cmd.add_argument("--season", type=int, required=True)
 
+    sync_shotmap_cmd = subparsers.add_parser(
+        "sync-shotmap",
+        help="Fetch shotmaps for all completed Série B matches (situation, xG, coordinates)",
+    )
+    sync_shotmap_cmd.add_argument("--season", type=int, required=True)
+    sync_shotmap_cmd.add_argument(
+        "--from-round", type=int, dest="from_round", default=1,
+    )
+    sync_shotmap_cmd.add_argument(
+        "--to-round", type=int, dest="to_round", default=None,
+        help="Rodada limite (default: auto-detect última rodada completamente concluída)",
+    )
+
     sync_attack_map_cmd = subparsers.add_parser(
         "sync-attack-map",
         help="Fetch extended stats + shotmap for all completed opponent matches",
@@ -160,10 +178,147 @@ def build_parser() -> argparse.ArgumentParser:
     )
     transform_standings_cmd.add_argument("--season", type=int, required=True)
 
+    transform_pr_cmd = subparsers.add_parser(
+        "transform-power-ranking",
+        help="Build composite power ranking (xPts, Net xG, SOS-rolling, form)",
+    )
+    transform_pr_cmd.add_argument("--season", type=int, required=True)
+    transform_pr_cmd.add_argument(
+        "--sos-window", type=int, default=4,
+        help="Rolling window for SOS (default: 4 matches)",
+    )
+
     validate = subparsers.add_parser("validate", help="Run data validation checks")
     validate.add_argument("--season", type=int, required=True)
 
+    update_round_cmd = subparsers.add_parser(
+        "update-round",
+        help="Pipeline completo da nova rodada: extract + transform + validate + cards",
+    )
+    update_round_cmd.add_argument("--season", type=int, required=True)
+    update_round_cmd.add_argument(
+        "--round", type=int, dest="round_number", default=None,
+        help="Rodada-alvo. Padrão: auto-detect última rodada com stats completas.",
+    )
+    update_round_cmd.add_argument(
+        "--skip-cards", action="store_true", dest="skip_cards",
+        help="Pula geração de nivel_de_ataque + cards xPts.",
+    )
+    update_round_cmd.add_argument(
+        "--strict", action="store_true",
+        help="Aborta na primeira falha (default: fail-soft com log de erro).",
+    )
+    update_round_cmd.add_argument(
+        "--refresh-strength", action="store_true", dest="refresh_strength",
+        help="Roda sync-serie-b-strength antes do transform-standings "
+             "(custo ~5min Selenium). Default off — SOS recalcula PPG ao vivo "
+             "do table; só o market value pode ficar antigo.",
+    )
+
     return parser
+
+
+def _detect_latest_round(settings, season: int) -> int | None:
+    """Última rodada com stats completas (mesma heurística de nivel_de_ataque.py)."""
+    stats_path = (
+        Path(settings.base_dir)
+        / "data" / "curated" / f"serie_b_{season}" / "team_match_stats.csv"
+    )
+    if not stats_path.exists():
+        return None
+    import pandas as pd
+    df = pd.read_csv(stats_path)
+    if df.empty or "match_code" not in df.columns or "round" not in df.columns:
+        return None
+    sizes = df.groupby("match_code").size()
+    valid = sizes[sizes == 2].index
+    df = df[df["match_code"].isin(valid)]
+    if df.empty:
+        return None
+    return int(df["round"].max())
+
+
+def _run_update_round(
+    settings,
+    *,
+    season: int,
+    round_number: int | None,
+    skip_cards: bool,
+    strict: bool,
+    refresh_strength: bool,
+    logger,
+) -> None:
+    failures: list[str] = []
+    completed: list[str] = []
+
+    def step(name: str, func) -> None:
+        logger.info("[update-round] ▶ %s", name)
+        try:
+            func()
+            completed.append(name)
+            logger.info("[update-round] ✓ %s", name)
+        except Exception as exc:  # noqa: BLE001
+            failures.append(name)
+            if strict:
+                logger.error("[update-round] ✗ %s — abortando (--strict)", name)
+                raise
+            logger.error("[update-round] ✗ %s — %s", name, exc, exc_info=True)
+
+    # Fase 1 — EXTRACT
+    step("sync-matches", lambda: sync_matches_stub(
+        settings, season=season, from_round=1, to_round=38))
+    step("sync-sport", lambda: sync_sport_stub(settings, season=season))
+    step("sync-player-stats", lambda: sync_player_stats(settings, season=season))
+    step("sync-incidents", lambda: sync_incidents(settings, season=season))
+    step("sync-shotmap", lambda: sync_shotmap_serie_b(settings, season=season))
+    step("sync-player-positions", lambda: sync_player_positions(settings, season=season))
+
+    # Fase 2 — TRANSFORM
+    step("transform-matches", lambda: transform_matches(settings, season=season))
+    step("transform-players", lambda: transform_players(settings, season=season))
+    step("transform-incidents", lambda: transform_incidents(settings, season=season))
+    step("transform-player-positions",
+         lambda: transform_player_positions(settings, season=season))
+    if refresh_strength:
+        step("sync-serie-b-strength",
+             lambda: sync_serie_b_strength(settings, season=season))
+    step("transform-standings", lambda: transform_standings(settings, season=season))
+
+    # Fase 3 — VALIDATE
+    step("validate", lambda: run_quality_checks(settings, season=season))
+
+    # Auto-detect da rodada (após transforms — usa CSVs atualizados)
+    detected_round = round_number or _detect_latest_round(settings, season)
+    if detected_round is None:
+        logger.warning("[update-round] não foi possível detectar rodada — cards podem falhar")
+    else:
+        logger.info("[update-round] rodada-alvo dos cards: R%s", detected_round)
+
+    # Fase 4 — CARDS (subprocess; scripts têm side effects no escopo de módulo)
+    if not skip_cards:
+        base = Path(settings.base_dir)
+
+        def run_card(script_name: str, extra_args: list[str] | None = None) -> None:
+            cmd = [sys.executable, str(base / script_name)]
+            if extra_args:
+                cmd.extend(extra_args)
+            result = subprocess.run(cmd, cwd=str(base))
+            if result.returncode != 0:
+                raise RuntimeError(f"{script_name} exit code {result.returncode}")
+
+        nivel_args = ["--round", str(detected_round)] if detected_round else None
+        step("card:nivel-de-ataque", lambda: run_card("nivel_de_ataque.py", nivel_args))
+        step("card:xpts-table", lambda: run_card("generate_xpts_table_card.py"))
+        step("card:xpts-scatter", lambda: run_card("generate_xpts_scatter_card.py"))
+
+    total = len(completed) + len(failures)
+    if failures:
+        logger.warning(
+            "[update-round] concluído com %d falha(s) de %d passos: %s",
+            len(failures), total, ", ".join(failures),
+        )
+    else:
+        logger.info("[update-round] concluído: %d/%d passos OK", len(completed), total)
 
 
 def main() -> None:
@@ -285,6 +440,20 @@ def main() -> None:
         logger.info("Opponent transform completed for %s season %s", args.team_key, args.season)
         return
 
+    if args.command == "sync-shotmap":
+        ensure_project_structure(settings)
+        sync_shotmap_serie_b(
+            settings,
+            season=args.season,
+            from_round=args.from_round,
+            to_round=args.to_round,
+        )
+        logger.info(
+            "Shotmap sync completed for season %s rounds %s-%s",
+            args.season, args.from_round, args.to_round,
+        )
+        return
+
     if args.command == "sync-attack-map":
         ensure_project_structure(settings)
         sync_attack_map(settings, team_key=args.team_key, season=args.season)
@@ -326,10 +495,29 @@ def main() -> None:
         logger.info("Standings transform completed for season %s", args.season)
         return
 
+    if args.command == "transform-power-ranking":
+        ensure_project_structure(settings)
+        transform_power_ranking(settings, season=args.season, sos_window=args.sos_window)
+        logger.info("Power ranking completed for season %s", args.season)
+        return
+
     if args.command == "validate":
         ensure_project_structure(settings)
         run_quality_checks(settings, season=args.season)
         logger.info("Validation completed for season %s", args.season)
+        return
+
+    if args.command == "update-round":
+        ensure_project_structure(settings)
+        _run_update_round(
+            settings,
+            season=args.season,
+            round_number=args.round_number,
+            skip_cards=args.skip_cards,
+            strict=args.strict,
+            refresh_strength=args.refresh_strength,
+            logger=logger,
+        )
         return
 
 

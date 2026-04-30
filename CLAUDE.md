@@ -223,11 +223,39 @@ python -m src.main transform-standings --season 2026
 
 ### Fluxo incremental (a cada nova rodada)
 
+Comando único — executa extract + transform + validate + cards recorrentes (`nivel_de_ataque`, xPts table, xPts scatter):
+
+```bash
+python -m src.main update-round --season 2026
+# --round N            → força rodada-alvo dos cards (default: auto-detect última completa)
+# --skip-cards         → roda só pipeline de dados, pula geração de cards
+# --strict             → aborta no primeiro erro (default: fail-soft, segue + log)
+# --refresh-strength   → roda sync-serie-b-strength antes do transform-standings
+#                        (custo Selenium ~5min). Recomendado quando MV estiver antigo
+#                        ou faltar cobertura — janelas de transferência, p.ex.
+```
+
+**SOS / força do calendário:** o `transform-standings` agora calcula o `perf_score`
+**ao vivo** do próprio `expected_points_table.csv` (Pts/MP da Série B), e combina
+com o `mv_score` congelado do CSV de força. Em prática: PPG sempre fresco a cada
+rodada; MV só atualiza com `--refresh-strength` (ou `python -m src.main sync-serie-b-strength`).
+
+**Sequência interna** (13 passos, idempotentes):
+1. extract: `sync-matches` (1-38) · `sync-sport` · `sync-player-stats` · `sync-incidents` · `sync-player-positions`
+2. transform: `transform-matches` · `transform-players` · `transform-incidents` · `transform-player-positions` · `transform-standings`
+3. validate: `run_quality_checks`
+4. cards: `nivel_de_ataque.py --round N` · `generate_xpts_table_card.py` · `generate_xpts_scatter_card.py`
+
+**Comandos individuais (para debug de etapa isolada):**
+
 ```bash
 python -m src.main sync-matches --season 2026 --from-round N --to-round N
 python -m src.main sync-sport --season 2026
 python -m src.main sync-player-stats --season 2026
+python -m src.main sync-incidents --season 2026
 python -m src.main transform --season 2026
+python -m src.main transform-incidents --season 2026
+python -m src.main transform-standings --season 2026
 python -m src.main validate --season 2026
 ```
 

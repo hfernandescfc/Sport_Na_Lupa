@@ -1,45 +1,49 @@
 season,competition_name,competition_round,match_id,team_name,team_key,is_home,possession,expected_goals,shots_total,shots_on_target,shots_on_target_pct,corners,fouls,passes_total,passes_accurate,passes_accuracy_pct,tackles_total,yellow_cards,red_cards,data_status,last_updated_at,transformed_at
-2026,"Pernambucano, Serie A1",1,jOswXWd,AD Jaguar,ad-jaguar,True,46.0,0.8,9.0,5.0,55.6,5.0,13.0,309.0,256.0,82.8,2.0,4,0,advanced_stats_confirmed,2026-04-16T17:41:38.674220Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1",1,jOswXWd,Sport Recife,sport,False,54.0,1.74,9.0,3.0,33.3,7.0,13.0,393.0,314.0,79.9,6.0,4,0,advanced_stats_confirmed,2026-04-16T17:41:38.674220Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1",2,jOsOWEc,Sport Recife,sport,True,64.0,2.29,19.0,6.0,31.6,8.0,17.0,506.0,446.0,88.1,4.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674273Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1",2,jOsOWEc,Retrô,retro,False,36.0,0.47,4.0,0.0,0.0,0.0,20.0,256.0,211.0,82.4,0.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674273Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1",3,jOslP,Náutico,nautico,True,53.0,0.69,10.0,2.0,20.0,2.0,19.0,341.0,277.0,81.2,8.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674298Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1",3,jOslP,Sport Recife,sport,False,47.0,3.08,20.0,8.0,40.0,4.0,24.0,245.0,209.0,85.3,5.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674298Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1",4,jOsToWd,Sport Recife,sport,True,57.0,3.02,20.0,8.0,40.0,8.0,7.0,429.0,369.0,86.0,2.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674318Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1",4,jOsToWd,Decisão Goiana,decisao-goiana,False,43.0,0.49,10.0,2.0,20.0,4.0,8.0,353.0,290.0,82.2,3.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674318Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1",5,jOsydn,Sport Recife,sport,True,62.0,2.75,24.0,9.0,37.5,9.0,18.0,515.0,440.0,85.4,1.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674339Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1",5,jOsydn,Acadêmica Vitória,academica-vitoria,False,38.0,0.0,2.0,0.0,0.0,2.0,8.0,293.0,241.0,82.3,4.0,1,0,advanced_stats_confirmed,2026-04-16T17:41:38.674339Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1",6,jOsXMHd,Maguary,maguary,True,32.0,1.88,10.0,4.0,40.0,2.0,11.0,205.0,141.0,68.8,1.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674358Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1",6,jOsXMHd,Sport Recife,sport,False,68.0,1.62,16.0,5.0,31.2,4.0,7.0,540.0,452.0,83.7,2.0,1,0,advanced_stats_confirmed,2026-04-16T17:41:38.674358Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1",7,jOsBO,Sport Recife,sport,True,58.0,2.41,19.0,7.0,36.8,13.0,18.0,374.0,311.0,83.2,4.0,4,0,advanced_stats_confirmed,2026-04-16T17:41:38.674378Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1",7,jOsBO,Santa Cruz,santa-cruz,False,42.0,1.05,8.0,2.0,25.0,3.0,13.0,259.0,203.0,78.4,3.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674378Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1, Playoffs",28,jOsOWEc,Retrô,retro,True,64.0,2.29,19.0,6.0,31.6,8.0,17.0,506.0,446.0,88.1,4.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674395Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1, Playoffs",28,jOsOWEc,Sport Recife,sport,False,36.0,0.47,4.0,0.0,0.0,0.0,20.0,256.0,211.0,82.4,0.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674395Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1, Playoffs",28,jOsOWEc,Sport Recife,sport,True,64.0,2.29,19.0,6.0,31.6,8.0,17.0,506.0,446.0,88.1,4.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674412Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1, Playoffs",28,jOsOWEc,Retrô,retro,False,36.0,0.47,4.0,0.0,0.0,0.0,20.0,256.0,211.0,82.4,0.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674412Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1, Playoffs",29,jOslP,Sport Recife,sport,True,53.0,0.69,10.0,2.0,20.0,2.0,19.0,341.0,277.0,81.2,8.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674430Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1, Playoffs",29,jOslP,Náutico,nautico,False,47.0,3.08,20.0,8.0,40.0,4.0,24.0,245.0,209.0,85.3,5.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674430Z,2026-04-16T18:23:07.832661Z
-2026,Copa Betano do Brasil,2,jOslFn,Desportiva Ferroviária,desportiva-ferroviaria,True,,0.84,,,,,,,,,,4,0,advanced_stats_partial,2026-04-16T17:41:38.674447Z,2026-04-16T18:23:07.832661Z
-2026,Copa Betano do Brasil,2,jOslFn,Sport Recife,sport,False,,1.87,,,,,,,,,,1,0,advanced_stats_partial,2026-04-16T17:41:38.674447Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1, Playoffs",29,jOslP,Náutico,nautico,True,53.0,0.69,10.0,2.0,20.0,2.0,19.0,341.0,277.0,81.2,8.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674465Z,2026-04-16T18:23:07.832661Z
-2026,"Pernambucano, Serie A1, Playoffs",29,jOslP,Sport Recife,sport,False,47.0,3.08,20.0,8.0,40.0,4.0,24.0,245.0,209.0,85.3,5.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674465Z,2026-04-16T18:23:07.832661Z
-2026,Copa Betano do Brasil,3,jOsxMi,Sport Recife,sport,True,57.0,1.07,,4.0,,7.0,15.0,,,,,4,0,advanced_stats_partial,2026-04-16T17:41:38.674484Z,2026-04-16T18:23:07.832661Z
-2026,Copa Betano do Brasil,3,jOsxMi,Anápolis,anapolis,False,43.0,1.0,,2.0,,1.0,29.0,,,,,3,0,advanced_stats_partial,2026-04-16T17:41:38.674484Z,2026-04-16T18:23:07.832661Z
-2026,Copa Betano do Brasil,4,jOsAfMc,Sport Recife,sport,True,66.0,0.81,8.0,3.0,37.5,8.0,18.0,427.0,362.0,84.8,14.0,1,0,advanced_stats_confirmed,2026-04-16T17:41:38.674502Z,2026-04-16T18:23:07.832661Z
-2026,Copa Betano do Brasil,4,jOsAfMc,Athletic Club,athletic-club,False,34.0,1.07,10.0,5.0,50.0,3.0,23.0,224.0,161.0,71.9,27.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674502Z,2026-04-16T18:23:07.832661Z
-2026,Brasileirão Série B,1,jOscJu,Cuiabá,cuiaba,True,42.0,1.32,13.0,4.0,30.8,0.0,20.0,356.0,290.0,81.5,12.0,1,0,advanced_stats_confirmed,2026-04-16T17:41:38.674521Z,2026-04-16T18:23:07.832661Z
-2026,Brasileirão Série B,1,jOscJu,Sport Recife,sport,False,58.0,0.92,10.0,1.0,10.0,1.0,21.0,500.0,428.0,85.6,8.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674521Z,2026-04-16T18:23:07.832661Z
-2026,Copa do Nordeste,1,jOsqTJ,Sport Recife,sport,True,56.0,0.51,7.0,5.0,71.4,4.0,17.0,473.0,402.0,85.0,5.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674538Z,2026-04-16T18:23:07.832661Z
-2026,Copa do Nordeste,1,jOsqTJ,Jacuipense,jacuipense,False,44.0,1.26,8.0,2.0,25.0,4.0,9.0,311.0,257.0,82.6,7.0,4,0,advanced_stats_confirmed,2026-04-16T17:41:38.674538Z,2026-04-16T18:23:07.832661Z
-2026,Copa do Nordeste,2,jOsNLi,ABC,abc,True,47.0,2.06,16.0,3.0,18.8,9.0,14.0,267.0,206.0,77.2,3.0,5,0,advanced_stats_confirmed,2026-04-16T17:41:38.674556Z,2026-04-16T18:23:07.832661Z
-2026,Copa do Nordeste,2,jOsNLi,Sport Recife,sport,False,53.0,1.02,13.0,4.0,30.8,2.0,13.0,293.0,245.0,83.6,4.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674556Z,2026-04-16T18:23:07.832661Z
-2026,Brasileirão Série B,2,jOswP,Sport Recife,sport,True,39.0,0.68,10.0,7.0,70.0,6.0,11.0,320.0,250.0,78.1,16.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674573Z,2026-04-16T18:23:07.832661Z
-2026,Brasileirão Série B,2,jOswP,Vila Nova FC,vila-nova-fc,False,61.0,1.64,16.0,2.0,12.5,3.0,12.0,505.0,446.0,88.3,17.0,4,0,advanced_stats_confirmed,2026-04-16T17:41:38.674573Z,2026-04-16T18:23:07.832661Z
-2026,Brasileirão Série B,3,jOsxP,Londrina,londrina,True,38.0,0.85,13.0,3.0,23.1,5.0,13.0,281.0,223.0,79.4,18.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674619Z,2026-04-16T18:23:07.832661Z
-2026,Brasileirão Série B,3,jOsxP,Sport Recife,sport,False,62.0,2.23,16.0,4.0,25.0,7.0,13.0,481.0,418.0,86.9,16.0,0,0,advanced_stats_confirmed,2026-04-16T17:41:38.674619Z,2026-04-16T18:23:07.832661Z
-2026,Copa do Nordeste,3,jOsOWEc,Sport Recife,sport,True,64.0,2.29,19.0,6.0,31.6,8.0,17.0,506.0,446.0,88.1,4.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674641Z,2026-04-16T18:23:07.832661Z
-2026,Copa do Nordeste,3,jOsOWEc,Retrô,retro,False,36.0,0.47,4.0,0.0,0.0,0.0,20.0,256.0,211.0,82.4,0.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674641Z,2026-04-16T18:23:07.832661Z
-2026,Brasileirão Série B,4,jOspWc,Sport Recife,sport,True,59.0,3.24,21.0,10.0,47.6,7.0,8.0,414.0,343.0,82.9,19.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674659Z,2026-04-16T18:23:07.832661Z
-2026,Brasileirão Série B,4,jOspWc,Avaí,avai,False,41.0,1.79,16.0,4.0,25.0,8.0,16.0,291.0,221.0,75.9,8.0,7,0,advanced_stats_confirmed,2026-04-16T17:41:38.674659Z,2026-04-16T18:23:07.832661Z
-2026,Copa do Nordeste,4,jOsiMi,Sport Recife,sport,True,59.0,3.51,24.0,9.0,37.5,6.0,21.0,547.0,479.0,87.6,2.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674677Z,2026-04-16T18:23:07.832661Z
-2026,Copa do Nordeste,4,jOsiMi,Maranhão AC,maranhao-ac,False,41.0,0.58,8.0,3.0,37.5,3.0,18.0,354.0,297.0,83.9,2.0,4,0,advanced_stats_confirmed,2026-04-16T17:41:38.674677Z,2026-04-16T18:23:07.832661Z
+2026,"Pernambucano, Serie A1",1,jOswXWd,AD Jaguar,ad-jaguar,True,46.0,0.8,9.0,5.0,55.6,5.0,13.0,309.0,256.0,82.8,2.0,4,0,advanced_stats_confirmed,2026-04-16T17:41:38.674220Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1",1,jOswXWd,Sport Recife,sport,False,54.0,1.74,9.0,3.0,33.3,7.0,13.0,393.0,314.0,79.9,6.0,4,0,advanced_stats_confirmed,2026-04-16T17:41:38.674220Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1",2,jOsOWEc,Sport Recife,sport,True,64.0,2.29,19.0,6.0,31.6,8.0,17.0,506.0,446.0,88.1,4.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674273Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1",2,jOsOWEc,Retrô,retro,False,36.0,0.47,4.0,0.0,0.0,0.0,20.0,256.0,211.0,82.4,0.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674273Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1",3,jOslP,Náutico,nautico,True,53.0,0.69,10.0,2.0,20.0,2.0,19.0,341.0,277.0,81.2,8.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674298Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1",3,jOslP,Sport Recife,sport,False,47.0,3.08,20.0,8.0,40.0,4.0,24.0,245.0,209.0,85.3,5.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674298Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1",4,jOsToWd,Sport Recife,sport,True,57.0,3.02,20.0,8.0,40.0,8.0,7.0,429.0,369.0,86.0,2.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674318Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1",4,jOsToWd,Decisão Goiana,decisao-goiana,False,43.0,0.49,10.0,2.0,20.0,4.0,8.0,353.0,290.0,82.2,3.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674318Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1",5,jOsydn,Sport Recife,sport,True,62.0,2.75,24.0,9.0,37.5,9.0,18.0,515.0,440.0,85.4,1.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674339Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1",5,jOsydn,Acadêmica Vitória,academica-vitoria,False,38.0,0.0,2.0,0.0,0.0,2.0,8.0,293.0,241.0,82.3,4.0,1,0,advanced_stats_confirmed,2026-04-16T17:41:38.674339Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1",6,jOsXMHd,Maguary,maguary,True,32.0,1.88,10.0,4.0,40.0,2.0,11.0,205.0,141.0,68.8,1.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674358Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1",6,jOsXMHd,Sport Recife,sport,False,68.0,1.62,16.0,5.0,31.2,4.0,7.0,540.0,452.0,83.7,2.0,1,0,advanced_stats_confirmed,2026-04-16T17:41:38.674358Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1",7,jOsBO,Sport Recife,sport,True,58.0,2.41,19.0,7.0,36.8,13.0,18.0,374.0,311.0,83.2,4.0,4,0,advanced_stats_confirmed,2026-04-16T17:41:38.674378Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1",7,jOsBO,Santa Cruz,santa-cruz,False,42.0,1.05,8.0,2.0,25.0,3.0,13.0,259.0,203.0,78.4,3.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674378Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1, Playoffs",28,jOsOWEc,Retrô,retro,True,64.0,2.29,19.0,6.0,31.6,8.0,17.0,506.0,446.0,88.1,4.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674395Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1, Playoffs",28,jOsOWEc,Sport Recife,sport,False,36.0,0.47,4.0,0.0,0.0,0.0,20.0,256.0,211.0,82.4,0.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674395Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1, Playoffs",28,jOsOWEc,Sport Recife,sport,True,64.0,2.29,19.0,6.0,31.6,8.0,17.0,506.0,446.0,88.1,4.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674412Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1, Playoffs",28,jOsOWEc,Retrô,retro,False,36.0,0.47,4.0,0.0,0.0,0.0,20.0,256.0,211.0,82.4,0.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674412Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1, Playoffs",29,jOslP,Sport Recife,sport,True,53.0,0.69,10.0,2.0,20.0,2.0,19.0,341.0,277.0,81.2,8.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674430Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1, Playoffs",29,jOslP,Náutico,nautico,False,47.0,3.08,20.0,8.0,40.0,4.0,24.0,245.0,209.0,85.3,5.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674430Z,2026-04-29T13:40:07.204232Z
+2026,Copa Betano do Brasil,2,jOslFn,Desportiva Ferroviária,desportiva-ferroviaria,True,,0.84,,,,,,,,,,4,0,advanced_stats_partial,2026-04-16T17:41:38.674447Z,2026-04-29T13:40:07.204232Z
+2026,Copa Betano do Brasil,2,jOslFn,Sport Recife,sport,False,,1.87,,,,,,,,,,1,0,advanced_stats_partial,2026-04-16T17:41:38.674447Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1, Playoffs",29,jOslP,Náutico,nautico,True,53.0,0.69,10.0,2.0,20.0,2.0,19.0,341.0,277.0,81.2,8.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674465Z,2026-04-29T13:40:07.204232Z
+2026,"Pernambucano, Serie A1, Playoffs",29,jOslP,Sport Recife,sport,False,47.0,3.08,20.0,8.0,40.0,4.0,24.0,245.0,209.0,85.3,5.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674465Z,2026-04-29T13:40:07.204232Z
+2026,Copa Betano do Brasil,3,jOsxMi,Sport Recife,sport,True,57.0,1.07,,4.0,,7.0,15.0,,,,,4,0,advanced_stats_partial,2026-04-16T17:41:38.674484Z,2026-04-29T13:40:07.204232Z
+2026,Copa Betano do Brasil,3,jOsxMi,Anápolis,anapolis,False,43.0,1.0,,2.0,,1.0,29.0,,,,,3,0,advanced_stats_partial,2026-04-16T17:41:38.674484Z,2026-04-29T13:40:07.204232Z
+2026,Copa Betano do Brasil,4,jOsAfMc,Sport Recife,sport,True,66.0,0.81,8.0,3.0,37.5,8.0,18.0,427.0,362.0,84.8,14.0,1,0,advanced_stats_confirmed,2026-04-16T17:41:38.674502Z,2026-04-29T13:40:07.204232Z
+2026,Copa Betano do Brasil,4,jOsAfMc,Athletic Club,athletic-club,False,34.0,1.07,10.0,5.0,50.0,3.0,23.0,224.0,161.0,71.9,27.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674502Z,2026-04-29T13:40:07.204232Z
+2026,Brasileirão Série B,1,jOscJu,Cuiabá,cuiaba,True,42.0,1.32,13.0,4.0,30.8,0.0,20.0,356.0,290.0,81.5,12.0,1,0,advanced_stats_confirmed,2026-04-16T17:41:38.674521Z,2026-04-29T13:40:07.204232Z
+2026,Brasileirão Série B,1,jOscJu,Sport Recife,sport,False,58.0,0.92,10.0,1.0,10.0,1.0,21.0,500.0,428.0,85.6,8.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674521Z,2026-04-29T13:40:07.204232Z
+2026,Copa do Nordeste,1,jOsqTJ,Sport Recife,sport,True,56.0,0.51,7.0,5.0,71.4,4.0,17.0,473.0,402.0,85.0,5.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674538Z,2026-04-29T13:40:07.204232Z
+2026,Copa do Nordeste,1,jOsqTJ,Jacuipense,jacuipense,False,44.0,1.26,8.0,2.0,25.0,4.0,9.0,311.0,257.0,82.6,7.0,4,0,advanced_stats_confirmed,2026-04-16T17:41:38.674538Z,2026-04-29T13:40:07.204232Z
+2026,Copa do Nordeste,2,jOsNLi,ABC,abc,True,47.0,2.06,16.0,3.0,18.8,9.0,14.0,267.0,206.0,77.2,3.0,5,0,advanced_stats_confirmed,2026-04-16T17:41:38.674556Z,2026-04-29T13:40:07.204232Z
+2026,Copa do Nordeste,2,jOsNLi,Sport Recife,sport,False,53.0,1.02,13.0,4.0,30.8,2.0,13.0,293.0,245.0,83.6,4.0,3,0,advanced_stats_confirmed,2026-04-16T17:41:38.674556Z,2026-04-29T13:40:07.204232Z
+2026,Brasileirão Série B,2,jOswP,Sport Recife,sport,True,39.0,0.68,10.0,7.0,70.0,6.0,11.0,320.0,250.0,78.1,16.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674573Z,2026-04-29T13:40:07.204232Z
+2026,Brasileirão Série B,2,jOswP,Vila Nova FC,vila-nova,False,61.0,1.64,16.0,2.0,12.5,3.0,12.0,505.0,446.0,88.3,17.0,4,0,advanced_stats_confirmed,2026-04-16T17:41:38.674573Z,2026-04-29T13:40:07.204232Z
+2026,Brasileirão Série B,3,jOsxP,Londrina,londrina,True,38.0,0.85,13.0,3.0,23.1,5.0,13.0,281.0,223.0,79.4,18.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674619Z,2026-04-29T13:40:07.204232Z
+2026,Brasileirão Série B,3,jOsxP,Sport Recife,sport,False,62.0,2.23,16.0,4.0,25.0,7.0,13.0,481.0,418.0,86.9,16.0,0,0,advanced_stats_confirmed,2026-04-16T17:41:38.674619Z,2026-04-29T13:40:07.204232Z
+2026,Copa do Nordeste,3,jOsOWEc,Sport Recife,sport,True,64.0,2.29,19.0,6.0,31.6,8.0,17.0,506.0,446.0,88.1,4.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674641Z,2026-04-29T13:40:07.204232Z
+2026,Copa do Nordeste,3,jOsOWEc,Retrô,retro,False,36.0,0.47,4.0,0.0,0.0,0.0,20.0,256.0,211.0,82.4,0.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674641Z,2026-04-29T13:40:07.204232Z
+2026,Brasileirão Série B,4,jOspWc,Sport Recife,sport,True,59.0,3.24,21.0,10.0,47.6,7.0,8.0,414.0,343.0,82.9,19.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674659Z,2026-04-29T13:40:07.204232Z
+2026,Brasileirão Série B,4,jOspWc,Avaí,avai,False,41.0,1.79,16.0,4.0,25.0,8.0,16.0,291.0,221.0,75.9,8.0,7,0,advanced_stats_confirmed,2026-04-16T17:41:38.674659Z,2026-04-29T13:40:07.204232Z
+2026,Copa do Nordeste,4,jOsiMi,Sport Recife,sport,True,59.0,3.51,24.0,9.0,37.5,6.0,21.0,547.0,479.0,87.6,2.0,2,0,advanced_stats_confirmed,2026-04-16T17:41:38.674677Z,2026-04-29T13:40:07.204232Z
+2026,Copa do Nordeste,4,jOsiMi,Maranhão AC,maranhao-ac,False,41.0,0.58,8.0,3.0,37.5,3.0,18.0,354.0,297.0,83.9,2.0,4,0,advanced_stats_confirmed,2026-04-16T17:41:38.674677Z,2026-04-29T13:40:07.204232Z
+2026,Brasileirão Série B,5,jOsyO,América Mineiro,america-mg,True,50,1.26,17.0,6.0,35.3,8,14,316.0,264.0,83.5,15,1,0,advanced_stats_confirmed,2026-04-22T15:27:26.785269Z,2026-04-29T13:40:07.204232Z
+2026,Brasileirão Série B,5,jOsyO,Sport Recife,sport,False,50,0.35,9.0,0.0,0.0,3,15,324.0,270.0,83.3,15,4,0,advanced_stats_confirmed,2026-04-22T15:27:26.785269Z,2026-04-29T13:40:07.204232Z
+2026,Brasileirão Série B,6,jOsokeb,Sport Recife,sport,True,56,1.5,10.0,5.0,50.0,3,13,402.0,338.0,84.1,9,4,0,advanced_stats_confirmed,2026-04-27T13:10:30.137549Z,2026-04-29T13:40:07.204232Z
+2026,Brasileirão Série B,6,jOsokeb,Grêmio Novorizontino,novorizontino,False,44,0.65,10.0,4.0,40.0,5,21,302.0,239.0,79.1,6,5,0,advanced_stats_confirmed,2026-04-27T13:10:30.137549Z,2026-04-29T13:40:07.204232Z

@@ -35,17 +35,18 @@ except ImportError:
     HAS_PIL = False
 
 # ── Caminhos ─────────────────────────────────────────────────────────────────
-BASE_DIR    = Path(__file__).parent
-TABLE_PATH  = BASE_DIR / "data/curated/serie_b_2026/expected_points_table.csv"
-MATCHES_PATH= BASE_DIR / "data/curated/serie_b_2026/matches.csv"
-LOGO_CACHE  = BASE_DIR / "data/cache/logos"
-AVATAR_PATH = BASE_DIR / "sportrecifelab_avatar.png"
-TODAY_STR   = datetime.date.today().strftime("%Y-%m-%d")
-OUT_DIR     = BASE_DIR / f"pending_posts/{TODAY_STR}_xpts-serie-b"
+BASE_DIR     = Path(__file__).parent
+TABLE_PATH   = BASE_DIR / "data/curated/serie_b_2026/expected_points_table.csv"
+MATCHES_PATH = BASE_DIR / "data/curated/serie_b_2026/matches.csv"
+LOGO_CACHE   = BASE_DIR / "data/cache/logos"
+SNAPSHOT_DIR = BASE_DIR / "data/curated/serie_b_2026/snapshots"
+AVATAR_PATH  = BASE_DIR / "sportrecifelab_avatar.png"
+TODAY_STR    = datetime.date.today().strftime("%Y-%m-%d")
+OUT_DIR      = BASE_DIR / f"pending_posts/{TODAY_STR}_xpts-serie-b"
 
 # ── IDs SofaScore por team_key (chave = valor em team_match_stats.csv) ───────
 TEAM_IDS = {
-    "america-mineiro": 1973,
+    "america-mg":      1973,
     "athletic-club":   342775,
     "atletico-go":     7314,
     "avai":            7315,
@@ -64,7 +65,7 @@ TEAM_IDS = {
     "ponte-preta":     1969,
     "sao-bernardo":    47504,
     "sport":           1959,
-    "vila-nova-fc":    2021,
+    "vila-nova":       2021,
 }
 
 SPORT_KEY = "sport"
@@ -205,6 +206,21 @@ def _draw_delta(ax, x: float, y: float, delta: float):
             transform=ax.transAxes, zorder=5)
 
 
+def _draw_rank_delta(ax, x: float, y: float, delta: int | None):
+    """Indicador de movimentação empilhado abaixo do rank, dentro da mesma célula."""
+    if delta is None:
+        return
+    if delta > 0:
+        txt, color = f"▲{delta}", GREEN
+    elif delta < 0:
+        txt, color = f"▼{abs(delta)}", RED
+    else:
+        txt, color = "—", GRAY
+    ax.text(x, y - ROW_H * 0.30, txt, color=color, fontsize=5.5,
+            fontfamily=FONT_BODY, ha="center", va="center",
+            transform=ax.transAxes, zorder=5)
+
+
 def _place_logo(ax, arr: np.ndarray, x: float, y: float, zoom: float = LOGO_ZOOM):
     ab = AnnotationBbox(
         OffsetImage(arr, zoom=zoom),
@@ -227,6 +243,30 @@ def _load_data() -> tuple[pd.DataFrame, int]:
     return df, max_round
 
 
+def _save_snapshot(df: pd.DataFrame, round_num: int) -> None:
+    SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+    df.to_csv(SNAPSHOT_DIR / f"xpts_R{round_num:02d}.csv", index=False)
+
+
+def _load_prev_snapshot(round_num: int) -> pd.DataFrame | None:
+    for r in range(round_num - 1, 0, -1):
+        path = SNAPSHOT_DIR / f"xpts_R{r:02d}.csv"
+        if path.exists():
+            return pd.read_csv(path)
+    return None
+
+
+def _compute_rank_deltas(df: pd.DataFrame, prev_df: pd.DataFrame | None) -> dict[str, int]:
+    if prev_df is None:
+        return {}
+    prev_ranks = dict(zip(prev_df["team_key"], prev_df["rank_xpts"].astype(int)))
+    return {
+        row["team_key"]: prev_ranks[row["team_key"]] - int(row["rank_xpts"])
+        for _, row in df.iterrows()
+        if row["team_key"] in prev_ranks
+    }
+
+
 def _sos_level(sos_rank: float | None, n: int = 20) -> int | None:
     if sos_rank is None or (isinstance(sos_rank, float) and math.isnan(sos_rank)):
         return None
@@ -237,7 +277,8 @@ def _sos_level(sos_rank: float | None, n: int = 20) -> int | None:
 
 # ── Card ──────────────────────────────────────────────────────────────────────
 
-def generate_table_card(df: pd.DataFrame, max_round: int) -> None:
+def generate_table_card(df: pd.DataFrame, max_round: int,
+                        rank_deltas: dict[str, int] | None = None) -> None:
     has_sos = "sos_rank" in df.columns
 
     fig, ax = plt.subplots(figsize=(FIG_W, FIG_H), dpi=DPI)
@@ -252,9 +293,13 @@ def generate_table_card(df: pd.DataFrame, max_round: int) -> None:
             color=YELLOW, fontsize=17, fontfamily=FONT_TITLE, fontweight="bold",
             ha="center", va="center", transform=ax.transAxes, zorder=5)
 
+    has_deltas = bool(rank_deltas)
     subtitle = f"xPts via xG (Poisson)  ·  Rodada {max_round}"
     if has_sos:
         subtitle += "  ·  Dificuldade de calendário incluída"
+    if has_deltas:
+        prev_round = max_round - 1
+        subtitle += f"  ·  ↕ vs R{prev_round}"
     ax.text(0.50, Y_SUBTITLE, subtitle,
             color=GRAY, fontsize=8.5, fontfamily=FONT_BODY,
             ha="center", va="center", transform=ax.transAxes, zorder=5)
@@ -307,10 +352,17 @@ def generate_table_card(df: pd.DataFrame, max_round: int) -> None:
         rank_color = YELLOW if is_sport else LGRAY
         name_color = YELLOW if is_sport else WHITE
 
-        # Rank
-        ax.text(X_RANK, y, str(row["rank_xpts"]), color=rank_color,
+        # Rank — sobe levemente quando há delta para dar espaço ao indicador abaixo
+        has_delta_row = rank_deltas is not None and rank_deltas.get(row["team_key"]) is not None
+        rank_y = y + (ROW_H * 0.16 if has_delta_row else 0)
+        ax.text(X_RANK, rank_y, str(row["rank_xpts"]), color=rank_color,
                 fontsize=8.5, fontfamily=FONT_TITLE, ha="center", va="center",
                 transform=ax.transAxes, zorder=5)
+
+        # Δ posição vs rodada anterior (abaixo do rank, mesma coluna)
+        if rank_deltas is not None:
+            delta_pos = rank_deltas.get(row["team_key"])
+            _draw_rank_delta(ax, X_RANK, y, delta_pos)
 
         # Escudo
         logo = _get_logo(row["team_key"])
@@ -406,6 +458,17 @@ if __name__ == "__main__":
     has_sos = "sos_rank" in df.columns
     print(f"  {len(df)} times  ·  rodada {max_round}  ·  SOS: {'sim' if has_sos else 'não'}")
 
+    prev_df = _load_prev_snapshot(max_round)
+    rank_deltas = _compute_rank_deltas(df, prev_df)
+    if rank_deltas:
+        prev_round = max_round - 1
+        print(f"  Comparando com snapshot R{prev_round} ({len(rank_deltas)} times)")
+    else:
+        print("  Sem snapshot anterior — movimentação não exibida")
+
     print("\nGerando Card 01 — Tabela xPts...")
-    generate_table_card(df, max_round)
+    generate_table_card(df, max_round, rank_deltas=rank_deltas)
+
+    _save_snapshot(df, max_round)
     print(f"\nCard salvo em: {OUT_DIR}")
+    print(f"Snapshot R{max_round} salvo em: {SNAPSHOT_DIR / f'xpts_R{max_round:02d}.csv'}")

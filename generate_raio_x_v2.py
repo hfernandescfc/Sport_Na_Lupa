@@ -1,21 +1,20 @@
 """
-Gerador de cards Raio-X v2 — design system novo.
+Gerador de cards Raio-X v2 — design system editorial.
 
-Renderiza HTML/CSS via Selenium Edge headless → PNG 1080×1350 (portrait 4:5).
-
-Design system:
-  - Fontes: Archivo (números/títulos) + JetBrains Mono (labels/dados)
-  - Paleta: #0B0B0E bg | #F5F1E8 ink | #F2C230 yellow | #E63946 red | #3DA35D green
-  - Estrutura: header fixo (brand + meta) | rule | conteúdo | footer fixo
-  - Cards sem bordas coloridas — cor como acento tipográfico
+Renderiza HTML/CSS via Selenium Edge headless -> PNG 1080x1350 (portrait 4:5).
+Dados carregados automaticamente dos CSVs curados do pipeline.
 
 Uso:
-  python -X utf8 generate_raio_x_v2.py --team-key america-mg --round 5
-
-Ou como módulo:
-  from generate_raio_x_v2 import RaioXCards
-  cards = RaioXCards(data, out_dir="pending_posts/...")
-  cards.render_all()
+  python -X utf8 generate_raio_x_v2.py \
+    --team-key novorizontino \
+    --team-name "Gremio Novorizontino" \
+    --team-abbr "NOVORIZONTINO" \
+    --team-id 135514 \
+    --round 6 \
+    --season 2026 \
+    --date 2026-04-25 \
+    --sport-role mandante \
+    [--city "Recife"] [--stadium "Ilha do Retiro"]
 """
 
 import os
@@ -24,9 +23,11 @@ import time
 import base64
 import tempfile
 import argparse
-import textwrap
+from datetime import datetime
 from pathlib import Path
-from typing import Any
+
+import numpy as np
+import pandas as pd
 
 try:
     from selenium import webdriver
@@ -34,6 +35,12 @@ try:
     HAS_SELENIUM = True
 except ImportError:
     HAS_SELENIUM = False
+
+try:
+    from generate_como_joga_html import build_html as _cj_html, render_to_png as _cj_png
+    _HAS_CJ = True
+except ImportError:
+    _HAS_CJ = False
 
 
 # ─── Design tokens (espelham o CSS do design de referência) ──────────────────
@@ -622,35 +629,52 @@ def html_p3(d: dict, logo_b64: str) -> str:
             f'<div class="line"><span class="l">{lbl}</span><span class="v {vc}">{val}</span></div>'
             for lbl, val, vc in items
         )
+    # suporta mandante (sport_role=visitante) e visitante (sport_role=mandante)
+    is_home_context = d.get("is_home_context", True)
+    if is_home_context:
+        kicker = "Em casa"
+        cap_meta1 = "Como mandante"
+        h1_line2 = f'EM <em>{d["city"].upper()}</em>'
+        aprov_label = "Aproveitamento como mandante"
+        col1_head = f'Geral em casa · {d["ctx_games"]} jogos'
+        col2_head = f'Série B em casa · {d["sb_ctx_games"]} jogos'
+    else:
+        kicker = "Como visitante"
+        cap_meta1 = "Como visitante"
+        h1_line2 = f'<em>COMO VISITANTE</em>'
+        aprov_label = "Aproveitamento como visitante"
+        col1_head = f'Geral fora de casa · {d["ctx_games"]} jogos'
+        col2_head = f'Série B fora de casa · {d["sb_ctx_games"]} jogos'
+
     content = f"""
     <div class="card-title-block">
-      <div class="kicker">Em casa</div>
-      <h1>{d["team_abbr"]}<br/>EM <em>{d["city"].upper()}</em></h1>
+      <div class="kicker">{kicker}</div>
+      <h1>{d["team_abbr"]}<br/>{h1_line2}</h1>
       <div class="sub">{d["sub"]}</div>
     </div>
     <div class="big">
-      <div class="num">{d["home_aprov"]}<small>%</small></div>
+      <div class="num">{d["ctx_aprov"]}<small>%</small></div>
       <div class="caption">
-        <b>Aproveitamento como mandante</b>
-        {d["home_games"]} jogos em 2026 · {d["home_w"]}V · {d["home_d"]}E · {d["home_l"]}D
+        <b>{aprov_label}</b>
+        {d["ctx_games"]} jogos em 2026 · {d["ctx_w"]}V · {d["ctx_d"]}E · {d["ctx_l"]}D
       </div>
     </div>
     <div class="split">
       <div class="col">
-        <div class="head"><b>Geral em casa</b> · {d["home_games"]} jogos</div>
-        {lines(d["home_general_lines"])}
+        <div class="head"><b>{col1_head}</b></div>
+        {lines(d["ctx_general_lines"])}
       </div>
       <div class="col">
-        <div class="head"><b>Série B em casa</b> · {d["sb_home_games"]} jogos</div>
-        {lines(d["home_sb_lines"])}
+        <div class="head"><b>{col2_head}</b></div>
+        {lines(d["ctx_sb_lines"])}
       </div>
     </div>
     <div class="insight">
-      <div class="k">Leitura tática</div>
+      <div class="k">Leitura tatica</div>
       <div class="t">{d["insight_title"]}</div>
       <div class="s">{d["insight_body"]}</div>
     </div>"""
-    return _shell("p3", "Como mandante", f"{d['stadium']} · 2026", "03", content, logo_b64)
+    return _shell("p3", cap_meta1, f"{d['stadium']} · 2026", "03", content, logo_b64)
 
 
 def html_p4(d: dict, logo_b64: str) -> str:
@@ -698,17 +722,17 @@ def html_p4(d: dict, logo_b64: str) -> str:
 
 
 def html_p5(d: dict, logo_b64: str) -> str:
-    zones = d["zones"]  # list of (label, pct, is_center)
+    zones = d.get("zones") or []
     zones_html = ""
     for label, pct, is_center in zones:
         if is_center:
             fill_color = "rgba(230,57,70,0.85)"
-            pct_style  = 'style="color:#fff"'
+            pct_style   = 'style="color:#fff"'
             pct_u_style = 'style="font-size:28px;color:rgba(255,255,255,0.7)"'
             lab_style   = 'style="color:rgba(255,255,255,0.9)"'
         else:
-            fill_color = "rgba(184,180,171,0.22)"
-            pct_style  = ""
+            fill_color  = "rgba(184,180,171,0.22)"
+            pct_style   = ""
             pct_u_style = 'style="font-size:28px;color:var(--ink-3)"'
             lab_style   = ""
         zones_html += f"""
@@ -717,26 +741,20 @@ def html_p5(d: dict, logo_b64: str) -> str:
           <div class="pct" {pct_style}>{pct}<span {pct_u_style}>%</span></div>
           <div class="lab" {lab_style}>{label}</div>
         </div>"""
+
     metrics_html = "".join(
         f'<div class="m"><div class="n">{v}<span class="u">{u}</span></div>'
         f'<div class="l">{lbl}</div><div class="t">{sub}</div></div>'
         for v, u, lbl, sub in d["metrics"]
     )
-    content = f"""
-    <div class="card-title-block">
-      <div class="kicker">Posse × finalização</div>
-      <h1>DOMINA A BOLA,<br/><em>{d["title_em"]}</em></h1>
-    </div>
-    <div class="metrics">{metrics_html}</div>
-    <div class="thesis">
-      <div class="k">Leitura</div>
-      <h3>{d["thesis_h3"]}</h3>
-      <p>{d["thesis_p"]}</p>
-    </div>
+
+    pitch_block = ""
+    if zones_html:
+        pitch_block = f"""
     <div class="pitch-block">
       <div class="h">
-        <div class="t">Zonas de finalização</div>
-        <div class="s">{d["zones_sub"]}</div>
+        <div class="t">Zonas de finalizacao</div>
+        <div class="s">{d.get("zones_sub", "")}</div>
       </div>
       <div class="pitch">
         <div class="pitch-attack">Ataque</div>
@@ -746,7 +764,20 @@ def html_p5(d: dict, logo_b64: str) -> str:
         <div>Flanco esquerdo</div><div>Corredor central</div><div>Flanco direito</div>
       </div>
     </div>"""
-    return _shell("p5", "Análise ofensiva", d["meta_sub"], "05", content, logo_b64)
+
+    content = f"""
+    <div class="card-title-block">
+      <div class="kicker">Posse x finalizacao</div>
+      <h1>{d["title_line1"]},<br/><em>{d["title_em"]}</em></h1>
+    </div>
+    <div class="metrics">{metrics_html}</div>
+    <div class="thesis">
+      <div class="k">Leitura</div>
+      <h3>{d["thesis_h3"]}</h3>
+      <p>{d["thesis_p"]}</p>
+    </div>
+    {pitch_block}"""
+    return _shell("p5", "Analise ofensiva", d["meta_sub"], "05", content, logo_b64)
 
 
 def html_p6(d: dict, logo_b64: str) -> str:
@@ -843,10 +874,12 @@ class RaioXCards:
     """
 
     def __init__(self, data: dict, out_dir: str,
+                 cfg: dict = None,
                  logo_path: str = "sportrecifelab_avatar.png",
                  shield_path: str = ""):
         self.d = data
         self.out_dir = out_dir
+        self.cfg = cfg or {}
         self.logo_b64   = _b64_img(logo_path)
         self.shield_b64 = _b64_img(shield_path)
 
@@ -862,10 +895,395 @@ class RaioXCards:
         ]
         for fname, html in cards:
             _render_html_to_png(html, os.path.join(self.out_dir, fname))
+
+        # Cards 07 e 08 — Como Joga (landscape 1200×675, design Barlow Condensed)
+        if _HAS_CJ and self.cfg:
+            tk   = self.cfg.get("team_key", "")
+            tn   = self.d["p1"]["team_name"]
+            tid  = int(self.cfg.get("team_id", 0))
+            rnd  = self.cfg.get("round", 0)
+            comp = self.cfg.get("comp_name", "Série B 2026")
+            try:
+                date_cj = datetime.strptime(self.cfg["date"], "%Y-%m-%d").strftime("%d/%m")
+            except Exception:
+                date_cj = self.cfg.get("date", "")[:5]
+            for mode, fname in [(False, "07_como_joga.png"), (True, "08_como_marca_gols.png")]:
+                try:
+                    html = _cj_html(tk, tn, tid, rnd, date_cj, comp, mode)
+                    out_path = Path(self.out_dir) / fname
+                    _cj_png(html, out_path)
+                    print(f"  OK {fname}")
+                except FileNotFoundError:
+                    print(f"  SKIP {fname} — attack_profile ou team_heatmap ausente (rode sync-attack-map primeiro)")
+                except Exception as e:
+                    print(f"  WARN {fname} — {e}")
+
         print(f"\nPronto. Cards em: {self.out_dir}")
 
 
-# ─── Dados América Mineiro R5 ─────────────────────────────────────────────────
+# ─── Computação automática de dados dos CSVs ─────────────────────────────────
+
+def _load(team_key: str):
+    base = f"data/curated/opponents_2026/{team_key}"
+    m = pd.read_csv(f"{base}/matches.csv")
+    s = pd.read_csv(f"{base}/team_match_stats.csv")
+    try:
+        p = pd.read_csv(f"{base}/player_match_stats.csv")
+    except FileNotFoundError:
+        p = None
+    return m, s, p
+
+
+def _enrich(matches: pd.DataFrame, stats: pd.DataFrame):
+    done = matches[matches["status"] == "completed"].copy()
+    done["gf"] = np.where(done["is_home_team"], done["home_score"], done["away_score"])
+    done["ga"] = np.where(done["is_home_team"], done["away_score"], done["home_score"])
+    done["_outcome"] = np.where(
+        done["gf"] > done["ga"], "win",
+        np.where(done["gf"] == done["ga"], "draw", "loss")
+    )
+    joined = stats.merge(
+        done[["match_code", "is_home_team"]].rename(columns={"match_code": "match_id"}),
+        on="match_id", how="inner"
+    )
+    own = joined[joined["is_home"] == joined["is_home_team"]]
+    opp = joined[joined["is_home"] != joined["is_home_team"]]
+    return done, joined, own, opp
+
+
+def _record(df):
+    if df.empty:
+        return {"w": 0, "d": 0, "l": 0, "gf": 0, "ga": 0, "n": 0}
+    return {
+        "w":  int((df["_outcome"] == "win").sum()),
+        "d":  int((df["_outcome"] == "draw").sum()),
+        "l":  int((df["_outcome"] == "loss").sum()),
+        "gf": int(df["gf"].sum()),
+        "ga": int(df["ga"].sum()),
+        "n":  len(df),
+    }
+
+
+def _aprov(rec):
+    return round((rec["w"] * 3 + rec["d"]) / (rec["n"] * 3) * 100) if rec["n"] else 0
+
+
+def _sb_filter(done: pd.DataFrame):
+    return done[done["competition_name"].str.contains(
+        "Serie B|Série B|Brasileir", case=False, na=False
+    )]
+
+
+def _stat_lines(rec, xg_avg=None):
+    saldo = rec["gf"] - rec["ga"]
+    saldo_str = f"+{saldo}" if saldo > 0 else str(saldo)
+    rows = [
+        ("Vitorias",      str(rec["w"]),  "ok"   if rec["w"] >= 3 else ""),
+        ("Empates",       str(rec["d"]),  "acc"),
+        ("Derrotas",      str(rec["l"]),  "warn" if rec["l"] >= 3 else ""),
+        ("Gols marcados", str(rec["gf"]), ""),
+        ("Gols sofridos", str(rec["ga"]), "warn" if rec["ga"] > rec["gf"] else ""),
+        ("Saldo",         saldo_str,      "ok" if saldo > 0 else ("warn" if saldo < 0 else "")),
+    ]
+    if xg_avg is not None:
+        rows.append(("xG medio", f"{xg_avg:.2f}", ""))
+    return rows
+
+
+def build_data(cfg: dict, matches, stats, players_df) -> dict:
+    done, joined, own, opp = _enrich(matches, stats)
+    sb = _sb_filter(done)
+
+    # ── Totais ──────────────────────────────────────────────────────────────────
+    total_rec = _record(done)
+    home_done = done[done["is_home_team"]]
+    away_done = done[~done["is_home_team"]]
+    home_rec  = _record(home_done)
+    away_rec  = _record(away_done)
+    sb_rec    = _record(sb)
+
+    sb_home = sb[sb["is_home_team"]]
+    sb_away = sb[~sb["is_home_team"]]
+    sb_home_rec = _record(sb_home)
+    sb_away_rec = _record(sb_away)
+
+    # ── Stats de time ───────────────────────────────────────────────────────────
+    xg_avg   = own["expected_goals"].mean() if not own.empty else 0
+    xga_avg  = opp["expected_goals"].mean() if not opp.empty else 0
+    poss_avg = own["possession"].mean()      if not own.empty else 50
+    shots_avg = own["shots_total"].mean()    if not own.empty else 0
+
+    sb_own = joined[
+        joined["match_id"].isin(sb["match_code"]) &
+        (joined["is_home"] == joined["is_home_team"])
+    ]
+    sb_xg = sb_own["expected_goals"].mean() if not sb_own.empty else xg_avg
+    sb_shots = sb_own["shots_total"].mean() if not sb_own.empty else shots_avg
+
+    # ── Contexto mandante/visitante ──────────────────────────────────────────
+    sport_role = cfg["sport_role"]   # "mandante" ou "visitante"
+    # Se Sport é visitante → oponente é mandante → mostrar stats de CASA do oponente
+    is_home_context = (sport_role == "visitante")
+    ctx_done    = home_done if is_home_context else away_done
+    ctx_rec     = home_rec  if is_home_context else away_rec
+    ctx_sb_done = sb_home   if is_home_context else sb_away
+    ctx_sb_rec  = sb_home_rec if is_home_context else sb_away_rec
+
+    ctx_own = joined[
+        (joined["match_id"].isin(ctx_done["match_code"])) &
+        (joined["is_home"] == joined["is_home_team"])
+    ]
+    ctx_xg   = ctx_own["expected_goals"].mean() if not ctx_own.empty else xg_avg
+    ctx_xga  = joined[
+        (joined["match_id"].isin(ctx_done["match_code"])) &
+        (joined["is_home"] != joined["is_home_team"])
+    ]["expected_goals"].mean() if not ctx_own.empty else xga_avg
+    ctx_poss = ctx_own["possession"].mean() if not ctx_own.empty else poss_avg
+
+    ctx_sb_own = joined[
+        (joined["match_id"].isin(ctx_sb_done["match_code"])) &
+        (joined["is_home"] == joined["is_home_team"])
+    ]
+    ctx_sb_xg = ctx_sb_own["expected_goals"].mean() if not ctx_sb_own.empty else sb_xg
+
+    # ── Últimos 5 ────────────────────────────────────────────────────────────
+    done["_date_parsed"] = pd.to_datetime(done["match_date_utc"], utc=True)
+    done_sorted = done.sort_values("_date_parsed", ascending=False).head(5)
+    last5_outcomes = list(reversed(done_sorted["_outcome"].tolist()))  # oldest→newest
+
+    matches_p4 = []
+    for _, r in done_sorted.iterrows():
+        matches_p4.append({
+            "date":      pd.to_datetime(r["match_date_utc"], utc=True).strftime("%d/%m"),
+            "comp":      str(r["competition_name"]).split(",")[0][:16],
+            "home":      r["home_team"],
+            "hs":        int(r["home_score"]) if pd.notna(r["home_score"]) else 0,
+            "as_":       int(r["away_score"]) if pd.notna(r["away_score"]) else 0,
+            "away":      r["away_team"],
+            "is_am_home": bool(r["is_home_team"]),
+            "outcome":   r["_outcome"],
+        })
+
+    # ── Players (Série B) ─────────────────────────────────────────────────────
+    p6_players = []
+    if players_df is not None and not players_df.empty:
+        sb_match_codes = set(sb["match_code"].tolist())
+        pj = players_df[players_df["match_code"].isin(sb_match_codes)].copy()
+        # Flag oponente: is_home == is_home_team em matches
+        hm = matches[["match_code", "is_home_team"]]
+        pj = pj.merge(hm, on="match_code", how="left")
+        own_p = pj[pj["is_home"] == pj["is_home_team"]]
+        if not own_p.empty:
+            agg = own_p.groupby(
+                ["player_id", "player_name", "position", "jersey_number"]
+            ).agg(
+                apps=("minutes_played", "count"),
+                minutes=("minutes_played", "sum"),
+                rating=("rating", "mean"),
+                shots=("total_shots", "sum"),
+                assists=("goal_assist", "sum"),
+                saves=("saves", "sum"),
+            ).reset_index()
+            agg = agg[agg["apps"] >= 1].sort_values("rating", ascending=False)
+
+            pos_label = {"G": "Goleiro", "D": "Defensor", "M": "Meia", "F": "Atacante"}
+            role_map  = {
+                "G": ("Goleiro titular",      "Ultima linha de defesa"),
+                "D": ("Muro defensivo",       "Solidez na retaguarda"),
+                "M": ("Motor do meio",        "Distribui e progride"),
+                "F": ("Principal finalizador","Referencia no ataque"),
+            }
+            colors_i = ["red", "yellow", "ink-2"]
+
+            for _, row in agg.head(3).iterrows():
+                parts     = str(row["player_name"]).split()
+                first     = parts[0] if parts else "?"
+                last      = " ".join(parts[1:]) if len(parts) > 1 else ""
+                pos       = str(row["position"])
+                role_t, role_b = role_map.get(pos, ("Destaque da temporada", ""))
+
+                stat_list = [("Jogos", str(int(row["apps"])))]
+                if pos == "G" and row["saves"] > 0:
+                    stat_list.append(("Defesas", str(int(row["saves"]))))
+                elif row["assists"] > 0:
+                    stat_list.append(("Assistencias", str(int(row["assists"]))))
+                elif row["shots"] > 0:
+                    stat_list.append(("Chutes", str(int(row["shots"]))))
+                stat_list.append(("Minutos", f"{int(row['minutes'])}'"))
+
+                p6_players.append({
+                    "pos":        pos_label.get(pos, pos),
+                    "jersey":     str(int(row["jersey_number"])) if pd.notna(row["jersey_number"]) else "?",
+                    "first_name": first,
+                    "last_name":  last,
+                    "rating":     f"{row['rating']:.2f}",
+                    "stats":      stat_list,
+                    "role_title": role_t,
+                    "role_body":  role_b,
+                })
+
+    # ── Narrativa xG (p5) ────────────────────────────────────────────────────
+    if poss_avg >= 55 and xg_avg < 1.3:
+        title_line1 = "DOMINA A BOLA"
+        title_em    = "NAO VENCE"
+        thesis_h3   = (f"{poss_avg:.0f}% de posse e {xg_avg:.2f} xG/jogo — "
+                       f"<br/>mas sofre <em>{total_rec['ga']} gols em {total_rec['n']} jogos</em>.")
+        thesis_p    = ("Equipe circula mas cria pouco. Transicoes rapidas e pressao direta "
+                       "podem explorar os espacos deixados pela linha alta.")
+    elif xg_avg >= 1.6:
+        title_line1 = "OFENSIVAMENTE"
+        title_em    = "PERIGOSO"
+        thesis_h3   = (f"{xg_avg:.2f} xG por jogo — "
+                       f"<br/>saldo positivo de <em>+{total_rec['gf'] - total_rec['ga']} gols</em>.")
+        thesis_p    = ("Time com volume e eficiencia ofensiva. Sport devera ser solido "
+                       "defensivamente e aproveitar os contra-ataques.")
+    else:
+        diff_str = (f"+{xg_avg - xga_avg:.2f}" if xg_avg >= xga_avg
+                    else f"{xg_avg - xga_avg:.2f}")
+        title_line1 = "EQUILIBRADO"
+        title_em    = "NAS METRICAS"
+        thesis_h3   = (f"{xg_avg:.2f} xG gerado vs {xga_avg:.2f} xG cedido —"
+                       f"<br/>saldo de <em>{diff_str}</em> xG por jogo.")
+        thesis_p    = ("Equipe sem desequilibrio gritante. A qualidade do dia pode "
+                       "ser o fator decisivo no confronto.")
+
+    # ── Narrativa p3 insight ──────────────────────────────────────────────────
+    ctx_label = "mandante" if is_home_context else "visitante"
+    if ctx_rec["n"] == 0:
+        insight_title = "Dados insuficientes para esta analise."
+        insight_body  = "Adversario ainda nao disputou partidas neste contexto em 2026."
+    elif ctx_xga > 1.4:
+        insight_title = f"Defensivamente vulneravel como {ctx_label}."
+        insight_body  = (f"Cede {ctx_xga:.2f} xG por jogo neste contexto — "
+                         "pressao alta pode ser eficaz.")
+    elif ctx_rec["w"] >= ctx_rec["n"] * 0.6:
+        insight_title = f"Forte como {ctx_label} — aproveitamento acima de 60%."
+        insight_body  = (f"{ctx_rec['w']}V em {ctx_rec['n']} jogos. "
+                         "Sport precisara ser eficiente para romper a solidez.")
+    else:
+        total_goals = ctx_rec["gf"] + ctx_rec["ga"]
+        avg_g = total_goals / ctx_rec["n"] if ctx_rec["n"] else 0
+        insight_title = f"Media de {avg_g:.1f} gols por jogo como {ctx_label}."
+        insight_body  = "Jogo tende a ser movimentado com chancas para os dois lados."
+
+    # ── Comps breakdown (p2) ──────────────────────────────────────────────────
+    comp_counts = (done.groupby("competition_name").size()
+                   .sort_values(ascending=False).head(4))
+    max_n = comp_counts.max() if len(comp_counts) else 1
+    comps_data = [
+        (name, int(n), round(n / max_n * 100), "var(--yellow)" if i == 0 else "var(--ink-2)")
+        for i, (name, n) in enumerate(comp_counts.items())
+    ]
+
+    # ── KPIs (p1) ─────────────────────────────────────────────────────────────
+    sb_aprov = _aprov(sb_rec)
+    kpis = [
+        ("Serie B 2026",
+         f"{sb_rec['w']}V {sb_rec['d']}E {sb_rec['l']}D",
+         f"/ {sb_rec['w']*3+sb_rec['d']}pt",
+         "warn" if sb_rec["w"] == 0 else ""),
+        ("Aproveitamento geral",
+         str(_aprov(total_rec)), "%",
+         "ok" if _aprov(total_rec) >= 60 else ""),
+        ("Posse media",
+         f"{poss_avg:.0f}", "%", ""),
+        ("xG gerado / jogo",
+         f"{xg_avg:.2f}", "",
+         "ok" if xg_avg >= 1.5 else ("warn" if xg_avg < 1.0 else "")),
+    ]
+
+    # ── Monta data dict completo ──────────────────────────────────────────────
+    team_abbr = cfg["team_abbr"]
+    team_name = cfg["team_name"]
+    sport_role_label = "visitante" if sport_role == "visitante" else "mandante"
+    date_fmt  = cfg.get("date", "")
+    try:
+        date_fmt = datetime.strptime(date_fmt, "%Y-%m-%d").strftime("%d.%m")
+    except Exception:
+        pass
+
+    city    = cfg.get("city", "")
+    stadium = cfg.get("stadium", "")
+
+    sub_p1 = (f"Sport recebe o adversario em casa — o que esperar do {team_abbr}"
+              if sport_role == "mandante"
+              else f"Sport visita o {team_abbr} — o que esperar do adversario")
+
+    sub_p3 = (f"Sport recebe o adversario — como o {team_abbr} se sai como visitante?"
+              if sport_role == "mandante"
+              else f"Sport visita o {team_abbr} — como ele se sai em casa?")
+
+    # Série B ctx lines
+    ctx_sb_lines_data = _stat_lines(ctx_sb_rec, ctx_sb_xg)
+
+    w5 = last5_outcomes.count("win")
+    e5 = last5_outcomes.count("draw")
+    l5 = last5_outcomes.count("loss")
+    form_sub = (
+        f"{w5} vitorias, {e5} empates e {l5} derrota(s) nos ultimos 5 jogos"
+    )
+
+    return {
+        "p1": {
+            "team_name": team_name,
+            "team_name_hero": team_abbr,
+            "team_abbr": team_abbr,
+            "comp_label": "Serie B 2026",
+            "round_label": f"Rodada {cfg['round']:02d} · {date_fmt}",
+            "sub": sub_p1,
+            "kpis": kpis,
+        },
+        "p2": {
+            "team_abbr": team_abbr,
+            "wins": total_rec["w"], "draws": total_rec["d"], "losses": total_rec["l"],
+            "gf": total_rec["gf"], "ga": total_rec["ga"],
+            "comps": comps_data,
+        },
+        "p3": {
+            "team_abbr":  team_abbr,
+            "city":       city or "Recife",
+            "stadium":    stadium or "Ilha do Retiro",
+            "sub":        sub_p3,
+            "is_home_context": is_home_context,
+            "ctx_aprov":  _aprov(ctx_rec),
+            "ctx_games":  ctx_rec["n"],
+            "ctx_w":      ctx_rec["w"],
+            "ctx_d":      ctx_rec["d"],
+            "ctx_l":      ctx_rec["l"],
+            "ctx_general_lines": _stat_lines(ctx_rec, ctx_xg),
+            "sb_ctx_games":  ctx_sb_rec["n"],
+            "ctx_sb_lines":  ctx_sb_lines_data,
+            "insight_title": insight_title,
+            "insight_body":  insight_body,
+        },
+        "p4": {
+            "last5": last5_outcomes,
+            "form_sub": form_sub,
+            "matches": matches_p4,
+        },
+        "p5": {
+            "title_line1": title_line1,
+            "title_em":    title_em,
+            "metrics": [
+                (f"{poss_avg:.0f}", "%",  "Posse media",   "controla o jogo" if poss_avg >= 52 else "disputa equilibrada"),
+                (f"{xg_avg:.2f}",  "",   "xG / jogo",     "eficiente" if xg_avg >= 1.5 else "baixa criacao"),
+                (f"{shots_avg:.1f}","",  "Chutes / jogo", "volume alto" if shots_avg >= 14 else "volume medio"),
+            ],
+            "thesis_h3": thesis_h3,
+            "thesis_p":  thesis_p,
+            "zones":     None,   # preencher manualmente se sync-attack-map foi rodado
+            "zones_sub": f"{len(sb)} jogos Serie B · SofaScore",
+            "meta_sub":  f"Serie B 2026 · {len(sb)} jogos",
+        },
+        "p6": {
+            "subtitle_em": f"DO {team_abbr.split()[0]}",
+            "sub": f"Ratings medios · Brasileirao Serie B · {len(sb)} jogos",
+            "players": p6_players,
+        },
+    }
+
+
+# ─── Dados América Mineiro R5 (mantido como referência / fallback) ────────────
 
 DATA_AMERICA_MG = {
     "p1": {
@@ -986,20 +1404,49 @@ DATA_AMERICA_MG = {
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Gera cards Raio-X v2")
-    parser.add_argument("--team-key", default="america-mg")
-    parser.add_argument("--round",    default="5")
-    parser.add_argument("--date",     default="2026-04-18")
+    parser.add_argument("--team-key",   required=True, help="Ex: novorizontino")
+    parser.add_argument("--team-name",  required=True, help="Ex: 'Gremio Novorizontino'")
+    parser.add_argument("--team-abbr",  required=True, help="Ex: NOVORIZONTINO")
+    parser.add_argument("--team-id",    required=True, help="SofaScore team_id, ex: 135514")
+    parser.add_argument("--round",      required=True, type=int, help="Rodada, ex: 6")
+    parser.add_argument("--season",     default="2026")
+    parser.add_argument("--date",       required=True, help="YYYY-MM-DD da partida")
+    parser.add_argument("--sport-role", default="mandante",
+                        choices=["mandante", "visitante"],
+                        help="Sport joga como mandante ou visitante")
+    parser.add_argument("--city",       default="Recife")
+    parser.add_argument("--stadium",    default="Ilha do Retiro")
     args = parser.parse_args()
 
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-    out = f"pending_posts/{args.date}_raio-x-{args.team_key}-v2"
-    shield = f"data/cache/logos/1973.png"  # América Mineiro
+    cfg = {
+        "team_key":   args.team_key,
+        "team_name":  args.team_name,
+        "team_abbr":  args.team_abbr,
+        "team_id":    args.team_id,
+        "round":      args.round,
+        "season":     args.season,
+        "date":       args.date,
+        "sport_role": args.sport_role,
+        "city":       args.city,
+        "stadium":    args.stadium,
+    }
 
-    print(f"Gerando Raio-X v2 — {args.team_key} | Série B 2026 R{args.round}")
+    print(f"Carregando dados: {args.team_key} ...")
+    matches, stats, players = _load(args.team_key)
+
+    print(f"Computando metricas ...")
+    data = build_data(cfg, matches, stats, players)
+
+    out    = f"pending_posts/{args.date}_raio-x-{args.team_key}"
+    shield = f"data/cache/logos/{args.team_id}.png"
+
+    print(f"Gerando Raio-X v2 — {args.team_abbr} | Serie B {args.season} R{args.round:02d}")
     cards = RaioXCards(
-        data=DATA_AMERICA_MG,
+        data=data,
         out_dir=out,
+        cfg=cfg,
         logo_path="sportrecifelab_avatar.png",
         shield_path=shield,
     )

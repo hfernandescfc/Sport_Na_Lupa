@@ -118,6 +118,8 @@ def _fetch_opponent_matches(
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
+    options.add_argument("--blink-settings=imagesEnabled=false")
+    options.page_load_strategy = "none"  # don't wait for full page — only need origin
 
     season_start = int(
         datetime.datetime(season, 1, 1, tzinfo=datetime.timezone.utc).timestamp()
@@ -127,9 +129,10 @@ def _fetch_opponent_matches(
     )
 
     driver = webdriver.Edge(options=options)
-    driver.set_page_load_timeout(30)
+    driver.set_page_load_timeout(60)
     try:
         driver.get(team_url)
+        time.sleep(2)  # allow origin context to settle before XHR
         past = _paginate_team_events(driver, team_id, "last", season_start, season_end)
         future = _paginate_team_events(driver, team_id, "next", season_start, season_end)
     except Exception as exc:
@@ -214,6 +217,8 @@ def _fetch_player_stats(
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
+    options.add_argument("--blink-settings=imagesEnabled=false")
+    options.page_load_strategy = "none"
 
     all_rows: list[dict[str, Any]] = []
 
@@ -228,10 +233,10 @@ def _fetch_player_stats(
             continue
 
         driver = webdriver.Edge(options=options)
-        driver.set_page_load_timeout(30)
+        driver.set_page_load_timeout(60)
         try:
             driver.get(source_url)
-            time.sleep(3)
+            time.sleep(2)
             payload = _fetch_lineups_json(driver, str(event_id))
             if payload is None:
                 logger.warning("No lineups payload for event_id=%s", event_id)

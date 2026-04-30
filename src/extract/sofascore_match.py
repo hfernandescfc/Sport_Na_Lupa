@@ -151,16 +151,37 @@ def sync_matches_stub(settings: Settings, season: int, from_round: int, to_round
     existing_stats_csv = base / "team_match_stats.csv"
     existing_stats_rows: list[dict] = []
     already_processed: set[str] = set()
+    needs_retry: set[str] = set()
     if existing_stats_csv.exists():
         with open(existing_stats_csv, encoding="utf-8") as f:
             existing_stats_rows = list(csv.DictReader(f))
-            already_processed = {r["match_id"] for r in existing_stats_rows if r.get("match_id")}
+            for r in existing_stats_rows:
+                mid = r.get("match_id")
+                if not mid:
+                    continue
+                if r.get("data_status") == "advanced_stats_missing":
+                    needs_retry.add(mid)
+                else:
+                    already_processed.add(mid)
 
-    new_completed = [m for m in completed if m.get("match_code") not in already_processed]
+    # Re-try matches that previously returned advanced_stats_missing
+    if needs_retry:
+        logger.info(
+            "Will retry %s match(es) previously returned advanced_stats_missing: %s",
+            len(needs_retry), sorted(needs_retry),
+        )
+        existing_stats_rows = [r for r in existing_stats_rows if r.get("match_id") not in needs_retry]
+
+    new_completed = [
+        m for m in completed
+        if m.get("match_code") not in already_processed
+    ]
     if new_completed:
         logger.info(
-            "Extracting team stats for %s new completed matches (skipping %s already persisted)",
-            len(new_completed), len(already_processed),
+            "Extracting team stats for %s match(es) (%s new, %s retry, skipping %s already confirmed)",
+            len(new_completed), len(new_completed) - len(needs_retry & {m.get("match_code") for m in new_completed}),
+            len(needs_retry & {m.get("match_code") for m in new_completed}),
+            len(already_processed),
         )
         new_stats_rows = _extract_round_team_stats(new_completed)
         all_stats_rows = existing_stats_rows + new_stats_rows
