@@ -13,19 +13,20 @@ Aggregate per team and compare against actual points.
 
 Opponent strength
 -----------------
-The table is always enriched with a SOS column derived from each team's live
-Série B PPG (Pts / MP from this very table), optionally combined with squad
+The table is always enriched with a SOS column derived from each team's recent
+form (last 5 Série B matches, linearly weighted), optionally combined with squad
 market value from data/processed/{season}/matches/serie_b_{season}_team_strength.csv.
 
-  strength_score = 0.60 × mv_score + 0.40 × perf_score   (when MV available)
+  strength_score = 0.40 × mv_score + 0.60 × perf_score   (when MV available)
   strength_score = perf_score                              (fallback)
 
-  mv_score   = (mv - min) / (max - min)             [frozen until sync-serie-b-strength re-runs]
-  perf_score = (Pts/MP) / max(Pts/MP)               [live — recomputed every transform-standings]
+  mv_score   = (mv - min) / (max - min)   [frozen until sync-serie-b-strength re-runs]
+  perf_score = weighted_ppg / max(weighted_ppg)
+               weighted_ppg = Σ(w_i × pts_i) / Σ(w_i)
+               w_i = λ^(n−1−i), λ=0.9  (most recent = 1.0, each prior × 0.9)
 
-This keeps the time-sensitive part of SOS in sync with the current round even
-if MV has not been refreshed, while preserving market value as a stable
-top-of-table signal between transfer windows.
+All matches are included. Exponential decay ensures recent form drives the score
+without hard-discarding early results — after 7 matches a game's weight halves.
 
 Output
 ------
@@ -107,7 +108,7 @@ def _load_market_values(settings: Settings, season: int) -> dict[str, float]:
     MV evolves slowly (transfer windows) and is sourced from
     sync-serie-b-strength. The performance component is computed live in
     `_compute_strength_scores` from the curated standings table — so a stale
-    MV CSV degrades to a frozen 60% weight, but the live 40% always reflects
+    MV CSV degrades to a frozen 40% weight, but the live 60% always reflects
     the latest round.
     """
     path = (
@@ -140,29 +141,58 @@ def _load_market_values(settings: Settings, season: int) -> dict[str, float]:
     return dict(zip(df["team_key"], df["mv_score"]))
 
 
+_FORM_DECAY = 0.9  # exponential decay per match (most recent = 1.0, each prior × 0.9)
+
+
+def _compute_recent_form(matches_df: pd.DataFrame) -> dict[str, float]:
+    """Return {team_key: perf_score in [0,1]} using all matches with exponential decay.
+
+    w_i = DECAY^(n-1-i) where i=0 is oldest and i=n-1 is most recent.
+    Most recent match always gets weight 1.0; each prior match is multiplied by
+    DECAY (0.9), so influence halves roughly every 7 matches.
+    All games count — no hard cutoff.
+    """
+    completed = matches_df[matches_df["status"] == "completed"].copy()
+    completed["match_date_utc"] = pd.to_datetime(completed["match_date_utc"], utc=True)
+    completed["home_score"] = pd.to_numeric(completed["home_score"], errors="coerce")
+    completed["away_score"] = pd.to_numeric(completed["away_score"], errors="coerce")
+    completed = completed.dropna(subset=["home_score", "away_score"])
+
+    home = completed[["match_date_utc", "home_team_key", "home_score", "away_score"]].rename(
+        columns={"home_team_key": "team_key", "home_score": "gf", "away_score": "ga"}
+    )
+    away = completed[["match_date_utc", "away_team_key", "away_score", "home_score"]].rename(
+        columns={"away_team_key": "team_key", "away_score": "gf", "home_score": "ga"}
+    )
+    long = pd.concat([home, away], ignore_index=True)
+    long["pts"] = long.apply(
+        lambda r: 3 if r.gf > r.ga else (1 if r.gf == r.ga else 0), axis=1
+    )
+
+    weighted_pts: dict[str, float] = {}
+    for team_key, group in long.groupby("team_key"):
+        pts_list = group.sort_values("match_date_utc")["pts"].tolist()
+        n = len(pts_list)
+        weights = [_FORM_DECAY ** (n - 1 - i) for i in range(n)]
+        weighted_pts[str(team_key)] = sum(w * p for w, p in zip(weights, pts_list)) / sum(weights)
+
+    max_wp = max(weighted_pts.values()) if weighted_pts else 1.0
+    if max_wp <= 0:
+        return {k: 0.0 for k in weighted_pts}
+    return {k: v / max_wp for k, v in weighted_pts.items()}
+
+
 def _compute_strength_scores(
-    table: pd.DataFrame, mv_scores: dict[str, float]
+    perf_scores: dict[str, float], mv_scores: dict[str, float]
 ) -> dict[str, float]:
-    """Combine frozen MV (60%) with live PPG from the curated Série B table (40%).
+    """Combine frozen MV (40%) with recent-form perf_score (60%).
 
-    Live PPG ensures SOS reflects each opponent's latest form even if
-    sync-serie-b-strength has not been re-run. Falls back to PPG-only when
-    MV is unavailable for a team (graceful degradation; matches the previous
-    behaviour for partial coverage)."""
-    if table.empty or "Pts" not in table.columns or "MP" not in table.columns:
-        return {}
-
-    ppg = (table["Pts"] / table["MP"]).where(table["MP"] > 0, 0.0)
-    ppg_max = ppg.max()
-    if ppg_max <= 0:
-        return {}
-    perf_scores = dict(zip(table["team_key"], ppg / ppg_max))
-
+    Falls back to perf_score-only when MV is unavailable for a team."""
     strength: dict[str, float] = {}
     for team_key, perf in perf_scores.items():
         mv = mv_scores.get(team_key)
         if mv is not None:
-            strength[team_key] = 0.60 * mv + 0.40 * float(perf)
+            strength[team_key] = 0.40 * mv + 0.60 * float(perf)
         else:
             strength[team_key] = float(perf)
     return strength
@@ -173,7 +203,7 @@ def _compute_strength_scores(
 # ---------------------------------------------------------------------------
 
 def transform_standings(settings: Settings, season: int) -> None:
-    curated = settings.curated_dir / "serie_b_2026"
+    curated = settings.curated_dir / f"serie_b_{season}"
 
     matches_path = curated / "matches.csv"
     stats_path = curated / "team_match_stats.csv"
@@ -302,9 +332,10 @@ def transform_standings(settings: Settings, season: int) -> None:
     table["pts_diff"] = (table["Pts"] - table["xPts"]).round(2)
 
     # ── Opponent strength ─────────────────────────────────────────────────────
-    # MV from CSV (frozen, slow-changing); PPG from this very table (live).
+    # MV from CSV (frozen, slow-changing); perf from last-5 weighted form (live).
     mv_scores = _load_market_values(settings, season)
-    strength_scores = _compute_strength_scores(table, mv_scores)
+    perf_scores = _compute_recent_form(matches_df)
+    strength_scores = _compute_strength_scores(perf_scores, mv_scores)
     if strength_scores:
         table = _enrich_with_sos(table, all_rows, strength_scores)
 

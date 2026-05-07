@@ -33,7 +33,7 @@ def transform_matches(settings: Settings, season: int) -> None:
 
 def _transform_serie_b(settings: Settings, season: int) -> None:
     processed = settings.processed_dir / str(season)
-    curated = settings.curated_dir / "serie_b_2026"
+    curated = settings.curated_dir / f"serie_b_{season}"
 
     matches_df = _load_serie_b_matches(processed)
     stats_df = _load_serie_b_team_stats(processed)
@@ -138,7 +138,7 @@ def _load_serie_b_team_stats(processed: Path) -> pd.DataFrame:
 
 def _transform_sport(settings: Settings, season: int) -> None:
     processed = settings.processed_dir / str(season)
-    curated = settings.curated_dir / "sport_2026"
+    curated = settings.curated_dir / f"sport_{season}"
     curated.mkdir(parents=True, exist_ok=True)
 
     matches_df = _load_sport_matches(processed, season)

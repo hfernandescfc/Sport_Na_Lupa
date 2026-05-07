@@ -69,7 +69,7 @@ def transform_players(settings: Settings, season: int) -> None:
 
     # Série B subset
     serie_b_df = df[df["competition"] == SERIE_B_COMPETITION_KEY].copy()
-    _write(settings.curated_dir / "serie_b_2026" / "player_match_stats.csv", serie_b_df)
+    _write(settings.curated_dir / f"serie_b_{season}" / "player_match_stats.csv", serie_b_df)
     logger.info("Curated Série B player stats: %s rows", len(serie_b_df))
 
     # Sport subset (all competitions) — use sport-specific file if available
@@ -79,7 +79,7 @@ def transform_players(settings: Settings, season: int) -> None:
     else:
         sport_df = df[df["team_name"].str.contains("Sport", na=False)].copy()
 
-    _write(settings.curated_dir / "sport_2026" / "player_match_stats.csv", sport_df)
+    _write(settings.curated_dir / f"sport_{season}" / "player_match_stats.csv", sport_df)
     logger.info("Curated Sport player stats: %s rows", len(sport_df))
 
 
