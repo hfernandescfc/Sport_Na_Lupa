@@ -1,0 +1,130 @@
+{
+  "post_type": "tier_list",
+  "round": 7,
+  "sos_window": 4,
+  "season": 2026,
+  "competition": "serie_b",
+  "generated_at": "2026-05-07T11:17:22.752839Z",
+  "cards": [
+    "01_tier_list.png"
+  ],
+  "components": {
+    "Desempenho": "30%",
+    "Domínio": "25%",
+    "Calendário": "30%",
+    "Momento": "15%"
+  },
+  "tiers": {
+    "CANDIDATO AO G2": [
+      {
+        "rank": 1,
+        "team": "Criciúma",
+        "score": 95.5
+      },
+      {
+        "rank": 2,
+        "team": "Atlético Goianiense",
+        "score": 92.7
+      },
+      {
+        "rank": 3,
+        "team": "Operário-PR",
+        "score": 88.3
+      },
+      {
+        "rank": 4,
+        "team": "Sport Recife",
+        "score": 85.5
+      }
+    ],
+    "BRIGAM PELOS PLAYOFFS": [
+      {
+        "rank": 5,
+        "team": "Grêmio Novorizontino",
+        "score": 85.0
+      },
+      {
+        "rank": 6,
+        "team": "Vila Nova FC",
+        "score": 82.6
+      },
+      {
+        "rank": 7,
+        "team": "CRB",
+        "score": 75.0
+      },
+      {
+        "rank": 8,
+        "team": "Fortaleza",
+        "score": 73.1
+      },
+      {
+        "rank": 9,
+        "team": "Cuiabá",
+        "score": 70.7
+      },
+      {
+        "rank": 10,
+        "team": "Ceará",
+        "score": 70.5
+      }
+    ],
+    "MAROLA": [
+      {
+        "rank": 11,
+        "team": "Náutico",
+        "score": 70.3
+      },
+      {
+        "rank": 12,
+        "team": "Botafogo-SP",
+        "score": 67.7
+      },
+      {
+        "rank": 13,
+        "team": "São Bernardo",
+        "score": 67.6
+      },
+      {
+        "rank": 14,
+        "team": "Ponte Preta",
+        "score": 54.9
+      },
+      {
+        "rank": 15,
+        "team": "Juventude",
+        "score": 54.3
+      },
+      {
+        "rank": 16,
+        "team": "América Mineiro",
+        "score": 48.0
+      }
+    ],
+    "MANUTENÇÃO É LUCRO": [
+      {
+        "rank": 17,
+        "team": "Goiás",
+        "score": 39.3
+      },
+      {
+        "rank": 18,
+        "team": "Avaí",
+        "score": 28.8
+      },
+      {
+        "rank": 19,
+        "team": "Athletic Club",
+        "score": 27.6
+      },
+      {
+        "rank": 20,
+        "team": "Londrina",
+        "score": 1.5
+      }
+    ]
+  },
+  "sport_rank": 4,
+  "sport_score": 85.5,
+  "status": "pending_review"
+}

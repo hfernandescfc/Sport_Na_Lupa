@@ -1,0 +1,127 @@
+================================================================================
+PREVISÕES RODADA 8 — PRÉ-JOGO (SÉRIE B 2026)
+Modelo: LogisticRegression + FULL Features (18)
+Features: rolling proxies de R1-R7
+================================================================================
+
+PARTIDA 1
+Vila Nova FC              × Goiás                    
+
+  PROBABILIDADES:
+    Away (A):   83.0%
+    Draw (D):   15.4%
+    Home (H):    1.7%
+
+  PREVISÃO: Away   (83.0%)
+--------------------------------------------------------------------------------
+
+PARTIDA 2
+Cuiabá                    × Athletic Club            
+
+  PROBABILIDADES:
+    Away (A):   67.1%
+    Draw (D):   25.5%
+    Home (H):    7.4%
+
+  PREVISÃO: Away   (67.1%)
+--------------------------------------------------------------------------------
+
+PARTIDA 3
+Sport Recife              × Ponte Preta              
+
+  PROBABILIDADES:
+    Away (A):   35.2%
+    Draw (D):   35.2%
+    Home (H):   29.6%
+
+  PREVISÃO: Away   (35.2%)
+--------------------------------------------------------------------------------
+
+PARTIDA 4
+Atlético Goianiense       × Ceará                    
+
+  PROBABILIDADES:
+    Away (A):   68.5%
+    Draw (D):   27.0%
+    Home (H):    4.5%
+
+  PREVISÃO: Away   (68.5%)
+--------------------------------------------------------------------------------
+
+PARTIDA 5
+Operário-PR               × CRB                      
+
+  PROBABILIDADES:
+    Away (A):   40.2%
+    Draw (D):   33.9%
+    Home (H):   25.8%
+
+  PREVISÃO: Away   (40.2%)
+--------------------------------------------------------------------------------
+
+PARTIDA 6
+Criciúma                  × Juventude                
+
+  PROBABILIDADES:
+    Away (A):   65.4%
+    Draw (D):   19.5%
+    Home (H):   15.1%
+
+  PREVISÃO: Away   (65.4%)
+--------------------------------------------------------------------------------
+
+PARTIDA 7
+São Bernardo              × Londrina                 
+
+  PROBABILIDADES:
+    Away (A):   58.6%
+    Draw (D):   39.8%
+    Home (H):    1.6%
+
+  PREVISÃO: Away   (58.6%)
+--------------------------------------------------------------------------------
+
+PARTIDA 8
+América Mineiro           × Náutico                  
+
+  PROBABILIDADES:
+    Away (A):   27.5%
+    Draw (D):   22.8%
+    Home (H):   49.7%
+
+  PREVISÃO: Home   (49.7%)
+--------------------------------------------------------------------------------
+
+PARTIDA 9
+Fortaleza                 × Avaí                     
+
+  PROBABILIDADES:
+    Away (A):   90.4%
+    Draw (D):    7.4%
+    Home (H):    2.2%
+
+  PREVISÃO: Away   (90.4%)
+--------------------------------------------------------------------------------
+
+PARTIDA 10
+Botafogo-SP               × Grêmio Novorizontino     
+
+  PROBABILIDADES:
+    Away (A):   56.0%
+    Draw (D):   26.0%
+    Home (H):   18.0%
+
+  PREVISÃO: Away   (56.0%)
+--------------------------------------------------------------------------------
+
+PARTIDA 11
+São Bernardo              × Londrina                 
+
+  PROBABILIDADES:
+    Away (A):   58.6%
+    Draw (D):   39.8%
+    Home (H):    1.6%
+
+  PREVISÃO: Away   (58.6%)
+--------------------------------------------------------------------------------
+

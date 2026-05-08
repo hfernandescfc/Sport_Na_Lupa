@@ -1,0 +1,18 @@
+{
+  "slug": "2026-04-23_contribuicao-jogadores-r5",
+  "type": "contribuicao_jogadores",
+  "round": 5,
+  "season": 2026,
+  "competition": "Serie B",
+  "cards": ["card.png"],
+  "status": "pending",
+  "created_at": "2026-04-23",
+  "topic": "Contribuicao ofensiva dos jogadores do Sport — R1-R5 Série B",
+  "highlights": [
+    "Felipinho lidera passes no campo adversário: 16% do total do time",
+    "Barletta: 30% das finalizacoes — 1 em cada 3 chutes do Sport"
+  ],
+  "narrative": "Dados defendem Felipinho (alvo de criticas) e revelam Barletta como principal finalizador",
+  "encoding": "size",
+  "metrics": ["accurate_opposition_half_passes", "total_progression", "total_shots"]
+}

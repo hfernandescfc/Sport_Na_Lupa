@@ -1,0 +1,37 @@
+{
+  "post_type": "power_ranking",
+  "round": 6,
+  "sos_window": 4,
+  "season": 2026,
+  "competition": "serie_b",
+  "generated_at": "2026-04-29T14:12:19.244617Z",
+  "cards": [
+    "01_power_ranking.png"
+  ],
+  "components": {
+    "Desempenho": "35%",
+    "Domínio": "30%",
+    "Calendário": "25%",
+    "Momento": "10%"
+  },
+  "top_3": [
+    {
+      "rank": 1,
+      "team": "Criciúma",
+      "score": 93.3
+    },
+    {
+      "rank": 2,
+      "team": "Ceará",
+      "score": 84.3
+    },
+    {
+      "rank": 3,
+      "team": "Atlético Goianiense",
+      "score": 77.6
+    }
+  ],
+  "sport_rank": 8,
+  "sport_score": 67.0,
+  "status": "pending_review"
+}

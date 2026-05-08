@@ -1,0 +1,41 @@
+— THREAD —
+
+[1/3 — sem imagem]
+
+Nova edição do #NivelDeAtaque — xG produzido x contexto defensivo.
+
+Após R6, o ranking balançou:
+▲ Fortaleza subiu 7 posições.
+▼ Náutico caiu 9.
+
+O retrato da Série B segue mudando. 🧵
+
+---
+
+[2/3 — card: card.png]
+
+#NivelDeAtaque (R1-R6)
+xG × contexto defensivo · setas vs R5
+
+✅ Criciúma: +1.90 ▲4
+✅ Ceará: +1.71 ▼1
+✅ CRB: +1.66 ▲5
+
+❌ Londrina: -3.16 ▼2
+❌ Juventude: -2.89 ▲1
+❌ Goiás: -1.86 ▼5
+
+Sport: #5 (▼1) · +1.21
+
+Qual time te surpreendeu mais? 👇
+
+---
+
+[3/3 — reply ao tweet 2]
+
+Metodologia: para cada partida, calculamos a média de xG concedido pelo adversário nas rodadas anteriores. O delta = xG real produzido − esse contexto.
+
+Dados: SofaScore · R1-R6
+
+📊 @SportRecifeLab
+#SerieB #SerieB2026 #SportRecife #NivelDeAtaque

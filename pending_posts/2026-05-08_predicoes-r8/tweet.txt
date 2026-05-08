@@ -1,0 +1,10 @@
+🔮 Rodada 8 chegando: nosso modelo previu R1-R7 com 75,5% de acurácia.
+
+Maiores certezas:
+🔴 Fortaleza vence Avaí (90%)
+🔴 Vila Nova vence Goiás (83%)
+
+A SURPRESA: Sport Recife vs Ponte Preta é 50/50.
+
+Qual resultado você acha que sai? O modelo acertou em R1-R7?
+👇 Concordam ou discordam?

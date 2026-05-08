@@ -1,0 +1,20 @@
+{
+  "quadro": "Nivel de Ataque",
+  "post_date": "2026-04-27",
+  "slug": "nivel-de-ataque-r6",
+  "topic": "offensive_xg_vs_defensive_context",
+  "season": 2026,
+  "rounds_covered": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "max_round": 6,
+  "cards": {
+    "card.png": "pronto"
+  },
+  "status": "pronto para publicar"
+}

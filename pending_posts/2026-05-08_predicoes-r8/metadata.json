@@ -1,0 +1,53 @@
+{
+  "title": "Previsões Rodada 8 — Série B 2026 (3 Cards Mobile-First)",
+  "description": "Thread de 3 cards otimizados para mobile: Card 1 foca Sport Recife (35% vitória vs Ponte Preta). Card 2 destaca top 4 favoritos (Fortaleza 90%, Vila Nova 83%, Atlético Go 69%, Cuiabá 67%). Card 3 alerta para jogos equilibrados/possíveis zebras.",
+  "date": "2026-05-08",
+  "category": "predictions",
+  "competition": "Série B 2026",
+  "round": 8,
+  "model": "LogisticRegression (C=0.1)",
+  "features": 18,
+  "train_accuracy": 0.755,
+  "confidence": "high",
+  "format": "thread_3_cards_mobile_first",
+  "cards": {
+    "card_1_sport": {
+      "title": "Pré-Rodada R8 — Foco Sport Recife",
+      "match": "Ponte Preta (H) vs Sport Recife (A)",
+      "sport_chance": "35.2%",
+      "aspect_ratio": "4:5",
+      "focus": "Sport em destaque, hierarquia clara, leitura instantânea"
+    },
+    "card_2_favoritos": {
+      "title": "Maiores Favoritos da Rodada",
+      "teams": [
+        "Fortaleza (90%)",
+        "Vila Nova FC (83%)",
+        "Atlético Goianiense (69%)",
+        "Cuiabá (67%)"
+      ],
+      "aspect_ratio": "4:5",
+      "focus": "Top 4 com logos grandes, percentuais em destaque"
+    },
+    "card_3_equilibradas": {
+      "title": "Jogos Imprevisíveis",
+      "matches": [
+        "Ponte Preta × Sport (30/35/35) — Jogo equilibrado",
+        "CRB × Operário-PR (26/34/40) — Tudo aberto",
+        "Grêmio × Botafogo-SP (18/26/56) — Alerta de zebra"
+      ],
+      "aspect_ratio": "4:5",
+      "focus": "Jogos com probabilidades próximas, possíveis surpresas"
+    }
+  },
+  "tags": [
+    "previsões",
+    "rodada-8",
+    "série-b-2026",
+    "modelo-preditivo",
+    "mobile-first",
+    "thread",
+    "sport-recife"
+  ],
+  "design_philosophy": "Chromatic Odds — color encodes probability, minimal text, premium sports analytics aesthetic (Opta/SofaScore/The Athletic style)"
+}

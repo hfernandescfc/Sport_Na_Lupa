@@ -1,0 +1,35 @@
+{
+  "slug": "2026-04-27_ze-gabriel-impacto-xg",
+  "type": "tactical_analysis_text_only",
+  "subject": "Zé Gabriel — impacto em xG/xGA quando em campo (Série B 2026)",
+  "method": "shotmap minuto-a-minuto via /api/v1/event/{id}/shotmap; chutes divididos pelo minuto da substituição em cada partida",
+  "sample": {
+    "matches": 5,
+    "rounds": [1, 2, 3, 4, 6],
+    "minutes_with_ze_gabriel": 378,
+    "minutes_without_ze_gabriel": 72
+  },
+  "metrics_per_90": {
+    "with_ze_gabriel": {
+      "xg_sport": 1.61,
+      "xga_opponent": 1.26
+    },
+    "without_ze_gabriel": {
+      "xg_sport": 2.54,
+      "xga_opponent": 1.54
+    }
+  },
+  "narrative_angle": "incisivo: dado valida demanda da torcida — Sport produz +58% de xG/90 sem Zé Gabriel em campo",
+  "caveats": [
+    "Amostra sem ZG é pequena (72 min total) e enviesada para finais de jogo",
+    "2º tempo do R6 (Carlos De Pena entrou) gerou 1.17 xG sozinho, puxando média 'sem ZG'"
+  ],
+  "tweet": {
+    "tweets_count": 1,
+    "thread": false,
+    "has_card": false,
+    "char_count_approx": 218
+  },
+  "status": "pending_review",
+  "created_at": "2026-04-27"
+}

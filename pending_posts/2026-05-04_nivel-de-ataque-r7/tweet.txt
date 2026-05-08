@@ -1,0 +1,41 @@
+— THREAD —
+
+[1/3 — sem imagem]
+
+Nova edição do #NivelDeAtaque — xG produzido x contexto defensivo.
+
+Após R7, o ranking balançou:
+▲ CRB subiu 9 posições.
+▼ Náutico caiu 12.
+
+O retrato da Série B segue mudando. 🧵
+
+---
+
+[2/3 — card: card.png]
+
+#NivelDeAtaque (R1-R7)
+xG × contexto defensivo · setas vs R6
+
+✅ CRB: +1.99 ▲9
+✅ Sport Recife: +1.97 ▲1
+✅ São Bernardo: +1.89 ▲8
+
+❌ Juventude: -3.84
+❌ Londrina: -3.57 ▼1
+❌ Náutico: -2.12 ▼12
+
+Sport: #2 (▲1) · +1.97
+
+Qual time te surpreendeu mais? 👇
+
+---
+
+[3/3 — reply ao tweet 2]
+
+Metodologia: para cada partida, calculamos a média de xG concedido pelo adversário nas rodadas anteriores. O delta = xG real produzido − esse contexto.
+
+Dados: SofaScore · R1-R7
+
+📊 @SportRecifeLab
+#SerieB #SerieB2026 #SportRecife #NivelDeAtaque

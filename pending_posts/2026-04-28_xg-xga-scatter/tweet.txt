@@ -1,0 +1,8 @@
+xG vs xGA — saldo de cada time na Serie B 2026
+
+Eixo X: produziu mais (ou menos) xG do que o calendário sugeria.
+Eixo Y: sofreu mais (ou menos) xGA do que o esperado.
+
+Sport: +0.19 xG | -0.11 xGA vs esperado
+
+#SerieB2026 #SportRecife #DataFootball

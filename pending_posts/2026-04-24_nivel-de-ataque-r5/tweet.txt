@@ -1,0 +1,41 @@
+— THREAD —
+
+[1/3 — sem imagem]
+
+Nova edição do #NivelDeAtaque — xG produzido x contexto defensivo.
+
+Após R5, o ranking balançou:
+▲ Ponte Preta subiu 12 posições.
+▼ Botafogo-SP caiu 8.
+
+O retrato da Série B segue mudando. 🧵
+
+---
+
+[2/3 — card: card.png]
+
+#NivelDeAtaque (R1-R5)
+xG × contexto defensivo · setas vs R4
+
+✅ Ceará: +1.85 ▲1
+✅ Ponte Preta: +1.78 ▲12
+✅ Grêmio Novorizontino: +1.62 ▲3
+
+❌ Londrina: -2.75 ▼1
+❌ Juventude: -1.67 ▲1
+❌ Cuiabá: -1.36 ▼1
+
+Sport: #7 (▼6) · +0.56
+
+Qual time te surpreendeu mais? 👇
+
+---
+
+[3/3 — reply ao tweet 2]
+
+Metodologia: para cada partida, calculamos a média de xG concedido pelo adversário nas rodadas anteriores. O delta = xG real produzido − esse contexto.
+
+Dados: SofaScore · R1-R5
+
+📊 @SportRecifeLab
+#SerieB #SerieB2026 #SportRecife #NivelDeAtaque

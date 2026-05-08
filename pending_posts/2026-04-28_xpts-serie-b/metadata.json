@@ -1,0 +1,17 @@
+{
+  "slug": "2026-04-28_xpts-serie-b",
+  "type": "xpts_table",
+  "round": 6,
+  "season": 2026,
+  "generated_at": "2026-04-28",
+  "cards": ["01_xpts_table.png", "02_xpts_scatter.png"],
+  "status": "pending",
+  "highlights": {
+    "top_xpts": "Criciúma (10.50)",
+    "most_unlucky": "CRB (6º xPts, 2 pts, -7.0 saldo)",
+    "most_lucky": "Fortaleza (15º xPts, 11 pts, +3.5 saldo)",
+    "biggest_rise": "Sport Recife (+4 posições vs R5)",
+    "biggest_drop": "Cuiabá (-5 posições vs R5)",
+    "calendar_alert": "Operário-PR (5º xPts, calendário mais fácil — sos_rank 1)"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "slug": "2026-04-27_contribuicao-jogadores-gremio-novorizontino",
+  "type": "match_player_contribution",
+  "match": {
+    "round": 6,
+    "competition": "Brasileirão Série B",
+    "season": 2026,
+    "event_id": 15526043,
+    "match_code": "jOsokeb",
+    "date": "2026-04-25",
+    "home_team": "Sport Recife",
+    "away_team": "Grêmio Novorizontino",
+    "score": "1x0",
+    "outcome": "win"
+  },
+  "narrative": {
+    "headline": "Zé constrói · Carlos decide",
+    "key_player": "Carlos De Pena",
+    "key_player_angle": "reserva que entrou no 2º tempo (45 min) e empatou Perotti em finalizações (3 chutes)",
+    "secondary_highlights": [
+      "Zé Lucas: 16% dos passes no campo adversário (líder)",
+      "Felipinho: 44% da progressão com bola (líder)",
+      "Perotti: 33% das finalizações (líder, jogou 90 min)",
+      "Carlos De Pena: 33% das finalizações em metade do tempo"
+    ]
+  },
+  "card": {
+    "filename": "card.png",
+    "metric_columns": [
+      "accurate_opposition_half_passes",
+      "total_progression",
+      "total_shots"
+    ],
+    "selection_rule": "top 10 por minutos UNION top 3 de qualquer métrica",
+    "players_count": 11
+  },
+  "tweet": {
+    "tweets_count": 1,
+    "thread": false,
+    "char_count_approx": 227,
+    "char_with_image_approx": 250
+  },
+  "status": "pending_review",
+  "created_at": "2026-04-27"
+}
