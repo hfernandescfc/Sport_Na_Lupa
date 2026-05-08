@@ -100,6 +100,7 @@ generate_xpts_table_card.py     — tabela xPts dos 20 clubes Série B com escud
 generate_xpts_scatter_card.py   — scatter xPts vs SOS com 4 quadrantes coloridos ✅
 generate_como_joga_card.py      — card "Como Joga" do adversário: shotmap + zonas + padrões ✅
 nivel_de_ataque.py              — quadro semanal "Nível de Ataque": dumbbell xG produzido vs contexto defensivo ✅
+generate_power_ranking_gif.py   — quadro recorrente "Evolução da Classificação": bump chart GIF rodada a rodada (Pts > SG > GM) ✅
 analise_ofensiva_serie_b.py     — script de análise exploratória (terminal): ranking completo + detalhe por rodada
 
 # Curadoria de conteúdo
@@ -244,7 +245,7 @@ rodada; MV só atualiza com `--refresh-strength` (ou `python -m src.main sync-se
 1. extract: `sync-matches` (1-38) · `sync-sport` · `sync-player-stats` · `sync-incidents` · `sync-player-positions`
 2. transform: `transform-matches` · `transform-players` · `transform-incidents` · `transform-player-positions` · `transform-standings`
 3. validate: `run_quality_checks`
-4. cards: `nivel_de_ataque.py --round N` · `generate_xpts_table_card.py` · `generate_xpts_scatter_card.py`
+4. cards: `nivel_de_ataque.py --round N` · `generate_xpts_table_card.py` · `generate_xpts_scatter_card.py` · `generate_power_ranking_gif.py`
 
 **Comandos individuais (para debug de etapa isolada):**
 
@@ -297,7 +298,9 @@ python generate_xpts_table_card.py
 python generate_xpts_scatter_card.py
 ```
 
-### Fluxo raio-x do próximo adversário
+### Fluxo raio-x do próximo adversário (V2 genérico)
+
+Template V2: usar `generate_raio_x_cards.py` (genérico parametrizável) em vez de criar script por time.
 
 ```bash
 # 1. Extrair dados do adversário
@@ -306,14 +309,39 @@ python -m src.main sync-opponent --team-key <key> --team-id <id> --season 2026
 # 2. Normalizar em tabelas curadas
 python -m src.main transform-opponent --team-key <key> --season 2026
 
-# 3. Gerar cards visuais (criar script generate_<key>_cards.py baseado em generate_vila_nova_cards.py)
-python generate_<key>_cards.py
+# 3. Gerar 6 cards visuais (V2) com template genérico
+python generate_raio_x_cards.py \
+  --team-key <key> \
+  --team-name "NOME COMPLETO" \
+  --team-id <id> \
+  --round <N> \
+  --season 2026 \
+  --date YYYY-MM-DD \
+  --sport-role [mandante|visitante] \
+  [--accent-color "#HEX"] \
+  [--sport-city "XX"]
 
-# Exemplo — Vila Nova (R2):
-python -m src.main sync-opponent --team-key vila-nova --team-id 2021 --season 2026
-python -m src.main transform-opponent --team-key vila-nova --season 2026
-python generate_vila_nova_cards.py
+# Exemplo — Ponte Preta (R8):
+python -m src.main sync-opponent --team-key ponte-preta --team-id 1969 --season 2026
+python -m src.main transform-opponent --team-key ponte-preta --season 2026
+python generate_raio_x_cards.py \
+  --team-key ponte-preta \
+  --team-name "PONTE PRETA" \
+  --team-id 1969 \
+  --round 8 \
+  --season 2026 \
+  --date 2026-05-10 \
+  --sport-role visitante \
+  --accent-color "#000000"
 ```
+
+Outputs (6 cards):
+- `01_cover.png` — escudo + nome + rodada
+- `02_campanha.png` — P/V/E/D, gols, xG, posse
+- `03_mandante_vis.png` — stats como mandante / visitante
+- `04_ultimos5.png` — últimas 5 partidas com placares
+- `05_xg.png` — análise xG
+- `06_jogadores.png` — destaques individuais
 
 ---
 
@@ -570,6 +598,7 @@ A skill deve ser invocada antes de escrever código de card, para alinhar as dec
 | xPts semanal (tabela) | `generate_xpts_table_card.py` | A cada bloco de rodadas da Série B |
 | xPts semanal (scatter) | `generate_xpts_scatter_card.py` | A cada bloco de rodadas da Série B |
 | **Nível de Ataque** (quadro recorrente) | `nivel_de_ataque.py` | Após cada rodada — dumbbell xG produzido vs contexto defensivo dos 20 clubes |
+| **Evolução da Classificação** (quadro recorrente) | `generate_power_ranking_gif.py` | Após cada rodada — bump chart GIF posições R1→RN (Pts > SG > GM) |
 
 ### Cards do raio-x (6 cards por adversário)
 
