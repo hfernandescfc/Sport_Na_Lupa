@@ -1,0 +1,16 @@
+{
+  "type": "eficiencia-ofensiva",
+  "competition": "serie_b_2026",
+  "round_label": "R1-R5",
+  "generated_at": "2026-04-23T14:15:26.855672Z",
+  "filters": {
+    "min_minutes": 90,
+    "min_shots": 1
+  },
+  "players_plotted": 56,
+  "top_scorer": {
+    "player_name": "Ronaldo Tavares",
+    "team_name": "Athletic Club",
+    "goals": 5
+  }
+}

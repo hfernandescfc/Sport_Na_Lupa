@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Série B 2026 — xPts vs Força dos Adversários</title>
+<style>
+  :root {
+    --bg: #0D0D0D;
+    --yellow: #E8B800;
+    --text-primary: #F0F0F0;
+    --text-secondary: #9A9A9A;
+    --border: #2A2A2A;
+    --positive: #27AE60;
+    --negative: #C0392B;
+    --neutral: #9A9A9A;
+    --grid: #1E1E1E;
+    --quad-label: #2E2E2E;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: var(--bg);
+    width: 1080px;
+    height: 1080px;
+    overflow: hidden;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--text-primary);
+  }
+  .card {
+    width: 1080px;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 40px 24px;
+  }
+  .header { text-align: center; margin-bottom: 14px; }
+  .header h1 {
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--yellow);
+  }
+  .header .meta {
+    font-size: 10.5px;
+    color: var(--text-secondary);
+    margin-top: 5px;
+    letter-spacing: 0.02em;
+  }
+  .header .meta span { margin: 0 5px; opacity: 0.45; }
+
+  .chart-area { flex: 1; position: relative; }
+
+  /* Y-axis label */
+  .y-label {
+    position: absolute;
+    left: -36px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-size: 10px;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  svg.plot {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* LEGEND */
+  .legend {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(20,20,20,0.9);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 10px; color: var(--text-secondary); }
+  .legend-dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
+
+  /* FOOTER */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+  }
+  .footer-left { display: flex; align-items: center; gap: 10px; }
+  .footer-logo {
+    width: 28px; height: 28px; border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .footer-handle { font-size: 10.5px; font-weight: 600; color: #666; }
+  .footer-source { font-size: 10px; color: #555; }
+</style>
+
+<template id="__bundler_thumbnail" data-bg-color="#0D0D0D">
+  <svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1080" height="1080" fill="#0D0D0D"/>
+    <!-- quadrant lines -->
+    <line x1="540" y1="80" x2="540" y2="920" stroke="#2A2A2A" stroke-width="2"/>
+    <line x1="100" y1="500" x2="980" y2="500" stroke="#2A2A2A" stroke-width="2"/>
+    <!-- sample dots -->
+    <circle cx="300" cy="200" r="14" fill="#27AE60" opacity="0.9"/>
+    <circle cx="500" cy="300" r="14" fill="#C0392B" opacity="0.9"/>
+    <circle cx="700" cy="250" r="14" fill="#C0392B" opacity="0.9"/>
+    <circle cx="400" cy="520" r="14" fill="#9A9A9A" opacity="0.9"/>
+    <circle cx="220" cy="480" r="18" fill="#E8B800" opacity="0.95"/>
+    <!-- title -->
+    <text x="540" y="60" fill="#E8B800" font-size="36" font-family="Helvetica" font-weight="900" text-anchor="middle" letter-spacing="3">SÉRIE B 2026</text>
+  </svg>
+</template>
+</head>
+<body>
+<div class="card">
+
+  <div class="header">
+    <!-- [VAR: título] -->
+    <h1>Série B 2026 — xPts vs Força dos Adversários</h1>
+    <div class="meta">
+      Cor do ponto = performance real vs esperada
+      <span>·</span>
+      Quadrante superior direito = desempenho mais consistente
+    </div>
+  </div>
+
+  <div class="chart-area">
+    <div class="y-label">xPts acumulados</div>
+    <svg class="plot" id="plot" viewBox="0 0 1000 860" preserveAspectRatio="xMidYMid meet"></svg>
+
+    <!-- LEGEND -->
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#27AE60"></div>
+        <span>Pontuando acima do esperado (▲ PTS)</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#9A9A9A"></div>
+        <span>Pontuando conforme esperado</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#C0392B"></div>
+        <span>Pontuando abaixo do esperado (▼ PTS)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">
+      <img class="footer-logo" src="__AVATAR_SRC__" alt="SportRecifeLab">
+      <div class="footer-handle">@SportRecifeLab</div>
+    </div>
+    <div class="footer-source">Dados: SofaScore</div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// [VAR] DADOS DO SCATTER — editar para atualizar
+// sos = força dos adversários (0=fácil, 1=difícil)
+// xPts = xPts acumulados
+// delta = diferença PTS - xPts (positivo = acima, negativo = abaixo)
+// isSport = destaca o clube
+// ============================================================
+const teams = [
+  { name:"Criciúma",             sos:0.555, xPts:8.80, delta:-1.8, isSport:false },
+  { name:"Grêmio",               sos:0.300, xPts:8.73, delta:-0.7, isSport:false },
+  { name:"Ceará",                sos:0.248, xPts:8.58, delta:+0.4, isSport:false },
+  { name:"CRB",                  sos:0.345, xPts:7.94, delta:-5.9, isSport:false },
+  { name:"Operário-PR",          sos:0.272, xPts:7.43, delta:+0.6, isSport:false },
+  { name:"Atlético",             sos:0.282, xPts:7.33, delta:-3.3, isSport:false },
+  { name:"Cuiabá",               sos:0.650, xPts:7.20, delta:-1.2, isSport:false },
+  { name:"Náutico",              sos:0.415, xPts:7.13, delta:-1.1, isSport:false },
+  { name:"Ponte",                sos:0.422, xPts:6.99, delta:-3.0, isSport:false },
+  { name:"Botafogo-SP",          sos:0.468, xPts:6.97, delta:+0.0, isSport:false },
+  { name:"Vila",                 sos:0.430, xPts:6.96, delta:+4.0, isSport:false },
+  { name:"América",              sos:0.498, xPts:6.81, delta:-4.8, isSport:false },
+  { name:"Sport",                sos:0.198, xPts:6.75, delta:+0.2, isSport:true  },
+  { name:"Juventude",            sos:0.585, xPts:6.73, delta:+0.3, isSport:false },
+  { name:"Fortaleza",            sos:0.328, xPts:6.47, delta:+3.5, isSport:false },
+  { name:"Goiás",               sos:0.312, xPts:6.37, delta:+0.6, isSport:false },
+  { name:"Avaí",                sos:0.440, xPts:5.48, delta:+2.5, isSport:false },
+  { name:"São",                  sos:0.515, xPts:5.35, delta:+1.6, isSport:false },
+  { name:"Athletic",             sos:0.270, xPts:5.24, delta:+2.8, isSport:false },
+  { name:"Londrina",             sos:0.572, xPts:3.95, delta:+1.1, isSport:false },
+];
+
+// ============================================================
+// PLOT BOUNDS — [VAR: ajustar se dados mudarem]
+// ============================================================
+const X_MIN = 0.15, X_MAX = 0.72;
+const Y_MIN = 3.5,  Y_MAX = 9.5;
+
+// Quadrant center lines
+const X_MID = 0.40;  // [VAR: linha vertical do quadrante]
+const Y_MID = 6.75;  // [VAR: linha horizontal = mediana de xPts da Série B]
+
+// SVG viewport
+const VW = 1000, VH = 860;
+const PAD = { top: 30, right: 30, bottom: 52, left: 54 };
+const PW = VW - PAD.left - PAD.right;
+const PH = VH - PAD.top  - PAD.bottom;
+
+function toX(sos)  { return PAD.left + (sos - X_MIN) / (X_MAX - X_MIN) * PW; }
+function toY(xpts) { return PAD.top  + (1 - (xpts - Y_MIN) / (Y_MAX - Y_MIN)) * PH; }
+
+function dotColor(delta) {
+  if(Math.abs(delta) < 0.15) return '#9A9A9A';
+  return delta > 0 ? '#27AE60' : '#C0392B';
+}
+
+const svg = document.getElementById('plot');
+const ns = 'http://www.w3.org/2000/svg';
+
+function el(tag, attrs, text) {
+  const e = document.createElementNS(ns, tag);
+  Object.entries(attrs).forEach(([k,v]) => e.setAttribute(k,v));
+  if(text !== undefined) e.textContent = text;
+  return e;
+}
+
+// ---- QUADRANT BACKGROUNDS ----
+const quads = [
+  { x1:X_MIN, x2:X_MID, y1:Y_MID, y2:Y_MAX, fill:'#0F1F0F', label:'xPts alto · calendário fácil',  lx:X_MIN+0.005, ly:Y_MAX-0.12, color:'#3A6B3A' },
+  { x1:X_MID, x2:X_MAX, y1:Y_MID, y2:Y_MAX, fill:'#0B1F10', label:'xPts alto · calendário difícil', lx:X_MID+0.005, ly:Y_MAX-0.12, color:'#3A6B3A' },
+  { x1:X_MIN, x2:X_MID, y1:Y_MIN, y2:Y_MID, fill:'#1F0B0B', label:'xPts baixo · calendário fácil',  lx:X_MIN+0.005, ly:Y_MIN+0.28, color:'#7A2E2E' },
+  { x1:X_MID, x2:X_MAX, y1:Y_MIN, y2:Y_MID, fill:'#18100B', label:'xPts baixo · calendário difícil', lx:X_MID+0.005, ly:Y_MIN+0.28, color:'#7A2E2E' },
+];
+quads.forEach(q => {
+  svg.appendChild(el('rect', {
+    x: toX(q.x1), y: toY(q.y2),
+    width: toX(q.x2)-toX(q.x1), height: toY(q.y1)-toY(q.y2),
+    fill: q.fill
+  }));
+  if(q.label) {
+    const t = el('text', {
+      x: toX(q.lx), y: toY(q.ly),
+      fill: q.color, 'font-size': '11', 'font-family':'Helvetica Neue, Helvetica, Arial, sans-serif',
+      'font-style': 'italic'
+    }, q.label);
+    svg.appendChild(t);
+  }
+});
+
+// ---- GRID LINES (subtle) ----
+const yTicks = [4, 5, 6, 7, 8, 9];
+const xTicks = [0.2, 0.3, 0.4, 0.5, 0.6, 0.7];
+
+yTicks.forEach(v => {
+  svg.appendChild(el('line', { x1:toX(X_MIN), x2:toX(X_MAX), y1:toY(v), y2:toY(v), stroke:'#1E1E1E', 'stroke-width':'1' }));
+  svg.appendChild(el('text', { x: toX(X_MIN)-8, y: toY(v)+4, fill:'#555', 'font-size':'10.5', 'text-anchor':'end', 'font-family':'Helvetica Neue, Helvetica, Arial, sans-serif', 'font-variant-numeric':'tabular-nums' }, v.toFixed(0)));
+});
+xTicks.forEach(v => {
+  svg.appendChild(el('line', { x1:toX(v), x2:toX(v), y1:toY(Y_MIN), y2:toY(Y_MAX), stroke:'#1E1E1E', 'stroke-width':'1' }));
+  svg.appendChild(el('text', { x: toX(v), y: toY(Y_MIN)+18, fill:'#555', 'font-size':'10.5', 'text-anchor':'middle', 'font-family':'Helvetica Neue, Helvetica, Arial, sans-serif' }, v.toFixed(1)));
+});
+
+// ---- QUADRANT DIVIDER LINES ----
+svg.appendChild(el('line', { x1:toX(X_MID), x2:toX(X_MID), y1:toY(Y_MIN), y2:toY(Y_MAX), stroke:'#2E2E2E', 'stroke-width':'1.5', 'stroke-dasharray':'4,3' }));
+svg.appendChild(el('line', { x1:toX(X_MIN), x2:toX(X_MAX), y1:toY(Y_MID), y2:toY(Y_MID), stroke:'#2E2E2E', 'stroke-width':'1.5', 'stroke-dasharray':'4,3' }));
+
+// ---- BORDER ----
+svg.appendChild(el('rect', {
+  x:toX(X_MIN), y:toY(Y_MAX),
+  width:PW, height:PH,
+  fill:'none', stroke:'#2A2A2A', 'stroke-width':'1'
+}));
+
+// ---- X AXIS LABEL ----
+svg.appendChild(el('text', {
+  x: toX((X_MIN+X_MAX)/2), y: VH - 4,
+  fill:'#9A9A9A', 'font-size':'11', 'text-anchor':'middle',
+  'font-family':'Helvetica Neue, Helvetica, Arial, sans-serif'
+}, 'Força dos adversários (SOS)  —  0 = mais fácil  ·  1 = mais difícil'));
+
+// Helper: text label with offset for overlapping points
+const labelOffsets = {
+  'Sport':    { dx: 62, dy: 0 },
+  'Náutico':  { dx: -6, dy: -14 },
+  'Ponte':    { dx: -6, dy: 10 },
+  'Botafogo-SP': { dx: 6, dy: 14 },
+  'Vila':     { dx: -8, dy: -14 },
+  'América':  { dx: 6, dy: 14 },
+  'Goiás':   { dx: -8, dy: 14 },
+  'Fortaleza':{ dx: 8, dy: 14 },
+  'Ceará':    { dx: -8, dy: -14 },
+  'Grêmio':   { dx: 6, dy: -14 },
+  'Athletic': { dx: -10, dy: 14 },
+  'Londrina': { dx: 6, dy: 14 },
+  'Avaí':    { dx: 6, dy: -14 },
+  'São':      { dx: 6, dy: 14 },
+};
+
+// ---- SPORT HIGHLIGHT LINE (connector) ----
+const sportTeam = teams.find(t => t.isSport);
+const sx = toX(sportTeam.sos), sy = toY(sportTeam.xPts);
+// Dashed connector to label
+svg.appendChild(el('line', { x1: sx+10, x2: sx+52, y1: sy, y2: sy, stroke:'#E8B800', 'stroke-width':'1', 'stroke-dasharray':'3,2', opacity:'0.7' }));
+
+// ---- DOTS ----
+teams.forEach(t => {
+  const x = toX(t.sos), y = toY(t.xPts);
+  const color = t.isSport ? '#E8B800' : dotColor(t.delta);
+  const r = t.isSport ? 9 : 7;
+
+  // Glow for Sport
+  if(t.isSport) {
+    svg.appendChild(el('circle', { cx:x, cy:y, r:'15', fill:'#E8B800', opacity:'0.12' }));
+  }
+
+  svg.appendChild(el('circle', { cx:x, cy:y, r, fill:color, opacity:'0.92' }));
+  if(t.isSport) {
+    svg.appendChild(el('circle', { cx:x, cy:y, r:'10', fill:'none', stroke:'#E8B800', 'stroke-width':'1.5', opacity:'0.7' }));
+  }
+
+  // Label
+  const off = labelOffsets[t.name] || { dx:6, dy:-13 };
+  const lx = x + off.dx, ly = y + off.dy;
+  const labelColor = t.isSport ? '#E8B800' : '#9A9A9A';
+  const fontSize = t.isSport ? '11.5' : '9.5';
+  const fontWeight = t.isSport ? '700' : '400';
+
+  if(t.isSport) {
+    // Sport label with xPts + delta
+    const bg = el('rect', { x:lx-4, y:ly-13, width:140, height:32, rx:'3', fill:'rgba(20,16,0,0.85)', stroke:'#E8B800', 'stroke-width':'0.8', opacity:'0.95' });
+    svg.appendChild(bg);
+    const ln1 = el('text', { x:lx, y:ly+1, fill:'#E8B800', 'font-size':'12', 'font-weight':'700', 'font-family':'Helvetica Neue, Helvetica, Arial, sans-serif' }, 'Sport Recife');
+    svg.appendChild(ln1);
+    const ln2 = el('text', { x:lx, y:ly+14, fill:'#aaa', 'font-size':'10', 'font-family':'Helvetica Neue, Helvetica, Arial, sans-serif' }, `6.75 xPts · ≈ +0.2`);
+    svg.appendChild(ln2);
+  } else {
+    svg.appendChild(el('text', {
+      x: lx, y: ly,
+      fill: labelColor, 'font-size': fontSize, 'font-weight': fontWeight,
+      'font-family':'Helvetica Neue, Helvetica, Arial, sans-serif',
+      'text-anchor': off.dx < 0 ? 'end' : 'start'
+    }, t.name));
+  }
+});
+</script>
+</body>
+</html>

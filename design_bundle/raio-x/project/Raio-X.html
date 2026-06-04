@@ -1,0 +1,1301 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Raio-X · América Mineiro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0B0B0E;
+    --bg-2: #13131A;
+    --bg-3: #1A1A22;
+    --ink: #F5F1E8;
+    --ink-2: #B8B4AB;
+    --ink-3: #6E6B64;
+    --line: #26262F;
+    --line-2: #34343F;
+    --yellow: #F2C230;
+    --yellow-dim: #8A6F1C;
+    --red: #E63946;
+    --red-dim: #7A1F26;
+    --green: #3DA35D;
+    --green-dim: #1F5330;
+
+    /* América colors (fonte do escudo) */
+    --am-green: #1D6E3D;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{
+    background:#05050a;
+    color:var(--ink);
+    font-family:'Archivo',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  /* Canvas apresenta 6 pe\u00e7as 1080x1350 lado a lado */
+  .stage{
+    min-height:100vh;
+    padding:56px 40px 80px;
+  }
+  .stage-header{
+    max-width: 1200px;
+    margin: 0 auto 48px;
+    color: var(--ink-2);
+  }
+  .stage-header h1{
+    font-family:'Archivo',sans-serif;
+    font-weight:900;
+    font-size:28px;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  .stage-header p{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    margin-top:6px;
+    color:var(--ink-3);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(2, 540px);
+    gap: 56px 32px;
+    justify-content:center;
+  }
+  @media (min-width: 1780px){
+    .grid{ grid-template-columns: repeat(3, 540px);}
+  }
+  .cell{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .cell-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    color:var(--ink-3);
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    display:flex;
+    justify-content:space-between;
+  }
+  .cell-label b{color:var(--ink-2);font-weight:500}
+
+  /* ---- A pe\u00e7a em si. Display 1080x1350, escalada para 540 na grade. */
+  .card{
+    width:1080px;
+    height:1350px;
+    background:var(--bg);
+    color:var(--ink);
+    position:relative;
+    overflow:hidden;
+    transform-origin: top left;
+    transform: scale(0.5);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  }
+  .card-wrap{ width:540px; height:675px; overflow:hidden; border-radius:4px;}
+
+  /* common header */
+  .cap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 44px 56px 0;
+    height:110px;
+  }
+  .cap-brand{
+    display:flex; align-items:center; gap:14px;
+  }
+  .cap-brand img{
+    width:56px; height:56px; border-radius:50%;
+    background:#000;
+    object-fit:cover;
+  }
+  .cap-brand .wordmark{
+    line-height:1;
+  }
+  .cap-brand .wordmark .h{
+    font-family:'Archivo',sans-serif;
+    font-weight:800;
+    font-size:22px;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  .cap-brand .wordmark .s{
+    font-family:'JetBrains Mono',monospace;
+    font-weight:500;
+    font-size:13px;
+    color:var(--ink-3);
+    letter-spacing:0.04em;
+    margin-top:4px;
+  }
+  .cap-meta{
+    text-align:right;
+    font-family:'JetBrains Mono',monospace;
+    font-size:14px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--yellow);
+    font-weight:500;
+    line-height:1.5;
+  }
+  .cap-meta .dim{ color:var(--ink-3);}
+
+  .rule{
+    height:1px;
+    background:var(--line);
+    margin: 20px 56px 0;
+  }
+
+  /* footer */
+  .foot{
+    position:absolute;
+    left:56px; right:56px; bottom:36px;
+    display:flex; justify-content:space-between; align-items:center;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+  }
+  .foot .src b{color:var(--ink-2);font-weight:500}
+  .foot .pg{
+    display:flex;align-items:center;gap:10px;
+  }
+  .foot .pg .n{color:var(--ink)}
+  .foot .pg .t{color:var(--ink-3)}
+
+  /* Kicker titles (por pe\u00e7a) */
+  .kicker{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--yellow);
+    font-weight:500;
+  }
+
+  /* utility */
+  .mono{font-family:'JetBrains Mono',monospace}
+  .narrow{font-family:'Archivo Narrow',sans-serif}
+  .up{text-transform:uppercase;letter-spacing:0.08em}
+  .dim{color:var(--ink-3)}
+  .dim2{color:var(--ink-2)}
+  .rowline{height:1px;background:var(--line)}
+
+  /* ---------- P1: CAPA ---------- */
+  .p1 .hero{
+    padding: 48px 56px 0;
+    margin-top:8px;
+  }
+  .p1 .hero .kicker{margin-bottom:22px}
+  .p1 .hero h1{
+    font-family:'Archivo',sans-serif;
+    font-weight:900;
+    font-size:220px;
+    line-height:0.84;
+    letter-spacing:-0.04em;
+    color:var(--yellow);
+  }
+  .p1 .hero h1 .x{color:var(--ink)}
+  .p1 .hero h2{
+    margin-top:18px;
+    font-family:'Archivo',sans-serif;
+    font-weight:800;
+    font-size:62px;
+    line-height:0.95;
+    letter-spacing:-0.015em;
+    color:var(--ink);
+  }
+  .p1 .hero .sub{
+    margin-top:14px;
+    font-family:'JetBrains Mono',monospace;
+    color:var(--ink-2);
+    font-size:20px;
+    letter-spacing:0.04em;
+  }
+
+  .p1 .body{
+    margin-top:48px;
+    padding: 0 56px;
+    display:grid;
+    grid-template-columns: 420px 1fr;
+    gap:40px;
+    align-items:center;
+  }
+  .p1 .badge-wrap{
+    width:420px; height:420px;
+    background: radial-gradient(ellipse at center, rgba(29,110,61,0.22), transparent 62%);
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+  }
+  .p1 .badge-wrap::before{
+    content:"";
+    position:absolute; inset:40px;
+    border: 1px dashed var(--line-2);
+    border-radius:50%;
+    opacity:0.6;
+  }
+  .p1 .badge-wrap img{
+    width:300px; height:300px;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
+  }
+  .p1 .kpis{
+    display:flex; flex-direction:column;
+    border-top:1px solid var(--line);
+  }
+  .p1 .kpi{
+    padding: 22px 0;
+    border-bottom:1px solid var(--line);
+    display:grid;
+    grid-template-columns: 1fr auto;
+    align-items:baseline;
+    gap:20px;
+  }
+  .p1 .kpi .l{
+    font-family:'JetBrains Mono',monospace;
+    font-size:14px;
+    color:var(--ink-3);
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+  }
+  .p1 .kpi .v{
+    font-family:'Archivo',sans-serif;
+    font-weight:800;
+    font-size:56px;
+    line-height:1;
+    letter-spacing:-0.02em;
+    color:var(--ink);
+  }
+  .p1 .kpi .v.warn{ color: var(--red);}
+  .p1 .kpi .v.ok{ color: var(--yellow);}
+  .p1 .kpi .v small{
+    font-size:24px;
+    color:var(--ink-3);
+    font-weight:500;
+    margin-left:6px;
+    letter-spacing:0;
+  }
+
+  .p1 .tag{
+    position:absolute;
+    left:56px; bottom:140px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:15px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--ink-2);
+    display:flex; align-items:center; gap:14px;
+  }
+  .p1 .tag .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--yellow);
+    box-shadow:0 0 0 4px rgba(242,194,48,0.14);
+  }
+
+  /* ---------- P2: CAMPANHA ---------- */
+  .card-title-block{
+    padding: 8px 56px 0;
+  }
+  .card-title-block .kicker{ margin-top: 8px}
+  .card-title-block h1{
+    margin-top: 14px;
+    font-family:'Archivo',sans-serif;
+    font-weight:900;
+    font-size:88px;
+    line-height:0.9;
+    letter-spacing:-0.025em;
+    color:var(--ink);
+  }
+  .card-title-block h1 em{
+    font-style: normal;
+    color: var(--yellow);
+  }
+  .card-title-block .sub{
+    margin-top:10px;
+    font-family:'JetBrains Mono',monospace;
+    color:var(--ink-2);
+    font-size:18px;
+    letter-spacing:0.04em;
+  }
+
+  .p2 .record{
+    margin: 48px 56px 0;
+    display:flex;
+    align-items: stretch;
+    height: 120px;
+    border:1px solid var(--line);
+  }
+  .p2 .record .seg{
+    flex: var(--f, 1);
+    display:flex; align-items:center; justify-content:center; gap:16px;
+    position:relative;
+  }
+  .p2 .record .seg + .seg{ border-left: 1px solid var(--line);}
+  .p2 .record .seg .n{
+    font-family:'Archivo',sans-serif;
+    font-weight:900;
+    font-size:72px;
+    line-height:1;
+    letter-spacing:-0.025em;
+  }
+  .p2 .record .seg .l{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    text-transform:uppercase;
+    color:var(--ink-2);
+    letter-spacing:0.12em;
+  }
+  .p2 .record .v .n{color:var(--green)}
+  .p2 .record .e .n{color:var(--yellow)}
+  .p2 .record .d .n{color:var(--red)}
+
+  .p2 .stack{
+    margin: 20px 56px 0;
+    height:12px;
+    display:flex;
+    border-radius:2px; overflow:hidden;
+  }
+  .p2 .stack .bar{
+    height:100%;
+  }
+
+  .p2 .summary{
+    margin: 36px 56px 0;
+    display:flex; align-items:baseline; justify-content:space-between;
+    padding-bottom: 28px;
+    border-bottom:1px solid var(--line);
+  }
+  .p2 .summary .item{ display:flex; flex-direction:column; gap:6px}
+  .p2 .summary .item .n{
+    font-family:'Archivo',sans-serif; font-weight:800;
+    font-size:56px; line-height:1; color:var(--ink);
+    letter-spacing:-0.02em;
+  }
+  .p2 .summary .item .l{
+    font-family:'JetBrains Mono',monospace; font-size:12px;
+    color:var(--ink-3); text-transform:uppercase; letter-spacing:0.12em;
+  }
+
+  .p2 .goals{
+    margin: 36px 56px 0;
+    display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;
+    padding-bottom: 24px;
+    border-bottom:1px solid var(--line);
+  }
+  .p2 .goals .goal{
+    display:block;
+  }
+  .p2 .goals .n{
+    font-family:'Archivo',sans-serif; font-weight:800;
+    font-size:88px; line-height:1; letter-spacing:-0.03em;
+  }
+  .p2 .goals .n.neg{color:var(--red)}
+  .p2 .goals .n.bal{color:var(--ink)}
+  .p2 .goals .n.for{color:var(--ink)}
+  .p2 .goals .l{
+    margin-top:10px;
+    font-family:'JetBrains Mono',monospace; font-size:13px;
+    color:var(--ink-2); text-transform:uppercase; letter-spacing:0.1em;
+  }
+
+  .p2 .breakdown{
+    margin: 32px 56px 0;
+  }
+  .p2 .breakdown h3{
+    font-family:'JetBrains Mono',monospace; font-size:12px;
+    color:var(--ink-3); text-transform:uppercase; letter-spacing:0.14em;
+    margin-bottom: 18px;
+  }
+  .p2 .breakdown .rows{ display:flex; flex-direction:column;}
+  .p2 .breakdown .row{
+    display:grid; grid-template-columns: 26px 1fr 80px 120px; gap:18px;
+    align-items:center;
+    padding: 14px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .p2 .breakdown .row:last-child{border-bottom:none}
+  .p2 .breakdown .row .tick{
+    width:10px; height:10px; background:var(--yellow);
+    border-radius:1px;
+  }
+  .p2 .breakdown .row .name{
+    font-family:'Archivo',sans-serif; font-weight:600;
+    font-size:22px; color:var(--ink);
+  }
+  .p2 .breakdown .row .n{
+    font-family:'Archivo',sans-serif; font-weight:700;
+    font-size:26px; color:var(--ink); text-align:right;
+    letter-spacing:-0.01em;
+  }
+  .p2 .breakdown .row .n small{
+    font-family:'JetBrains Mono',monospace;
+    font-size:14px; color:var(--ink-3); margin-left:6px;
+  }
+  .p2 .breakdown .bar{
+    height: 8px; background: var(--bg-3); position:relative;
+  }
+  .p2 .breakdown .bar i{
+    position:absolute; inset:0 auto 0 0; background: var(--yellow);
+    display:block;
+  }
+
+  /* ---------- P3: MANDANTE ---------- */
+  .p3 .big{
+    margin: 48px 56px 0;
+    display:flex; align-items:baseline; gap:24px;
+    padding-bottom:30px;
+    border-bottom:1px solid var(--line);
+  }
+  .p3 .big .num{
+    font-family:'Archivo',sans-serif; font-weight:900;
+    font-size:220px; line-height:0.85;
+    letter-spacing:-0.04em; color:var(--yellow);
+  }
+  .p3 .big .num small{ font-size:120px; color:var(--yellow-dim)}
+  .p3 .big .caption{
+    flex:1;
+    font-family:'JetBrains Mono',monospace;
+    color:var(--ink-2); font-size:16px; line-height:1.5;
+    letter-spacing:0.03em;
+  }
+  .p3 .big .caption b{ color:var(--ink); font-weight:500; text-transform:uppercase; letter-spacing:0.1em;display:block;font-size:13px; margin-bottom:8px;}
+
+  .p3 .split{
+    margin: 32px 56px 0;
+    display:grid; grid-template-columns: 1fr 1fr; gap:0;
+    border:1px solid var(--line);
+  }
+  .p3 .split .col{
+    padding: 28px 32px;
+  }
+  .p3 .split .col + .col{ border-left:1px solid var(--line);}
+  .p3 .split .col .head{
+    font-family:'JetBrains Mono',monospace; font-size:12px;
+    color:var(--ink-3); text-transform:uppercase; letter-spacing:0.14em;
+    margin-bottom: 20px;
+  }
+  .p3 .split .col .head b{ color: var(--ink); font-weight:500}
+  .p3 .split .line{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .p3 .split .line:last-child{ border:none}
+  .p3 .split .line .l{
+    font-family:'JetBrains Mono',monospace; font-size:13px;
+    color:var(--ink-2); text-transform:uppercase; letter-spacing:0.1em;
+  }
+  .p3 .split .line .v{
+    font-family:'Archivo',sans-serif; font-weight:700;
+    font-size:30px; color:var(--ink); letter-spacing:-0.01em;
+  }
+  .p3 .split .line .v.warn{ color: var(--red)}
+  .p3 .split .line .v.ok{ color: var(--green)}
+  .p3 .split .line .v.acc{ color: var(--yellow)}
+
+  .p3 .insight{
+    margin: 36px 56px 0;
+    padding: 28px 32px;
+    background: var(--bg-2);
+    border-left: 3px solid var(--yellow);
+  }
+  .p3 .insight .k{
+    font-family:'JetBrains Mono',monospace; font-size:12px;
+    color:var(--yellow); text-transform:uppercase; letter-spacing:0.14em;
+  }
+  .p3 .insight .t{
+    margin-top:10px;
+    font-family:'Archivo',sans-serif; font-weight:700;
+    font-size:28px; line-height:1.2; color:var(--ink);
+    letter-spacing:-0.01em;
+  }
+  .p3 .insight .s{
+    margin-top:10px;
+    font-family:'Archivo',sans-serif; font-size:18px;
+    color:var(--ink-2); line-height:1.45;
+  }
+
+  /* ---------- P4: ULTIMOS 5 ---------- */
+  .p4 .streak{
+    margin: 48px 56px 0;
+    display:grid; grid-template-columns: repeat(5, 1fr); gap: 14px;
+    padding-bottom: 36px;
+    border-bottom:1px solid var(--line);
+  }
+  .p4 .streak .s{
+    aspect-ratio: 1;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Archivo',sans-serif; font-weight:900;
+    font-size:72px; letter-spacing:-0.02em;
+    border: 2px solid;
+  }
+  .p4 .streak .s.v{ color:var(--green); border-color:var(--green-dim); background:rgba(61,163,93,0.08)}
+  .p4 .streak .s.e{ color:var(--yellow); border-color:var(--yellow-dim); background:rgba(242,194,48,0.06)}
+  .p4 .streak .s.d{ color:var(--red); border-color:var(--red-dim); background:rgba(230,57,70,0.06)}
+
+  .p4 .streak-meta{
+    margin: 16px 56px 0;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px; color:var(--ink-3);
+    text-transform:uppercase; letter-spacing:0.12em;
+    display:flex; justify-content:space-between;
+  }
+
+  .p4 .matches{
+    margin: 30px 56px 0;
+  }
+  .p4 .match{
+    display:grid;
+    grid-template-columns: 86px 1fr auto 1fr 52px;
+    gap: 20px;
+    align-items:center;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .p4 .match:first-child{ border-top: 1px solid var(--line);}
+  .p4 .match .date{
+    font-family:'JetBrains Mono',monospace;
+    font-size:14px; line-height:1.3;
+  }
+  .p4 .match .date .d{ color:var(--ink); font-weight:700; font-size:20px; letter-spacing:0.02em;}
+  .p4 .match .date .c{ color:var(--ink-3); display:block; margin-top:4px; text-transform:uppercase; font-size:11px; letter-spacing:0.08em;}
+  .p4 .match .team{
+    font-family:'Archivo',sans-serif; font-weight:600;
+    font-size:28px; letter-spacing:-0.01em;
+    color:var(--ink-2);
+  }
+  .p4 .match .team.home{ text-align:right}
+  .p4 .match .team.me{ color:var(--ink); font-weight:800}
+  .p4 .match .score{
+    font-family:'Archivo',sans-serif; font-weight:900;
+    font-size:36px; color:var(--ink);
+    letter-spacing:-0.02em;
+    min-width:120px; text-align:center;
+  }
+  .p4 .match .score .x{ color:var(--ink-3); font-weight:500; margin:0 10px;}
+  .p4 .match .chip{
+    width:44px; height:44px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Archivo',sans-serif; font-weight:900;
+    font-size:22px;
+    justify-self:end;
+  }
+  .p4 .match .chip.v{ background:var(--green); color:#06210F}
+  .p4 .match .chip.e{ background:var(--yellow); color:#2A1F02}
+  .p4 .match .chip.d{ background:var(--red); color:#2A0609}
+
+  /* ---------- P5: xG ---------- */
+  .p5 .metrics{
+    margin: 40px 56px 0;
+    display:grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .p5 .metrics .m{
+    padding: 28px 8px;
+  }
+  .p5 .metrics .m + .m{ border-left:1px solid var(--line);}
+  .p5 .metrics .m .n{
+    font-family:'Archivo',sans-serif; font-weight:900;
+    font-size:88px; line-height:1;
+    letter-spacing:-0.03em; color:var(--ink);
+  }
+  .p5 .metrics .m .n .u{ color:var(--ink-3); font-size:48px; margin-left:4px;}
+  .p5 .metrics .m .l{
+    margin-top: 14px;
+    font-family:'JetBrains Mono',monospace; font-size:13px;
+    color:var(--ink-2); text-transform:uppercase; letter-spacing:0.1em;
+  }
+  .p5 .metrics .m .t{
+    margin-top:6px;
+    font-family:'Archivo',sans-serif; font-size:16px;
+    color:var(--ink-3);
+  }
+
+  .p5 .thesis{
+    margin: 40px 56px 0;
+  }
+  .p5 .thesis .k{
+    font-family:'JetBrains Mono',monospace; font-size:12px;
+    color:var(--yellow); text-transform:uppercase; letter-spacing:0.14em;
+  }
+  .p5 .thesis h3{
+    margin-top:10px;
+    font-family:'Archivo',sans-serif; font-weight:800;
+    font-size:44px; line-height:1.1;
+    color:var(--ink); letter-spacing:-0.02em;
+  }
+  .p5 .thesis h3 em{ font-style:normal; color: var(--red);}
+  .p5 .thesis p{
+    margin-top:16px;
+    font-family:'Archivo',sans-serif; font-size:19px;
+    color:var(--ink-2); line-height:1.5;
+  }
+
+  .p5 .pitch-block{
+    margin: 32px 56px 0;
+    padding-top: 28px;
+    border-top:1px solid var(--line);
+  }
+  .p5 .pitch-block .h{
+    display:flex; justify-content:space-between; align-items:baseline;
+    margin-bottom: 20px;
+  }
+  .p5 .pitch-block .h .t{
+    font-family:'Archivo',sans-serif; font-weight:700;
+    font-size:24px; color:var(--ink); letter-spacing:-0.01em;
+  }
+  .p5 .pitch-block .h .s{
+    font-family:'JetBrains Mono',monospace; font-size:12px;
+    color:var(--ink-3); text-transform:uppercase; letter-spacing:0.14em;
+  }
+  .p5 .pitch{
+    position:relative;
+    height: 260px;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    display:grid; grid-template-columns: 1fr 1fr 1fr;
+  }
+  .p5 .pitch .zone{
+    position:relative;
+    display:flex; flex-direction:column; justify-content:flex-end;
+    padding: 20px;
+  }
+  .p5 .pitch .zone + .zone{ border-left:1px dashed var(--line-2);}
+  .p5 .pitch .zone .fill{
+    position:absolute; left:0; right:0; bottom:0;
+    background: var(--zone, rgba(230,57,70,0.75));
+  }
+  .p5 .pitch .zone .pct{
+    position:relative;
+    font-family:'Archivo',sans-serif; font-weight:900;
+    font-size:56px; line-height:1; letter-spacing:-0.03em;
+    color:var(--ink);
+  }
+  .p5 .pitch .zone .lab{
+    position:relative;
+    margin-top:8px;
+    font-family:'JetBrains Mono',monospace; font-size:12px;
+    color:var(--ink-2); text-transform:uppercase; letter-spacing:0.14em;
+  }
+  .p5 .pitch-ruler{
+    margin: 8px 0 0;
+    display:grid; grid-template-columns: 1fr 1fr 1fr;
+    font-family:'JetBrains Mono',monospace; font-size:11px;
+    color:var(--ink-3); text-transform:uppercase; letter-spacing:0.14em;
+    text-align:center;
+  }
+  .p5 .pitch-attack{
+    position:absolute; right: 16px; top: 14px;
+    font-family:'JetBrains Mono',monospace; font-size:11px;
+    color: var(--ink-3); letter-spacing: 0.18em; text-transform:uppercase;
+    display:flex; align-items:center; gap:8px;
+  }
+  .p5 .pitch-attack::after{
+    content:""; width:28px; height:1px; background:var(--ink-3);
+    position:relative;
+  }
+
+  /* ---------- P6: JOGADORES ---------- */
+  .p6 .players{
+    margin: 40px 56px 0;
+    display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;
+  }
+  .p6 .player{
+    background: var(--bg-2);
+    padding: 26px 22px;
+    display:flex; flex-direction:column;
+    gap: 16px;
+    min-height: 520px;
+  }
+  .p6 .player .head{
+    display:flex; justify-content:space-between; align-items:center;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  .p6 .player .pos{
+    font-family:'JetBrains Mono',monospace; font-size:11px;
+    color:var(--ink-3); text-transform:uppercase; letter-spacing:0.14em;
+  }
+  .p6 .player .num{
+    font-family:'Archivo',sans-serif; font-weight:900;
+    font-size:28px; line-height:1;
+  }
+  .p6 .player .num i{ font-style:normal; color:var(--ink-3); font-size:14px; font-weight:500; margin-right:4px;}
+  .p6 .player.l1 .num{ color: var(--red)}
+  .p6 .player.l2 .num{ color: var(--yellow)}
+  .p6 .player.l3 .num{ color: var(--ink-2)}
+
+  .p6 .player .name{
+    font-family:'Archivo',sans-serif; font-weight:900;
+    font-size:28px; line-height:1.1;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  .p6 .player .name em{ font-style:normal; display:block; font-size:20px; font-weight:700; color:var(--ink-2); margin-top:4px;}
+
+  .p6 .player .rating{
+    padding: 16px 0; margin: 4px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display:flex; align-items:baseline; justify-content:space-between;
+  }
+  .p6 .player .rating .l{
+    font-family:'JetBrains Mono',monospace; font-size:11px;
+    color:var(--ink-3); text-transform:uppercase; letter-spacing:0.14em;
+  }
+  .p6 .player .rating .v{
+    font-family:'Archivo',sans-serif; font-weight:900;
+    font-size:42px; letter-spacing:-0.02em;
+  }
+  .p6 .player.l1 .rating .v{ color: var(--red)}
+  .p6 .player.l2 .rating .v{ color: var(--yellow)}
+  .p6 .player.l3 .rating .v{ color: var(--ink)}
+
+  .p6 .player .stats{
+    display:flex; flex-direction:column; gap:10px;
+    margin-top:4px;
+  }
+  .p6 .player .stat{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding: 6px 0;
+  }
+  .p6 .player .stat .l{
+    font-family:'JetBrains Mono',monospace; font-size:12px;
+    color:var(--ink-2); text-transform:uppercase; letter-spacing:0.1em;
+  }
+  .p6 .player .stat .v{
+    font-family:'Archivo',sans-serif; font-weight:700;
+    font-size:24px; color:var(--ink); letter-spacing:-0.01em;
+  }
+
+  .p6 .player .role{
+    margin-top:auto;
+    padding-top: 14px;
+    border-top:1px solid var(--line);
+    font-family:'JetBrains Mono',monospace; font-size:12px;
+    color:var(--ink-2); text-transform:uppercase; letter-spacing:0.14em;
+    line-height:1.5;
+  }
+  .p6 .player .role b{color:var(--ink); font-weight:500; display:block; margin-bottom:2px;}
+  .p6 .player.l1 .role b{color:var(--red)}
+  .p6 .player.l2 .role b{color:var(--yellow)}
+  .p6 .player.l3 .role b{color:var(--ink)}
+
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="stage-header">
+    <h1>Raio-X · América Mineiro — carrossel X</h1>
+    <p>6 peças · 1080 × 1350 · preview a 50%</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- ============ P1 CAPA ============ -->
+    <div class="cell">
+      <div class="cell-label"><span>01 — CAPA</span><b>Identificação da partida</b></div>
+      <div class="card-wrap"><div class="card p1">
+
+        <div class="cap">
+          <div class="cap-brand">
+            <img src="assets/logo-canal.png" alt="canal"/>
+            <div class="wordmark">
+              <div class="h">Sport Recife Lab</div>
+              <div class="s">@SportRecifeLab</div>
+            </div>
+          </div>
+          <div class="cap-meta">
+            <div>Série B 2026</div>
+            <div class="dim">Rodada 05 · 20.04</div>
+          </div>
+        </div>
+        <div class="rule"></div>
+
+        <div class="hero">
+          <div class="kicker">Raio-X do adversário</div>
+          <h1>RAIO<span class="x">·</span>X</h1>
+          <h2>AMÉRICA<br/>MINEIRO</h2>
+          <div class="sub">Sport visita o Independência — o que esperar do Coelho</div>
+        </div>
+
+        <div class="body">
+          <div class="badge-wrap">
+            <img src="assets/escudo-america.png" alt="América-MG"/>
+          </div>
+
+          <div class="kpis">
+            <div class="kpi">
+              <div class="l">Posição · Série B</div>
+              <div class="v warn">16º<small>/ 1pt</small></div>
+            </div>
+            <div class="kpi">
+              <div class="l">Campanha na Série B</div>
+              <div class="v">0<small>V</small> 1<small>E</small> 3<small>D</small></div>
+            </div>
+            <div class="kpi">
+              <div class="l">Posse média</div>
+              <div class="v">67<small>%</small></div>
+            </div>
+            <div class="kpi">
+              <div class="l">xG gerado / jogo</div>
+              <div class="v ok">1.64</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="foot">
+          <div class="src">Fontes <b>SofaScore · FBref</b></div>
+          <div class="pg"><span class="n">01</span><span class="t">/ 06</span></div>
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- ============ P2 CAMPANHA ============ -->
+    <div class="cell">
+      <div class="cell-label"><span>02 — CAMPANHA GERAL</span><b>Temporada 2026</b></div>
+      <div class="card-wrap"><div class="card p2">
+
+        <div class="cap">
+          <div class="cap-brand">
+            <img src="assets/logo-canal.png" alt="canal"/>
+            <div class="wordmark">
+              <div class="h">Sport Recife Lab</div>
+              <div class="s">@SportRecifeLab</div>
+            </div>
+          </div>
+          <div class="cap-meta">
+            <div>Temporada 2026</div>
+            <div class="dim">Todas as competições</div>
+          </div>
+        </div>
+        <div class="rule"></div>
+
+        <div class="card-title-block">
+          <div class="kicker">Campanha geral</div>
+          <h1>AMÉRICA EM<br/><em>20 JOGOS</em></h1>
+          <div class="sub">25 pontos · 42% de aproveitamento</div>
+        </div>
+
+        <div class="record">
+          <div class="seg v" style="--f:6"><div><div class="n">6</div><div class="l">Vitórias</div></div></div>
+          <div class="seg e" style="--f:7"><div><div class="n">7</div><div class="l">Empates</div></div></div>
+          <div class="seg d" style="--f:7"><div><div class="n">7</div><div class="l">Derrotas</div></div></div>
+        </div>
+
+        <div class="stack">
+          <div class="bar" style="flex:6;background:var(--green)"></div>
+          <div class="bar" style="flex:7;background:var(--yellow)"></div>
+          <div class="bar" style="flex:7;background:var(--red)"></div>
+        </div>
+
+        <div class="goals">
+          <div class="goal"><div class="n for">31</div><div class="l">Gols marcados</div></div>
+          <div class="goal"><div class="n neg">−4</div><div class="l">Saldo de gols</div></div>
+          <div class="goal"><div class="n for">35</div><div class="l">Gols sofridos</div></div>
+        </div>
+
+        <div class="breakdown">
+          <h3>Jogos por competição</h3>
+          <div class="rows">
+            <div class="row">
+              <span class="tick"></span>
+              <span class="name">Mineiro Módulo I</span>
+              <span class="bar"><i style="width:100%"></i></span>
+              <span class="n">11<small>jogos</small></span>
+            </div>
+            <div class="row">
+              <span class="tick" style="background:var(--ink-2)"></span>
+              <span class="name">Copa Sul-Sudeste</span>
+              <span class="bar"><i style="width:36.4%"></i></span>
+              <span class="n">4<small>jogos</small></span>
+            </div>
+            <div class="row">
+              <span class="tick" style="background:var(--ink-2)"></span>
+              <span class="name">Série B</span>
+              <span class="bar"><i style="width:36.4%"></i></span>
+              <span class="n">4<small>jogos</small></span>
+            </div>
+            <div class="row">
+              <span class="tick" style="background:var(--ink-2)"></span>
+              <span class="name">Copa do Brasil</span>
+              <span class="bar"><i style="width:27.3%"></i></span>
+              <span class="n">3<small>jogos</small></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="foot">
+          <div class="src">Fontes <b>SofaScore · FBref</b></div>
+          <div class="pg"><span class="n">02</span><span class="t">/ 06</span></div>
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- ============ P3 MANDANTE ============ -->
+    <div class="cell">
+      <div class="cell-label"><span>03 — COMO MANDANTE</span><b>Independência</b></div>
+      <div class="card-wrap"><div class="card p3">
+
+        <div class="cap">
+          <div class="cap-brand">
+            <img src="assets/logo-canal.png" alt="canal"/>
+            <div class="wordmark">
+              <div class="h">Sport Recife Lab</div>
+              <div class="s">@SportRecifeLab</div>
+            </div>
+          </div>
+          <div class="cap-meta">
+            <div>Como mandante</div>
+            <div class="dim">Independência · 2026</div>
+          </div>
+        </div>
+        <div class="rule"></div>
+
+        <div class="card-title-block">
+          <div class="kicker">Em casa</div>
+          <h1>AMÉRICA<br/>EM <em>BELO HORIZONTE</em></h1>
+          <div class="sub">Sport visita o Independência — como o Coelho se sai em casa?</div>
+        </div>
+
+        <div class="big">
+          <div class="num">53<small>%</small></div>
+          <div class="caption">
+            <b>Aproveitamento como mandante</b>
+            10 jogos em 2026 · 5V · 1E · 4D
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="col">
+            <div class="head"><b>Geral em casa</b> · 10 jogos</div>
+            <div class="line"><span class="l">Vitórias</span><span class="v ok">5</span></div>
+            <div class="line"><span class="l">Empates</span><span class="v acc">1</span></div>
+            <div class="line"><span class="l">Derrotas</span><span class="v warn">4</span></div>
+            <div class="line"><span class="l">Gols marcados</span><span class="v">18</span></div>
+            <div class="line"><span class="l">Gols sofridos</span><span class="v">18</span></div>
+            <div class="line"><span class="l">Saldo</span><span class="v">0</span></div>
+          </div>
+          <div class="col">
+            <div class="head"><b>Série B em casa</b> · 2 jogos</div>
+            <div class="line"><span class="l">Vitórias</span><span class="v">0</span></div>
+            <div class="line"><span class="l">Empates</span><span class="v">0</span></div>
+            <div class="line"><span class="l">Derrotas</span><span class="v warn">2</span></div>
+            <div class="line"><span class="l">Gols marcados</span><span class="v">1</span></div>
+            <div class="line"><span class="l">Gols sofridos</span><span class="v warn">5</span></div>
+            <div class="line"><span class="l">xG médio</span><span class="v">0.60</span></div>
+          </div>
+        </div>
+
+        <div class="insight">
+          <div class="k">Leitura tática</div>
+          <div class="t">Em casa pela Série B, o América não venceu — e sofreu 5 gols em 2 jogos.</div>
+          <div class="s">Domina a posse (67%) mas não converte. Padrão vulnerável a contra-ataques diretos, com linha defensiva alta e transições lentas.</div>
+        </div>
+
+        <div class="foot">
+          <div class="src">Fontes <b>SofaScore · FBref</b></div>
+          <div class="pg"><span class="n">03</span><span class="t">/ 06</span></div>
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- ============ P4 ULTIMOS 5 ============ -->
+    <div class="cell">
+      <div class="cell-label"><span>04 — FORMA RECENTE</span><b>Últimos 5 jogos</b></div>
+      <div class="card-wrap"><div class="card p4">
+
+        <div class="cap">
+          <div class="cap-brand">
+            <img src="assets/logo-canal.png" alt="canal"/>
+            <div class="wordmark">
+              <div class="h">Sport Recife Lab</div>
+              <div class="s">@SportRecifeLab</div>
+            </div>
+          </div>
+          <div class="cap-meta">
+            <div>Forma recente</div>
+            <div class="dim">Últimos 5 jogos</div>
+          </div>
+        </div>
+        <div class="rule"></div>
+
+        <div class="card-title-block">
+          <div class="kicker">Forma recente</div>
+          <h1>1<em>V</em> · 2<em>E</em> · 2<em>D</em></h1>
+          <div class="sub">Apenas uma vitória — e zero vitórias na Série B desde o início</div>
+        </div>
+
+        <div class="streak">
+          <div class="s d">D</div>
+          <div class="s e">E</div>
+          <div class="s e">E</div>
+          <div class="s d">D</div>
+          <div class="s v">V</div>
+        </div>
+        <div class="streak-meta">
+          <span>01/04 · mais antigo</span>
+          <span>15/04 · mais recente →</span>
+        </div>
+
+        <div class="matches">
+
+          <div class="match">
+            <div class="date">
+              <div class="d">15/04</div>
+              <div class="c">Copa Sul-Sud.</div>
+            </div>
+            <div class="team home me">América-MG</div>
+            <div class="score">2<span class="x">–</span>1</div>
+            <div class="team">Sampaio Corrêa</div>
+            <div class="chip v">V</div>
+          </div>
+
+          <div class="match">
+            <div class="date">
+              <div class="d">12/04</div>
+              <div class="c">Série B · R4</div>
+            </div>
+            <div class="team home me">América-MG</div>
+            <div class="score">0<span class="x">–</span>3</div>
+            <div class="team">Grêmio Nov.</div>
+            <div class="chip d">D</div>
+          </div>
+
+          <div class="match">
+            <div class="date">
+              <div class="d">09/04</div>
+              <div class="c">Copa Sul-Sud.</div>
+            </div>
+            <div class="team home">Tombense</div>
+            <div class="score">3<span class="x">–</span>3</div>
+            <div class="team me">América-MG</div>
+            <div class="chip e">E</div>
+          </div>
+
+          <div class="match">
+            <div class="date">
+              <div class="d">05/04</div>
+              <div class="c">Série B · R3</div>
+            </div>
+            <div class="team home">Athletic Club</div>
+            <div class="score">1<span class="x">–</span>1</div>
+            <div class="team me">América-MG</div>
+            <div class="chip e">E</div>
+          </div>
+
+          <div class="match">
+            <div class="date">
+              <div class="d">01/04</div>
+              <div class="c">Série B · R2</div>
+            </div>
+            <div class="team home me">América-MG</div>
+            <div class="score">1<span class="x">–</span>2</div>
+            <div class="team">Botafogo-SP</div>
+            <div class="chip d">D</div>
+          </div>
+
+        </div>
+
+        <div class="foot">
+          <div class="src">Fontes <b>SofaScore · FBref</b></div>
+          <div class="pg"><span class="n">04</span><span class="t">/ 06</span></div>
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- ============ P5 xG ============ -->
+    <div class="cell">
+      <div class="cell-label"><span>05 — ANÁLISE OFENSIVA</span><b>xG · posse · zonas</b></div>
+      <div class="card-wrap"><div class="card p5">
+
+        <div class="cap">
+          <div class="cap-brand">
+            <img src="assets/logo-canal.png" alt="canal"/>
+            <div class="wordmark">
+              <div class="h">Sport Recife Lab</div>
+              <div class="s">@SportRecifeLab</div>
+            </div>
+          </div>
+          <div class="cap-meta">
+            <div>Análise ofensiva</div>
+            <div class="dim">Série B 2026 · 4 jogos</div>
+          </div>
+        </div>
+        <div class="rule"></div>
+
+        <div class="card-title-block">
+          <div class="kicker">Posse × finalização</div>
+          <h1>DOMINA<br/>A BOLA,<br/><em>NÃO VENCE</em></h1>
+        </div>
+
+        <div class="metrics">
+          <div class="m">
+            <div class="n">67<span class="u">%</span></div>
+            <div class="l">Posse média</div>
+            <div class="t">domina o meio</div>
+          </div>
+          <div class="m">
+            <div class="n">1.64</div>
+            <div class="l">xG / jogo</div>
+            <div class="t">cria, não finaliza</div>
+          </div>
+          <div class="m">
+            <div class="n">19.3</div>
+            <div class="l">Chutes / jogo</div>
+            <div class="t">volume alto</div>
+          </div>
+        </div>
+
+        <div class="thesis">
+          <div class="k">Leitura</div>
+          <h3>67% de posse e 1.64 xG/jogo —<br/>mas <em>0 vitórias e 9 gols sofridos</em> na Série B.</h3>
+          <p>Equipe cria pela posse, mas é vulnerável ao ritmo adversário: transições rápidas nas laterais e contra-ataques diretos exploram a linha alta.</p>
+        </div>
+
+        <div class="pitch-block">
+          <div class="h">
+            <div class="t">Zonas de finalização</div>
+            <div class="s">16 jogos · SofaScore</div>
+          </div>
+          <div class="pitch">
+            <div class="pitch-attack">Ataque</div>
+            <div class="zone">
+              <div class="fill" style="--zone: rgba(184,180,171,0.22); height:10%"></div>
+              <div class="pct">10<span style="font-size:28px;color:var(--ink-3)">%</span></div>
+              <div class="lab">Esquerda</div>
+            </div>
+            <div class="zone">
+              <div class="fill" style="--zone: rgba(230,57,70,0.85); height:79%"></div>
+              <div class="pct" style="color:#fff">79<span style="font-size:28px;color:rgba(255,255,255,0.7)">%</span></div>
+              <div class="lab" style="color:rgba(255,255,255,0.9)">Centro</div>
+            </div>
+            <div class="zone">
+              <div class="fill" style="--zone: rgba(184,180,171,0.22); height:11%"></div>
+              <div class="pct">11<span style="font-size:28px;color:var(--ink-3)">%</span></div>
+              <div class="lab">Direita</div>
+            </div>
+          </div>
+          <div class="pitch-ruler">
+            <div>Flanco esquerdo</div>
+            <div>Corredor central</div>
+            <div>Flanco direito</div>
+          </div>
+        </div>
+
+        <div class="foot">
+          <div class="src">Fontes <b>SofaScore · FBref</b></div>
+          <div class="pg"><span class="n">05</span><span class="t">/ 06</span></div>
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- ============ P6 JOGADORES ============ -->
+    <div class="cell">
+      <div class="cell-label"><span>06 — FIQUE DE OLHO</span><b>Destaques Série B</b></div>
+      <div class="card-wrap"><div class="card p6">
+
+        <div class="cap">
+          <div class="cap-brand">
+            <img src="assets/logo-canal.png" alt="canal"/>
+            <div class="wordmark">
+              <div class="h">Sport Recife Lab</div>
+              <div class="s">@SportRecifeLab</div>
+            </div>
+          </div>
+          <div class="cap-meta">
+            <div>Fique de olho</div>
+            <div class="dim">Destaques Série B</div>
+          </div>
+        </div>
+        <div class="rule"></div>
+
+        <div class="card-title-block">
+          <div class="kicker">Jogadores para observar</div>
+          <h1>TRÊS<br/>NOMES <em>DO COELHO</em></h1>
+          <div class="sub">Ratings médios · Brasileirão Série B · 4 jogos</div>
+        </div>
+
+        <div class="players">
+
+          <div class="player l1">
+            <div class="head">
+              <span class="pos">Centroavante</span>
+              <span class="num"><i>#</i>9</span>
+            </div>
+            <div class="name">Gonzalo<em>Mastriani</em></div>
+            <div class="rating">
+              <span class="l">Rating<br/>médio</span>
+              <span class="v">7.22</span>
+            </div>
+            <div class="stats">
+              <div class="stat"><span class="l">Jogos</span><span class="v">4</span></div>
+              <div class="stat"><span class="l">Chutes</span><span class="v">8</span></div>
+              <div class="stat"><span class="l">Minutos</span><span class="v">360'</span></div>
+            </div>
+            <div class="role"><b>Principal finalizador</b>Referência no ataque, pivô no centro</div>
+          </div>
+
+          <div class="player l2">
+            <div class="head">
+              <span class="pos">Meia-atacante</span>
+              <span class="num"><i>#</i>10</span>
+            </div>
+            <div class="name">Felipe<em>Amaral</em></div>
+            <div class="rating">
+              <span class="l">Rating<br/>médio</span>
+              <span class="v">6.93</span>
+            </div>
+            <div class="stats">
+              <div class="stat"><span class="l">Jogos</span><span class="v">4</span></div>
+              <div class="stat"><span class="l">Chutes</span><span class="v">8</span></div>
+              <div class="stat"><span class="l">Minutos</span><span class="v">295'</span></div>
+            </div>
+            <div class="role"><b>Criação pelo centro</b>Conecta meio e ataque, chega à área</div>
+          </div>
+
+          <div class="player l3">
+            <div class="head">
+              <span class="pos">Goleiro</span>
+              <span class="num"><i>#</i>1</span>
+            </div>
+            <div class="name">Gustavo<em>Ramalho</em></div>
+            <div class="rating">
+              <span class="l">Rating<br/>médio</span>
+              <span class="v">6.90</span>
+            </div>
+            <div class="stats">
+              <div class="stat"><span class="l">Jogos</span><span class="v">4</span></div>
+              <div class="stat"><span class="l">Defesas</span><span class="v">14</span></div>
+              <div class="stat"><span class="l">Minutos</span><span class="v">360'</span></div>
+            </div>
+            <div class="role"><b>Linha de defesa</b>Sustenta uma zaga exposta, volume alto de defesas</div>
+          </div>
+
+        </div>
+
+        <div class="foot">
+          <div class="src">Fontes <b>SofaScore · FBref</b></div>
+          <div class="pg"><span class="n">06</span><span class="t">/ 06</span></div>
+        </div>
+
+      </div></div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:     #0a0a0a;
+    --panel:  #111111;
+    --card:   #181818;
+    --yellow: #FFC700;
+    --white:  #FFFFFF;
+    --gray:   #888888;
+    --dgray:  #2a2a2a;
+    --green:  #2ECC71;
+    --red:    #E74C3C;
+  }
+
+  html, body {
+    width: 1080px;
+    height: 1080px;
+    overflow: hidden;
+    background: var(--bg);
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--white);
+  }
+
+  .card {
+    width: 1080px;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    position: relative;
+  }
+
+  /* ── Yellow left accent bar ── */
+  .card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 8px; height: 100%;
+    background: var(--yellow);
+    z-index: 10;
+  }
+
+  /* ══ HEADER ══════════════════════════════════════════ */
+  .header {
+    padding: 28px 40px 20px 28px;
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    border-bottom: 1px solid var(--dgray);
+    flex-shrink: 0;
+  }
+
+  .header .home { color: var(--yellow); font-size: 32px; font-weight: 900; letter-spacing: 0.5px; }
+  .header .score { color: var(--white); font-size: 32px; font-weight: 900; flex: 1; text-align: center; }
+  .header .away  { color: var(--white); font-size: 32px; font-weight: 900; letter-spacing: 0.5px; }
+  .header .meta  { color: var(--gray); font-size: 13px; font-weight: 400; margin-left: auto; white-space: nowrap; }
+
+  /* ══ BODY ════════════════════════════════════════════ */
+  .body {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* ── LEFT PANEL ── */
+  .left {
+    width: 390px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 20px 20px 28px;
+    border-right: 1px solid var(--dgray);
+    position: relative;
+  }
+
+  .photo-wrap {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 14px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #222;
+  }
+
+  .photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .rating {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: var(--yellow);
+    color: #111;
+    font-size: 22px;
+    font-weight: 900;
+    padding: 4px 12px;
+    border-radius: 6px;
+    line-height: 1;
+  }
+
+  .player-name {
+    margin-top: 18px;
+    text-align: center;
+    line-height: 1.05;
+  }
+
+  .player-name .first { font-size: 48px; font-weight: 900; color: var(--white); }
+  .player-name .last  { font-size: 48px; font-weight: 900; color: var(--yellow); }
+
+  .position {
+    margin-top: 6px;
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .escudo {
+    margin-top: auto;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  /* ── RIGHT PANEL ── */
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 32px 20px 28px;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .compare-label {
+    color: var(--gray);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+
+  /* ── Stat cards ── */
+  .stat-featured {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+  }
+
+  .stat-featured .value {
+    font-size: 56px;
+    font-weight: 900;
+    color: var(--yellow);
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 90px;
+  }
+
+  .stat-featured .info { display: flex; flex-direction: column; gap: 4px; }
+  .stat-featured .label { font-size: 14px; font-weight: 700; color: var(--white); letter-spacing: 0.5px; }
+  .stat-featured .delta { font-size: 13px; font-weight: 700; }
+  .stat-featured .delta.pos { color: var(--green); }
+  .stat-featured .delta.neg { color: var(--red); }
+  .stat-featured .base { font-size: 11px; color: var(--gray); }
+
+  .stat-compact {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .stat-compact .value {
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--yellow);
+    line-height: 1;
+    min-width: 64px;
+    flex-shrink: 0;
+  }
+
+  .stat-compact .label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    flex: 1;
+  }
+
+  .stat-compact .base {
+    font-size: 11px;
+    color: var(--gray);
+    display: block;
+    margin-top: 2px;
+  }
+
+  .stat-compact .delta {
+    font-size: 14px;
+    font-weight: 800;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .stat-compact .delta.pos { color: var(--green); }
+  .stat-compact .delta.neg { color: var(--red); }
+
+  /* ══ FOOTER ════════════════════════════════════════ */
+  .footer {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px 0 28px;
+    border-top: 1px solid var(--dgray);
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .footer img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+  .footer .handle { color: var(--yellow); font-size: 16px; font-weight: 700; }
+  .footer .source { color: var(--gray); font-size: 12px; margin-left: auto; }
+</style>
+</head>
+<body>
+<div class="card">
+  <!-- HEADER -->
+  <div class="header">
+    <span class="home">{{HOME_TEAM}}</span>
+    <span class="score">{{SCORE}}</span>
+    <span class="away">{{AWAY_TEAM}}</span>
+    <span class="meta">{{COMPETITION}} · {{ROUND}} · {{MINUTES}} min</span>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+    <!-- LEFT -->
+    <div class="left">
+      <div class="photo-wrap">
+        <img src="{{PHOTO_SRC}}" alt="{{PLAYER_NAME}}">
+        <div class="rating">{{RATING}}</div>
+      </div>
+      <div class="player-name">
+        <div class="first">{{FIRST_NAME}}</div>
+        <div class="last">{{LAST_NAME}}</div>
+      </div>
+      <div class="position">{{POSITION}}</div>
+      <img class="escudo" src="{{ESCUDO_SRC}}" alt="escudo">
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+      <div class="compare-label">{{COMPARE_LABEL}}</div>
+      {{STATS_HTML}}
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <img src="{{AVATAR_SRC}}" alt="logo">
+    <span class="handle">@SportRecifeLab</span>
+    <span class="source">{{SOURCE}}</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+— THREAD —
+
+[1/3 — sem imagem — ~200 chars]
+
+Criar xG é uma coisa.
+
+Criar xG além do que o adversário costuma conceder é outra.
+
+Cruzamos os dois — e o ranking muda bastante a narrativa da Série B até aqui. 🧵
+
+---
+
+[2/3 — card: card.png — ~270 chars]
+
+xG produzido × xG esperado dado o contexto defensivo do adversário.
+
+Maiores over-performers (R1-R4):
+✅ Ceará: +2.98 (+73%)
+✅ Sport: +1.79 (+34%)
+✅ Criciúma: +1.48 (+31%)
+
+Maiores devedores:
+❌ Londrina: -2.63 (-41%)
+❌ Náutico: -2.16 (-31%)
+❌ Juventude: -2.01 (-40%)
+
+Qual time te surpreendeu mais? 👇
+
+---
+
+[3/3 — reply ao tweet 2 — ~220 chars]
+
+Metodologia: para cada partida, calculamos a média de xG concedido pelo adversário nas rodadas anteriores. O delta é a diferença entre o xG real produzido e esse contexto.
+
+Dados: SofaScore · R1-R4
+
+📊 @SportRecifeLab
+#SerieB #SerieB2026 #SportRecife

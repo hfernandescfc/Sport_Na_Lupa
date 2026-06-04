@@ -1,0 +1,41 @@
+— THREAD —
+
+[1/3 — sem imagem]
+
+Nova edição do #NivelDeAtaque — xG produzido x contexto defensivo.
+
+Após R10, o ranking balançou:
+▲ São Bernardo subiu 5 posições.
+▼ Vila Nova FC caiu 7.
+
+O retrato da Série B segue mudando. 🧵
+
+---
+
+[2/3 — card: card.png]
+
+#NivelDeAtaque (R1-R10)
+xG × contexto defensivo · setas vs R9
+
+✅ CRB: +2.96 ▲4
+✅ Atlético Goianiense: +2.17 ▼1
+✅ Sport Recife: +1.65 ▼1
+
+❌ Londrina: -4.10 ▼1
+❌ Juventude: -3.62 ▲1
+❌ Cuiabá: -3.30 ▼1
+
+Sport: #3 (▼1) · +1.65
+
+Qual time te surpreendeu mais? 👇
+
+---
+
+[3/3 — reply ao tweet 2]
+
+Metodologia: para cada partida, calculamos a média de xG concedido pelo adversário nas rodadas anteriores. O delta = xG real produzido − esse contexto.
+
+Dados: SofaScore · R1-R10
+
+📊 @SportRecifeLab
+#SerieB #SerieB2026 #SportRecife #NivelDeAtaque

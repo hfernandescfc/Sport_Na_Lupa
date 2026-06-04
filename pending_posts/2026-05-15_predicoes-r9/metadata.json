@@ -1,0 +1,63 @@
+{
+  "slug": "predicoes-r9",
+  "created_at": "2026-05-15",
+  "category": "previsoes_serie_b",
+  "subject": "Previsões pré-rodada R9 · Série B 2026",
+  "thread_length": 3,
+  "card_count": 3,
+  "cards": [
+    "card_1_sport.png",
+    "card_2_favoritos.png",
+    "card_3_demais.png"
+  ],
+  "data_window": {
+    "season": 2026,
+    "competition": "Brasileirão Série B",
+    "predicted_round": 9,
+    "training_rounds": "histórico 2025 + R2-R8 de 2026"
+  },
+  "model": {
+    "name": "lr_full_v1",
+    "algorithm": "LogisticRegression (C=0.1) + StandardScaler",
+    "features": 18,
+    "feature_breakdown": "16 pré-match + 2 jogadores (prog_ratio)",
+    "n_train_matches": 239,
+    "train_accuracy_pct": 62.3,
+    "evaluated_at": "2026-05-15T18:56:16Z",
+    "previous_round_accuracy_pct": 40.0
+  },
+  "predictions": {
+    "sport_match": {
+      "matchup": "Sport Recife × CRB",
+      "role": "mandante",
+      "prob_home_pct": 56.4,
+      "prob_draw_pct": 37.7,
+      "prob_away_pct": 5.8,
+      "predicted_result": "vitória do Sport"
+    },
+    "favoritos": [
+      {"rank": 1, "matchup": "São Bernardo × América-MG", "favorito": "São Bernardo (mandante)", "prob_pct": 84.1},
+      {"rank": 2, "matchup": "Ponte Preta × Londrina", "favorito": "Ponte Preta (mandante)", "prob_pct": 82.9},
+      {"rank": 3, "matchup": "Criciúma × Atlético-GO", "favorito": "Atlético-GO (visitante)", "prob_pct": 67.8},
+      {"rank": 4, "matchup": "Operário-PR × Náutico", "favorito": "Náutico (visitante)", "prob_pct": 63.5}
+    ],
+    "demais": [
+      {"matchup": "Goiás × Botafogo-SP", "predicted_result": "mandante", "prob_pct": 40.3},
+      {"matchup": "Cuiabá × Grêmio Novorizontino", "predicted_result": "visitante", "prob_pct": 49.4},
+      {"matchup": "Athletic Club × Juventude", "predicted_result": "empate", "prob_pct": 49.1},
+      {"matchup": "Vila Nova × Avaí", "predicted_result": "empate", "prob_pct": 41.6},
+      {"matchup": "Ceará × Fortaleza", "predicted_result": "visitante", "prob_pct": 45.0}
+    ]
+  },
+  "algorithm_strategy": {
+    "hook": "Sport como favorito em casa pela primeira vez na temporada — chamariz emocional",
+    "engagement_trigger": "modelo quantitativo (% chama atenção em todos os tweets)",
+    "community_target": "torcida Sport + apostadores esportivos + analistas Série B",
+    "bookmarks_appeal": "10 jogos da rodada inteira organizados em hierarquia (Sport / favoritos / abertos)",
+    "retweet_appeal": "previsão clara — visitantes favoritos fora (zebras teóricas) geram debate"
+  },
+  "char_counts": [192, 217, 247],
+  "char_limit_per_tweet": 280,
+  "status": "pending_review",
+  "notes": "Thread de previsão pré-rodada. Card 1 destaca Sport como favorito (56%) em casa — primeiro post oficial do modelo lr_full_v1 cobrindo Sport. Acurácia da R8 (40%) ficou abaixo do esperado mas pool de treino dobrou para R9 com inclusão das rodadas concluídas. Validação cumulativa em accuracy_summary.csv."
+}

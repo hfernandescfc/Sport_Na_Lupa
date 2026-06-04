@@ -9,6 +9,6 @@
 - sport_team_advanced_stats_rows: pass
 - serie_b_incremental_round_seed_count: pass
 - serie_b_full_season_coverage: info
-- serie_b_round_1_completed_results: pass
+- serie_b_round_1_completed_results: warn
 - serie_b_team_advanced_stats_rows: pass
 - serie_b_team_advanced_stats_confirmed_consistency: pass

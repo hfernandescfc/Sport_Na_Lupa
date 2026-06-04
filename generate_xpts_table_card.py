@@ -234,6 +234,16 @@ def _place_logo(ax, arr: np.ndarray, x: float, y: float, zoom: float = LOGO_ZOOM
 
 def _load_data() -> tuple[pd.DataFrame, int]:
     df = pd.read_csv(TABLE_PATH)
+    # Índice canônico = xPts ajustado por game state (quando disponível).
+    # Aliasa as colunas de trabalho e re-rankeia; o resto do card fica intacto.
+    if "xPts_adj" in df.columns:
+        df["xPts"] = df["xPts_adj"]
+        if "pts_diff_adj" in df.columns:
+            df["pts_diff"] = df["pts_diff_adj"]
+        df = df.sort_values(
+            ["xPts", "Pts", "GD", "GF"], ascending=False
+        ).reset_index(drop=True)
+        df["rank_xpts"] = range(1, len(df) + 1)
     # Número da última rodada completada
     try:
         mdf = pd.read_csv(MATCHES_PATH, dtype=str)
@@ -294,7 +304,7 @@ def generate_table_card(df: pd.DataFrame, max_round: int,
             ha="center", va="center", transform=ax.transAxes, zorder=5)
 
     has_deltas = bool(rank_deltas)
-    subtitle = f"xPts via xG (Poisson)  ·  Rodada {max_round}"
+    subtitle = f"xPts via xG ajustado por game state  ·  Rodada {max_round}"
     if has_sos:
         subtitle += "  ·  Dificuldade de calendário incluída"
     if has_deltas:

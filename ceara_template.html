@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1200">
+<title>Como o Ceará SC Joga</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("3fae070e-0780-499e-807f-9e128b998c41") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("f1b6c46a-61c9-45a5-80f0-117e0d09faec") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("a28abe63-272a-46ad-8c25-9d2e737304b2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("b03bc766-41ef-4922-aacf-5fe7c4ca5dd0") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("f44493af-1fb2-41ad-8e1b-64f30dbc31cb") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("64e80a2d-6f60-4222-b0c5-f82880910802") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("0dc8b793-014c-41ef-a415-76016c556cf2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("1c80d3d2-c74d-4388-9392-f8893be5b612") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("0bcf0d0f-f305-4df3-b7dd-bb2fe1a07c82") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("9f936251-67d3-42c2-a4cd-998529be18ca") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("e9853c33-bd47-4ea4-86bc-f348437730ce") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("30a542b7-e4fb-430e-939b-5cbbc0fc80bf") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("75685d26-8dc9-4911-a177-80da83982baf") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("52cc5a18-0862-468c-b074-b68092e7ba16") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("c5644649-257f-40bd-8863-7313ac3dd14c") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("afef8acf-d8c8-44b5-8b6e-44fc80afcfa0") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("bc6e3de2-23a4-45f0-86ac-d0330ee52690") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("ad7a7ad9-ea9c-4a22-9bac-c61f15c0987f") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("bc4dcde5-b21c-40f6-a217-291e26cd521b") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("6859cc56-edc4-488b-8caf-153aedd8e287") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("416ea2be-2c34-4d1f-8b74-57d10aaf0221") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("33ab6739-7c66-4927-a79d-f02f92dac122") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("2239e55f-e4ae-474e-9fa9-0f2e7916e389") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("2101e01b-e826-4f83-aca6-4f513d4ebb21") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1200px;
+    height: 675px;
+    background: #0a0a0a;
+    font-family: 'Barlow', sans-serif;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    width: 1200px;
+    height: 675px;
+    background: #111111;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* subtle noise texture */
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 32px 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .label-como {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.35);
+    text-transform: uppercase;
+  }
+
+  .title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 46px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .title span {
+    color: #F5C200;
+  }
+
+  .header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .meta-badges {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .badge {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #F5C200;
+    background: rgba(245,194,0,0.12);
+    border: 1px solid rgba(245,194,0,0.25);
+    padding: 3px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+
+  .meta-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.5px;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .logo-placeholder {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #1e1e1e;
+    border: 2px solid rgba(245,194,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* Ceará crest simplified SVG */
+  .crest svg {
+    width: 52px;
+    height: 52px;
+  }
+
+  /* ── BODY ── */
+  .body {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 196px 420px 1fr;
+    gap: 0;
+  }
+
+  /* dividers */
+  .col + .col {
+    border-left: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .col {
+    padding: 18px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .col-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  /* ── PITCH ── */
+  .pitch-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .pitch {
+    width: 130px;
+    height: 220px;
+    position: relative;
+    border: 1.5px solid rgba(255,255,255,0.15);
+    border-radius: 4px;
+    overflow: hidden;
+    background: #0d1f0d;
+    flex-shrink: 0;
+  }
+
+  /* pitch lines */
+  .pitch::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0; right: 0;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-50%);
+  }
+
+  .pitch-center-circle {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .pitch-box-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 30px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-top: none;
+  }
+
+  .pitch-box-bot {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 30px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-bottom: none;
+  }
+
+  /* heat zones */
+  .zone-def {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 43%;
+    background: radial-gradient(ellipse 80% 60% at 50% 80%, rgba(245,194,0,0.55) 0%, rgba(245,194,0,0.15) 55%, transparent 100%);
+  }
+
+  .zone-atk {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 40%;
+    background: radial-gradient(ellipse 55% 50% at 65% 30%, rgba(245,194,0,0.35) 0%, rgba(245,194,0,0.08) 60%, transparent 100%);
+  }
+
+  .zone-label {
+    position: absolute;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.55);
+    text-transform: uppercase;
+  }
+
+  .zone-label.atk { top: 6px; right: 6px; }
+  .zone-label.def { bottom: 6px; left: 50%; transform: translateX(-50%); }
+
+  .intensity-dot {
+    position: absolute;
+    border-radius: 50%;
+    background: #F5C200;
+    box-shadow: 0 0 8px 4px rgba(245,194,0,0.4);
+  }
+
+  .pitch-corridor {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+    margin-top: 2px;
+  }
+
+  .corridor-bar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .corridor-fill {
+    height: 4px;
+    width: 100%;
+    background: rgba(255,255,255,0.08);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .corridor-fill-inner {
+    height: 100%;
+    border-radius: 2px;
+    background: #F5C200;
+  }
+
+  .corridor-label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.4);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .corridor-pct {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* ── SHOT ORIGINS ── */
+  .shot-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+  }
+
+  .shot-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .shot-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .shot-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.65);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .shot-meta {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+  }
+
+  .shot-pct {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .shot-detail {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    line-height: 1.4;
+    text-align: right;
+  }
+
+  .shot-bar-track {
+    height: 6px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .shot-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.3s;
+  }
+
+  .color-yellow { background: #F5C200; }
+  .color-blue   { background: #4A90D9; }
+  .color-orange { background: #E8622A; }
+  .color-gray   { background: rgba(255,255,255,0.25); }
+
+  .shot-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.05);
+  }
+
+  /* ── OFFENSIVE PROFILE ── */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    flex: 1;
+  }
+
+  .stat-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 6px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .stat-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.3);
+    text-transform: uppercase;
+  }
+
+  .stat-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  .stat-bar-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .stat-compare-bar {
+    height: 3px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 2px;
+    position: relative;
+    overflow: visible;
+  }
+
+  .stat-compare-fill {
+    height: 100%;
+    border-radius: 2px;
+    position: absolute;
+    top: 0; left: 0;
+  }
+
+  .stat-compare-marker {
+    position: absolute;
+    top: -2px;
+    width: 2px;
+    height: 7px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 1px;
+  }
+
+  .stat-badge {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .stat-badge.above { color: #4CAF7D; }
+  .stat-badge.avg   { color: rgba(255,255,255,0.35); }
+
+  .stat-liga {
+    font-size: 10px;
+    color: rgba(255,255,255,0.2);
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 32px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    background: rgba(0,0,0,0.2);
+  }
+
+  .synthesis {
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.5;
+    max-width: 820px;
+    font-style: italic;
+  }
+
+  .synthesis strong {
+    color: rgba(255,255,255,0.7);
+    font-style: normal;
+  }
+
+  .watermark {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.2);
+    white-space: nowrap;
+  }
+
+  .watermark span { color: #F5C200; }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <span class="label-como">Como o</span>
+      <div class="title">Ceará SC&nbsp;<span>Joga</span></div>
+    </div>
+
+    <div class="header-center">
+      <div class="meta-badges">
+        <span class="badge">Série B 2026</span>
+        <span class="badge">R7</span>
+        <span class="badge">03/05</span>
+      </div>
+      <div class="meta-sub">6 partidas · 300 chutes analisados</div>
+    </div>
+
+    <div class="header-right">
+      <!-- Ceará crest simplified -->
+      <div class="logo-placeholder">
+        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="52" height="52">
+          <!-- shield shape -->
+          <path d="M30 4 L52 14 L52 36 Q52 52 30 58 Q8 52 8 36 L8 14 Z" fill="#1a1a1a" stroke="#F5C200" stroke-width="1.5"></path>
+          <!-- black stripes -->
+          <path d="M30 4 L52 14 L52 36 Q52 52 30 58 Q8 52 8 36 L8 14 Z" fill="none" stroke="#F5C200" stroke-width="1.5"></path>
+          <!-- B letter area -->
+          <rect x="19" y="18" width="22" height="28" rx="2" fill="#F5C200" opacity="0.1"></rect>
+          <text x="30" y="38" text-anchor="middle" font-family="'Barlow Condensed', sans-serif" font-weight="900" font-size="18" fill="#F5C200">CEC</text>
+          <text x="30" y="48" text-anchor="middle" font-family="'Barlow Condensed', sans-serif" font-weight="600" font-size="7" fill="rgba(255,255,255,0.5)" letter-spacing="1">1914</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- COL 1: PITCH ZONES -->
+    <div class="col">
+      <div class="col-title">Zonas de Atuação</div>
+      <div class="pitch-wrap">
+        <div class="pitch">
+          <div class="zone-def"></div>
+          <div class="zone-atk"></div>
+          <div class="pitch-box-top"></div>
+          <div class="pitch-box-bot"></div>
+          <div class="pitch-center-circle"></div>
+          <!-- intensity dots -->
+          <div class="intensity-dot" style="width:18px;height:18px;bottom:22%;left:50%;transform:translateX(-50%);opacity:0.9;"></div>
+          <div class="intensity-dot" style="width:9px;height:9px;top:28%;right:28%;opacity:0.5;"></div>
+          <div class="zone-label atk">ATQ</div>
+          <div class="zone-label def">DEF</div>
+        </div>
+
+        <!-- corridor breakdown -->
+        <div style="width:130px;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.25);text-transform:uppercase;margin-bottom:8px;text-align:center;">Distribuição</div>
+          <div class="pitch-corridor">
+            <div class="corridor-bar">
+              <div class="corridor-pct">32%</div>
+              <div class="corridor-fill"><div class="corridor-fill-inner" style="width:32%;background:rgba(255,255,255,0.3);"></div></div>
+              <div class="corridor-label">ESQ</div>
+            </div>
+            <div class="corridor-bar">
+              <div class="corridor-pct">32%</div>
+              <div class="corridor-fill"><div class="corridor-fill-inner" style="width:32%;background:rgba(255,255,255,0.3);"></div></div>
+              <div class="corridor-label">CTR</div>
+            </div>
+            <div class="corridor-bar">
+              <div class="corridor-pct" style="color:#F5C200;">36%</div>
+              <div class="corridor-fill"><div class="corridor-fill-inner" style="width:100%;"></div></div>
+              <div class="corridor-label">DIR</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- terço final label -->
+        <div style="width:130px;padding:8px 10px;background:rgba(245,194,0,0.06);border:1px solid rgba(245,194,0,0.15);border-radius:4px;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.3);text-transform:uppercase;margin-bottom:2px;">Terço Final</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;color:#F5C200;">DIR · 66%</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.3);text-transform:uppercase;margin-top:6px;margin-bottom:2px;">Bloco Rec.</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;color:rgba(255,255,255,0.6);">CTR · 99%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COL 2: SHOT ORIGINS -->
+    <div class="col">
+      <div class="col-title">Origem dos Chutes</div>
+      <div class="shot-list">
+
+        <div class="shot-row">
+          <div class="shot-header">
+            <span class="shot-name">Jogada Aberta</span>
+            <div class="shot-meta">
+              <span class="shot-pct">66%</span>
+            </div>
+          </div>
+          <div class="shot-bar-track">
+            <div class="shot-bar-fill color-yellow" style="width:66%;"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:2px;">
+            <span style="font-size:11px;color:rgba(255,255,255,0.25);">191 chutes</span>
+            <span style="font-size:11px;color:rgba(255,255,255,0.25);">0.10 xG/chute</span>
+          </div>
+        </div>
+
+        <div class="shot-divider"></div>
+
+        <div class="shot-row">
+          <div class="shot-header">
+            <span class="shot-name">Bola Parada</span>
+            <div class="shot-meta">
+              <span class="shot-pct">29%</span>
+            </div>
+          </div>
+          <div class="shot-bar-track">
+            <div class="shot-bar-fill color-blue" style="width:29%;"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:2px;">
+            <span style="font-size:11px;color:rgba(255,255,255,0.25);">84 chutes</span>
+            <span style="font-size:11px;color:#4A90D9;font-weight:600;">0.95 xG/chute ↑</span>
+          </div>
+        </div>
+
+        <div class="shot-divider"></div>
+
+        <div class="shot-row">
+          <div class="shot-header">
+            <span class="shot-name">Contra-Ataque</span>
+            <div class="shot-meta">
+              <span class="shot-pct" style="font-size:18px;">4%</span>
+            </div>
+          </div>
+          <div class="shot-bar-track">
+            <div class="shot-bar-fill color-orange" style="width:4%;"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:2px;">
+            <span style="font-size:11px;color:rgba(255,255,255,0.25);">11 chutes</span>
+            <span style="font-size:11px;color:rgba(255,255,255,0.25);">0.13 xG/chute</span>
+          </div>
+        </div>
+
+        <div class="shot-divider"></div>
+
+        <div class="shot-row">
+          <div class="shot-header">
+            <span class="shot-name">Pênalti</span>
+            <div class="shot-meta">
+              <span class="shot-pct" style="font-size:18px;">1%</span>
+            </div>
+          </div>
+          <div class="shot-bar-track">
+            <div class="shot-bar-fill color-gray" style="width:1%;min-width:6px;"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:2px;">
+            <span style="font-size:11px;color:rgba(255,255,255,0.25);">4 chutes</span>
+            <span style="font-size:11px;color:rgba(255,255,255,0.25);">0.58 xG/chute</span>
+          </div>
+        </div>
+
+        <!-- stacked proportion visual -->
+        <div style="margin-top:auto;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:6px;">Proporção total</div>
+          <div style="display:flex;height:8px;border-radius:4px;overflow:hidden;gap:2px;">
+            <div style="flex:66;background:#F5C200;border-radius:3px 0 0 3px;"></div>
+            <div style="flex:29;background:#4A90D9;"></div>
+            <div style="flex:4;background:#E8622A;"></div>
+            <div style="flex:1;background:rgba(255,255,255,0.2);border-radius:0 3px 3px 0;"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- COL 3: OFFENSIVE PROFILE -->
+    <div class="col">
+      <div class="col-title">Perfil Ofensivo · por jogo vs Série B</div>
+      <div class="stat-grid">
+
+        <div class="stat-card">
+          <div class="stat-label">xG / Jogo</div>
+          <div class="stat-value">1.55</div>
+          <div class="stat-bar-row">
+            <div class="stat-compare-bar">
+              <div class="stat-compare-fill" style="width:100%;background:linear-gradient(90deg,#F5C200,#F5C200cc);border-radius:2px;"></div>
+              <div class="stat-compare-marker" style="left:70.9%;"></div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="stat-badge above">▲ Acima da liga</span>
+            <span class="stat-liga">liga: 1.10</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">Posse de Bola</div>
+          <div class="stat-value">51<span style="font-size:22px;opacity:0.6;">%</span></div>
+          <div class="stat-bar-row">
+            <div class="stat-compare-bar">
+              <div class="stat-compare-fill" style="width:51%;background:rgba(255,255,255,0.3);border-radius:2px;"></div>
+              <div class="stat-compare-marker" style="left:50%;"></div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="stat-badge avg">≈ Na média</span>
+            <span class="stat-liga">liga: 50%</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">Chutes / Jogo</div>
+          <div class="stat-value">11.7</div>
+          <div class="stat-bar-row">
+            <div class="stat-compare-bar">
+              <div class="stat-compare-fill" style="width:52%;background:rgba(255,255,255,0.3);border-radius:2px;"></div>
+              <div class="stat-compare-marker" style="left:50%;"></div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="stat-badge avg">≈ Na média</span>
+            <span class="stat-liga">liga: 11.5</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">Bolas Longas</div>
+          <div class="stat-value">23.0</div>
+          <div class="stat-bar-row">
+            <div class="stat-compare-bar">
+              <div class="stat-compare-fill" style="width:100%;background:linear-gradient(90deg,#4CAF7D,#4CAF7Dcc);border-radius:2px;"></div>
+              <div class="stat-compare-marker" style="left:78%;"></div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="stat-badge above">▲ Acima da liga</span>
+            <span class="stat-liga">liga: 18.0</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="synthesis">
+      <strong>Síntese:</strong> Time de posse equilibrada (51%), distribuído pelos corredores, de bloco recuado (43% no terço defensivo). Ataque com <strong>66% via jogo corrido</strong> — bola parada é a 2ª fonte (29%).
+    </div>
+    <div class="watermark"><span>@</span>SportRecifeLab</div>
+  </div>
+
+</div>
+
+
+</body></html>

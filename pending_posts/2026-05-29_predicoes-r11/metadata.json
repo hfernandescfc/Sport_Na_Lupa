@@ -1,0 +1,66 @@
+{
+  "slug": "predicoes-r11",
+  "created_at": "2026-05-29",
+  "category": "previsoes_serie_b",
+  "subject": "Previsões pré-rodada R11 · Série B 2026",
+  "thread_length": 3,
+  "card_count": 3,
+  "cards": [
+    "card_1_sport.png",
+    "card_2_favoritos.png",
+    "card_3_demais.png"
+  ],
+  "data_window": {
+    "season": 2026,
+    "competition": "Brasileirão Série B",
+    "predicted_round": 11,
+    "training_rounds": "histórico 2025 (160) + R3-R10 de 2026 (80) = 240 partidas"
+  },
+  "model": {
+    "name": "ens_lr_gbm_v1",
+    "algorithm": "Ensemble: LR(C=0.1) + LGBMClassifier(num_leaves=7, n_est=150) sigmoid-calibrated · média de predict_proba",
+    "features": 18,
+    "feature_breakdown": "14 pré-match + 2 força acumulada (ppg/xg-pm to-date) + 2 jogadores (prog_ratio)",
+    "n_train_matches": 240,
+    "train_accuracy_pct": 54.2,
+    "evaluated_at": "2026-05-29T13:58:48Z",
+    "previous_round_accuracy_pct": 30.0,
+    "cumulative_accuracy_pct": 41.5,
+    "cumulative_correct": 17,
+    "cumulative_n": 41
+  },
+  "predictions": {
+    "sport_match": {
+      "matchup": "Sport Recife × Náutico",
+      "role": "mandante",
+      "prob_home_pct": 36.3,
+      "prob_draw_pct": 37.2,
+      "prob_away_pct": 26.5,
+      "predicted_result": "empate"
+    },
+    "favoritos": [
+      {"rank": 1, "matchup": "Ceará × Operário-PR", "favorito": "Ceará (mandante)", "prob_pct": 47.9},
+      {"rank": 2, "matchup": "Juventude × América-MG", "favorito": "Juventude (mandante)", "prob_pct": 47.8},
+      {"rank": 3, "matchup": "Avaí × Criciúma", "favorito": "Avaí (mandante)", "prob_pct": 44.8},
+      {"rank": 4, "matchup": "São Bernardo × Grêmio Novorizontino", "favorito": "São Bernardo (mandante)", "prob_pct": 44.4}
+    ],
+    "demais": [
+      {"matchup": "Ponte Preta × Botafogo-SP", "predicted_result": "mandante", "prob_pct": 40.4},
+      {"matchup": "Atlético-GO × Goiás", "predicted_result": "mandante", "prob_pct": 35.8},
+      {"matchup": "Athletic × Fortaleza", "predicted_result": "mandante", "prob_pct": 36.2},
+      {"matchup": "Cuiabá × CRB", "predicted_result": "empate", "prob_pct": 37.0},
+      {"matchup": "Londrina × Vila Nova", "predicted_result": "empate", "prob_pct": 34.3}
+    ]
+  },
+  "algorithm_strategy": {
+    "hook": "Clássico Sport × Náutico (CLÁSSICO PE) sem favorito — modelo diz EMPATE no card 1",
+    "engagement_trigger": "rodada inteira sem favorito esmagador (top mandante = 48%) — narrativa de 'rodada imprevisível'",
+    "community_target": "torcida Sport + torcida Náutico (clássico) + apostadores esportivos + analistas Série B",
+    "bookmarks_appeal": "10 jogos da rodada organizados em hierarquia (clássico Sport / top favoritos / demais)",
+    "retweet_appeal": "modelo diz empate no clássico — gera debate na torcida Sport (favorito por mando) e Náutico (vence Sport no histórico recente)"
+  },
+  "char_counts": [194, 183, 248],
+  "char_limit_per_tweet": 280,
+  "status": "pending_review",
+  "notes": "Thread de previsão pré-rodada R11. Card 1 destaca o clássico PE (Sport × Náutico) com narrativa de empate técnico — modelo aponta empate (37%) ligeiramente acima de vitória do Sport (36%). Rodada 11 é a mais equilibrada da temporada — top mandante (Ceará) só 48%, e 5 jogos têm 3 vias dentro de 10pp. Modelo cumulativo subiu para 41.5% após re-validação (acima do baseline 'sempre H' = 40%). Pool de treino agora com 240 partidas (160 histórico + R3-R10 atual)."
+}

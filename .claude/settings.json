@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "Bash(python:*)",
+      "Bash(python -m:*)",
+      "Bash(python -m src.main:*)",
+      "Bash(pytest:*)",
+      "Bash(pip:*)",
+      "Bash(pip install:*)",
+      "Bash(ls:*)",
+      "Bash(dir:*)",
+      "Bash(mkdir:*)",
+      "Bash(type:*)",
+      "Bash(jq:*)"
+    ]
+  }
+}

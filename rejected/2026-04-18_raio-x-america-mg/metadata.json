@@ -1,0 +1,55 @@
+{
+  "post_type": "raio-x",
+  "opponent": "América Mineiro",
+  "opponent_key": "america-mg",
+  "opponent_id": 1973,
+  "competition": "Brasileirão Série B 2026",
+  "round": 5,
+  "match_date": "2026-04-18",
+  "match_time_local": "21:00",
+  "venue": "Estádio Independência, Belo Horizonte",
+  "sport_role": "visitante",
+  "created_at": "2026-04-17T00:00:00Z",
+  "status": "pending",
+  "cards": [
+    "01_cover.png",
+    "02_campanha.png",
+    "03_mandante_vis.png",
+    "04_ultimos5.png",
+    "05_xg.png",
+    "06_jogadores.png"
+  ],
+  "thread_tweets": 4,
+  "data_sources": [
+    "data/curated/opponents_2026/america-mg/matches.csv",
+    "data/curated/opponents_2026/america-mg/team_match_stats.csv",
+    "data/curated/opponents_2026/america-mg/player_match_stats.csv",
+    "data/curated/opponents_2026/america-mg/attack_profile.json"
+  ],
+  "key_stats": {
+    "serie_b_record": "0V 1E 3D",
+    "serie_b_pts": 1,
+    "serie_b_position": 20,
+    "serie_b_gf": 3,
+    "serie_b_ga": 9,
+    "serie_b_xg_per_game": 1.64,
+    "serie_b_possession_pct": 66.7,
+    "serie_b_shots_per_game": 19.3,
+    "attack_zone_center_pct": 79.0,
+    "home_record_serie_b": "0V 0E 2D",
+    "home_gf_serie_b": 1,
+    "home_ga_serie_b": 5,
+    "overall_record_2026": "6V 7E 7D",
+    "overall_pts": 25,
+    "overall_gf": 31,
+    "overall_ga": 35,
+    "last5_results": ["W", "L", "D", "D", "L"]
+  },
+  "top_players": [
+    {"name": "Gonzalo Mastriani", "pos": "CA", "rating": 7.22, "shots_serie_b": 8},
+    {"name": "Felipe Amaral", "pos": "MEI", "rating": 6.93, "shots_serie_b": 8},
+    {"name": "Gustavo", "pos": "GOL", "rating": 6.90, "games": 4}
+  ],
+  "narrative_hook": "América domina a posse (67%) mas tem 0 vitórias na Série B — paradoxo claro de dado vs resultado",
+  "tactical_insight": "79% dos chutes pelo centro — corredor central é ponto fraco; contra-ataques pelas laterais são a oportunidade para o Sport"
+}

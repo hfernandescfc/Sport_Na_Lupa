@@ -1,0 +1,26 @@
+{
+  "slug": "2026-05-05_xpts-serie-b",
+  "date": "2026-05-05",
+  "type": "xpts-semanal",
+  "round": 7,
+  "season": 2026,
+  "cards": [
+    "01_xpts_table.png",
+    "02_xpts_scatter.png",
+    "01_xpts_evolution.png"
+  ],
+  "tweet_count": 3,
+  "status": "posted",
+  "posted_at": "2026-05-05T00:00:00Z",
+  "highlights": {
+    "top_xpts": "Criciuma (11.71)",
+    "sport_xpts_rank": 4,
+    "sport_xpts": 11.10,
+    "sport_pts": 13,
+    "sport_pts_diff": 1.90,
+    "sport_sos_rank": 19,
+    "biggest_overperformer": "Fortaleza (+4.43)",
+    "biggest_underperformer": "America Mineiro (-7.03)"
+  },
+  "generated_at": "2026-05-05T00:00:00Z"
+}

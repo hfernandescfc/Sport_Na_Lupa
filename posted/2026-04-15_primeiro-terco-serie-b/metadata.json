@@ -1,0 +1,58 @@
+{
+  "slug": "2026-04-15_primeiro-terco-serie-b",
+  "type": "recorte_serie_b",
+  "date": "2026-04-15",
+  "title": "Sport no 1º Terço — Dado ou Exagero?",
+  "subject": "Análise comparativa do comportamento do Sport no primeiro terço frente ao Top 5 da Série B 2026",
+  "season": 2026,
+  "competition": "Brasileirão Série B",
+  "rounds": "R1–R4",
+  "format": "thread",
+  "tweet_count": 4,
+  "card_file": "card.png",
+  "posting": {
+    "best_days": ["terça", "quarta", "quinta"],
+    "best_time": "19h–21h (horário de Brasília)",
+    "hashtags": ["#SportRecife", "#SérieB"],
+    "hashtag_placement": "tweet 4 opcional"
+  },
+  "metrics": {
+    "lb_acc_pct": {
+      "description": "Precisão de bola longa — defensores + GK",
+      "sport": 44.0,
+      "best": { "team": "Fortaleza", "value": 57.7 },
+      "sport_rank": 4
+    },
+    "gk_long_balls_per_game": {
+      "description": "Lançamentos do GK por jogo",
+      "sport": 10.8,
+      "reference": { "team": "Fortaleza", "value": 7.8 },
+      "gk": "Thiago Couto",
+      "gk_accuracy_pct": 34.9
+    },
+    "retention_index": {
+      "description": "Índice de retenção no campo próprio (0=progressivo, 100=retentivo) — normalizado pela posse",
+      "sport": 85,
+      "best": { "team": "Goiás", "value": 0 },
+      "sport_rank": 5
+    },
+    "own_half_pass_acc_pct": {
+      "description": "Precisão de passe no campo próprio",
+      "sport": 92.1,
+      "best": { "team": "Fortaleza", "value": 92.5 },
+      "sport_rank": 3
+    },
+    "def_progression_m_per_game": {
+      "description": "Progressão dos defensores em metros por jogo",
+      "sport": 258,
+      "best": { "team": "Sport", "value": 258 },
+      "sport_rank": 1
+    }
+  },
+  "strength_ranking": {
+    "method": "valor de mercado (70%) + pontos/jogo (30%)",
+    "top5": ["Fortaleza", "Sport", "Goiás", "Ceará", "Juventude"]
+  },
+  "source": "Sofascore",
+  "generated_by": "SportSofa pipeline"
+}

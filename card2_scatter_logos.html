@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Série B 2026 — xPts vs Força dos Adversários</title>
+<style>
+  :root {
+    --bg: #0D0D0D;
+    --yellow: #E8B800;
+    --text-primary: #F0F0F0;
+    --text-secondary: #9A9A9A;
+    --border: #2A2A2A;
+    --grid: #1E1E1E;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: var(--bg);
+    width: 1080px;
+    height: 1080px;
+    overflow: hidden;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--text-primary);
+  }
+  .card {
+    width: 1080px;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 40px 20px;
+  }
+
+  /* HEADER */
+  .header { text-align: center; margin-bottom: 12px; }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--yellow);
+  }
+  .header .meta {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+    letter-spacing: 0.02em;
+  }
+  .header .meta span { margin: 0 6px; opacity: 0.45; }
+
+  /* CHART */
+  .chart-area { flex: 1; position: relative; }
+
+  .y-label {
+    position: absolute;
+    left: -42px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-size: 13px;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  svg.plot {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* LEGENDA — eixos apenas */
+  .legend {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(20,20,20,0.92);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .legend-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+  .legend-arrow { font-size: 15px; width: 18px; text-align: center; flex-shrink: 0; }
+
+  /* FOOTER */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+    margin-top: 6px;
+  }
+  .footer-left { display: flex; align-items: center; gap: 10px; }
+  .footer-logo {
+    width: 32px; height: 32px; border-radius: 50%;
+    object-fit: cover; flex-shrink: 0;
+  }
+  .footer-handle { font-size: 13px; font-weight: 600; color: #666; }
+  .footer-source { font-size: 12px; color: #555; }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="header">
+    <h1>Série B 2026 — xPts vs Força dos Adversários</h1>
+    <div class="meta">
+      Eixo X: dificuldade do calendário (SOS)
+      <span>·</span>
+      Eixo Y: pontos esperados acumulados (xPts)
+    </div>
+  </div>
+
+  <div class="chart-area">
+    <div class="y-label">xPts acumulados</div>
+    <svg class="plot" id="plot" viewBox="0 0 1000 860" preserveAspectRatio="xMidYMid meet"></svg>
+
+    <!-- LEGENDA simplificada -->
+    <div class="legend">
+      <div class="legend-row">
+        <span class="legend-arrow">→</span>
+        <span>Calendário mais difícil</span>
+      </div>
+      <div class="legend-row">
+        <span class="legend-arrow">↑</span>
+        <span>Mais pontos esperados</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">
+      <img class="footer-logo" src="__AVATAR_SRC__" alt="SportRecifeLab">
+      <div class="footer-handle">@SportRecifeLab</div>
+    </div>
+    <div class="footer-source">Dados: SofaScore</div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// [VAR] DADOS — substituídos pelo script Python
+// ============================================================
+const teams = [
+  { name:"Sport", sos:0.198, xPts:6.75, delta:+0.2, isSport:true, logo:"" },
+];
+
+// ============================================================
+// PLOT BOUNDS — [VAR]
+// ============================================================
+const X_MIN = 0.15, X_MAX = 0.72;
+const Y_MIN = 3.5,  Y_MAX = 9.5;
+
+const X_MID = 0.40;
+const Y_MID = 6.75;  // [VAR: mediana de xPts da Série B]
+
+// SVG viewport
+const VW = 1000, VH = 860;
+const PAD = { top: 36, right: 36, bottom: 58, left: 62 };
+const PW = VW - PAD.left - PAD.right;
+const PH = VH - PAD.top  - PAD.bottom;
+
+function toX(sos)  { return PAD.left + (sos - X_MIN) / (X_MAX - X_MIN) * PW; }
+function toY(xpts) { return PAD.top  + (1 - (xpts - Y_MIN) / (Y_MAX - Y_MIN)) * PH; }
+
+const svg = document.getElementById('plot');
+const ns = 'http://www.w3.org/2000/svg';
+
+function el(tag, attrs, text) {
+  const e = document.createElementNS(ns, tag);
+  Object.entries(attrs).forEach(([k,v]) => e.setAttribute(k,v));
+  if(text !== undefined) e.textContent = text;
+  return e;
+}
+
+// ---- QUADRANT BACKGROUNDS ----
+const quads = [
+  { x1:X_MIN, x2:X_MID, y1:Y_MID, y2:Y_MAX, fill:'#0F1F0F', label:'xPts alto · calendário fácil',   lx:X_MIN+0.005, ly:Y_MAX-0.14, color:'#4A8B4A' },
+  { x1:X_MID, x2:X_MAX, y1:Y_MID, y2:Y_MAX, fill:'#0B1F10', label:'xPts alto · calendário difícil',  lx:X_MID+0.005, ly:Y_MAX-0.14, color:'#4A8B4A' },
+  { x1:X_MIN, x2:X_MID, y1:Y_MIN, y2:Y_MID, fill:'#1F0B0B', label:'xPts baixo · calendário fácil',   lx:X_MIN+0.005, ly:Y_MIN+0.35, color:'#9A3E3E' },
+  { x1:X_MID, x2:X_MAX, y1:Y_MIN, y2:Y_MID, fill:'#18100B', label:'xPts baixo · calendário difícil', lx:X_MID+0.005, ly:Y_MIN+0.35, color:'#9A3E3E' },
+];
+quads.forEach(q => {
+  svg.appendChild(el('rect', {
+    x: toX(q.x1), y: toY(q.y2),
+    width: toX(q.x2)-toX(q.x1), height: toY(q.y1)-toY(q.y2),
+    fill: q.fill
+  }));
+  if(q.label) {
+    svg.appendChild(el('text', {
+      x: toX(q.lx), y: toY(q.ly),
+      fill: q.color, 'font-size': '14', 'font-style': 'italic',
+      'font-family':'Helvetica Neue, Helvetica, Arial, sans-serif'
+    }, q.label));
+  }
+});
+
+// ---- GRID LINES ----
+const yTicks = [4, 5, 6, 7, 8, 9];
+const xTicks = [0.2, 0.3, 0.4, 0.5, 0.6, 0.7];
+
+yTicks.forEach(v => {
+  svg.appendChild(el('line', { x1:toX(X_MIN), x2:toX(X_MAX), y1:toY(v), y2:toY(v), stroke:'#1E1E1E', 'stroke-width':'1' }));
+  svg.appendChild(el('text', { x: toX(X_MIN)-10, y: toY(v)+5, fill:'#666', 'font-size':'13', 'text-anchor':'end', 'font-family':'Helvetica Neue, Helvetica, Arial, sans-serif', 'font-variant-numeric':'tabular-nums' }, v.toFixed(0)));
+});
+xTicks.forEach(v => {
+  svg.appendChild(el('line', { x1:toX(v), x2:toX(v), y1:toY(Y_MIN), y2:toY(Y_MAX), stroke:'#1E1E1E', 'stroke-width':'1' }));
+  svg.appendChild(el('text', { x: toX(v), y: toY(Y_MIN)+20, fill:'#666', 'font-size':'13', 'text-anchor':'middle', 'font-family':'Helvetica Neue, Helvetica, Arial, sans-serif' }, v.toFixed(1)));
+});
+
+// ---- QUADRANT DIVIDER LINES ----
+svg.appendChild(el('line', { x1:toX(X_MID), x2:toX(X_MID), y1:toY(Y_MIN), y2:toY(Y_MAX), stroke:'#3A3A3A', 'stroke-width':'1.5', 'stroke-dasharray':'5,4' }));
+svg.appendChild(el('line', { x1:toX(X_MIN), x2:toX(X_MAX), y1:toY(Y_MID), y2:toY(Y_MID), stroke:'#3A3A3A', 'stroke-width':'1.5', 'stroke-dasharray':'5,4' }));
+
+// ---- BORDER ----
+svg.appendChild(el('rect', {
+  x:toX(X_MIN), y:toY(Y_MAX),
+  width:PW, height:PH,
+  fill:'none', stroke:'#2A2A2A', 'stroke-width':'1'
+}));
+
+// ---- X AXIS LABEL ----
+svg.appendChild(el('text', {
+  x: toX((X_MIN+X_MAX)/2), y: VH - 2,
+  fill:'#777', 'font-size':'13', 'text-anchor':'middle',
+  'font-family':'Helvetica Neue, Helvetica, Arial, sans-serif'
+}, 'Força dos adversários (SOS)  —  0 = mais fácil  ·  1 = mais difícil'));
+
+// ---- DOTS (LOGOS) ----
+teams.forEach(t => {
+  const x = toX(t.sos), y = toY(t.xPts);
+  const size = t.isSport ? 72 : 60;
+
+  if (t.logo) {
+    if(t.isSport) {
+      svg.appendChild(el('circle', { cx:x, cy:y, r:'40', fill:'#E8B800', opacity:'0.12' }));
+    }
+
+    const img = el('image', {
+      x: x - size/2,
+      y: y - size/2,
+      width: size,
+      height: size,
+      href: t.logo,
+      opacity: '0.95'
+    });
+    svg.appendChild(img);
+
+    if(t.isSport) {
+      svg.appendChild(el('circle', { cx:x, cy:y, r: size/2 + 3, fill:'none', stroke:'#E8B800', 'stroke-width':'2', opacity:'0.85' }));
+    }
+  }
+});
+</script>
+</body>
+</html>

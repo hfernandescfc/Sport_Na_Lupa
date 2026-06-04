@@ -93,6 +93,37 @@ def _match_probabilities(xg_home: float, xg_away: float) -> tuple[float, float, 
 
 
 # ---------------------------------------------------------------------------
+# Game-state-adjusted xG
+# ---------------------------------------------------------------------------
+
+def _load_weighted_xg(curated) -> pd.DataFrame | None:
+    """Load game_state_xg.csv → one row per match with xg_home_w / xg_away_w.
+
+    Returns None when the file is absent (xPts_adj then falls back to raw xG).
+    """
+    path = curated / "game_state_xg.csv"
+    if not path.exists():
+        logger.info("game_state_xg.csv not found — xPts_adj will mirror raw xPts")
+        return None
+
+    df = pd.read_csv(path)
+    df["is_home"] = df["is_home"].map(
+        {"True": True, "False": False, True: True, False: False}
+    )
+    df["xg_weighted"] = pd.to_numeric(df["xg_weighted"], errors="coerce")
+
+    home = (
+        df[df["is_home"] == True][["match_code", "xg_weighted"]]
+        .rename(columns={"xg_weighted": "xg_home_w"})
+    )
+    away = (
+        df[df["is_home"] == False][["match_code", "xg_weighted"]]
+        .rename(columns={"xg_weighted": "xg_away_w"})
+    )
+    return home.merge(away, on="match_code", how="inner")
+
+
+# ---------------------------------------------------------------------------
 # Opponent strength
 # ---------------------------------------------------------------------------
 
@@ -202,7 +233,18 @@ def _compute_strength_scores(
 # Main transform
 # ---------------------------------------------------------------------------
 
-def transform_standings(settings: Settings, season: int) -> None:
+def transform_standings(
+    settings: Settings,
+    season: int,
+    max_round: int | None = None,
+    output_path=None,
+) -> None:
+    """Build the expected-points table.
+
+    max_round   — quando definido, considera só rodadas ≤ max_round (reconstrói
+                  o estado histórico de uma rodada, ex.: refazer snapshot).
+    output_path — quando definido, grava aí em vez do CSV canônico.
+    """
     curated = settings.curated_dir / f"serie_b_{season}"
 
     matches_path = curated / "matches.csv"
@@ -217,6 +259,10 @@ def transform_standings(settings: Settings, season: int) -> None:
 
     # Keep only completed matches
     matches_df = matches_df[matches_df["status"] == "completed"].copy()
+    if max_round is not None:
+        matches_df = matches_df[
+            pd.to_numeric(matches_df["round"], errors="coerce") <= max_round
+        ]
     matches_df["home_score"] = pd.to_numeric(matches_df["home_score"], errors="coerce")
     matches_df["away_score"] = pd.to_numeric(matches_df["away_score"], errors="coerce")
     matches_df = matches_df.dropna(subset=["home_score", "away_score"])
@@ -246,7 +292,17 @@ def transform_standings(settings: Settings, season: int) -> None:
         logger.warning("No completed matches with xG data found — table not generated")
         return
 
-    # Compute per-match probabilities and expected points
+    # Game-state-weighted xG (fallback to raw when a match has no shotmap yet)
+    weighted = _load_weighted_xg(curated)
+    if weighted is not None:
+        merged = merged.merge(weighted, on="match_code", how="left")
+        merged["xg_home_w"] = merged["xg_home_w"].fillna(merged["xg_home"])
+        merged["xg_away_w"] = merged["xg_away_w"].fillna(merged["xg_away"])
+    else:
+        merged["xg_home_w"] = merged["xg_home"]
+        merged["xg_away_w"] = merged["xg_away"]
+
+    # Compute per-match probabilities and expected points (raw + game-state-adjusted)
     probs = merged.apply(
         lambda r: pd.Series(
             _match_probabilities(r["xg_home"], r["xg_away"]),
@@ -254,9 +310,18 @@ def transform_standings(settings: Settings, season: int) -> None:
         ),
         axis=1,
     )
-    merged = pd.concat([merged, probs], axis=1)
+    probs_adj = merged.apply(
+        lambda r: pd.Series(
+            _match_probabilities(r["xg_home_w"], r["xg_away_w"]),
+            index=["p_home_win_adj", "p_draw_adj", "p_away_win_adj"],
+        ),
+        axis=1,
+    )
+    merged = pd.concat([merged, probs, probs_adj], axis=1)
     merged["xpts_home"] = 3.0 * merged["p_home_win"] + merged["p_draw"]
     merged["xpts_away"] = 3.0 * merged["p_away_win"] + merged["p_draw"]
+    merged["xpts_home_adj"] = 3.0 * merged["p_home_win_adj"] + merged["p_draw_adj"]
+    merged["xpts_away_adj"] = 3.0 * merged["p_away_win_adj"] + merged["p_draw_adj"]
 
     merged["home_outcome"] = merged.apply(
         lambda r: "W" if r["home_score"] > r["away_score"]
@@ -272,7 +337,7 @@ def transform_standings(settings: Settings, season: int) -> None:
         "home_team", "home_team_key", "away_team_key",
         "home_score", "away_score",
         "home_outcome", "pts_home",
-        "xpts_home", "p_home_win", "p_draw", "p_away_win",
+        "xpts_home", "xpts_home_adj", "p_home_win", "p_draw", "p_away_win",
     ]].rename(columns={
         "home_team": "team_name",
         "home_team_key": "team_key",
@@ -282,6 +347,7 @@ def transform_standings(settings: Settings, season: int) -> None:
         "home_outcome": "outcome",
         "pts_home": "pts",
         "xpts_home": "xpts",
+        "xpts_home_adj": "xpts_adj",
         "p_home_win": "xw",
         "p_away_win": "xl",
     })
@@ -290,7 +356,7 @@ def transform_standings(settings: Settings, season: int) -> None:
         "away_team", "away_team_key", "home_team_key",
         "away_score", "home_score",
         "away_outcome", "pts_away",
-        "xpts_away", "p_away_win", "p_draw", "p_home_win",
+        "xpts_away", "xpts_away_adj", "p_away_win", "p_draw", "p_home_win",
     ]].rename(columns={
         "away_team": "team_name",
         "away_team_key": "team_key",
@@ -300,6 +366,7 @@ def transform_standings(settings: Settings, season: int) -> None:
         "away_outcome": "outcome",
         "pts_away": "pts",
         "xpts_away": "xpts",
+        "xpts_away_adj": "xpts_adj",
         "p_away_win": "xw",
         "p_home_win": "xl",
     })
@@ -312,6 +379,7 @@ def transform_standings(settings: Settings, season: int) -> None:
         .agg(
             MP=("pts", "count"),
             xPts=("xpts", "sum"),
+            xPts_adj=("xpts_adj", "sum"),
             xW=("xw", "sum"),
             xD=("p_draw", "sum"),
             xL=("xl", "sum"),
@@ -326,10 +394,14 @@ def transform_standings(settings: Settings, season: int) -> None:
 
     table["GD"] = table["GF"] - table["GA"]
     table["xPts"] = table["xPts"].round(2)
+    table["xPts_adj"] = table["xPts_adj"].round(2)
     table["xW"] = table["xW"].round(2)
     table["xD"] = table["xD"].round(2)
     table["xL"] = table["xL"].round(2)
     table["pts_diff"] = (table["Pts"] - table["xPts"]).round(2)
+    table["pts_diff_adj"] = (table["Pts"] - table["xPts_adj"]).round(2)
+    # Quanto o ajuste de game state corrige o xPts (− = inflado por lixo de fim de jogo)
+    table["xpts_adj_delta"] = (table["xPts_adj"] - table["xPts"]).round(2)
 
     # ── Opponent strength ─────────────────────────────────────────────────────
     # MV from CSV (frozen, slow-changing); perf from last-5 weighted form (live).
@@ -347,14 +419,14 @@ def transform_standings(settings: Settings, season: int) -> None:
 
     base_cols = [
         "rank_xpts", "team_name", "team_key", "MP",
-        "xPts", "xW", "xD", "xL",
+        "xPts", "xPts_adj", "xpts_adj_delta", "xW", "xD", "xL",
         "Pts", "W", "D", "L",
-        "GF", "GA", "GD", "pts_diff",
+        "GF", "GA", "GD", "pts_diff", "pts_diff_adj",
     ]
     strength_cols = ["sos", "sos_rank"] if "sos" in table.columns else []
     table = table[base_cols + strength_cols + ["generated_at"]]
 
-    out_path = curated / "expected_points_table.csv"
+    out_path = output_path if output_path is not None else curated / "expected_points_table.csv"
     write_csv(out_path, table.to_dict("records"))
     logger.info(
         "Expected points table: %s teams, %s matches%s -> %s",

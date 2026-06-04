@@ -1,0 +1,74 @@
+{
+  "season": 2026,
+  "round": 6,
+  "model_version": "ens_lr_gbm_v1",
+  "model_architecture": "ensemble: LR(C=0.1) + LGBM(num_leaves=7, n_est=150) sigmoid-calibrated, mean of predict_proba",
+  "lr_params": {
+    "C": 0.1,
+    "max_iter": 500,
+    "random_state": 42
+  },
+  "gbm_params": {
+    "n_estimators": 150,
+    "learning_rate": 0.05,
+    "num_leaves": 7,
+    "min_data_in_leaf": 15,
+    "feature_fraction": 0.85,
+    "bagging_fraction": 0.85,
+    "bagging_freq": 5,
+    "reg_alpha": 0.1,
+    "reg_lambda": 0.1,
+    "objective": "multiclass",
+    "num_class": 3,
+    "random_state": 42,
+    "verbose": -1,
+    "n_jobs": 1
+  },
+  "calibration": {
+    "method": "sigmoid",
+    "cv": 3
+  },
+  "features": [
+    "xg_diff",
+    "xg_h",
+    "xg_a",
+    "xg_per_shot_diff",
+    "xg_tilt_h",
+    "xg_tilt_diff",
+    "field_tilt_sot_h",
+    "field_tilt_sot_diff",
+    "sot_diff",
+    "shots_diff",
+    "poss_diff",
+    "xg_ctx_diff",
+    "passes_acc_pct_diff",
+    "corners_diff",
+    "ppg_diff_todate",
+    "xg_pm_diff_todate",
+    "prog_ratio_diff",
+    "prog_ratio_h"
+  ],
+  "n_features": 18,
+  "n_features_breakdown": {
+    "prematch": 14,
+    "strength_todate": 2,
+    "player": 2
+  },
+  "n_train": 240,
+  "n_train_historical": 160,
+  "n_train_current_season": 80,
+  "current_season_rounds_in_training": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "train_accuracy": 0.5666666666666667,
+  "n_predicted": 11,
+  "generated_at": "2026-06-02T14:46:55.782158+00:00"
+}

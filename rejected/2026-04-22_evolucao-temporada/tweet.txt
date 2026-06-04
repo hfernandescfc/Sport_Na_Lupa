@@ -1,0 +1,38 @@
+— THREAD —
+
+[1/3 — sem imagem — 182 chars]
+
+O Sport 2026 é dois times em um.
+
+Copa do Nordeste: 4J · 4V · 11 gols marcados · 1 sofrido.
+Série B: 5J · 1V · 4E · 7 pts.
+
+Mesma plantel. Por que a diferença? Os dados explicam 🧵
+
+---
+
+[2/3 — card: 01_competicoes.png — 255 chars com imagem]
+
+Aproveitamento por competição em 2026:
+
+🟡 Copa Nordeste: 100% · xG/jogo 1.83
+🟢 PE Playoffs: 83% · PE Fase Gr.: 67%
+🔴 Série B: 47% · xG/jogo 1.48
+
+Mesmo elenco. Desempenho radicalmente diferente.
+
+Qual é a sua teoria? 👇
+
+---
+
+[3/3 — card: 02_serie_b_jogos.png — 276 chars com imagem]
+
+O xG na Série B mostra o padrão:
+
+R3 (Londrina): 2.23 xG ✅ vitória
+R4 (Avaí): 3.24 xG — empate 2-2
+R5 (América MG): 0.35 xG 📉
+
+O Sport perdeu a criação ofensiva no R5. Gestão? Fadiga? Adversário?
+
+📊 @SportRecifeLab #SerieB2026 #SportRecife

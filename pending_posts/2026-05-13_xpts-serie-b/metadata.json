@@ -1,0 +1,30 @@
+{
+  "slug": "2026-05-13_xpts-serie-b",
+  "type": "xpts_table_evolucao",
+  "round": 8,
+  "season": 2026,
+  "competition": "serie_b",
+  "generated_at": "2026-05-13",
+  "cards": [
+    "01_xpts_table.png",
+    "02_xpts_scatter.png",
+    "03_evolucao_tabela.gif"
+  ],
+  "status": "pending_review",
+  "highlights": {
+    "top_xpts": "Grêmio Novorizontino (13.12)",
+    "top_real": "São Bernardo / Sport Recife (16 pts)",
+    "biggest_xpts_rise_vs_r7": "Náutico (#10 → #5, +5)",
+    "biggest_xpts_drop_vs_r7": "Botafogo-SP (#8 → #13, -5)",
+    "most_unlucky": "América-MG (-7.47 saldo)",
+    "second_most_unlucky": "CRB (-5.03 saldo, 2º em xPts)",
+    "most_lucky": "São Bernardo (+5.26 saldo)",
+    "sport_xpts_rank": 6,
+    "sport_real_rank": 2,
+    "sport_pts_diff": "+3.88",
+    "sport_sos_rank": 20,
+    "calendar_alert": "Operário-PR (#3 → #7 em xPts, SOS fácil cobrando)",
+    "ex_leader_drop": "Criciúma (1º → 4º em xPts vs R7)"
+  },
+  "thread_length": 3
+}

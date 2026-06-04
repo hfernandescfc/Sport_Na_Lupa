@@ -1,0 +1,331 @@
+season,round,id_jogo,num_jogo,data,hora,estadio,cidade,uf,mandante_id,mandante_nome,visitante_id,visitante_nome,gols_mandante,gols_visitante,publico_pagante,renda_bruta,boletim_status,transformed_at
+2026,1,832847,10,21/03/2026,17:00,Onésio Brasileiro Alvarenga,Goiania,GO,20079,Vila Nova,20032,Crb,2.0,2.0,2485.0,36140.0,ok,2026-06-02T14:46:54.196783Z
+2026,1,832842,5,21/03/2026,18:00,Arena Castelão,Fortaleza,CE,20031,Ceará,31790,Sao Bernardo,1.0,1.0,8680.0,87486.0,ok,2026-06-02T14:46:54.196783Z
+2026,1,832841,4,21/03/2026,18:15,Germano Kruger,Ponta Grossa,PR,20106,Operário,62261,Atlético Goianiense Saf,1.0,0.0,3535.0,100390.0,ok,2026-06-02T14:46:54.196783Z
+2026,1,832838,1,21/03/2026,19:15,Santa Cruz,Ribeirao Preto,SP,56654,Botafogo,63238,Fortaleza SAF,4.0,0.0,2754.0,73615.0,ok,2026-06-02T14:46:54.196783Z
+2026,1,832846,9,21/03/2026,20:30,Arena Pantanal,Cuiaba,MT,20800,Cuiabá,20010,Sport Recife,0.0,0.0,3211.0,45738.0,ok,2026-06-02T14:46:54.196783Z
+2026,1,832844,7,22/03/2026,16:00,Ressacada,Florianopolis,SC,20058,Avaí,20027,Juventude,2.0,0.0,5099.0,135135.0,ok,2026-06-02T14:46:54.196783Z
+2026,1,832845,8,22/03/2026,16:00,Aflitos,Recife,PE,20023,Náutico,20019,Criciúma,0.0,1.0,7442.0,237933.0,ok,2026-06-02T14:46:54.196783Z
+2026,1,832843,6,22/03/2026,18:00,Hailé Pinheiro,Goiania,GO,20028,Goiás,59897,América,3.0,1.0,6377.0,96855.0,ok,2026-06-02T14:46:54.196783Z
+2026,1,832840,3,22/03/2026,18:00,Arena Sicredi,Sao Joao del Rei,MG,59896,Athletic SAF,20037,Ponte Preta,2.0,1.0,3217.0,38110.0,ok,2026-06-02T14:46:54.196783Z
+2026,1,832839,2,22/03/2026,20:00,Dr. Jorge Ismael de Biasi,Novo Horizonte,SP,31514,Gremio Novorizontino - Saf,62726,Londrina SAF,1.0,3.0,1282.0,17290.0,ok,2026-06-02T14:46:54.196783Z
+2026,2,832857,20,31/03/2026,18:30,Alfredo Jaconi,Caxias do Sul,RS,20027,Juventude,31514,Gremio Novorizontino - Saf,0.0,0.0,3542.0,56970.0,ok,2026-06-02T14:46:54.196783Z
+2026,2,832852,15,31/03/2026,19:00,Arena Castelão,Fortaleza,CE,63238,Fortaleza SAF,20800,Cuiabá,0.0,0.0,7679.0,85480.0,ok,2026-06-02T14:46:54.196783Z
+2026,2,832850,13,01/04/2026,18:00,ARENA MRV,Belo Horizonte,MG,59897,América,56654,Botafogo,1.0,2.0,1148.0,12340.0,ok,2026-06-02T14:46:54.196783Z
+2026,2,832851,14,01/04/2026,19:00,VGD,Londrina,PR,62726,Londrina SAF,20028,Goiás,2.0,2.0,4421.0,125590.0,ok,2026-06-02T14:46:54.196783Z
+2026,2,832853,16,01/04/2026,19:00,Antônio Accioly,Goiania,GO,62261,Atlético Goianiense Saf,20023,Náutico,1.0,2.0,1762.0,22435.0,ok,2026-06-02T14:46:54.196783Z
+2026,2,832855,18,01/04/2026,19:00,Ilha do Retiro,Recife,PE,20010,Sport Recife,20079,Vila Nova,1.0,1.0,4576.0,131884.0,ok,2026-06-02T14:46:54.196783Z
+2026,2,832848,11,01/04/2026,21:00,Moisés Lucarelli,Campinas,SP,20037,Ponte Preta,20031,Ceará,1.0,1.0,4057.0,100210.0,ok,2026-06-02T14:46:54.196783Z
+2026,2,832856,19,01/04/2026,21:30,Rei Pelé,Maceio,AL,20032,Crb,20058,Avaí,0.0,1.0,3268.0,33087.3,ok,2026-06-02T14:46:54.196783Z
+2026,2,832854,17,01/04/2026,21:30,Heriberto Hulse,Criciuma,SC,20019,Criciúma,59896,Athletic SAF,1.0,1.0,,,download_failed,2026-06-02T14:46:54.196783Z
+2026,2,832849,12,02/04/2026,19:00,1º de Maio,Sao Bernardo do Campo,SP,31790,Sao Bernardo,20106,Operário,1.0,2.0,495.0,7150.0,ok,2026-06-02T14:46:54.196783Z
+2026,3,832862,25,04/04/2026,16:00,Arena Castelão,Fortaleza,CE,63238,Fortaleza SAF,20027,Juventude,2.0,1.0,7437.0,103136.0,ok,2026-06-02T14:46:54.196783Z
+2026,3,832865,28,04/04/2026,18:00,Aflitos,Recife,PE,20023,Náutico,20037,Ponte Preta,1.0,0.0,5724.0,170834.0,ok,2026-06-02T14:46:54.196783Z
+2026,3,832866,29,04/04/2026,18:00,Arena Pantanal,Cuiaba,MT,20800,Cuiabá,20031,Ceará,0.0,2.0,2195.0,28179.0,ok,2026-06-02T14:46:54.196783Z
+2026,3,832867,30,04/04/2026,20:00,Onésio Brasileiro Alvarenga,Goiania,GO,20079,Vila Nova,62261,Atlético Goianiense Saf,2.0,1.0,5389.0,103900.0,ok,2026-06-02T14:46:54.196783Z
+2026,3,832861,24,04/04/2026,20:30,VGD,Londrina,PR,62726,Londrina SAF,20010,Sport Recife,1.0,2.0,4363.0,123460.0,ok,2026-06-02T14:46:54.196783Z
+2026,3,832864,27,05/04/2026,16:00,Ressacada,Florianopolis,SC,20058,Avaí,20106,Operário,0.0,0.0,4390.0,113058.0,ok,2026-06-02T14:46:54.196783Z
+2026,3,832859,22,05/04/2026,18:00,Dr. Jorge Ismael de Biasi,Novo Horizonte,SP,31514,Gremio Novorizontino - Saf,20032,Crb,1.0,1.0,1037.0,15150.0,ok,2026-06-02T14:46:54.196783Z
+2026,3,832860,23,05/04/2026,20:00,Arena Sicredi,Sao Joao del Rei,MG,59896,Athletic SAF,59897,América,1.0,1.0,2708.0,32640.0,ok,2026-06-02T14:46:54.196783Z
+2026,3,832858,21,05/04/2026,20:30,Santa Cruz,Ribeirao Preto,SP,56654,Botafogo,31790,Sao Bernardo,1.0,2.0,2543.0,60880.0,ok,2026-06-02T14:46:54.196783Z
+2026,3,832863,26,06/04/2026,21:00,Hailé Pinheiro,Goiania,GO,20028,Goiás,20019,Criciúma,1.0,0.0,5588.0,82065.0,ok,2026-06-02T14:46:54.196783Z
+2026,4,832874,37,10/04/2026,20:30,Heriberto Hulse,Criciuma,SC,20019,Criciúma,56654,Botafogo,1.0,0.0,9580.0,153020.0,ok,2026-06-02T14:46:54.196783Z
+2026,4,832877,40,11/04/2026,16:00,Alfredo Jaconi,Caxias do Sul,RS,20027,Juventude,20028,Goiás,2.0,0.0,4219.0,70965.0,ok,2026-06-02T14:46:54.196783Z
+2026,4,832875,38,11/04/2026,18:00,Ilha do Retiro,Recife,PE,20010,Sport Recife,20058,Avaí,2.0,2.0,10715.0,368672.0,ok,2026-06-02T14:46:54.196783Z
+2026,4,832868,31,11/04/2026,18:00,Moisés Lucarelli,Campinas,SP,20037,Ponte Preta,20079,Vila Nova,0.0,1.0,4139.0,99870.0,ok,2026-06-02T14:46:54.196783Z
+2026,4,832872,35,11/04/2026,20:30,Arena Castelão,Fortaleza,CE,20031,Ceará,20023,Náutico,1.0,0.0,14032.0,134984.0,ok,2026-06-02T14:46:54.196783Z
+2026,4,832869,32,12/04/2026,18:00,1º de Maio,Sao Bernardo do Campo,SP,31790,Sao Bernardo,63238,Fortaleza SAF,0.0,1.0,961.0,22990.0,ok,2026-06-02T14:46:54.196783Z
+2026,4,832870,33,12/04/2026,18:00,Independência,Belo Horizonte,MG,59897,América,31514,Gremio Novorizontino - Saf,0.0,3.0,1332.0,16788.0,ok,2026-06-02T14:46:54.196783Z
+2026,4,832871,34,12/04/2026,18:00,Germano Kruger,Ponta Grossa,PR,20106,Operário,20800,Cuiabá,0.0,0.0,3512.0,94910.0,ok,2026-06-02T14:46:54.196783Z
+2026,4,832876,39,12/04/2026,20:00,Rei Pelé,Maceio,AL,20032,Crb,59896,Athletic SAF,2.0,3.0,2970.0,31926.0,ok,2026-06-02T14:46:54.196783Z
+2026,4,832873,36,12/04/2026,20:30,Antônio Accioly,Goiania,GO,62261,Atlético Goianiense Saf,62726,Londrina SAF,2.0,1.0,1834.0,21815.0,ok,2026-06-02T14:46:54.196783Z
+2026,5,832924,43,18/04/2026,18:00,Independência,Belo Horizonte,MG,59897,América,20010,Sport Recife,0.0,0.0,2351.0,33846.0,ok,2026-06-02T14:46:54.196783Z
+2026,5,832929,48,18/04/2026,18:00,Aflitos,Recife,PE,20023,Náutico,31790,Sao Bernardo,0.0,3.0,7316.0,227990.0,ok,2026-06-02T14:46:54.196783Z
+2026,5,832931,50,18/04/2026,18:30,Onésio Brasileiro Alvarenga,Goiania,GO,20079,Vila Nova,20106,Operário,2.0,1.0,5336.0,97960.0,ok,2026-06-02T14:46:54.196783Z
+2026,5,832928,47,18/04/2026,20:30,Ressacada,Florianopolis,SC,20058,Avaí,20037,Ponte Preta,1.0,2.0,6185.0,157895.0,ok,2026-06-02T14:46:54.196783Z
+2026,5,832930,49,18/04/2026,20:45,Rei Pelé,Maceio,AL,20032,Crb,20027,Juventude,0.0,1.0,2980.0,32727.6,ok,2026-06-02T14:46:54.196783Z
+2026,5,832925,44,19/04/2026,16:00,VGD,Londrina,PR,62726,Londrina SAF,20031,Ceará,0.0,0.0,3515.0,91975.0,ok,2026-06-02T14:46:54.196783Z
+2026,5,832922,41,19/04/2026,16:00,Santa Cruz,Ribeirao Preto,SP,56654,Botafogo,62261,Atlético Goianiense Saf,1.0,1.0,2722.0,63155.0,ok,2026-06-02T14:46:54.196783Z
+2026,5,832927,46,19/04/2026,18:00,Hailé Pinheiro,Goiania,GO,20028,Goiás,20800,Cuiabá,0.0,2.0,6499.0,113140.0,ok,2026-06-02T14:46:54.196783Z
+2026,5,832923,42,19/04/2026,20:00,Dr. Jorge Ismael de Biasi,Novo Horizonte,SP,31514,Gremio Novorizontino - Saf,59896,Athletic SAF,2.0,1.0,1239.0,18630.0,ok,2026-06-02T14:46:54.196783Z
+2026,5,832926,45,19/04/2026,20:00,Presidente Vargas,Fortaleza,CE,63238,Fortaleza SAF,20019,Criciúma,3.0,2.0,7604.0,80119.0,ok,2026-06-02T14:46:54.196783Z
+2026,6,832940,59,22/04/2026,21:30,Arena Pantanal,Cuiaba,MT,20800,Cuiabá,56654,Botafogo,1.0,1.0,1278.0,15569.0,ok,2026-06-02T14:46:54.196783Z
+2026,6,832932,51,24/04/2026,20:00,Moisés Lucarelli,Campinas,SP,20037,Ponte Preta,59897,América,1.0,0.0,4353.0,104270.0,ok,2026-06-02T14:46:54.196783Z
+2026,6,832939,58,25/04/2026,20:30,Ilha do Retiro,Recife,PE,20010,Sport Recife,31514,Gremio Novorizontino - Saf,1.0,0.0,12749.0,310220.0,ok,2026-06-02T14:46:54.196783Z
+2026,6,832941,60,25/04/2026,21:00,Alfredo Jaconi,Caxias do Sul,RS,20027,Juventude,62726,Londrina SAF,1.0,0.0,3206.0,55020.0,ok,2026-06-02T14:46:54.196783Z
+2026,6,832933,52,26/04/2026,16:00,1º de Maio,Sao Bernardo do Campo,SP,31790,Sao Bernardo,20028,Goiás,1.0,0.0,813.0,16370.0,ok,2026-06-02T14:46:54.196783Z
+2026,6,832935,54,26/04/2026,18:00,Germano Kruger,Ponta Grossa,PR,20106,Operário,63238,Fortaleza SAF,0.0,0.0,2171.0,55670.0,ok,2026-06-02T14:46:54.196783Z
+2026,6,832936,55,26/04/2026,18:00,Arena Castelão,Fortaleza,CE,20031,Ceará,20079,Vila Nova,3.0,3.0,10599.0,108659.0,ok,2026-06-02T14:46:54.196783Z
+2026,6,832937,56,26/04/2026,20:30,Antônio Accioly,Goiania,GO,62261,Atlético Goianiense Saf,20058,Avaí,2.0,1.0,2084.0,23745.0,ok,2026-06-02T14:46:54.196783Z
+2026,6,832938,57,26/04/2026,20:30,Heriberto Hulse,Criciuma,SC,20019,Criciúma,20032,Crb,3.0,1.0,7012.0,132580.0,ok,2026-06-02T14:46:54.196783Z
+2026,6,832934,53,27/04/2026,19:00,Arena Sicredi,Sao Joao del Rei,MG,59896,Athletic SAF,20023,Náutico,0.0,1.0,2700.0,32260.0,ok,2026-06-02T14:46:54.196783Z
+2026,7,832942,61,02/05/2026,16:00,Santa Cruz,Ribeirao Preto,SP,56654,Botafogo,20023,Náutico,1.0,1.0,3636.0,87450.0,ok,2026-06-02T14:46:54.196783Z
+2026,7,832950,69,02/05/2026,18:30,Arena Pantanal,Cuiaba,MT,20800,Cuiabá,20019,Criciúma,1.0,1.0,1743.0,21208.0,ok,2026-06-02T14:46:54.196783Z
+2026,7,832946,65,02/05/2026,20:30,Arena Castelão,Fortaleza,CE,63238,Fortaleza SAF,20028,Goiás,4.0,1.0,19050.0,225430.0,ok,2026-06-02T14:46:54.196783Z
+2026,7,832943,62,03/05/2026,16:00,1º de Maio,Sao Bernardo do Campo,SP,31790,Sao Bernardo,20037,Ponte Preta,3.0,0.0,846.0,18170.0,ok,2026-06-02T14:46:54.196783Z
+2026,7,832945,64,03/05/2026,16:00,Germano Kruger,Ponta Grossa,PR,20106,Operário,62726,Londrina SAF,3.0,0.0,3084.0,83210.0,ok,2026-06-02T14:46:54.196783Z
+2026,7,832949,68,03/05/2026,18:00,Ilha do Retiro,Recife,PE,20010,Sport Recife,20031,Ceará,2.0,0.0,15655.0,519460.0,ok,2026-06-02T14:46:54.196783Z
+2026,7,832947,66,03/05/2026,18:30,Antônio Accioly,Goiania,GO,62261,Atlético Goianiense Saf,20027,Juventude,0.0,0.0,2558.0,30440.0,ok,2026-06-02T14:46:54.196783Z
+2026,7,832948,67,03/05/2026,20:30,Ressacada,Florianopolis,SC,20058,Avaí,31514,Gremio Novorizontino - Saf,3.0,3.0,3937.0,88942.0,ok,2026-06-02T14:46:54.196783Z
+2026,7,832944,63,03/05/2026,20:30,Independência,Belo Horizonte,MG,59897,América,20032,Crb,1.0,2.0,1231.0,12518.0,ok,2026-06-02T14:46:54.196783Z
+2026,7,832951,70,04/05/2026,19:00,Onésio Brasileiro Alvarenga,Goiania,GO,20079,Vila Nova,59896,Athletic SAF,1.0,1.0,8717.0,167890.0,ok,2026-06-02T14:46:54.196783Z
+2026,8,832957,76,09/05/2026,16:00,Hailé Pinheiro,Goiania,GO,20028,Goiás,20079,Vila Nova,1.0,0.0,10469.0,181100.0,ok,2026-06-02T14:46:54.196783Z
+2026,8,832954,73,09/05/2026,18:00,Arena Sicredi,Sao Joao del Rei,MG,59896,Athletic SAF,20800,Cuiabá,0.0,0.0,3004.0,36610.0,ok,2026-06-02T14:46:54.196783Z
+2026,8,832952,71,09/05/2026,18:30,Moisés Lucarelli,Campinas,SP,20037,Ponte Preta,20010,Sport Recife,1.0,3.0,4803.0,124440.0,ok,2026-06-02T14:46:54.196783Z
+2026,8,832956,75,09/05/2026,19:00,Arena Castelão,Fortaleza,CE,20031,Ceará,62261,Atlético Goianiense Saf,0.0,1.0,6268.0,62584.0,ok,2026-06-02T14:46:54.196783Z
+2026,8,832960,79,09/05/2026,20:30,Rei Pelé,Maceio,AL,20032,Crb,20106,Operário,3.0,0.0,2607.0,27507.4,ok,2026-06-02T14:46:54.196783Z
+2026,8,832961,80,09/05/2026,21:15,Alfredo Jaconi,Caxias do Sul,RS,20027,Juventude,20019,Criciúma,0.0,0.0,2865.0,55560.0,ok,2026-06-02T14:46:54.196783Z
+2026,8,832959,78,10/05/2026,16:00,Aflitos,Recife,PE,20023,Náutico,59897,América,4.0,0.0,7450.0,224280.0,ok,2026-06-02T14:46:54.196783Z
+2026,8,832958,77,10/05/2026,18:30,Ressacada,Florianopolis,SC,20058,Avaí,63238,Fortaleza SAF,0.0,0.0,5270.0,124224.0,ok,2026-06-02T14:46:54.196783Z
+2026,8,832953,72,10/05/2026,19:30,Dr. Jorge Ismael de Biasi,Novo Horizonte,SP,31514,Gremio Novorizontino - Saf,56654,Botafogo,1.0,0.0,353.0,6250.0,ok,2026-06-02T14:46:54.196783Z
+2026,8,832955,74,12/05/2026,19:30,VGD,Londrina,PR,62726,Londrina SAF,31790,Sao Bernardo,1.0,3.0,2113.0,51340.0,ok,2026-06-02T14:46:54.196783Z
+2026,9,832963,82,16/05/2026,16:00,1º de Maio,Sao Bernardo do Campo,SP,31790,Sao Bernardo,59897,América,1.0,1.0,949.0,22480.0,ok,2026-06-02T14:46:54.196783Z
+2026,9,832965,84,16/05/2026,16:00,Germano Kruger,Ponta Grossa,PR,20106,Operário,20023,Náutico,2.0,6.0,2527.0,58140.0,ok,2026-06-02T14:46:54.196783Z
+2026,9,832967,86,16/05/2026,18:30,Hailé Pinheiro,Goiania,GO,20028,Goiás,56654,Botafogo,1.0,0.0,4978.0,76110.0,ok,2026-06-02T14:46:54.196783Z
+2026,9,832970,89,16/05/2026,20:30,Arena Pantanal,Cuiaba,MT,20800,Cuiabá,31514,Gremio Novorizontino - Saf,0.0,0.0,1506.0,16599.0,ok,2026-06-02T14:46:54.196783Z
+2026,9,832964,83,17/05/2026,16:00,Arena Sicredi,Sao Joao del Rei,MG,59896,Athletic SAF,20027,Juventude,1.0,1.0,2973.0,32260.0,ok,2026-06-02T14:46:54.196783Z
+2026,9,832971,90,17/05/2026,18:00,Onésio Brasileiro Alvarenga,Goiania,GO,20079,Vila Nova,20058,Avaí,2.0,0.0,5290.0,93460.0,ok,2026-06-02T14:46:54.196783Z
+2026,9,832968,87,17/05/2026,18:30,Heriberto Hulse,Criciuma,SC,20019,Criciúma,62261,Atlético Goianiense Saf,1.0,1.0,7792.0,141640.0,ok,2026-06-02T14:46:54.196783Z
+2026,9,832966,85,17/05/2026,18:30,Arena Castelão,Fortaleza,CE,20031,Ceará,63238,Fortaleza SAF,2.0,1.0,20362.0,456652.0,ok,2026-06-02T14:46:54.196783Z
+2026,9,832969,88,17/05/2026,20:30,Ilha do Retiro,Recife,PE,20010,Sport Recife,20032,Crb,1.0,2.0,18444.0,516708.0,ok,2026-06-02T14:46:54.196783Z
+2026,9,832962,81,18/05/2026,19:00,Moisés Lucarelli,Campinas,SP,20037,Ponte Preta,62726,Londrina SAF,1.0,4.0,2843.0,68200.0,ok,2026-06-02T14:46:54.196783Z
+2026,10,832979,98,22/05/2026,19:00,Aflitos,Recife,PE,20023,Náutico,20800,Cuiabá,1.0,0.0,11703.0,381059.0,ok,2026-06-02T14:46:54.196783Z
+2026,10,832973,92,23/05/2026,16:00,Dr. Jorge Ismael de Biasi,Novo Horizonte,SP,31514,Gremio Novorizontino - Saf,20031,Ceará,2.0,1.0,1117.0,17900.0,ok,2026-06-02T14:46:54.196783Z
+2026,10,832976,95,23/05/2026,18:30,Arena Castelão,Fortaleza,CE,63238,Fortaleza SAF,62726,Londrina SAF,3.0,0.0,7666.0,88552.0,ok,2026-06-02T14:46:54.196783Z
+2026,10,832981,100,23/05/2026,20:30,Alfredo Jaconi,Caxias do Sul,RS,20027,Juventude,20010,Sport Recife,0.0,1.0,3328.0,61515.0,ok,2026-06-02T14:46:54.196783Z
+2026,10,832977,96,24/05/2026,16:00,Antônio Accioly,Goiania,GO,62261,Atlético Goianiense Saf,31790,Sao Bernardo,0.0,1.0,2941.0,37445.0,ok,2026-06-02T14:46:54.196783Z
+2026,10,832980,99,24/05/2026,16:30,Rei Pelé,Maceio,AL,20032,Crb,20037,Ponte Preta,4.0,2.0,7101.0,77415.0,ok,2026-06-02T14:46:54.196783Z
+2026,10,832974,93,24/05/2026,18:30,Independência,Belo Horizonte,MG,59897,América,20079,Vila Nova,1.0,2.0,1602.0,19911.0,ok,2026-06-02T14:46:54.196783Z
+2026,10,832978,97,24/05/2026,19:00,Ressacada,Florianopolis,SC,20058,Avaí,20028,Goiás,0.0,2.0,3473.0,75397.0,ok,2026-06-02T14:46:54.196783Z
+2026,10,832975,94,24/05/2026,20:30,Germano Kruger,Ponta Grossa,PR,20106,Operário,20019,Criciúma,1.0,1.0,1182.0,27020.0,ok,2026-06-02T14:46:54.196783Z
+2026,10,832972,91,25/05/2026,19:00,Santa Cruz,Ribeirao Preto,SP,56654,Botafogo,59896,Athletic SAF,1.0,2.0,2014.0,47210.0,ok,2026-06-02T14:46:54.196783Z
+2026,11,832991,110,29/05/2026,21:00,Alfredo Jaconi,Caxias do Sul,RS,20027,Juventude,59897,América,3.0,0.0,2821.0,46845.0,ok,2026-06-02T14:46:54.196783Z
+2026,11,832987,106,30/05/2026,16:00,Antônio Accioly,Goiania,GO,62261,Atlético Goianiense Saf,20028,Goiás,1.0,1.0,3699.0,49960.0,ok,2026-06-02T14:46:54.196783Z
+2026,11,832988,107,30/05/2026,16:00,Ressacada,Florianopolis,SC,20058,Avaí,20019,Criciúma,1.0,2.0,4585.0,112892.0,ok,2026-06-02T14:46:54.196783Z
+2026,11,832984,103,30/05/2026,18:00,Arena Sicredi,Sao Joao del Rei,MG,59896,Athletic SAF,63238,Fortaleza SAF,1.0,0.0,,,download_failed,2026-06-02T14:46:54.196783Z
+2026,11,832989,108,30/05/2026,20:30,Ilha do Retiro,Recife,PE,20010,Sport Recife,20023,Náutico,2.0,0.0,,,download_failed,2026-06-02T14:46:54.196783Z
+2026,11,832985,104,31/05/2026,11:00,VGD,Londrina,PR,62726,Londrina SAF,20079,Vila Nova,0.0,1.0,3306.0,88085.0,ok,2026-06-02T14:46:54.196783Z
+2026,11,832983,102,31/05/2026,11:00,1º de Maio,Sao Bernardo do Campo,SP,31790,Sao Bernardo,31514,Gremio Novorizontino - Saf,1.0,1.0,,,download_failed,2026-06-02T14:46:54.196783Z
+2026,11,832986,105,31/05/2026,16:00,Arena Castelão,Fortaleza,CE,20031,Ceará,20106,Operário,1.0,2.0,4356.0,31575.0,ok,2026-06-02T14:46:54.196783Z
+2026,11,832990,109,31/05/2026,20:30,Arena Pantanal,Cuiaba,MT,20800,Cuiabá,20032,Crb,2.0,0.0,,,download_failed,2026-06-02T14:46:54.196783Z
+2026,11,832982,101,01/06/2026,19:00,Moisés Lucarelli,Campinas,SP,20037,Ponte Preta,56654,Botafogo,0.0,0.0,,,download_failed,2026-06-02T14:46:54.196783Z
+2026,17,833042,161,A Definir,,-  -,,,20037,Ponte Preta,20019,Criciúma,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,17,833043,162,A Definir,,-  -,,,31790,Sao Bernardo,20800,Cuiabá,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,17,833044,163,A Definir,,-  -,,,59897,América,62726,Londrina SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,17,833045,164,A Definir,,-  -,,,20106,Operário,31514,Gremio Novorizontino - Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,17,833046,165,A Definir,,-  -,,,20031,Ceará,59896,Athletic SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,17,833047,166,A Definir,,-  -,,,62261,Atlético Goianiense Saf,63238,Fortaleza SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,17,833048,167,A Definir,,-  -,,,20058,Avaí,20023,Náutico,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,17,833049,168,A Definir,,-  -,,,20010,Sport Recife,56654,Botafogo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,17,833050,169,A Definir,,-  -,,,20032,Crb,20028,Goiás,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,17,833051,170,A Definir,,-  -,,,20027,Juventude,20079,Vila Nova,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,18,833052,171,A Definir,,-  -,,,20037,Ponte Preta,20028,Goiás,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,18,833053,172,A Definir,,-  -,,,31790,Sao Bernardo,20058,Avaí,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,18,833054,173,A Definir,,-  -,,,59897,América,20031,Ceará,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,18,833055,174,A Definir,,-  -,,,62726,Londrina SAF,56654,Botafogo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,18,833056,175,A Definir,,-  -,,,63238,Fortaleza SAF,31514,Gremio Novorizontino - Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,18,833057,176,A Definir,,-  -,,,62261,Atlético Goianiense Saf,59896,Athletic SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,18,833058,177,A Definir,,-  -,,,20019,Criciúma,20079,Vila Nova,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,18,833059,178,A Definir,,-  -,,,20010,Sport Recife,20106,Operário,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,18,833060,179,A Definir,,-  -,,,20032,Crb,20023,Náutico,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,18,833061,180,A Definir,,-  -,,,20027,Juventude,20800,Cuiabá,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,19,833062,181,A Definir,,-  -,,,56654,Botafogo,20027,Juventude,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,19,833063,182,A Definir,,-  -,,,31514,Gremio Novorizontino - Saf,20019,Criciúma,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,19,833064,183,A Definir,,-  -,,,59896,Athletic SAF,31790,Sao Bernardo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,19,833065,184,A Definir,,-  -,,,20106,Operário,20037,Ponte Preta,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,19,833066,185,A Definir,,-  -,,,20031,Ceará,20032,Crb,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,19,833067,186,A Definir,,-  -,,,20028,Goiás,20010,Sport Recife,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,19,833068,187,A Definir,,-  -,,,20058,Avaí,59897,América,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,19,833069,188,A Definir,,-  -,,,20023,Náutico,62726,Londrina SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,19,833070,189,A Definir,,-  -,,,20800,Cuiabá,62261,Atlético Goianiense Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,19,833071,190,A Definir,,-  -,,,20079,Vila Nova,63238,Fortaleza SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,20,833072,191,A Definir,,-  -,,,20037,Ponte Preta,59896,Athletic SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,20,833073,192,A Definir,,-  -,,,31790,Sao Bernardo,20031,Ceará,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,20,833074,193,A Definir,,-  -,,,59897,América,20028,Goiás,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,20,833075,194,A Definir,,-  -,,,62726,Londrina SAF,31514,Gremio Novorizontino - Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,20,833076,195,A Definir,,-  -,,,63238,Fortaleza SAF,56654,Botafogo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,20,833077,196,A Definir,,-  -,,,62261,Atlético Goianiense Saf,20106,Operário,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,20,833078,197,A Definir,,-  -,,,20019,Criciúma,20023,Náutico,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,20,833079,198,A Definir,,-  -,,,20010,Sport Recife,20800,Cuiabá,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,20,833080,199,A Definir,,-  -,,,20032,Crb,20079,Vila Nova,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,20,833081,200,A Definir,,-  -,,,20027,Juventude,20058,Avaí,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,21,833082,201,A Definir,,-  -,,,56654,Botafogo,59897,América,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,21,833083,202,A Definir,,-  -,,,31514,Gremio Novorizontino - Saf,20027,Juventude,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,21,833084,203,A Definir,,-  -,,,59896,Athletic SAF,20019,Criciúma,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,21,833085,204,A Definir,,-  -,,,20106,Operário,31790,Sao Bernardo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,21,833086,205,A Definir,,-  -,,,20031,Ceará,20037,Ponte Preta,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,21,833087,206,A Definir,,-  -,,,20028,Goiás,62726,Londrina SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,21,833088,207,A Definir,,-  -,,,20058,Avaí,20032,Crb,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,21,833089,208,A Definir,,-  -,,,20023,Náutico,62261,Atlético Goianiense Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,21,833090,209,A Definir,,-  -,,,20800,Cuiabá,63238,Fortaleza SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,21,833091,210,A Definir,,-  -,,,20079,Vila Nova,20010,Sport Recife,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,22,833092,211,A Definir,,-  -,,,20037,Ponte Preta,20023,Náutico,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,22,833093,212,A Definir,,-  -,,,31790,Sao Bernardo,56654,Botafogo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,22,833094,213,A Definir,,-  -,,,59897,América,59896,Athletic SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,22,833095,214,A Definir,,-  -,,,20106,Operário,20058,Avaí,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,22,833096,215,A Definir,,-  -,,,20031,Ceará,20800,Cuiabá,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,22,833097,216,A Definir,,-  -,,,62261,Atlético Goianiense Saf,20079,Vila Nova,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,22,833098,217,A Definir,,-  -,,,20019,Criciúma,20028,Goiás,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,22,833099,218,A Definir,,-  -,,,20010,Sport Recife,62726,Londrina SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,22,833100,219,A Definir,,-  -,,,20032,Crb,31514,Gremio Novorizontino - Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,22,833101,220,A Definir,,-  -,,,20027,Juventude,63238,Fortaleza SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,23,833102,221,A Definir,,-  -,,,56654,Botafogo,20019,Criciúma,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,23,833103,222,A Definir,,-  -,,,31514,Gremio Novorizontino - Saf,59897,América,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,23,833104,223,A Definir,,-  -,,,59896,Athletic SAF,20032,Crb,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,23,833105,224,A Definir,,-  -,,,62726,Londrina SAF,62261,Atlético Goianiense Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,23,833106,225,A Definir,,-  -,,,63238,Fortaleza SAF,31790,Sao Bernardo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,23,833107,226,A Definir,,-  -,,,20028,Goiás,20027,Juventude,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,23,833108,227,A Definir,,-  -,,,20058,Avaí,20010,Sport Recife,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,23,833109,228,A Definir,,-  -,,,20023,Náutico,20031,Ceará,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,23,833110,229,A Definir,,-  -,,,20800,Cuiabá,20106,Operário,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,23,833111,230,A Definir,,-  -,,,20079,Vila Nova,20037,Ponte Preta,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,24,833112,231,A Definir,,-  -,,,20037,Ponte Preta,20058,Avaí,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,24,833113,232,A Definir,,-  -,,,31790,Sao Bernardo,20023,Náutico,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,24,833114,233,A Definir,,-  -,,,59896,Athletic SAF,31514,Gremio Novorizontino - Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,24,833115,234,A Definir,,-  -,,,20106,Operário,20079,Vila Nova,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,24,833116,235,A Definir,,-  -,,,20031,Ceará,62726,Londrina SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,24,833117,236,A Definir,,-  -,,,62261,Atlético Goianiense Saf,56654,Botafogo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,24,833118,237,A Definir,,-  -,,,20019,Criciúma,63238,Fortaleza SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,24,833119,238,A Definir,,-  -,,,20010,Sport Recife,59897,América,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,24,833120,239,A Definir,,-  -,,,20800,Cuiabá,20028,Goiás,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,24,833121,240,A Definir,,-  -,,,20027,Juventude,20032,Crb,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,25,833122,241,A Definir,,-  -,,,56654,Botafogo,20800,Cuiabá,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,25,833123,242,A Definir,,-  -,,,31514,Gremio Novorizontino - Saf,20010,Sport Recife,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,25,833124,243,A Definir,,-  -,,,59897,América,20037,Ponte Preta,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,25,833125,244,A Definir,,-  -,,,62726,Londrina SAF,20027,Juventude,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,25,833126,245,A Definir,,-  -,,,63238,Fortaleza SAF,20106,Operário,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,25,833127,246,A Definir,,-  -,,,20028,Goiás,31790,Sao Bernardo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,25,833128,247,A Definir,,-  -,,,20058,Avaí,62261,Atlético Goianiense Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,25,833129,248,A Definir,,-  -,,,20023,Náutico,59896,Athletic SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,25,833130,249,A Definir,,-  -,,,20032,Crb,20019,Criciúma,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,25,833131,250,A Definir,,-  -,,,20079,Vila Nova,20031,Ceará,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,26,833132,251,A Definir,,-  -,,,20037,Ponte Preta,31790,Sao Bernardo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,26,833133,252,A Definir,,-  -,,,31514,Gremio Novorizontino - Saf,20058,Avaí,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,26,833134,253,A Definir,,-  -,,,59896,Athletic SAF,20079,Vila Nova,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,26,833135,254,A Definir,,-  -,,,62726,Londrina SAF,20106,Operário,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,26,833136,255,A Definir,,-  -,,,20031,Ceará,20010,Sport Recife,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,26,833137,256,A Definir,,-  -,,,20028,Goiás,63238,Fortaleza SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,26,833138,257,A Definir,,-  -,,,20019,Criciúma,20800,Cuiabá,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,26,833139,258,A Definir,,-  -,,,20023,Náutico,56654,Botafogo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,26,833140,259,A Definir,,-  -,,,20032,Crb,59897,América,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,26,833141,260,A Definir,,-  -,,,20027,Juventude,62261,Atlético Goianiense Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,27,833142,261,A Definir,,-  -,,,56654,Botafogo,31514,Gremio Novorizontino - Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,27,833143,262,A Definir,,-  -,,,31790,Sao Bernardo,62726,Londrina SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,27,833144,263,A Definir,,-  -,,,59897,América,20023,Náutico,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,27,833145,264,A Definir,,-  -,,,20106,Operário,20032,Crb,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,27,833146,265,A Definir,,-  -,,,63238,Fortaleza SAF,20058,Avaí,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,27,833147,266,A Definir,,-  -,,,62261,Atlético Goianiense Saf,20031,Ceará,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,27,833148,267,A Definir,,-  -,,,20019,Criciúma,20027,Juventude,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,27,833149,268,A Definir,,-  -,,,20010,Sport Recife,20037,Ponte Preta,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,27,833150,269,A Definir,,-  -,,,20800,Cuiabá,59896,Athletic SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,27,833151,270,A Definir,,-  -,,,20079,Vila Nova,20028,Goiás,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,28,833152,271,A Definir,,-  -,,,56654,Botafogo,20028,Goiás,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,28,833153,272,A Definir,,-  -,,,31514,Gremio Novorizontino - Saf,20800,Cuiabá,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,28,833154,273,A Definir,,-  -,,,59897,América,31790,Sao Bernardo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,28,833155,274,A Definir,,-  -,,,62726,Londrina SAF,20037,Ponte Preta,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,28,833156,275,A Definir,,-  -,,,63238,Fortaleza SAF,20031,Ceará,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,28,833157,276,A Definir,,-  -,,,62261,Atlético Goianiense Saf,20019,Criciúma,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,28,833159,277,A Definir,,-  -,,,20058,Avaí,20079,Vila Nova,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,28,833160,278,A Definir,,-  -,,,20023,Náutico,20106,Operário,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,28,833162,279,A Definir,,-  -,,,20032,Crb,20010,Sport Recife,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,28,833163,280,A Definir,,-  -,,,20027,Juventude,59896,Athletic SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,29,833166,281,A Definir,,-  -,,,20037,Ponte Preta,20032,Crb,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,29,833167,282,A Definir,,-  -,,,31790,Sao Bernardo,62261,Atlético Goianiense Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,29,833168,283,A Definir,,-  -,,,59896,Athletic SAF,56654,Botafogo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,29,833169,284,A Definir,,-  -,,,62726,Londrina SAF,63238,Fortaleza SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,29,833170,285,A Definir,,-  -,,,20031,Ceará,31514,Gremio Novorizontino - Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,29,833171,286,A Definir,,-  -,,,20028,Goiás,20058,Avaí,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,29,833172,287,A Definir,,-  -,,,20019,Criciúma,20106,Operário,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,29,833173,288,A Definir,,-  -,,,20010,Sport Recife,20027,Juventude,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,29,833174,289,A Definir,,-  -,,,20800,Cuiabá,20023,Náutico,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,29,833175,290,A Definir,,-  -,,,20079,Vila Nova,59897,América,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,30,833182,291,A Definir,,-  -,,,56654,Botafogo,20037,Ponte Preta,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,30,833183,292,A Definir,,-  -,,,31514,Gremio Novorizontino - Saf,31790,Sao Bernardo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,30,833184,293,A Definir,,-  -,,,59897,América,20027,Juventude,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,30,833185,294,A Definir,,-  -,,,20106,Operário,20031,Ceará,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,30,833186,295,A Definir,,-  -,,,63238,Fortaleza SAF,59896,Athletic SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,30,833187,296,A Definir,,-  -,,,20028,Goiás,62261,Atlético Goianiense Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,30,833188,297,A Definir,,-  -,,,20019,Criciúma,20058,Avaí,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,30,833189,298,A Definir,,-  -,,,20023,Náutico,20010,Sport Recife,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,30,833190,299,A Definir,,-  -,,,20032,Crb,20800,Cuiabá,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,30,833191,300,A Definir,,-  -,,,20079,Vila Nova,62726,Londrina SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,31,833192,301,A Definir,,-  -,,,56654,Botafogo,20079,Vila Nova,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,31,833193,302,A Definir,,-  -,,,31790,Sao Bernardo,20032,Crb,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,31,833194,303,A Definir,,-  -,,,59896,Athletic SAF,20010,Sport Recife,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,31,833195,304,A Definir,,-  -,,,62726,Londrina SAF,20019,Criciúma,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,31,833196,305,A Definir,,-  -,,,63238,Fortaleza SAF,20023,Náutico,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,31,833197,306,A Definir,,-  -,,,62261,Atlético Goianiense Saf,59897,América,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,31,833198,307,A Definir,,-  -,,,20058,Avaí,20031,Ceará,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,31,833199,308,A Definir,,-  -,,,31514,Gremio Novorizontino - Saf,20028,Goiás,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,31,833200,309,A Definir,,-  -,,,20800,Cuiabá,20037,Ponte Preta,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,31,833201,310,A Definir,,-  -,,,20027,Juventude,20106,Operário,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,32,833202,311,A Definir,,-  -,,,20037,Ponte Preta,20027,Juventude,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,32,833203,312,A Definir,,-  -,,,20010,Sport Recife,31790,Sao Bernardo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,32,833204,313,A Definir,,-  -,,,59897,América,63238,Fortaleza SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,32,833205,314,A Definir,,-  -,,,20106,Operário,56654,Botafogo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,32,833206,315,A Definir,,-  -,,,20031,Ceará,20019,Criciúma,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,32,833207,316,A Definir,,-  -,,,20028,Goiás,59896,Athletic SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,32,833208,317,A Definir,,-  -,,,20058,Avaí,62726,Londrina SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,32,833209,318,A Definir,,-  -,,,20023,Náutico,31514,Gremio Novorizontino - Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,32,833210,319,A Definir,,-  -,,,20032,Crb,62261,Atlético Goianiense Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,32,833211,320,A Definir,,-  -,,,20079,Vila Nova,20800,Cuiabá,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,33,833212,321,A Definir,,-  -,,,56654,Botafogo,20031,Ceará,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,33,833213,322,A Definir,,-  -,,,31514,Gremio Novorizontino - Saf,20037,Ponte Preta,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,33,833214,323,A Definir,,-  -,,,59896,Athletic SAF,62726,Londrina SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,33,833215,324,A Definir,,-  -,,,20106,Operário,20028,Goiás,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,33,833216,325,A Definir,,-  -,,,63238,Fortaleza SAF,20032,Crb,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,33,833217,326,A Definir,,-  -,,,62261,Atlético Goianiense Saf,20010,Sport Recife,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,33,833218,327,A Definir,,-  -,,,20019,Criciúma,59897,América,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,33,833219,328,A Definir,,-  -,,,20023,Náutico,20079,Vila Nova,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,33,833220,329,A Definir,,-  -,,,20800,Cuiabá,20058,Avaí,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,33,833221,330,A Definir,,-  -,,,20027,Juventude,31790,Sao Bernardo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,34,833242,331,A Definir,,-  -,,,20037,Ponte Preta,62261,Atlético Goianiense Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,34,833243,332,A Definir,,-  -,,,31790,Sao Bernardo,20019,Criciúma,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,34,833244,333,A Definir,,-  -,,,59897,América,20106,Operário,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,34,833245,334,A Definir,,-  -,,,62726,Londrina SAF,20800,Cuiabá,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,34,833246,335,A Definir,,-  -,,,20031,Ceará,20027,Juventude,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,34,833247,336,A Definir,,-  -,,,20028,Goiás,20023,Náutico,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,34,833248,337,A Definir,,-  -,,,20058,Avaí,59896,Athletic SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,34,833249,338,A Definir,,-  -,,,20010,Sport Recife,63238,Fortaleza SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,34,833250,339,A Definir,,-  -,,,20032,Crb,56654,Botafogo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,34,833251,340,A Definir,,-  -,,,20079,Vila Nova,31514,Gremio Novorizontino - Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,35,833252,341,A Definir,,-  -,,,20037,Ponte Preta,63238,Fortaleza SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,35,833253,342,A Definir,,-  -,,,31790,Sao Bernardo,20079,Vila Nova,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,35,833254,343,A Definir,,-  -,,,59897,América,20800,Cuiabá,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,35,833255,344,A Definir,,-  -,,,20106,Operário,59896,Athletic SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,35,833256,345,A Definir,,-  -,,,20031,Ceará,20028,Goiás,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,35,833257,346,A Definir,,-  -,,,62261,Atlético Goianiense Saf,31514,Gremio Novorizontino - Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,35,833258,347,A Definir,,-  -,,,20058,Avaí,56654,Botafogo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,35,833259,348,A Definir,,-  -,,,20010,Sport Recife,20019,Criciúma,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,35,833260,349,A Definir,,-  -,,,20032,Crb,62726,Londrina SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,35,833261,350,A Definir,,-  -,,,20027,Juventude,20023,Náutico,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,36,833262,351,A Definir,,-  -,,,56654,Botafogo,20010,Sport Recife,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,36,833263,352,A Definir,,-  -,,,31514,Gremio Novorizontino - Saf,20106,Operário,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,36,833264,353,A Definir,,-  -,,,59896,Athletic SAF,20031,Ceará,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,36,833265,354,A Definir,,-  -,,,62726,Londrina SAF,59897,América,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,36,833266,355,A Definir,,-  -,,,63238,Fortaleza SAF,62261,Atlético Goianiense Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,36,833267,356,A Definir,,-  -,,,20028,Goiás,20032,Crb,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,36,833268,357,A Definir,,-  -,,,20019,Criciúma,20037,Ponte Preta,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,36,833269,358,A Definir,,-  -,,,20023,Náutico,20058,Avaí,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,36,833270,359,A Definir,,-  -,,,20800,Cuiabá,31790,Sao Bernardo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,36,833271,360,A Definir,,-  -,,,20079,Vila Nova,20027,Juventude,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,37,833272,361,A Definir,,-  -,,,56654,Botafogo,62726,Londrina SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,37,833273,362,A Definir,,-  -,,,31514,Gremio Novorizontino - Saf,63238,Fortaleza SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,37,833274,363,A Definir,,-  -,,,59896,Athletic SAF,62261,Atlético Goianiense Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,37,833275,364,A Definir,,-  -,,,20106,Operário,20010,Sport Recife,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,37,833276,365,A Definir,,-  -,,,20031,Ceará,59897,América,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,37,833277,366,A Definir,,-  -,,,20028,Goiás,20037,Ponte Preta,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,37,833278,367,A Definir,,-  -,,,20058,Avaí,31790,Sao Bernardo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,37,833279,368,A Definir,,-  -,,,20023,Náutico,20032,Crb,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,37,833280,369,A Definir,,-  -,,,20800,Cuiabá,20027,Juventude,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,37,833281,370,A Definir,,-  -,,,20079,Vila Nova,20019,Criciúma,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,38,833282,371,A Definir,,-  -,,,20037,Ponte Preta,20106,Operário,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,38,833283,372,A Definir,,-  -,,,31790,Sao Bernardo,59896,Athletic SAF,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,38,833284,373,A Definir,,-  -,,,59897,América,20058,Avaí,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,38,833285,374,A Definir,,-  -,,,62726,Londrina SAF,20023,Náutico,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,38,833286,375,A Definir,,-  -,,,63238,Fortaleza SAF,20079,Vila Nova,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,38,833287,376,A Definir,,-  -,,,62261,Atlético Goianiense Saf,20800,Cuiabá,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,38,833288,377,A Definir,,-  -,,,20019,Criciúma,31514,Gremio Novorizontino - Saf,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,38,833289,378,A Definir,,-  -,,,20010,Sport Recife,20028,Goiás,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,38,833290,379,A Definir,,-  -,,,20032,Crb,20031,Ceará,,,,,sem_boletim,2026-06-02T14:46:54.196783Z
+2026,38,833291,380,A Definir,,-  -,,,20027,Juventude,56654,Botafogo,,,,,sem_boletim,2026-06-02T14:46:54.196783Z

@@ -1,0 +1,193 @@
+season,competition,round,match_code,event_id,match_label,match_date_utc,home_team,home_team_key,away_team,away_team_key,home_score,away_score,status,venue_name,source_url,data_status,last_updated_at,transformed_at
+2025,serie_b,1,kOsoIJc,13525840,Goiás 1.0 x 0.0 Amazonas FC,2025-04-04T22:00:00Z,Goiás,goias,Amazonas FC,amazonas-fc,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,1,JOsJRp,13525933,Criciúma 1.0 x 2.0 Operário-PR,2025-04-05T00:00:00Z,Criciúma,criciuma,Operário-PR,operario-pr,1.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,1,rOsXO,13525850,Paysandu SC 1.0 x 2.0 Athletico,2025-04-05T00:00:00Z,Paysandu SC,paysandu-sc,Athletico,athletico,1.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,1,VLisHPi,13525835,CRB 1.0 x 0.0 Chapecoense,2025-04-05T19:00:00Z,CRB,crb,Chapecoense,chapecoense,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,1,HOswP,13525935,Coritiba 1.0 x 0.0 Vila Nova FC,2025-04-05T19:00:00Z,Coritiba,coritiba,Vila Nova FC,vila-nova,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,1,yOsEO,13525862,América Mineiro 1.0 x 0.0 Botafogo-SP,2025-04-05T21:30:00Z,América Mineiro,america-mg,Botafogo-SP,botafogo-sp,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,1,mPsKfo,13525845,Ferroviária 1.0 x 1.0 Remo,2025-04-06T22:00:00Z,Ferroviária,ferroviaria,Remo,remo,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,1,HOcscJu,13525844,Volta Redonda 0.0 x 1.0 Cuiabá,2025-04-06T22:00:00Z,Volta Redonda,volta-redonda,Cuiabá,cuiaba,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,1,pWcsokeb,13525934,Avaí 1.0 x 1.0 Grêmio Novorizontino,2025-04-06T23:00:00Z,Avaí,avai,Grêmio Novorizontino,novorizontino,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,1,oWcsAfMc,13525848,Atlético Goianiense 4.0 x 2.0 Athletic Club,2025-04-07T22:00:00Z,Atlético Goianiense,atletico-go,Athletic Club,athletic-club,4.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,21,KfosoIJc,13616283,Ferroviária 2.0 x 1.0 Amazonas FC,2025-08-08T22:00:00Z,Ferroviária,ferroviaria,Amazonas FC,amazonas-fc,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,21,HOsVLi,13616275,Coritiba 0.0 x 0.0 Chapecoense,2025-08-09T00:35:00Z,Coritiba,coritiba,Chapecoense,chapecoense,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,21,rOsJO,13616280,Criciúma ? x ? Athletico,2025-08-09T18:00:00Z,Criciúma,criciuma,Athletico,athletico,,,postponed,,,scheduled,,2026-05-07T17:00:43.492970Z
+2025,serie_b,21,yOsmP,13616282,América Mineiro 0.0 x 1.0 Remo,2025-08-09T19:00:00Z,América Mineiro,america-mg,Remo,remo,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,21,kOsJRp,13616276,Goiás 2.0 x 1.0 Operário-PR,2025-08-09T21:30:00Z,Goiás,goias,Operário-PR,operario-pr,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,21,HOcsokeb,13616284,Volta Redonda 0.0 x 0.0 Grêmio Novorizontino,2025-08-09T23:30:00Z,Volta Redonda,volta-redonda,Grêmio Novorizontino,novorizontino,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,21,pWcscJu,13616279,Avaí 2.0 x 0.0 Cuiabá,2025-08-10T19:00:00Z,Avaí,avai,Cuiabá,cuiaba,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,21,EOsoWc,13616277,Atlético Goianiense 2.0 x 0.0 Botafogo-SP,2025-08-10T21:30:00Z,Atlético Goianiense,atletico-go,Botafogo-SP,botafogo-sp,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,21,rOsJO,14336256,Criciúma 4.0 x 2.0 Athletico,2025-08-11T22:00:00Z,Criciúma,criciuma,Athletico,athletico,4.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,21,XOswP,13616278,Paysandu SC 0.0 x 1.0 Vila Nova FC,2025-08-12T00:30:00Z,Paysandu SC,paysandu-sc,Vila Nova FC,vila-nova,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,21,HPisAfMc,13616281,CRB 1.0 x 0.0 Athletic Club,2025-08-12T22:30:00Z,CRB,crb,Athletic Club,athletic-club,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,22,HOsokeb,13616294,Grêmio Novorizontino 1.0 x 2.0 Coritiba,2025-08-15T00:35:00Z,Grêmio Novorizontino,novorizontino,Coritiba,coritiba,1.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,22,HOcsHPi,13616285,Volta Redonda ? x ? CRB,2025-08-15T12:00:00Z,Volta Redonda,volta-redonda,CRB,crb,,,postponed,,,scheduled,,2026-05-07T17:00:43.492970Z
+2025,serie_b,22,yOsoIJc,13616292,Amazonas FC 2.0 x 2.0 América Mineiro,2025-08-15T23:00:00Z,Amazonas FC,amazonas-fc,América Mineiro,america-mg,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,22,EOsmP,13616289,Remo 1.0 x 1.0 Botafogo-SP,2025-08-16T19:00:00Z,Remo,remo,Botafogo-SP,botafogo-sp,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,22,kOswP,13616287,Vila Nova FC 2.0 x 0.0 Goiás,2025-08-16T21:30:00Z,Vila Nova FC,vila-nova,Goiás,goias,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,22,rOscJu,13616286,Athletico 1.0 x 1.0 Cuiabá,2025-08-16T23:30:00Z,Athletico,athletico,Cuiabá,cuiaba,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,22,XOsVLi,13616290,Chapecoense 2.0 x 0.0 Paysandu SC,2025-08-17T19:00:00Z,Chapecoense,chapecoense,Paysandu SC,paysandu-sc,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,22,oWcsKfo,13616288,Atlético Goianiense 1.0 x 3.0 Ferroviária,2025-08-17T21:30:00Z,Atlético Goianiense,atletico-go,Ferroviária,ferroviaria,1.0,3.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,22,HOcsHPi,14242150,Volta Redonda 0.0 x 1.0 CRB,2025-08-18T22:00:00Z,Volta Redonda,volta-redonda,CRB,crb,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,22,JOsAfMc,13616293,Athletic Club 1.0 x 1.0 Criciúma,2025-08-19T00:00:00Z,Athletic Club,athletic-club,Criciúma,criciuma,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,22,pWcsJRp,13616291,Operário-PR 0.0 x 0.0 Avaí,2025-08-19T22:30:00Z,Operário-PR,operario-pr,Avaí,avai,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,23,VLisAfMc,13616302,Athletic Club 0.0 x 4.0 Chapecoense,2025-08-22T22:00:00Z,Athletic Club,athletic-club,Chapecoense,chapecoense,0.0,4.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,23,JOsokeb,13616300,Criciúma 2.0 x 0.0 Grêmio Novorizontino,2025-08-23T00:35:00Z,Criciúma,criciuma,Grêmio Novorizontino,novorizontino,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,23,HOsmP,13616295,Coritiba 0.0 x 0.0 Remo,2025-08-23T19:00:00Z,Coritiba,coritiba,Remo,remo,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,23,kOsyO,13616296,Goiás 1.0 x 0.0 América Mineiro,2025-08-23T21:00:00Z,Goiás,goias,América Mineiro,america-mg,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,23,rOsHPi,13616301,CRB 0.0 x 1.0 Athletico,2025-08-23T23:30:00Z,CRB,crb,Athletico,athletico,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,23,XOsJRp,13616298,Paysandu SC 1.0 x 2.0 Operário-PR,2025-08-24T19:00:00Z,Paysandu SC,paysandu-sc,Operário-PR,operario-pr,1.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,23,HOcsKfo,13616303,Ferroviária 0.0 x 0.0 Volta Redonda,2025-08-24T21:30:00Z,Ferroviária,ferroviaria,Volta Redonda,volta-redonda,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,23,oWcscJu,13616297,Cuiabá 2.0 x 2.0 Atlético Goianiense,2025-08-24T23:30:00Z,Cuiabá,cuiaba,Atlético Goianiense,atletico-go,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,23,EOswP,13616304,Botafogo-SP 2.0 x 0.0 Vila Nova FC,2025-08-25T22:00:00Z,Botafogo-SP,botafogo-sp,Vila Nova FC,vila-nova,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,23,pWcsoIJc,13616299,Avaí 1.0 x 2.0 Amazonas FC,2025-08-26T00:30:00Z,Avaí,avai,Amazonas FC,amazonas-fc,1.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,24,JOsmP,13616308,Remo 0.0 x 1.0 Criciúma,2025-08-29T00:35:00Z,Remo,remo,Criciúma,criciuma,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,24,HOsJRp,13616310,Operário-PR 1.0 x 0.0 Coritiba,2025-08-29T22:00:00Z,Operário-PR,operario-pr,Coritiba,coritiba,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,24,XOsHPi,13616311,CRB 2.0 x 0.0 Paysandu SC,2025-08-30T19:00:00Z,CRB,crb,Paysandu SC,paysandu-sc,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,24,kOsEO,13616306,Goiás 2.0 x 3.0 Botafogo-SP,2025-08-30T21:30:00Z,Goiás,goias,Botafogo-SP,botafogo-sp,2.0,3.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,24,rOsokeb,13616305,Athletico 2.0 x 1.0 Grêmio Novorizontino,2025-08-30T23:30:00Z,Athletico,athletico,Grêmio Novorizontino,novorizontino,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,24,oWcsoIJc,13616307,Atlético Goianiense 2.0 x 0.0 Amazonas FC,2025-08-31T19:00:00Z,Atlético Goianiense,atletico-go,Amazonas FC,amazonas-fc,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,24,HOcsAfMc,13616314,Volta Redonda 0.0 x 2.0 Athletic Club,2025-08-31T21:30:00Z,Volta Redonda,volta-redonda,Athletic Club,athletic-club,0.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,24,wPsVLi,13616309,Chapecoense 2.0 x 2.0 Vila Nova FC,2025-09-01T22:00:00Z,Chapecoense,chapecoense,Vila Nova FC,vila-nova,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,24,KfoscJu,13616313,Ferroviária 2.0 x 2.0 Cuiabá,2025-09-02T00:30:00Z,Ferroviária,ferroviaria,Cuiabá,cuiaba,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,24,yOspWc,13616312,América Mineiro 2.0 x 0.0 Avaí,2025-09-02T22:30:00Z,América Mineiro,america-mg,Avaí,avai,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,25,mPsoIJc,13638632,Amazonas FC 1.0 x 3.0 Remo,2025-09-05T20:00:00Z,Amazonas FC,amazonas-fc,Remo,remo,1.0,3.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,25,XOsHOc,13638626,Paysandu SC 1.0 x 2.0 Volta Redonda,2025-09-05T22:00:00Z,Paysandu SC,paysandu-sc,Volta Redonda,volta-redonda,1.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,25,HOsKfo,13616315,Coritiba 4.0 x 0.0 Ferroviária,2025-09-06T00:30:00Z,Coritiba,coritiba,Ferroviária,ferroviaria,4.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,25,rOsEO,13638638,Botafogo-SP 1.0 x 3.0 Athletico,2025-09-06T19:00:00Z,Botafogo-SP,botafogo-sp,Athletico,athletico,1.0,3.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,25,JOsVLi,13638630,Criciúma 2.0 x 0.0 Chapecoense,2025-09-07T19:00:00Z,Criciúma,criciuma,Chapecoense,chapecoense,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,25,yOsJRp,13638634,América Mineiro 1.0 x 1.0 Operário-PR,2025-09-07T21:30:00Z,América Mineiro,america-mg,Operário-PR,operario-pr,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,25,kOspWc,13638628,Avaí 2.0 x 1.0 Goiás,2025-09-07T23:30:00Z,Avaí,avai,Goiás,goias,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,25,oWcsokeb,13638636,Grêmio Novorizontino 1.0 x 1.0 Atlético Goianiense,2025-09-08T22:30:00Z,Grêmio Novorizontino,novorizontino,Atlético Goianiense,atletico-go,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,25,HPiscJu,13638624,Cuiabá 1.0 x 0.0 CRB,2025-09-08T23:00:00Z,Cuiabá,cuiaba,CRB,crb,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,25,wPsAfMc,13638622,Vila Nova FC 1.0 x 1.0 Athletic Club,2025-09-09T00:30:00Z,Vila Nova FC,vila-nova,Athletic Club,athletic-club,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,26,JOsHOc,13638661,Volta Redonda 0.0 x 0.0 Criciúma,2025-09-12T22:00:00Z,Volta Redonda,volta-redonda,Criciúma,criciuma,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,26,kOsHO,13638642,Coritiba 0.0 x 0.0 Goiás,2025-09-13T00:30:00Z,Coritiba,coritiba,Goiás,goias,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,26,yOsXO,13638649,Paysandu SC 0.0 x 0.0 América Mineiro,2025-09-13T19:00:00Z,Paysandu SC,paysandu-sc,América Mineiro,america-mg,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,26,mPswP,13638644,Vila Nova FC 1.0 x 1.0 Remo,2025-09-13T21:30:00Z,Vila Nova FC,vila-nova,Remo,remo,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,26,JRpscJu,13638653,Operário-PR 1.0 x 1.0 Cuiabá,2025-09-14T19:00:00Z,Operário-PR,operario-pr,Cuiabá,cuiaba,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,26,EOsAfMc,13638657,Athletic Club 2.0 x 0.0 Botafogo-SP,2025-09-14T21:30:00Z,Athletic Club,athletic-club,Botafogo-SP,botafogo-sp,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,26,Kfosokeb,13638659,Ferroviária 1.0 x 2.0 Grêmio Novorizontino,2025-09-15T22:00:00Z,Ferroviária,ferroviaria,Grêmio Novorizontino,novorizontino,1.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,26,HPisoIJc,13638655,CRB 2.0 x 0.0 Amazonas FC,2025-09-16T00:30:00Z,CRB,crb,Amazonas FC,amazonas-fc,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,26,oWcspWc,13638647,Atlético Goianiense 2.0 x 1.0 Avaí,2025-09-16T22:30:00Z,Atlético Goianiense,atletico-go,Avaí,avai,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,26,rOsVLi,13638651,Chapecoense 2.0 x 3.0 Athletico,2025-09-17T00:35:00Z,Chapecoense,chapecoense,Athletico,athletico,2.0,3.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,27,EOsJRp,13638682,Botafogo-SP 1.0 x 1.0 Operário-PR,2025-09-18T22:00:00Z,Botafogo-SP,botafogo-sp,Operário-PR,operario-pr,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,27,okebsAfMc,13638680,Grêmio Novorizontino 1.0 x 0.0 Athletic Club,2025-09-19T22:00:00Z,Grêmio Novorizontino,novorizontino,Athletic Club,athletic-club,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,27,kOsXO,13638665,Goiás 1.0 x 0.0 Paysandu SC,2025-09-20T19:00:00Z,Goiás,goias,Paysandu SC,paysandu-sc,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,27,HOcsoIJc,13638675,Amazonas FC 1.0 x 0.0 Volta Redonda,2025-09-20T21:30:00Z,Amazonas FC,amazonas-fc,Volta Redonda,volta-redonda,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,27,pWcsKfo,13638671,Avaí 2.0 x 2.0 Ferroviária,2025-09-20T21:30:00Z,Avaí,avai,Ferroviária,ferroviaria,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,27,mPsoWc,13638669,Remo 0.0 x 1.0 Atlético Goianiense,2025-09-20T23:30:00Z,Remo,remo,Atlético Goianiense,atletico-go,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,27,yOsHO,13638677,América Mineiro 1.0 x 0.0 Coritiba,2025-09-21T19:00:00Z,América Mineiro,america-mg,Coritiba,coritiba,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,27,JOsHPi,13638673,Criciúma 1.0 x 0.0 CRB,2025-09-21T19:00:00Z,Criciúma,criciuma,CRB,crb,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,27,rOswP,13638663,Athletico 2.0 x 0.0 Vila Nova FC,2025-09-21T22:00:00Z,Athletico,athletico,Vila Nova FC,vila-nova,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,27,VLiscJu,13638667,Cuiabá 1.0 x 0.0 Chapecoense,2025-09-21T23:30:00Z,Cuiabá,cuiaba,Chapecoense,chapecoense,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,28,XOsokeb,13638691,Paysandu SC 0.0 x 1.0 Grêmio Novorizontino,2025-09-23T22:30:00Z,Paysandu SC,paysandu-sc,Grêmio Novorizontino,novorizontino,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,28,kOsKfo,13638701,Ferroviária 1.0 x 1.0 Goiás,2025-09-24T00:35:00Z,Ferroviária,ferroviaria,Goiás,goias,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,28,rOsAfMc,13638699,Athletic Club 0.0 x 3.0 Athletico,2025-09-24T22:00:00Z,Athletic Club,athletic-club,Athletico,athletico,0.0,3.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,28,EOsHPi,13638697,CRB 3.0 x 2.0 Botafogo-SP,2025-09-24T22:00:00Z,CRB,crb,Botafogo-SP,botafogo-sp,3.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,28,wPscJu,13638686,Vila Nova FC 2.0 x 2.0 Cuiabá,2025-09-24T22:00:00Z,Vila Nova FC,vila-nova,Cuiabá,cuiaba,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,28,JRpsoIJc,13638695,Operário-PR 2.0 x 1.0 Amazonas FC,2025-09-24T23:00:00Z,Operário-PR,operario-pr,Amazonas FC,amazonas-fc,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,28,mPsHOc,13638703,Volta Redonda 2.0 x 1.0 Remo,2025-09-25T00:30:00Z,Volta Redonda,volta-redonda,Remo,remo,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,28,HOsJO,13638684,Coritiba 0.0 x 2.0 Criciúma,2025-09-25T22:00:00Z,Coritiba,coritiba,Criciúma,criciuma,0.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,28,yOsoWc,13638689,Atlético Goianiense 1.0 x 0.0 América Mineiro,2025-09-26T00:30:00Z,Atlético Goianiense,atletico-go,América Mineiro,america-mg,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,28,pWcsVLi,13638693,Chapecoense 0.0 x 1.0 Avaí,2025-09-26T00:35:00Z,Chapecoense,chapecoense,Avaí,avai,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,29,rOsJRp,13638705,Athletico 1.0 x 0.0 Operário-PR,2025-09-27T23:30:00Z,Athletico,athletico,Operário-PR,operario-pr,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,29,JOsXO,13638715,Criciúma 2.0 x 4.0 Paysandu SC,2025-09-28T19:00:00Z,Criciúma,criciuma,Paysandu SC,paysandu-sc,2.0,4.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,29,wPsokeb,13638722,Grêmio Novorizontino 1.0 x 1.0 Vila Nova FC,2025-09-28T19:00:00Z,Grêmio Novorizontino,novorizontino,Vila Nova FC,vila-nova,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,29,mPsHPi,13638711,Remo 4.0 x 2.0 CRB,2025-09-28T21:00:00Z,Remo,remo,CRB,crb,4.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,29,EOsKfo,13638724,Botafogo-SP 1.0 x 2.0 Ferroviária,2025-09-28T21:30:00Z,Botafogo-SP,botafogo-sp,Ferroviária,ferroviaria,1.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,29,cJusAfMc,13638709,Cuiabá 2.0 x 1.0 Athletic Club,2025-09-28T23:30:00Z,Cuiabá,cuiaba,Athletic Club,athletic-club,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,29,VLisoIJc,13638717,Amazonas FC 1.0 x 3.0 Chapecoense,2025-09-29T19:00:00Z,Amazonas FC,amazonas-fc,Chapecoense,chapecoense,1.0,3.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,29,yOsHOc,13638719,América Mineiro 2.0 x 1.0 Volta Redonda,2025-09-29T22:00:00Z,América Mineiro,america-mg,Volta Redonda,volta-redonda,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,29,HOspWc,13638713,Avaí 0.0 x 2.0 Coritiba,2025-09-29T22:30:00Z,Avaí,avai,Coritiba,coritiba,0.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,29,kOsoWc,13638707,Goiás 0.0 x 0.0 Atlético Goianiense,2025-10-01T00:35:00Z,Goiás,goias,Atlético Goianiense,atletico-go,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,30,XOscJu,13638732,Paysandu SC 1.0 x 1.0 Cuiabá,2025-10-02T22:00:00Z,Paysandu SC,paysandu-sc,Cuiabá,cuiaba,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,30,JOswP,13638728,Vila Nova FC 1.0 x 1.0 Criciúma,2025-10-03T00:30:00Z,Vila Nova FC,vila-nova,Criciúma,criciuma,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,30,oIJcsAfMc,13638740,Athletic Club 2.0 x 2.0 Amazonas FC,2025-10-03T22:00:00Z,Athletic Club,athletic-club,Amazonas FC,amazonas-fc,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,30,EOsHO,13638726,Coritiba 2.0 x 0.0 Botafogo-SP,2025-10-04T00:30:00Z,Coritiba,coritiba,Botafogo-SP,botafogo-sp,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,30,pWcsHPi,13638738,CRB 1.0 x 0.0 Avaí,2025-10-04T00:35:00Z,CRB,crb,Avaí,avai,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,30,VLisokeb,13638734,Chapecoense 1.0 x 0.0 Grêmio Novorizontino,2025-10-04T19:00:00Z,Chapecoense,chapecoense,Grêmio Novorizontino,novorizontino,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,30,kOsHOc,13638745,Volta Redonda 0.0 x 0.0 Goiás,2025-10-04T21:30:00Z,Volta Redonda,volta-redonda,Goiás,goias,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,30,yOsKfo,13638742,Ferroviária 1.0 x 3.0 América Mineiro,2025-10-04T23:30:00Z,Ferroviária,ferroviaria,América Mineiro,america-mg,1.0,3.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,30,mPsJRp,13638736,Operário-PR 0.0 x 1.0 Remo,2025-10-05T19:00:00Z,Operário-PR,operario-pr,Remo,remo,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,30,rOsoWc,13638730,Atlético Goianiense 3.0 x 0.0 Athletico,2025-10-05T23:30:00Z,Atlético Goianiense,atletico-go,Athletico,athletico,3.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,31,JOsoIJc,13638633,Amazonas FC 2.0 x 1.0 Criciúma,2025-10-07T23:00:00Z,Amazonas FC,amazonas-fc,Criciúma,criciuma,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,31,kOsHPi,13638623,Goiás 1.0 x 2.0 CRB,2025-10-08T00:30:00Z,Goiás,goias,CRB,crb,1.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,31,EOsXO,13638641,Botafogo-SP 1.0 x 0.0 Paysandu SC,2025-10-08T00:35:00Z,Botafogo-SP,botafogo-sp,Paysandu SC,paysandu-sc,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,31,cJusokeb,13638625,Cuiabá 0.0 x 1.0 Grêmio Novorizontino,2025-10-08T22:00:00Z,Cuiabá,cuiaba,Grêmio Novorizontino,novorizontino,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,31,JRpsAfMc,13638631,Operário-PR 1.0 x 4.0 Athletic Club,2025-10-08T22:00:00Z,Operário-PR,operario-pr,Athletic Club,athletic-club,1.0,4.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,31,HOcspWc,13638629,Avaí 3.0 x 0.0 Volta Redonda,2025-10-09T00:00:00Z,Avaí,avai,Volta Redonda,volta-redonda,3.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,31,yOswP,13638635,América Mineiro 1.0 x 1.0 Vila Nova FC,2025-10-09T00:30:00Z,América Mineiro,america-mg,Vila Nova FC,vila-nova,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,31,VLisKfo,13638637,Ferroviária 0.0 x 1.0 Chapecoense,2025-10-09T22:00:00Z,Ferroviária,ferroviaria,Chapecoense,chapecoense,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,31,HOsoWc,13638621,Coritiba 2.0 x 1.0 Atlético Goianiense,2025-10-09T22:30:00Z,Coritiba,coritiba,Atlético Goianiense,atletico-go,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,31,rOsmP,13638627,Remo 2.0 x 1.0 Athletico,2025-10-10T00:35:00Z,Remo,remo,Athletico,athletico,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,32,kOsAfMc,13638658,Athletic Club 1.0 x 1.0 Goiás,2025-10-11T19:00:00Z,Athletic Club,athletic-club,Goiás,goias,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,32,JRpsokeb,13638660,Grêmio Novorizontino 3.0 x 0.0 Operário-PR,2025-10-12T19:00:00Z,Grêmio Novorizontino,novorizontino,Operário-PR,operario-pr,3.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,32,yOsJO,13638654,Criciúma 2.0 x 1.0 América Mineiro,2025-10-12T21:30:00Z,Criciúma,criciuma,América Mineiro,america-mg,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,32,wPsoIJc,13638645,Vila Nova FC 1.0 x 0.0 Amazonas FC,2025-10-12T21:30:00Z,Vila Nova FC,vila-nova,Amazonas FC,amazonas-fc,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,32,HOscJu,13638648,Cuiabá 1.0 x 0.0 Coritiba,2025-10-12T23:30:00Z,Cuiabá,cuiaba,Coritiba,coritiba,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,32,HOcsoWc,13638662,Volta Redonda 3.0 x 0.0 Atlético Goianiense,2025-10-13T22:00:00Z,Volta Redonda,volta-redonda,Atlético Goianiense,atletico-go,3.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,32,HPisKfo,13638656,CRB 2.0 x 2.0 Ferroviária,2025-10-14T00:30:00Z,CRB,crb,Ferroviária,ferroviaria,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,32,EOsVLi,13638652,Chapecoense 1.0 x 1.0 Botafogo-SP,2025-10-14T22:30:00Z,Chapecoense,chapecoense,Botafogo-SP,botafogo-sp,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,32,XOsmP,13638650,Paysandu SC 2.0 x 3.0 Remo,2025-10-14T22:30:00Z,Paysandu SC,paysandu-sc,Remo,remo,2.0,3.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,32,rOspWc,13638643,Athletico 1.0 x 1.0 Avaí,2025-10-15T00:30:00Z,Athletico,athletico,Avaí,avai,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,33,okebsoIJc,13638676,Amazonas FC 0.0 x 0.0 Grêmio Novorizontino,2025-10-17T23:00:00Z,Amazonas FC,amazonas-fc,Grêmio Novorizontino,novorizontino,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,33,wPsoWc,13638668,Atlético Goianiense 1.0 x 0.0 Vila Nova FC,2025-10-18T19:00:00Z,Atlético Goianiense,atletico-go,Vila Nova FC,vila-nova,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,33,yOsHPi,13638678,América Mineiro 1.0 x 1.0 CRB,2025-10-18T21:30:00Z,América Mineiro,america-mg,CRB,crb,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,33,mPsAfMc,13638670,Remo 3.0 x 1.0 Athletic Club,2025-10-18T23:30:00Z,Remo,remo,Athletic Club,athletic-club,3.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,33,JOspWc,13638672,Avaí 1.0 x 1.0 Criciúma,2025-10-19T19:00:00Z,Avaí,avai,Criciúma,criciuma,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,33,HOcsJRp,13638674,Operário-PR 2.0 x 1.0 Volta Redonda,2025-10-19T19:00:00Z,Operário-PR,operario-pr,Volta Redonda,volta-redonda,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,33,EOscJu,13638681,Botafogo-SP 2.0 x 2.0 Cuiabá,2025-10-19T21:30:00Z,Botafogo-SP,botafogo-sp,Cuiabá,cuiaba,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,33,rOsHO,13638664,Coritiba 0.0 x 0.0 Athletico,2025-10-19T21:30:00Z,Coritiba,coritiba,Athletico,athletico,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,33,kOsVLi,13638666,Goiás 1.0 x 3.0 Chapecoense,2025-10-19T23:30:00Z,Goiás,goias,Chapecoense,chapecoense,1.0,3.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,33,XOsKfo,13638679,Ferroviária 2.0 x 2.0 Paysandu SC,2025-10-20T22:30:00Z,Ferroviária,ferroviaria,Paysandu SC,paysandu-sc,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,34,EOsokeb,13638700,Grêmio Novorizontino 1.0 x 1.0 Botafogo-SP,2025-10-24T22:00:00Z,Grêmio Novorizontino,novorizontino,Botafogo-SP,botafogo-sp,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,34,mPscJu,13638688,Cuiabá 1.0 x 3.0 Remo,2025-10-25T00:35:00Z,Cuiabá,cuiaba,Remo,remo,1.0,3.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,34,yOsAfMc,13638698,Athletic Club 0.0 x 2.0 América Mineiro,2025-10-25T19:00:00Z,Athletic Club,athletic-club,América Mineiro,america-mg,0.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,34,HOsHOc,13638702,Volta Redonda 0.0 x 1.0 Coritiba,2025-10-25T19:00:00Z,Volta Redonda,volta-redonda,Coritiba,coritiba,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,34,XOspWc,13638690,Paysandu SC 1.0 x 2.0 Avaí,2025-10-25T21:30:00Z,Paysandu SC,paysandu-sc,Avaí,avai,1.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,34,kOsJO,13638694,Criciúma 1.0 x 2.0 Goiás,2025-10-25T23:30:00Z,Criciúma,criciuma,Goiás,goias,1.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,34,oWcsHPi,13638696,CRB 2.0 x 1.0 Atlético Goianiense,2025-10-26T19:00:00Z,CRB,crb,Atlético Goianiense,atletico-go,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,34,wPsKfo,13638685,Vila Nova FC 2.0 x 2.0 Ferroviária,2025-10-26T21:30:00Z,Vila Nova FC,vila-nova,Ferroviária,ferroviaria,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,34,VLisJRp,13638692,Chapecoense 2.0 x 0.0 Operário-PR,2025-10-27T22:00:00Z,Chapecoense,chapecoense,Operário-PR,operario-pr,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,34,rOsoIJc,13638683,Athletico 2.0 x 0.0 Amazonas FC,2025-10-28T00:30:00Z,Athletico,athletico,Amazonas FC,amazonas-fc,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,35,XOsoWc,13638708,Atlético Goianiense 2.0 x 1.0 Paysandu SC,2025-10-31T22:00:00Z,Atlético Goianiense,atletico-go,Paysandu SC,paysandu-sc,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,35,HOsHPi,13638704,Coritiba 0.0 x 0.0 CRB,2025-10-31T22:00:00Z,Coritiba,coritiba,CRB,crb,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,35,JOsKfo,13638721,Ferroviária 0.0 x 0.0 Criciúma,2025-11-01T00:35:00Z,Ferroviária,ferroviaria,Criciúma,criciuma,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,35,kOsrO,13638706,Goiás 0.0 x 1.0 Athletico,2025-11-01T19:00:00Z,Goiás,goias,Athletico,athletico,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,35,pWcsAfMc,13638712,Avaí 2.0 x 1.0 Athletic Club,2025-11-01T21:30:00Z,Avaí,avai,Athletic Club,athletic-club,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,35,cJusoIJc,13638716,Amazonas FC 2.0 x 0.0 Cuiabá,2025-11-02T19:00:00Z,Amazonas FC,amazonas-fc,Cuiabá,cuiaba,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,35,mPsVLi,13638710,Remo 1.0 x 1.0 Chapecoense,2025-11-02T21:30:00Z,Remo,remo,Chapecoense,chapecoense,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,35,wPsJRp,13638714,Operário-PR 2.0 x 2.0 Vila Nova FC,2025-11-02T23:30:00Z,Operário-PR,operario-pr,Vila Nova FC,vila-nova,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,35,yOsokeb,13638718,América Mineiro 2.0 x 2.0 Grêmio Novorizontino,2025-11-03T22:00:00Z,América Mineiro,america-mg,Grêmio Novorizontino,novorizontino,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,35,EOsHOc,13638723,Volta Redonda 0.0 x 1.0 Botafogo-SP,2025-11-03T22:00:00Z,Volta Redonda,volta-redonda,Botafogo-SP,botafogo-sp,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,36,KfosAfMc,13638739,Athletic Club 2.0 x 1.0 Ferroviária,2025-11-07T22:00:00Z,Athletic Club,athletic-club,Ferroviária,ferroviaria,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,36,kOscJu,13638729,Cuiabá 0.0 x 1.0 Goiás,2025-11-08T00:30:00Z,Cuiabá,cuiaba,Goiás,goias,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,36,mPsokeb,13638741,Grêmio Novorizontino 1.0 x 1.0 Remo,2025-11-08T19:00:00Z,Grêmio Novorizontino,novorizontino,Remo,remo,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,36,rOsHOc,13638725,Athletico 2.0 x 0.0 Volta Redonda,2025-11-08T21:30:00Z,Athletico,athletico,Volta Redonda,volta-redonda,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,36,wPspWc,13638727,Vila Nova FC 2.0 x 2.0 Avaí,2025-11-08T23:30:00Z,Vila Nova FC,vila-nova,Avaí,avai,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,36,JOsoWc,13638735,Criciúma 1.0 x 0.0 Atlético Goianiense,2025-11-09T20:00:00Z,Criciúma,criciuma,Atlético Goianiense,atletico-go,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,36,HPisJRp,13638737,CRB 2.0 x 2.0 Operário-PR,2025-11-09T21:30:00Z,CRB,crb,Operário-PR,operario-pr,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,36,HOsXO,13638731,Paysandu SC 1.0 x 2.0 Coritiba,2025-11-09T23:30:00Z,Paysandu SC,paysandu-sc,Coritiba,coritiba,1.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,36,EOsoIJc,13638744,Botafogo-SP 1.0 x 0.0 Amazonas FC,2025-11-10T22:00:00Z,Botafogo-SP,botafogo-sp,Amazonas FC,amazonas-fc,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,36,yOsVLi,13638733,Chapecoense 0.0 x 1.0 América Mineiro,2025-11-10T22:00:00Z,Chapecoense,chapecoense,América Mineiro,america-mg,0.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,37,XOsoIJc,13638749,Paysandu SC 2.0 x 2.0 Amazonas FC,2025-11-14T23:00:00Z,Paysandu SC,paysandu-sc,Amazonas FC,amazonas-fc,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,37,oWcsJRp,13638748,Atlético Goianiense 0.0 x 0.0 Operário-PR,2025-11-15T19:30:00Z,Atlético Goianiense,atletico-go,Operário-PR,operario-pr,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,37,mPspWc,13638750,Avaí 3.0 x 1.0 Remo,2025-11-15T19:30:00Z,Avaí,avai,Remo,remo,3.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,37,wPsHPi,13638752,CRB 2.0 x 0.0 Vila Nova FC,2025-11-15T19:30:00Z,CRB,crb,Vila Nova FC,vila-nova,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,37,HOsAfMc,13638746,Coritiba 0.0 x 0.0 Athletic Club,2025-11-15T19:30:00Z,Coritiba,coritiba,Athletic Club,athletic-club,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,37,HOcsVLi,13638755,Volta Redonda 1.0 x 1.0 Chapecoense,2025-11-15T19:30:00Z,Volta Redonda,volta-redonda,Chapecoense,chapecoense,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,37,yOscJu,13638753,América Mineiro 1.0 x 1.0 Cuiabá,2025-11-16T19:30:00Z,América Mineiro,america-mg,Cuiabá,cuiaba,1.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,37,EOsJO,13638751,Criciúma 2.0 x 0.0 Botafogo-SP,2025-11-16T19:30:00Z,Criciúma,criciuma,Botafogo-SP,botafogo-sp,2.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,37,rOsKfo,13638754,Ferroviária 1.0 x 2.0 Athletico,2025-11-16T19:30:00Z,Ferroviária,ferroviaria,Athletico,athletico,1.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,37,kOsokeb,13638747,Goiás 1.0 x 0.0 Grêmio Novorizontino,2025-11-16T19:30:00Z,Goiás,goias,Grêmio Novorizontino,novorizontino,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,38,wPsHOc,13638757,Vila Nova FC 2.0 x 2.0 Volta Redonda,2025-11-19T22:30:00Z,Vila Nova FC,vila-nova,Volta Redonda,volta-redonda,2.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,38,HPisokeb,13638764,Grêmio Novorizontino 3.0 x 0.0 CRB,2025-11-22T22:30:00Z,Grêmio Novorizontino,novorizontino,CRB,crb,3.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,38,HOsoIJc,13638762,Amazonas FC 1.0 x 2.0 Coritiba,2025-11-23T19:30:00Z,Amazonas FC,amazonas-fc,Coritiba,coritiba,1.0,2.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,38,XOsAfMc,13638763,Athletic Club 2.0 x 1.0 Paysandu SC,2025-11-23T19:30:00Z,Athletic Club,athletic-club,Paysandu SC,paysandu-sc,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,38,rOsyO,13638756,Athletico 1.0 x 0.0 América Mineiro,2025-11-23T19:30:00Z,Athletico,athletico,América Mineiro,america-mg,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,38,EOspWc,13638765,Botafogo-SP 0.0 x 0.0 Avaí,2025-11-23T19:30:00Z,Botafogo-SP,botafogo-sp,Avaí,avai,0.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,38,oWcsVLi,13638760,Chapecoense 1.0 x 0.0 Atlético Goianiense,2025-11-23T19:30:00Z,Chapecoense,chapecoense,Atlético Goianiense,atletico-go,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,38,JOscJu,13638758,Cuiabá 1.0 x 0.0 Criciúma,2025-11-23T19:30:00Z,Cuiabá,cuiaba,Criciúma,criciuma,1.0,0.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,38,KfosJRp,13638761,Operário-PR 2.0 x 1.0 Ferroviária,2025-11-23T19:30:00Z,Operário-PR,operario-pr,Ferroviária,ferroviaria,2.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z
+2025,serie_b,38,kOsmP,13638759,Remo 3.0 x 1.0 Goiás,2025-11-23T19:30:00Z,Remo,remo,Goiás,goias,3.0,1.0,completed,,,score_confirmed,,2026-05-07T17:00:43.492970Z

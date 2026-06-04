@@ -1,0 +1,44 @@
+— THREAD —
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[1/2 — card: card.png — 239 chars]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Quantos chutes por gol você aceita do seu atacante?
+
+Mapeamos quem realmente finaliza bem na Série B — R1 a R5.
+
+▶ Melhor conversão: França (Avaí) — 50%
+▶ Artilheiro: Tavares (Athletic) — 5G, 33%
+▶ Sport: 3.5 chutes/90. Conversão? 16%
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2/2 — resposta ao tweet 1 — 257 chars]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+A métrica que importa não é quantos chutes um jogador dá — é quantos viram gol.
+
+França chuta pouco, mas quase sempre entra. Tavares une volume e eficiência.
+
+O Sport está no caminho. Falta o desfecho.
+
+Quem surpreendeu mais você? 👇 #SerieB2026 #SportRecife
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOTAS DE OTIMIZAÇÃO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Tweet 1 — por que funciona:
+  • Pergunta direta no início → ativa Real-graph (força resposta interna antes de scrollar)
+  • Três bullets com dados reais → Tweepcred (autoridade via especificidade)
+  • Contraste Sport vs elite → gera identificação + debate com a torcida
+  • Card no tweet 1 → retenção visual alta, bookmark signal forte
+
+Tweet 2 — por que funciona:
+  • Primeira linha longa + destrincha o insight → tempo de leitura alto (signal implícito)
+  • "Falta o desfecho" sobre o Sport → deixa abertura narrativa, convida reply
+  • Pergunta final aberta → reply signal (o mais pesado no algoritmo)
+  • Hashtags no último tweet → não polui o gancho, mas garante descoberta orgânica
+  • Sem link → evita penalização de saída de plataforma

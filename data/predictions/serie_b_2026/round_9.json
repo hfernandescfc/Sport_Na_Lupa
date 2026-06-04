@@ -1,0 +1,46 @@
+{
+  "season": 2026,
+  "round": 9,
+  "model_version": "lr_full_v1",
+  "model_params": {
+    "C": 0.1,
+    "max_iter": 500,
+    "random_state": 42
+  },
+  "features": [
+    "xg_diff",
+    "xg_h",
+    "xg_a",
+    "xg_per_shot_diff",
+    "xg_tilt_h",
+    "xg_tilt_diff",
+    "field_tilt_sot_h",
+    "field_tilt_sot_diff",
+    "sot_diff",
+    "shots_diff",
+    "poss_diff",
+    "rolling_xg_diff_3",
+    "rolling_pts_diff_3",
+    "xg_ctx_diff",
+    "passes_acc_pct_diff",
+    "corners_diff",
+    "prog_ratio_diff",
+    "prog_ratio_h"
+  ],
+  "n_features": 18,
+  "n_train": 239,
+  "n_train_historical": 170,
+  "n_train_current_season": 69,
+  "current_season_rounds_in_training": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "train_accuracy": 0.6234309623430963,
+  "n_predicted": 10,
+  "generated_at": "2026-05-15T18:56:16.285298+00:00"
+}

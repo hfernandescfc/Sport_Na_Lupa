@@ -1,0 +1,28 @@
+{
+  "slug": "2026-04-22_iury-castilho-impacto",
+  "created_at": "2026-04-22",
+  "status": "pending",
+  "type": "player_impact",
+  "round": 5,
+  "season": 2026,
+  "cards": [],
+  "narrative": "Iury Castilho é favorito da torcida, mas os números da Série B mostram que o Sport cria menos, sofre mais e perde posse com ele em campo. Post de texto puro — gancho de curiosidade → dados brutos → ressalva + pergunta aberta.",
+  "key_stats": {
+    "player": "Iury Castilho",
+    "min_com": 305,
+    "xg_per90_com": 1.02,
+    "xga_per90_com": 1.46,
+    "poss_com": 50.2,
+    "xg_minus_xga_com": -0.45,
+    "min_sem": 145,
+    "xg_per90_sem": 2.47,
+    "xga_per90_sem": 1.18,
+    "poss_sem": 60.8,
+    "xg_minus_xga_sem": 1.29,
+    "delta_xg_per90": -1.45,
+    "delta_xga_per90": 0.29,
+    "delta_poss": -10.6
+  },
+  "algorithm_notes": "Hook via curiosity gap (padrão que vai incomodar). Tweet 2 bookmarkável — tabela comparativa em texto. Tweet 3 fecha com pergunta direta (O que explica?) para maximizar replies. Tweepcred preservada pela ressalva explícita de amostra.",
+  "account": "@SportRecifeLab"
+}

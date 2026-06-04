@@ -1,0 +1,26 @@
+{
+  "slug": "2026-04-22_xpts-serie-b",
+  "created_at": "2026-04-22",
+  "status": "pending",
+  "type": "xpts_semanal",
+  "round": 5,
+  "season": 2026,
+  "cards": [
+    "01_xpts_table.png",
+    "02_xpts_scatter.png"
+  ],
+  "narrative": "Sport em 13º xPts com o menor SOS da divisão (sos_rank=20). Calendário fácil, entrega mediana. Thread de 3 tweets com tabela + scatter.",
+  "key_stats": {
+    "sport_xpts": 6.75,
+    "sport_pts": 7,
+    "sport_record": "1V 4E 0D",
+    "sport_sos_rank": 20,
+    "sport_xg_total": 7.42,
+    "sport_goals": 5,
+    "sport_r5_xg": 0.35,
+    "sport_r5_shots_on_target": 0,
+    "leader_xpts_team": "Criciúma",
+    "leader_xpts_value": 8.80
+  },
+  "account": "@SportRecifeLab"
+}

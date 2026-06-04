@@ -77,13 +77,18 @@ src/
     players.py                  — normaliza scouts individuais ✅
     attack_map.py               — agrega extended_stats + shotmap → attack_profile.json + padrões ✅
     opponents.py                — normaliza dados do adversário: is_home_team + team_outcome ✅
-    standings.py                — xPts (Poisson) + SOS + expected_points_table.csv ✅
+    standings.py                — xPts (Poisson) + xPts_adj (game state) + SOS + expected_points_table.csv ✅
+    game_state_xg.py            — xG ponderado por estado de jogo (desconto de lixo de fim de jogo) → game_state_xg.csv ✅
     incidents.py                — normaliza incidentes de partida → goal_sequences.csv + match_incidents.csv ✅
     player_positions.py         — posições de jogadores na Série B → player_positions_serie_b.csv ✅
     clubs.py / events.py / lineups.py / shots.py — stubs
   validate/
     quality_checks.py           — 12 checks, gera validation_report.json
     reconciliation.py           — stub
+  predict/
+    feature_builder.py          — pool de treino (2025+temporada corrente) + features rolling proxies para rodada-alvo ✅
+    round_predictor.py          — treina LR + FULL features e prediz rodada (sempre inclui últimas rodadas) ✅
+    validator.py                — compara previsões vs resultado real; mantém accuracy_log + summary ✅
   utils/
     http.py                     — get_json() com retry (tenacity)
     io.py                       — write_json(), write_csv(), ensure_project_structure()
@@ -173,7 +178,8 @@ pending_posts/                  — posts aguardando revisão (→ posted/ ou re
 | `serie_b_2026/matches.csv` | 40 | Partidas Série B R1-R4 com `match_label`, `team_key` normalizado |
 | `serie_b_2026/team_match_stats.csv` | 80 | Stats de time + `passes_accuracy_pct`, `shots_on_target_pct` |
 | `serie_b_2026/player_match_stats.csv` | ~1600 | Scouts individuais Série B R1-R4 |
-| `serie_b_2026/expected_points_table.csv` | 20 | xPts, xW/D/L, pts_diff, SOS, sos_rank — R1-R4 (MP=4) |
+| `serie_b_2026/expected_points_table.csv` | 20 | xPts (cru) + **xPts_adj** (game state), pts_diff/pts_diff_adj, xW/D/L, SOS, sos_rank |
+| `serie_b_2026/game_state_xg.csv` | ~MP×20 | xG cru vs ponderado por estado de jogo, por (event_id, team) + breakdown |
 | `serie_b_2026/goal_sequences.csv` | — | Sequências de gol com minuto, tipo, time — R1-R4 |
 | `serie_b_2026/match_incidents.csv` | — | Incidentes por partida (gols, cartões, substituições) — R1-R4 |
 | `sport_2026/matches.csv` | — | Todas partidas do Sport 2026 |
@@ -234,6 +240,7 @@ python -m src.main update-round --season 2026
 # --refresh-strength   → roda sync-serie-b-strength antes do transform-standings
 #                        (custo Selenium ~5min). Recomendado quando MV estiver antigo
 #                        ou faltar cobertura — janelas de transferência, p.ex.
+# --skip-predictions   → pula validate-predictions + predict-round (próxima rodada)
 ```
 
 **SOS / força do calendário:** o `transform-standings` agora calcula o `perf_score`
@@ -241,11 +248,22 @@ python -m src.main update-round --season 2026
 com o `mv_score` congelado do CSV de força. Em prática: PPG sempre fresco a cada
 rodada; MV só atualiza com `--refresh-strength` (ou `python -m src.main sync-serie-b-strength`).
 
-**Sequência interna** (13 passos, idempotentes):
-1. extract: `sync-matches` (1-38) · `sync-sport` · `sync-player-stats` · `sync-incidents` · `sync-player-positions`
-2. transform: `transform-matches` · `transform-players` · `transform-incidents` · `transform-player-positions` · `transform-standings`
+**Ajuste por game state (xPts_adj):** o `transform-game-state-xg` reconstrói o
+placar no minuto de cada finalização (cruzando o shotmap com os minutos de gol dos
+incidents) e pondera o xG para descontar "lixo de fim de jogo" (chances acumuladas
+em jogo já decidido): peso **1,0** com jogo dentro de 1 gol, **0,5** a ±2, **0,25** a
+±3+. O `transform-standings` roda o Poisson com o λ ponderado → colunas `xPts_adj`,
+`pts_diff_adj`, `xpts_adj_delta`. **Índice canônico publicado** (cards xPts +
+Power Ranking — `n_forca`/Net xG) usa o ajustado quando presente; `xPts`/`pts_diff`
+crus ficam para diagnóstico, e o **pipeline preditivo segue usando o cru** (intacto).
+Partidas sem shotmap caem em fallback para xG cru. Depende de `sync-shotmap`.
+
+**Sequência interna** (passos idempotentes):
+1. extract: `sync-matches` (1-38) · `sync-sport` · `sync-player-stats` · `sync-incidents` · `sync-shotmap` · `sync-player-positions`
+2. transform: `transform-matches` · `transform-players` · `transform-incidents` · `transform-player-positions` · `transform-game-state-xg` · `transform-standings`
 3. validate: `run_quality_checks`
-4. cards: `nivel_de_ataque.py --round N` · `generate_xpts_table_card.py` · `generate_xpts_scatter_card.py` · `generate_power_ranking_gif.py`
+4. **predict**: `validate-predictions` (R anterior vs real) · `predict-round` (próxima rodada, treino sempre inclui rodadas recém-sincronizadas)
+5. cards: `nivel_de_ataque.py --round N` · `generate_xpts_table_card.py` · `generate_xpts_scatter_card.py` · `generate_power_ranking_gif.py`
 
 **Comandos individuais (para debug de etapa isolada):**
 
@@ -254,8 +272,10 @@ python -m src.main sync-matches --season 2026 --from-round N --to-round N
 python -m src.main sync-sport --season 2026
 python -m src.main sync-player-stats --season 2026
 python -m src.main sync-incidents --season 2026
+python -m src.main sync-shotmap --season 2026
 python -m src.main transform --season 2026
 python -m src.main transform-incidents --season 2026
+python -m src.main transform-game-state-xg --season 2026
 python -m src.main transform-standings --season 2026
 python -m src.main validate --season 2026
 ```
@@ -297,6 +317,37 @@ python -m src.main transform-standings --season 2026
 python generate_xpts_table_card.py
 python generate_xpts_scatter_card.py
 ```
+
+### Fluxo análise preditiva (LR + FULL features, treino incremental)
+
+O modelo é re-treinado a cada execução em **todo o histórico disponível** (Série B
+2025 + temporada corrente). Toda rodada recém-sincronizada entra automaticamente
+no pool — o modelo evolui com mais dados a cada chamada.
+
+```bash
+# Prever a próxima rodada (auto: menor rodada com jogos não concluídos)
+python -m src.main predict-round --season 2026
+# Forçar rodada específica
+python -m src.main predict-round --season 2026 --round 9
+# Customizar histórico (default: 2025)
+python -m src.main predict-round --season 2026 --historical-seasons 2025
+
+# Validar previsões salvas vs. resultados reais → accuracy_log + summary
+python -m src.main validate-predictions --season 2026
+```
+
+**Stack:** `LogisticRegression(C=0.1)` + StandardScaler · 18 features (16 pré-match + `prog_ratio_h`, `prog_ratio_diff`).
+Imputação automática de `prog_ratio` por mediana da temporada corrente, permitindo incluir 2025 no pool.
+
+**Outputs em `data/predictions/serie_b_{season}/`:**
+- `round_{N}.csv` — probabilidades A/D/H + previsão por partida
+- `round_{N}.json` — metadata (n_train, train_acc, features, timestamp, rodadas no treino)
+- `round_{N}.md` — relatório legível
+- `accuracy_log.csv` — log detalhado partida-a-partida (predito vs real, brier, prob_real)
+- `accuracy_summary.csv` — uma linha por rodada + acurácia cumulativa
+
+**Integração automática:** `update-round` executa `validate-predictions` e `predict-round`
+(próxima rodada) entre `validate` e os cards. Use `--skip-predictions` para pular.
 
 ### Fluxo raio-x do próximo adversário (V2 genérico)
 

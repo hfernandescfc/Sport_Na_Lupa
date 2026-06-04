@@ -1,0 +1,25 @@
+{
+  "slug": "2026-05-14_publico-ilha",
+  "created_at": "2026-05-14",
+  "status": "pending",
+  "type": "attendance_evolution",
+  "season": 2026,
+  "competition": "Serie B",
+  "subject": "Sport Recife — público mandante R2-R7",
+  "card": "card.png",
+  "tweet_chars": 244,
+  "tweet_limit": 280,
+  "data_source": "CBF Boletim Financeiro",
+  "rounds_covered": [2, 4, 6, 7],
+  "hook": "crescimento de público jogo a jogo + antecipação próximo mandante vs CRB",
+  "matches": [
+    {"round": 2, "opponent": "Vila Nova",          "publico": 4576,  "renda": 131884.0, "score": "1x1"},
+    {"round": 4, "opponent": "Avaí",                "publico": 10715, "renda": 368672.0, "score": "2x2"},
+    {"round": 6, "opponent": "Grêmio Novorizontino","publico": 12749, "renda": 310220.0, "score": "1x0"},
+    {"round": 7, "opponent": "Ceará",               "publico": 15655, "renda": 519460.0, "score": "2x0"}
+  ],
+  "totals": {
+    "publico_total": 43695,
+    "renda_total": 1330236.0
+  }
+}

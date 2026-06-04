@@ -28,10 +28,15 @@ from src.transform.opponents import transform_opponent
 from src.transform.matches import transform_matches
 from src.transform.players import transform_players
 from src.transform.standings import transform_standings
+from src.transform.game_state_xg import transform_game_state_xg
 from src.transform.power_ranking import transform_power_ranking
+from src.extract.cbf_attendance import sync_attendance
+from src.transform.attendance import transform_attendance
 from src.extract.sofascore_serie_b_strength import sync_serie_b_strength
 from src.extract.sofascore_logos import sync_logos
 from src.extract.sofascore_team import sync_teams_stub
+from src.predict.round_predictor import predict_round
+from src.predict.validator import validate_predictions
 from src.utils.io import ensure_project_structure
 from src.utils.logging_utils import configure_logging, get_logger
 from src.validate.quality_checks import run_quality_checks
@@ -173,10 +178,30 @@ def build_parser() -> argparse.ArgumentParser:
     )
     sync_serie_b_strength_cmd.add_argument("--season", type=int, required=True)
 
+    sync_attendance_cmd = subparsers.add_parser(
+        "sync-attendance",
+        help="Fetch CBF Boletim Financeiro PDFs and extract attendance per match",
+    )
+    sync_attendance_cmd.add_argument("--season", type=int, required=True)
+    sync_attendance_cmd.add_argument("--from-round", type=int, dest="from_round", default=1)
+    sync_attendance_cmd.add_argument("--to-round", type=int, dest="to_round", default=38)
+
+    transform_attendance_cmd = subparsers.add_parser(
+        "transform-attendance",
+        help="Normalize attendance JSON into attendance.csv",
+    )
+    transform_attendance_cmd.add_argument("--season", type=int, required=True)
+
     transform_standings_cmd = subparsers.add_parser(
         "transform-standings", help="Build expected-points table from curated xG data"
     )
     transform_standings_cmd.add_argument("--season", type=int, required=True)
+
+    transform_gsxg_cmd = subparsers.add_parser(
+        "transform-game-state-xg",
+        help="Compute game-state-weighted xG per team-match (garbage-time discount)",
+    )
+    transform_gsxg_cmd.add_argument("--season", type=int, required=True)
 
     transform_pr_cmd = subparsers.add_parser(
         "transform-power-ranking",
@@ -190,6 +215,27 @@ def build_parser() -> argparse.ArgumentParser:
 
     validate = subparsers.add_parser("validate", help="Run data validation checks")
     validate.add_argument("--season", type=int, required=True)
+
+    predict_round_cmd = subparsers.add_parser(
+        "predict-round",
+        help="Treina LR no histórico completo (sempre inclui rodadas concluídas mais recentes) "
+             "e prediz uma rodada. Salva em data/predictions/serie_b_{season}/round_{N}.csv|json|md.",
+    )
+    predict_round_cmd.add_argument("--season", type=int, required=True)
+    predict_round_cmd.add_argument(
+        "--round", type=int, dest="round_number", default=None,
+        help="Rodada-alvo. Default: próxima rodada com jogos não concluídos.",
+    )
+    predict_round_cmd.add_argument(
+        "--historical-seasons", type=str, default="2025",
+        help="CSV de temporadas históricas a incluir no pool (default: 2025).",
+    )
+
+    validate_pred_cmd = subparsers.add_parser(
+        "validate-predictions",
+        help="Compara previsões salvas vs. resultados reais e atualiza accuracy_log.csv + accuracy_summary.csv.",
+    )
+    validate_pred_cmd.add_argument("--season", type=int, required=True)
 
     update_round_cmd = subparsers.add_parser(
         "update-round",
@@ -213,6 +259,10 @@ def build_parser() -> argparse.ArgumentParser:
         help="Roda sync-serie-b-strength antes do transform-standings "
              "(custo ~5min Selenium). Default off — SOS recalcula PPG ao vivo "
              "do table; só o market value pode ficar antigo.",
+    )
+    update_round_cmd.add_argument(
+        "--skip-predictions", action="store_true", dest="skip_predictions",
+        help="Pula validate-predictions + predict-round (próxima rodada).",
     )
 
     return parser
@@ -246,6 +296,7 @@ def _run_update_round(
     skip_cards: bool,
     strict: bool,
     refresh_strength: bool,
+    skip_predictions: bool,
     logger,
 ) -> None:
     failures: list[str] = []
@@ -270,6 +321,7 @@ def _run_update_round(
     step("sync-sport", lambda: sync_sport_stub(settings, season=season))
     step("sync-player-stats", lambda: sync_player_stats(settings, season=season))
     step("sync-incidents", lambda: sync_incidents(settings, season=season))
+    step("sync-attendance", lambda: sync_attendance(settings, season=season))
     step("sync-shotmap", lambda: sync_shotmap_serie_b(settings, season=season))
     step("sync-player-positions", lambda: sync_player_positions(settings, season=season))
 
@@ -277,8 +329,11 @@ def _run_update_round(
     step("transform-matches", lambda: transform_matches(settings, season=season))
     step("transform-players", lambda: transform_players(settings, season=season))
     step("transform-incidents", lambda: transform_incidents(settings, season=season))
+    step("transform-attendance", lambda: transform_attendance(settings, season=season))
     step("transform-player-positions",
          lambda: transform_player_positions(settings, season=season))
+    step("transform-game-state-xg",
+         lambda: transform_game_state_xg(settings, season=season))
     if refresh_strength:
         step("sync-serie-b-strength",
              lambda: sync_serie_b_strength(settings, season=season))
@@ -286,6 +341,19 @@ def _run_update_round(
 
     # Fase 3 — VALIDATE
     step("validate", lambda: run_quality_checks(settings, season=season))
+
+    # Fase 3.5 — PREDICTIONS (validar rodada anterior + prever próxima)
+    if not skip_predictions:
+        step("validate-predictions", lambda: validate_predictions(
+            base_dir=Path(settings.base_dir), season=season, logger=logger,
+        ))
+        step("predict-next-round", lambda: predict_round(
+            base_dir=Path(settings.base_dir),
+            season=season,
+            round_number=None,  # auto: próxima rodada com jogos não concluídos
+            historical_seasons=(2025,),
+            logger=logger,
+        ))
 
     # Auto-detect da rodada (após transforms — usa CSVs atualizados)
     detected_round = round_number or _detect_latest_round(settings, season)
@@ -310,6 +378,7 @@ def _run_update_round(
         step("card:nivel-de-ataque", lambda: run_card("nivel_de_ataque.py", nivel_args))
         step("card:xpts-table", lambda: run_card("generate_xpts_table_card.py"))
         step("card:xpts-scatter", lambda: run_card("generate_xpts_scatter_card.py"))
+        step("card:evolucao-classificacao", lambda: run_card("generate_power_ranking_gif.py"))
 
     total = len(completed) + len(failures)
     if failures:
@@ -489,10 +558,36 @@ def main() -> None:
         logger.info("Série B strength sync completed for season %s", args.season)
         return
 
+    if args.command == "sync-attendance":
+        ensure_project_structure(settings)
+        sync_attendance(
+            settings,
+            season=args.season,
+            from_round=args.from_round,
+            to_round=args.to_round,
+        )
+        logger.info(
+            "Attendance sync completed for season %s rounds %s-%s",
+            args.season, args.from_round, args.to_round,
+        )
+        return
+
+    if args.command == "transform-attendance":
+        ensure_project_structure(settings)
+        transform_attendance(settings, season=args.season)
+        logger.info("Attendance transform completed for season %s", args.season)
+        return
+
     if args.command == "transform-standings":
         ensure_project_structure(settings)
         transform_standings(settings, season=args.season)
         logger.info("Standings transform completed for season %s", args.season)
+        return
+
+    if args.command == "transform-game-state-xg":
+        ensure_project_structure(settings)
+        transform_game_state_xg(settings, season=args.season)
+        logger.info("Game-state xG transform completed for season %s", args.season)
         return
 
     if args.command == "transform-power-ranking":
@@ -507,6 +602,34 @@ def main() -> None:
         logger.info("Validation completed for season %s", args.season)
         return
 
+    if args.command == "predict-round":
+        ensure_project_structure(settings)
+        seasons_raw = (args.historical_seasons or "").strip()
+        historical = tuple(int(s) for s in seasons_raw.split(",") if s.strip()) if seasons_raw else ()
+        result = predict_round(
+            base_dir=Path(settings.base_dir),
+            season=args.season,
+            round_number=args.round_number,
+            historical_seasons=historical,
+            logger=logger,
+        )
+        meta = result["metadata"]
+        logger.info(
+            "Predict-round R%s season %s: %d jogos · train_acc=%.1f%% · pool=%d",
+            meta["round"], args.season, meta["n_predicted"],
+            meta["train_accuracy"] * 100, meta["n_train"],
+        )
+        return
+
+    if args.command == "validate-predictions":
+        ensure_project_structure(settings)
+        validate_predictions(
+            base_dir=Path(settings.base_dir),
+            season=args.season,
+            logger=logger,
+        )
+        return
+
     if args.command == "update-round":
         ensure_project_structure(settings)
         _run_update_round(
@@ -516,6 +639,7 @@ def main() -> None:
             skip_cards=args.skip_cards,
             strict=args.strict,
             refresh_strength=args.refresh_strength,
+            skip_predictions=args.skip_predictions,
             logger=logger,
         )
         return

@@ -1,12 +1,17 @@
 """
 Composite Power Ranking para a Série B 2026.
 
-Componentes (pesos fixos):
-  1. xPts/MP          (35%) — baseline de performance esperada via Poisson
-  2. Net xG/MP        (30%) — dominância: xG produzido − xGA por partida
-  3. SOS-adj xPts     (25%) — xPts/MP × (1 + sos_rolling) — premia calendário difícil
-  4. Recent form      (10%) — Pts/MP nas últimas K partidas
+Redesenho (jun/2026): xPts/MP (desempenho) e Net xG/MP (domínio) tinham
+correlação r≈0,99 — xPts é derivado do xG via Poisson, logo mediam o mesmo
+fator e estavam sendo contados em dobro. O SOS-adj antigo (xPts × (1+sos))
+era uma terceira cópia do xPts/MP (r≈0,88). Estrutura nova, sem redundância:
 
+  1. Força      (70%) — fusão normalizada de Desempenho (xPts/MP) + Domínio
+                        (Net xG/MP), depois AJUSTADA pelo calendário:
+                        forca × (1 + sos_rolling) → renormalizada.
+  2. Momento    (30%) — Pts/MP nas últimas K partidas (único sinal ortogonal).
+
+SOS entra UMA vez, como multiplicador da Força (não como componente somado).
 SOS Rolling: média do perf_score dos últimos K adversários (PPG normalizado).
 Força do adversário = Pts/MP / max(Pts/MP) ao vivo na própria tabela.
 
@@ -26,10 +31,8 @@ from src.utils.logging_utils import get_logger
 logger = get_logger(__name__)
 
 WEIGHTS = {
-    "xpts_mp":   0.30,
-    "net_xg_mp": 0.25,
-    "sos_adj":   0.30,
-    "form":      0.15,
+    "forca": 0.70,  # fusão Desempenho+Domínio, ajustada pelo SOS
+    "form":  0.30,  # momento recente
 }
 
 
@@ -120,6 +123,36 @@ def _compute_sos_rolling(
     return sos
 
 
+def _load_weighted_xg_map(curated) -> dict[tuple[str, str], float]:
+    """{(match_code, team_key): xg_weighted} de game_state_xg.csv. Vazio se ausente."""
+    path = curated / "game_state_xg.csv"
+    if not path.exists():
+        return {}
+    df = pd.read_csv(path)
+    df["xg_weighted"] = pd.to_numeric(df["xg_weighted"], errors="coerce")
+    return {
+        (str(r["match_code"]), str(r["team_key"])): float(r["xg_weighted"])
+        for _, r in df.iterrows()
+        if pd.notna(r["xg_weighted"])
+    }
+
+
+def _apply_weighted_xg(all_rows: pd.DataFrame, curated) -> pd.DataFrame:
+    """Substitui xg_prod/xg_conc pelo xG ponderado por game state (fallback: cru)."""
+    wmap = _load_weighted_xg_map(curated)
+    if not wmap:
+        logger.info("game_state_xg.csv ausente — Net xG do power ranking usa xG cru")
+        return all_rows
+    all_rows = all_rows.copy()
+    all_rows["xg_prod"] = all_rows.apply(
+        lambda r: wmap.get((str(r["match_code"]), str(r["team_key"])), r["xg_prod"]), axis=1
+    )
+    all_rows["xg_conc"] = all_rows.apply(
+        lambda r: wmap.get((str(r["match_code"]), str(r["opp_key"])), r["xg_conc"]), axis=1
+    )
+    return all_rows
+
+
 def transform_power_ranking(
     settings: Settings,
     season: int,
@@ -150,15 +183,17 @@ def transform_power_ranking(
         zip(xpts_df["team_key"], ppg / ppg_max if ppg_max > 0 else ppg)
     )
 
-    # ── Build match-level rows ────────────────────────────────────────────────
+    # ── Build match-level rows (xG ponderado por game state quando disponível) ─
     all_rows = _build_all_rows(matches, stats)
     if all_rows.empty:
         logger.warning("No completed matches with xG data — power ranking not generated")
         return
+    all_rows = _apply_weighted_xg(all_rows, curated)
 
-    # ── Component 1: xPts/MP ─────────────────────────────────────────────────
-    xpts_df["xPts"] = pd.to_numeric(xpts_df["xPts"], errors="coerce")
-    c1 = dict(zip(xpts_df["team_key"], xpts_df["xPts"] / xpts_df["MP"]))
+    # ── Component 1: xPts/MP (ajustado por game state quando disponível) ──────
+    xpts_col = "xPts_adj" if "xPts_adj" in xpts_df.columns else "xPts"
+    xpts_df[xpts_col] = pd.to_numeric(xpts_df[xpts_col], errors="coerce")
+    c1 = dict(zip(xpts_df["team_key"], xpts_df[xpts_col] / xpts_df["MP"]))
 
     # ── Component 2: Net xG/MP ────────────────────────────────────────────────
     net_xg = (
@@ -169,12 +204,10 @@ def transform_power_ranking(
     )
     c2 = dict(zip(net_xg["team_key"], net_xg["net_xg_mp"]))
 
-    # ── Component 3: SOS-rolling-adjusted xPts ───────────────────────────────
+    # ── SOS rolling (multiplicador, aplicado UMA vez à Força) ────────────────
     sos_rolling = _compute_sos_rolling(all_rows, perf_scores, window=sos_window)
-    # SOS in [0,1] → multiply: xPts/MP × (1 + sos_rolling)
-    c3 = {tk: c1.get(tk, 0.0) * (1.0 + sos_rolling.get(tk, 0.0)) for tk in perf_scores}
 
-    # ── Component 4: Recent form — Pts/MP in last `sos_window` rounds ────────
+    # ── Recent form — Pts/MP in last `sos_window` rounds ─────────────────────
     max_round = all_rows["round"].max()
     recent_rounds = range(max(1, max_round - sos_window + 1), max_round + 1)
     recent = all_rows[all_rows["round"].isin(recent_rounds)]
@@ -193,22 +226,22 @@ def transform_power_ranking(
 
     teams["c_xpts_mp"]   = teams["team_key"].map(c1).fillna(0.0)
     teams["c_net_xg_mp"] = teams["team_key"].map(c2).fillna(0.0)
-    teams["c_sos_adj"]   = teams["team_key"].map(c3).fillna(0.0)
     teams["c_form"]      = teams["team_key"].map(c4).fillna(0.0)
-    teams["sos_rolling"] = teams["team_key"].map(sos_rolling).round(3)
+    teams["sos_rolling"] = teams["team_key"].map(sos_rolling).fillna(0.0).round(3)
 
-    # Normalise each component to [0,1]
-    teams["n_xpts_mp"]   = _norm(teams["c_xpts_mp"])
-    teams["n_net_xg_mp"] = _norm(teams["c_net_xg_mp"])
-    teams["n_sos_adj"]   = _norm(teams["c_sos_adj"])
-    teams["n_form"]      = _norm(teams["c_form"])
+    # Sub-sinais normalizados (transparência) → fusão Desempenho+Domínio
+    teams["n_desemp"] = _norm(teams["c_xpts_mp"])
+    teams["n_dom"]    = _norm(teams["c_net_xg_mp"])
+    forca_raw = (teams["n_desemp"] + teams["n_dom"]) / 2.0
+
+    # Força ajustada pelo calendário (SOS como multiplicador único) → renormaliza
+    teams["n_forca"] = _norm(forca_raw * (1.0 + teams["sos_rolling"]))
+    teams["n_form"]  = _norm(teams["c_form"])
 
     # Weighted composite — scale to 0-100 for readability
     teams["power_score"] = (
-        WEIGHTS["xpts_mp"]   * teams["n_xpts_mp"]
-        + WEIGHTS["net_xg_mp"] * teams["n_net_xg_mp"]
-        + WEIGHTS["sos_adj"]   * teams["n_sos_adj"]
-        + WEIGHTS["form"]      * teams["n_form"]
+        WEIGHTS["forca"] * teams["n_forca"]
+        + WEIGHTS["form"]  * teams["n_form"]
     ) * 100
 
     teams["power_score"] = teams["power_score"].round(1)
@@ -221,8 +254,8 @@ def transform_power_ranking(
     out_cols = [
         "rank_power", "team_key", "team_name", "MP",
         "power_score",
-        "n_xpts_mp", "n_net_xg_mp", "n_sos_adj", "n_form",
-        "c_xpts_mp", "c_net_xg_mp", "c_sos_adj", "c_form",
+        "n_forca", "n_form", "n_desemp", "n_dom",
+        "c_xpts_mp", "c_net_xg_mp", "c_form",
         "xPts", "Pts", "pts_diff",
         "sos_rolling", "sos_window",
         "generated_at",

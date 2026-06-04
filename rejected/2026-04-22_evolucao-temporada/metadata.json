@@ -1,0 +1,11 @@
+{
+  "slug": "2026-04-22_evolucao-temporada",
+  "title": "Evolução da Temporada — R5 atualizado",
+  "type": "evolucao_temporada",
+  "date_created": "2026-04-22T18:13:14Z",
+  "cards": ["01_competicoes.png", "02_serie_b_jogos.png"],
+  "data_range": "2026-01-10 a 2026-04-18",
+  "matches_covered": 23,
+  "competitions": 5,
+  "status": "pending"
+}

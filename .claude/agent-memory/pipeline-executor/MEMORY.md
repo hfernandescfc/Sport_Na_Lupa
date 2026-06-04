@@ -1,0 +1,2 @@
+- [Latest Pipeline Run (2026-05-04)](latest_run_2026_05_04.md) — update-round completado com 6 rodadas, 3 cards gerados prontos
+- [2025 Season Data Extraction (May 7)](operation_2025_extraction_may7.md) — Historical data fill (R2–R20) + player stats; sync-player-stats in progress, auto-transform scheduled

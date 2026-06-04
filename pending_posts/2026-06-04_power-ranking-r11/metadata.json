@@ -1,0 +1,130 @@
+{
+  "post_type": "tier_list",
+  "round": 11,
+  "sos_window": 4,
+  "season": 2026,
+  "competition": "serie_b",
+  "generated_at": "2026-06-04T14:28:03.769364Z",
+  "cards": [
+    "01_power_ranking.png",
+    "02_tier_list.png"
+  ],
+  "components": {
+    "Força": "70% (xPts/MP + Net xG/MP, ajustada pelo SOS)",
+    "Momento": "30% (Pts/MP últimas 4 rodadas)",
+    "Calendário": "multiplicador da Força (não somado)"
+  },
+  "tiers": {
+    "CANDIDATO AO G2": [
+      {
+        "rank": 1,
+        "team": "Clube De Regatas Brasil",
+        "score": 94.6
+      },
+      {
+        "rank": 2,
+        "team": "Atlético Goianiense",
+        "score": 83.3
+      },
+      {
+        "rank": 3,
+        "team": "Sport Recife",
+        "score": 81.0
+      },
+      {
+        "rank": 4,
+        "team": "Náutico",
+        "score": 80.4
+      }
+    ],
+    "BRIGAM PELOS PLAYOFFS": [
+      {
+        "rank": 5,
+        "team": "São Bernardo",
+        "score": 77.5
+      },
+      {
+        "rank": 6,
+        "team": "Goiás",
+        "score": 75.2
+      },
+      {
+        "rank": 7,
+        "team": "Grêmio Novorizontino",
+        "score": 73.1
+      },
+      {
+        "rank": 8,
+        "team": "Criciúma",
+        "score": 71.2
+      },
+      {
+        "rank": 9,
+        "team": "Vila Nova FC",
+        "score": 65.8
+      },
+      {
+        "rank": 10,
+        "team": "Ceará",
+        "score": 64.4
+      }
+    ],
+    "MAROLA": [
+      {
+        "rank": 11,
+        "team": "Juventude",
+        "score": 63.3
+      },
+      {
+        "rank": 12,
+        "team": "Fortaleza",
+        "score": 63.1
+      },
+      {
+        "rank": 13,
+        "team": "Cuiabá",
+        "score": 61.0
+      },
+      {
+        "rank": 14,
+        "team": "Operário-PR",
+        "score": 59.4
+      },
+      {
+        "rank": 15,
+        "team": "Botafogo-SP",
+        "score": 47.6
+      },
+      {
+        "rank": 16,
+        "team": "Athletic Club",
+        "score": 43.7
+      }
+    ],
+    "MANUTENÇÃO É LUCRO": [
+      {
+        "rank": 17,
+        "team": "América Mineiro",
+        "score": 28.5
+      },
+      {
+        "rank": 18,
+        "team": "Ponte Preta",
+        "score": 19.5
+      },
+      {
+        "rank": 19,
+        "team": "Avaí",
+        "score": 10.1
+      },
+      {
+        "rank": 20,
+        "team": "Londrina",
+        "score": 6.7
+      }
+    ]
+  },
+  "sport_rank": 3,
+  "sport_score": 81.0,
+  "status": "pending_review"
+}

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)",
+      "Bash(cat)",
+      "Bash(chmod +x /c/Users/compesa/Desktop/SportSofa/.claude/run_2025_transform_when_ready.sh)"
+    ]
+  }
+}

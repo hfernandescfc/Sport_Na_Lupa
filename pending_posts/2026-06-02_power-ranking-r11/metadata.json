@@ -1,0 +1,37 @@
+{
+  "post_type": "power_ranking",
+  "round": 11,
+  "sos_window": 4,
+  "season": 2026,
+  "competition": "serie_b",
+  "generated_at": "2026-06-02T16:11:40.724396Z",
+  "cards": [
+    "01_power_ranking.png"
+  ],
+  "components": {
+    "Desempenho": "30%",
+    "Domínio": "25%",
+    "Calendário": "30%",
+    "Momento": "15%"
+  },
+  "top_3": [
+    {
+      "rank": 1,
+      "team": "CRB",
+      "score": 95.3
+    },
+    {
+      "rank": 2,
+      "team": "Atlético Goianiense",
+      "score": 89.4
+    },
+    {
+      "rank": 3,
+      "team": "Grêmio Novorizontino",
+      "score": 83.2
+    }
+  ],
+  "sport_rank": 5,
+  "sport_score": 78.2,
+  "status": "pending_review"
+}
